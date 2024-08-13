@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>Seer - Sensors & AI</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+
+</head>
+
+<body id="top" class="ss-preload theme-particles">
+
+
+    <!-- preloader
+    ================================================== -->
+    <div id="preloader">
+        <div id="loader" class="dots-fade">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+
+    <!-- intro
+    ================================================== -->
+    <section id="intro" class="s-intro">
+
+        <div id="particles-js" class="s-intro__particles"></div>
+
+        <header class="s-intro__header"> 
+            <div class="s-intro__logo">
+                <a class="logo" href="index.html">
+                    <img src="images/logo.png" alt="Homepage">
+                </a>
+            </div>
+        </header>  <!-- s-intro__header -->
+
+        <div class="row s-intro__content">
+            <div class="column">
+
+                <div class="text-pretitle">
+                    Nice to meet you.
+                </div>
+
+                <h1 class="text-huge-title">
+                We are preparing <br>
+                something exciting <br>
+                & amazing for you.
+                </h1>
+
+                <div class="s-intro__content-bottom">
+
+                    <div class="s-intro__content-bottom-block">
+                        <h5>Launching our product solutions in</h5>
+            
+                        <div class="counter">
+                            <div class="counter__time">
+                                <span class="ss-days">000</span>
+                                <span>D</span>
+                            </div>
+                            <div class="counter__time">
+                                <span class="ss-hours">00</span>
+                                <span>H</span>
+                            </div>
+                            <div class="counter__time minutes">
+                                <span class="ss-minutes">00</span>
+                                <span>M</span>
+                            </div>
+                            <div class="counter__time">
+                                <span class="ss-seconds">00</span>
+                                <span>S</span>
+                            </div>
+                        </div>  <!-- end counter -->
+
+                    </div> <!-- end s-intro-content__bottom-block -->
+
+                    <!--
+                    <div class="s-intro__content-bottom-block">
+
+                        <h5>Follow Us</h5>
+
+                        <ul class="social">
+                            <li><a href="">FB</a></li>
+                            <li><a href="">TW</a></li>
+                            <li><a href="">IG</a></li>
+                            <li><a href="">DB</a></li>
+                            <li><a href="">BH</a></li>
+                        </ul>
+
+                    </div> <!-- end s-intro-content__bottom-block -->
+                    -->
+
+                </div> <!-- end s-intro-content__bottom -->
+
+            </div>
+        </div> <!-- s-intro__content -->
+
+        <div class="s-intro__notify">
+            <!--
+            <button type="button" class="btn--stroke btn--small ss-modal-trigger">
+                Notify Me
+            </button>
+            -->
+        </div> <!-- s-intro__notify -->
+
+        <div hidden class="s-intro__modal ss-modal">
+            <div class="ss-modal__inner">
+
+                <span class="ss-modal__close"></span>
+
+                <svg viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" width="30" height="30"><path d="M.5 4.5l7 4 7-4m-13-3h12a1 1 0 011 1v10a1 1 0 01-1 1h-12a1 1 0 01-1-1v-10a1 1 0 011-1z" stroke="var(--color-2-dark)"></path></svg>
+                
+                <h4>Sign Up</h4>
+
+                <p class="ss-modal__text">
+                Be the first to know about the latest updates and
+                get exclusive offer on our grand opening.
+                </p>
+
+                <form id="mc-form" class="mc-form">
+                    <input type="email" name="EMAIL" id="mce-EMAIL" class="u-fullwidth text-center" placeholder="Email Address" title="The domain portion of the email address is invalid (the portion after the @)." pattern="^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22))*\x40([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d))*(\.\w{2,})+$" required>
+                    <input type="submit" name="subscribe" value="Subscribe" class="btn--small btn--primary u-fullwidth">
+                    <!-- <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_cdb7b577e41181934ed6a6a44_9a91cfe7b3" tabindex="-1" value=""></div> -->
+                    <div class="mc-status"></div>
+                </form>
+
+            </div> <!-- end ss-modal__inner -->
+        </div> <!-- end ss-modal -->
+
+        <div class="s-intro__scroll">
+            <a href="#hidden" class="smoothscroll">
+                Scroll For More
+            </a>
+        </div> <!-- s-intro__scroll -->
+
+    </section> <!-- end s-intro -->
+
+
+    <!-- hidden element
+    ================================================== -->
+    <div id="hidden" aria-hidden="true" style="opacity: 0;"></div>
+
+
+    <!-- details
+    ================================================== -->
+    <section id="details" class="s-details">
+
+        <div class="row">
+            <div class="column">
+
+                <h1 class="text-huge-title text-center">
+                    Hi, We Are SEER.
+                </h1>
+
+                <nav class="tab-nav">
+                    <ul class="tab-nav__list"> 
+                        <li class="active" data-id="tab-about">
+                            <a href="#0">
+                                <span>About</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#tab-services">
+                                <span>Services</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#tab-contact">
+                                <span>Contact</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav> <!-- end tab-nav -->
+
+                <div class="tab-content">
+
+                    <!-- 01 - tab about -->
+                    <div id="tab-about" class='tab-content__item'>
+
+                        <div class="row tab-content__item-header">
+                            <div class="column">
+                                <h2>Our Story.</h2>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="column">
+                                <p class="lead">
+                                    At SEER, we specialize in innovative industry sensor solutions that connect your operations to the digital world. With a focus on Wi-Fi, LoRa, and cellular technologies, our products empower businesses to monitor, manage, and optimize their processes with precision and reliability. Whether you need seamless connectivity across vast areas or secure, real-time data collection, SEER provides cutting-edge solutions designed to meet the unique demands of your industry. We’re committed to helping you achieve greater efficiency and insight through advanced sensor technology.
+                                </p>
+
+                                <p>
+                                    Powering AI with sensor data is revolutionizing how industries operate by enabling systems to make smarter, data-driven decisions in real-time. By continuously collecting and analyzing information from a wide array of sensors—ranging from environmental conditions to machine performance—AI can identify patterns, predict outcomes, and optimize processes with unprecedented accuracy. This synergy between AI and sensor data not only enhances operational efficiency but also drives innovation, leading to safer, more sustainable, and more responsive systems across various sectors.
+                                </p>
+
+                                <div class="row">
+                                    <div class="column lg-6 tab-12">
+                                        <h4>More About Us.</h4>
+                                        <p>
+                                            At Seer, we specialize in empowering industries with innovative sensor solutions and expert consulting. 
+                                            Our mission is to connect your business to the future through cutting-edge technology and comprehensive, 
+                                            tailored services. Discover how we can help you optimize, innovate, and succeed. 
+                                            Explore our services to see how we can support your business.
+                                        </p>
+                                    </div>
+                                    <div class="column lg-6 tab-12">
+                                        <h4>Need Help?</h4>
+                                        <p>
+                                            Have questions or need assistance? We're here to help! Reach out to us via phone or email, and one of our team members will get back to you promptly. Ask for Brian! We look forward to connecting with you and discussing how we can support your needs.                                        
+                                        </p>
+                                        <p class="tab-content__item-bottom">
+                                            <a href="mailto:#0" class="contact-email-small">Brian@i4seer.com</a>
+                                            <span class="contact-number"> 
+                                                <a href="tel:502-410-9932">+502-410-9932</a> 
+                                                <!--
+                                                <span>/</span>
+                                                <a href="tel:123-456-9000">+123 456 9000</a>
+                                                -->
+                                            </span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div> <!-- end 01 - tab about -->
+
+                    <!-- 02 - tab services -->
+                    <div id="tab-services" class='tab-content__item'>
+
+                        <div class="row tab-content__item-header">
+                            <div class="column">
+                                <h2>What We Do.</h2>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="column">
+                                <p class="lead">
+                                    Seer is your partner in innovation, offering a comprehensive suite of services and solutions designed to harness the power of sensor data. As a leading product company, we provide cutting-edge sensor technologies tailored to meet your industry’s needs. In addition, our consulting expertise in architecture and design ensures that your systems are built to maximize efficiency and effectiveness. From sensing and visualizing data to taking decisive action, Seer delivers end-to-end solutions that empower businesses to operate smarter and more efficiently.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="row services-list block-lg-one-half block-md-one-half block-tab-whole">
+
+                            <div class="column services-list__item">
+                                <div class="services-list__item-content">
+                                    <h4 class="item-title">Product Solutions</h4>
+                                    <p>
+                                        At Seer, we develop and deliver state-of-the-art sensor technologies that are at the forefront of industry innovation. Our products are designed to seamlessly integrate with your existing systems, providing reliable and accurate data collection across various environments. Whether you're looking to monitor environmental conditions, track assets, or optimize operational efficiency, our Wi-Fi, LoRa, and cellular sensor solutions are built to meet the unique challenges of your industry. Our commitment to quality and performance ensures that our products not only meet but exceed your expectations.
+                                    </p>
+                                </div>
+                            </div>
+                
+                            <div class="column services-list__item">
+                                <div class="services-list__item-content">
+                                    <h4 class="item-title">Consulting Services</h4>
+                                    <p>
+                                        Seer is more than just a product provider; we are also a trusted consultant in architecture and design solutions. Our team of experts works closely with you to understand your specific needs and challenges, providing tailored advice and strategic guidance to help you build robust, scalable, and efficient systems. From initial concept to final implementation, we ensure that every aspect of your architecture is optimized for performance, reliability, and future growth. Whether you’re starting from scratch or looking to enhance your existing infrastructure, Seer’s consulting services are designed to deliver results.
+                                    </p>
+                                </div>
+                            </div>
+                
+                            <div class="column services-list__item">
+                                <div class="services-list__item-content">
+                                    <h4 class="item-title">Full Solutions</h4>
+                                    <p>
+                                        Seer offers comprehensive, end-to-end solutions that go beyond just sensing data. We empower your business to visualize and act on the information collected, turning raw data into actionable insights. Our full solution approach ensures that every step—from data acquisition to analysis and decision-making—is seamlessly integrated and optimized for your specific requirements. By combining cutting-edge technology with deep industry expertise, Seer enables you to make informed decisions in real-time, improving operational efficiency, reducing costs, and driving innovation across your organization.                                    </p>
+                                </div>
+                            </div>
+                
+                            <div class="column services-list__item">
+                                <div class="services-list__item-content">
+                                    <h4 class="item-title">Edge Computing Solutions</h4>
+                                    <p>
+                                        In an increasingly connected world, Seer provides edge computing solutions that bring data processing closer to the source. By analyzing sensor data at the edge—near the data origin—our solutions reduce latency, increase reliability, and enable real-time decision-making. This is particularly valuable in environments where immediate responses are critical, such as industrial automation, remote monitoring, and smart city applications. Seer’s edge computing solutions are designed to handle the demands of modern, data-intensive operations.
+                                    </p>
+                                </div>
+                            </div>
+                
+                            <div class="column services-list__item">
+                                <div class="services-list__item-content">
+                                    <h4 class="item-title">Training and Support Services</h4>
+                                    <p>
+                                        Understanding and effectively utilizing advanced sensor technologies and systems is crucial for maximizing their potential. Seer offers comprehensive training and support services to ensure that your team is fully equipped to leverage our products and solutions. From initial onboarding and system setup to ongoing technical support and advanced training sessions, we provide the resources and expertise needed to help your organization stay ahead of the curve. Our goal is to empower your team with the knowledge and skills required to drive success with our technologies.
+                                    </p>
+                                </div>
+                            </div>
+                
+                            <div class="column services-list__item">
+                                <div class="services-list__item-content">
+                                    <h4 class="item-title">Custom Software Development</h4>
+                                    <p>
+                                        Seer offers custom software development tailored to the unique needs of your business. Whether you need specialized applications to process sensor data, integrate with your existing systems, or create custom dashboards for real-time visualization, our team of experienced developers can design and implement software solutions that align with your goals. We focus on creating intuitive, user-friendly interfaces that empower your team to access and act on data quickly and effectively, ensuring that your operations run smoothly and efficiently.
+                                    </p>
+                                </div>
+                            </div>
+                
+                        </div> <!-- end services-list -->
+                        
+                    </div> <!-- end 02 - tab services -->
+
+                    <!-- 03 - tab contact -->
+                    <div id="tab-contact" class="tab-content__item">
+
+                        <div class="row tab-content__item-header">
+                            <div class="column">
+                                <h2>Get in Touch.</h2>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="column">
+                                
+                                <p class="lead">
+                                    Ready to take your operations to the next level? Whether you have a question, need more information, or are ready to discuss how our solutions can benefit your business, we’re here to help. Reach out to our team of experts today, and let’s explore how SEER can empower your organization with cutting-edge sensor technology, expert consulting, and comprehensive solutions. Contact us via phone or email—we look forward to partnering with you!
+                                </p>
+
+                                <div class="row">
+                                    <div class="column lg-6 tab-12">
+                                        <h4>Contact us - ask for Brian!</h4>
+
+                                        <!--
+                                        <h4>Where to Find Us</h4>
+                
+                                        <p>
+                                        1100 Cherry Ridge Run<br>
+                                        La Grange, KY<br>
+                                        40031 US
+                                        </p>
+                                        -->
+                
+                                    </div>
+                
+                                    <div class="column lg-6 tab-12">
+                                        <!--
+                                        <h2>---</h2>
+                                       
+                                        <ul class="link-list">
+                                            <li><a href="#0">Facebook</a></li>
+                                            <li><a href="#0">Twitter</a></li>
+                                            <li><a href="#0">Instagram</a></li>
+                                        </ul>
+                                        -->
+                
+                                    </div>
+                                </div>
+
+                                <p class="tab-content__item-bottom">
+                                    <a href="mailto:#0" class="contact-email">Brian@i4seer.com</a>
+                                    <span class="contact-number"> 
+                                        <a href="tel:502-410-9932">+502-410-9932</a> 
+                                        <!--
+                                        <span>/</span>
+                                        <a href="tel:123-456-9000">+123 456 9000</a>
+                                        -->
+                                    </span>
+                                </p>
+
+                            </div>
+                        </div>
+                        
+                    </div> <!-- end 03 - tab contact -->
+
+                </div> <!-- end tab content -->
+
+                <!-- footer  -->
+                <footer>
+                    <div class="ss-copyright">
+                        <span>© Copyright Institute for Seer 2024</span>                         
+                    </div>
+                </footer>
+
+            </div>
+        </div>
+
+        <div class="ss-go-top">
+            <a class="smoothscroll" title="Back to Top" href="#top">
+                <span>Back to Top</span>
+                <svg viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" width="26" height="26"><path d="M7.5 1.5l.354-.354L7.5.793l-.354.353.354.354zm-.354.354l4 4 .708-.708-4-4-.708.708zm0-.708l-4 4 .708.708 4-4-.708-.708zM7 1.5V14h1V1.5H7z" fill="currentColor"></path></svg>
+             </a>
+        </div> <!-- end ss-go-top -->
+
+    </section> <!-- end s-details -->
+
+
+    <!-- Java Script
+    ================================================== -->
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/particles.min.js"></script>
+    <script src="js/particle-settings.js"></script>
+
+</body>
+
+</html>
