@@ -182,5 +182,25 @@
     <p>© 2025 i4Seer, Inc. All rights reserved.</p>
     <p><a href="privacy.html" target="_blank" rel="noopener noreferrer">Privacy Policy</a></p>
   </footer>
+
+  <!-- Cookie Banner -->
+  <div id="cookie-banner" style="display:none; position: fixed; bottom: 0; left: 0; right: 0; background: #1e3a8a; color: white; padding: 1rem; text-align: center; z-index: 1000;">
+    This website uses cookies to enhance the user experience. 
+    <a href="privacy.html" target="_blank" style="color: #bbf7d0; text-decoration: underline;">Learn more</a>.
+    <button onclick="acceptCookies()" style="margin-left: 1rem; padding: 0.5rem 1rem; background: #10b981; border: none; color: white; border-radius: 0.25rem; cursor: pointer;">Accept</button>
+  </div>
+
+  <script>
+    function acceptCookies() {
+      localStorage.setItem('cookiesAccepted', 'true');
+      document.getElementById('cookie-banner').style.display = 'none';
+    }
+
+    window.addEventListener('load', function () {
+      if (!localStorage.getItem('cookiesAccepted')) {
+        document.getElementById('cookie-banner').style.display = 'block';
+      }
+    });
+  </script>
 </body>
 </html>
