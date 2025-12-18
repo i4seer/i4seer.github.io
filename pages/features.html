@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tick Features - Web interface, cloud connectivity, sensor support, and software capabilities.">
+    <title>Features | Tick by i4Seer</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="icon" type="image/svg+xml" href="../images/favicon.svg">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="../index.html" class="logo">
+                <svg class="logo-icon" viewBox="0 0 32 32" fill="none">
+                    <path d="M4 16 L12 24 L28 8" stroke="#4fc3f7" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                i4Seer
+            </a>
+            <nav class="nav">
+                <a href="../index.html">Home</a>
+                <a href="product.html">Product</a>
+                <a href="features.html" class="active">Features</a>
+                <a href="quickstart.html">Quick Start</a>
+                <a href="protocols.html">Protocols</a>
+                <a href="../index.html#contact" class="nav-cta">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero" style="padding: 60px 0;">
+        <div class="container">
+            <h1>Software <span>Features</span></h1>
+            <p class="hero-tagline">Powerful software makes Tick more than just hardware</p>
+        </div>
+    </section>
+
+    <section class="features" style="background: var(--bg-primary); border: none;">
+        <div class="container">
+            <h2 class="section-title">Local Web Interface</h2>
+            <p class="section-subtitle">No app downloads, no cloud dependency—access directly from your browser</p>
+
+            <div class="screenshot-grid">
+                <div class="screenshot-card">
+                    <div class="screenshot-image" style="background: linear-gradient(135deg, #252526 0%, #1e1e1e 100%); padding: 20px;">
+                        <div style="text-align: left; width: 100%; font-family: monospace; font-size: 11px; color: #4fc3f7;">
+                            <div style="margin-bottom: 8px;">┌─ Dashboard ─────────────────┐</div>
+                            <div style="color: #888;">│ Temperature │ 72.4°F ▁▂▃▅▇ │</div>
+                            <div style="color: #888;">│ Humidity    │ 45.2%  ▂▃▄▅▆ │</div>
+                            <div style="color: #888;">│ Memory      │ 67.8%  [███░] │</div>
+                            <div>└─────────────────────────────┘</div>
+                        </div>
+                    </div>
+                    <div class="screenshot-info">
+                        <h4>Dashboard</h4>
+                        <p>Real-time sensor readings displayed as widgets. Sparkline charts show trends. Customizable refresh rates from 5 seconds to manual.</p>
+                    </div>
+                </div>
+
+                <div class="screenshot-card">
+                    <div class="screenshot-image" style="background: linear-gradient(135deg, #0c0c0c 0%, #1e1e1e 100%); padding: 20px;">
+                        <div style="text-align: left; width: 100%; font-family: monospace; font-size: 11px;">
+                            <div style="color: #4ec9b0;">[12:34:56] [INF] Sensor read complete</div>
+                            <div style="color: #4ec9b0;">[12:34:57] [INF] WiFi RSSI: -45 dBm</div>
+                            <div style="color: #f48771;">[12:34:58] [ERR] I2C timeout addr 0x76</div>
+                            <div style="color: #4fc3f7;">[12:34:59] [SYS] Reconnecting...</div>
+                            <div style="color: #dcdcaa;">$ status<span style="animation: blink 1s infinite;">_</span></div>
+                        </div>
+                    </div>
+                    <div class="screenshot-info">
+                        <h4>Console</h4>
+                        <p>Live log viewer with color-coded severity levels. Built-in command REPL for device control. Download logs for offline analysis.</p>
+                    </div>
+                </div>
+
+                <div class="screenshot-card">
+                    <div class="screenshot-image" style="background: linear-gradient(135deg, #252526 0%, #1e1e1e 100%); padding: 20px;">
+                        <div style="text-align: left; width: 100%; font-family: monospace; font-size: 11px; color: #888;">
+                            <div style="color: #4fc3f7; margin-bottom: 8px;">── Sensors ──</div>
+                            <div>● temperature <span style="color: #4caf50;">running</span> [Edit]</div>
+                            <div>● humidity <span style="color: #4caf50;">running</span> [Edit]</div>
+                            <div style="color: #4fc3f7; margin: 8px 0;">── Services ──</div>
+                            <div>● heartbeat <span style="color: #4caf50;">running</span></div>
+                            <div>● cloud_sync <span style="color: #ffa726;">idle</span></div>
+                        </div>
+                    </div>
+                    <div class="screenshot-info">
+                        <h4>Settings</h4>
+                        <p>Configure sensors, services, WiFi, and device options. Add or remove I2C sensors. Manage cloud connection settings.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Cloud Integration</h2>
+            <p class="section-subtitle">Optional Azure cloud connectivity for remote monitoring and fleet management</p>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">☁️</div>
+                    <h3>Twin API</h3>
+                    <p>Azure Functions-based REST API for device communication. Push readings, receive commands, sync configuration—all over HTTPS.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Data Storage</h3>
+                    <p>Azure Table Storage for readings, logs, and commands. Scalable, cost-effective storage with built-in retention policies.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🖥️</div>
+                    <h3>Web Dashboard</h3>
+                    <p>Browser-based UI for remote device monitoring. Same look and feel as local interface, accessible from anywhere.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📋</div>
+                    <h3>Command Queue</h3>
+                    <p>Send commands to devices remotely. Commands queue until device polls, then execute with result confirmation.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🏢</div>
+                    <h3>Fleet Management</h3>
+                    <p>Group devices into claims for organization. Broadcast commands to all devices in a group simultaneously.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🔐</div>
+                    <h3>Secure Auth</h3>
+                    <p>Per-device authentication keys. TLS encryption for all cloud communication. No passwords stored on device.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features" style="background: var(--bg-primary); border-top: 1px solid var(--border-color);">
+        <div class="container">
+            <h2 class="section-title">Supported Sensors</h2>
+            <p class="section-subtitle">I2C expansion supports hundreds of sensor types</p>
+
+            <div class="specs-grid">
+                <div class="spec-group">
+                    <h3>Temperature</h3>
+                    <div class="spec-row"><span class="spec-label">BME280</span><span class="spec-value">-40 to +85°C</span></div>
+                    <div class="spec-row"><span class="spec-label">SHT40</span><span class="spec-value">-40 to +125°C</span></div>
+                    <div class="spec-row"><span class="spec-label">TMP117</span><span class="spec-value">±0.1°C accuracy</span></div>
+                    <div class="spec-row"><span class="spec-label">DS18B20*</span><span class="spec-value">Waterproof probe</span></div>
+                </div>
+
+                <div class="spec-group">
+                    <h3>Environmental</h3>
+                    <div class="spec-row"><span class="spec-label">BME680</span><span class="spec-value">IAQ + VOC</span></div>
+                    <div class="spec-row"><span class="spec-label">SCD40</span><span class="spec-value">CO2 400-5000 ppm</span></div>
+                    <div class="spec-row"><span class="spec-label">SGP40</span><span class="spec-value">VOC index</span></div>
+                    <div class="spec-row"><span class="spec-label">PM2.5</span><span class="spec-value">Particulate matter</span></div>
+                </div>
+
+                <div class="spec-group">
+                    <h3>Light & Color</h3>
+                    <div class="spec-row"><span class="spec-label">TSL2591</span><span class="spec-value">Lux sensor</span></div>
+                    <div class="spec-row"><span class="spec-label">VEML7700</span><span class="spec-value">Ambient light</span></div>
+                    <div class="spec-row"><span class="spec-label">TCS34725</span><span class="spec-value">RGB color</span></div>
+                    <div class="spec-row"><span class="spec-label">AS7341</span><span class="spec-value">Spectral sensor</span></div>
+                </div>
+
+                <div class="spec-group">
+                    <h3>Motion & Position</h3>
+                    <div class="spec-row"><span class="spec-label">MPU6050</span><span class="spec-value">6-axis IMU</span></div>
+                    <div class="spec-row"><span class="spec-label">LIS3DH</span><span class="spec-value">3-axis accel</span></div>
+                    <div class="spec-row"><span class="spec-label">VL53L0X</span><span class="spec-value">ToF distance</span></div>
+                    <div class="spec-row"><span class="spec-label">QMC5883L</span><span class="spec-value">Magnetometer</span></div>
+                </div>
+            </div>
+
+            <p style="text-align: center; color: var(--text-muted); font-size: 13px; margin-top: 24px;">
+                * DS18B20 requires 1-Wire adapter. Contact us for custom sensor integrations.
+            </p>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Software Capabilities</h2>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">⏱️</div>
+                    <h3>Configurable Intervals</h3>
+                    <p>Set independent polling intervals for each sensor. From 1 second for fast-changing values to hours for slow trends.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">💾</div>
+                    <h3>Local Buffering</h3>
+                    <p>Readings buffered locally before cloud sync. Survives network outages. Configurable buffer size and retention.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🔄</div>
+                    <h3>OTA Updates</h3>
+                    <p>Update firmware over-the-air via cloud command. No physical access required for software updates.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>Watchdog</h3>
+                    <p>Hardware watchdog ensures recovery from crashes. Automatic restart if firmware hangs.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📝</div>
+                    <h3>Logging</h3>
+                    <p>Comprehensive logging with severity levels. Stream to console, store locally, or sync to cloud.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🌡️</div>
+                    <h3>Units & Formatting</h3>
+                    <p>Configurable units (°C/°F, metric/imperial). Local timezone support for timestamps.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact">
+        <div class="container">
+            <h2 class="section-title">Questions About Features?</h2>
+            <p>We're happy to discuss custom features and integrations.</p>
+            <a href="mailto:hello@i4seer.com" class="contact-email">hello@i4seer.com</a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <span>&copy; 2025 i4Seer, Inc. All rights reserved.</span>
+                <span>Tick is a trademark of i4Seer, Inc.</span>
+            </div>
+        </div>
+    </footer>
+
+    <style>
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+    </style>
+</body>
+</html>

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tick Quick Start Guide - Get your sensor module up and running in minutes.">
+    <title>Quick Start Guide | Tick by i4Seer</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="icon" type="image/svg+xml" href="../images/favicon.svg">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="../index.html" class="logo">
+                <svg class="logo-icon" viewBox="0 0 32 32" fill="none">
+                    <path d="M4 16 L12 24 L28 8" stroke="#4fc3f7" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                i4Seer
+            </a>
+            <nav class="nav">
+                <a href="../index.html">Home</a>
+                <a href="product.html">Product</a>
+                <a href="features.html">Features</a>
+                <a href="quickstart.html" class="active">Quick Start</a>
+                <a href="protocols.html">Protocols</a>
+                <a href="../index.html#contact" class="nav-cta">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero" style="padding: 60px 0;">
+        <div class="container">
+            <h1>Quick <span>Start</span> Guide</h1>
+            <p class="hero-tagline">Get your Tick sensor module running in under 5 minutes</p>
+        </div>
+    </section>
+
+    <section class="tutorial">
+        <div class="container">
+            <h2 class="section-title">Setup Steps</h2>
+            <p class="section-subtitle">Follow these steps to get started</p>
+
+            <div class="tutorial-steps">
+                <div class="tutorial-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Unbox Your Tick</h3>
+                        <p>Your package includes:</p>
+                        <ul style="margin: 12px 0 0 20px; color: var(--text-secondary);">
+                            <li>Tick sensor module</li>
+                            <li>USB-C power cable (1m)</li>
+                            <li>I2C sensor cable (JST-SH)</li>
+                            <li>Quick reference card</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="tutorial-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Connect Power</h3>
+                        <p>Plug the USB-C cable into Tick and connect to any 5V USB power source. The blue status LED will begin blinking, indicating the device is starting up.</p>
+                        <p style="margin-top: 12px; color: var(--accent);">💡 Use a quality USB power adapter (5V 1A minimum) for reliable operation.</p>
+                    </div>
+                </div>
+
+                <div class="tutorial-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Connect to Tick's WiFi</h3>
+                        <p>On first boot, Tick creates its own WiFi access point:</p>
+                        <div class="code-block" style="margin: 12px 0;">
+Network: <span class="string">Tick-XXXXXX</span>
+Password: <span class="string">ticksetup</span></div>
+                        <p>Connect your phone or laptop to this network.</p>
+                    </div>
+                </div>
+
+                <div class="tutorial-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Open the Web Interface</h3>
+                        <p>Once connected to Tick's WiFi, open your browser and navigate to:</p>
+                        <div class="code-block" style="margin: 12px 0;">
+<span class="string">http://192.168.4.1</span></div>
+                        <p>The Tick dashboard will load, showing device status and configuration options.</p>
+                    </div>
+                </div>
+
+                <div class="tutorial-step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h3>Configure Your WiFi</h3>
+                        <p>Navigate to <strong>Settings</strong> and enter your WiFi credentials:</p>
+                        <ol style="margin: 12px 0 0 20px; color: var(--text-secondary);">
+                            <li>Click the <strong>Settings</strong> tab</li>
+                            <li>Find the <strong>WiFi Configuration</strong> section</li>
+                            <li>Enter your network SSID and password</li>
+                            <li>Click <strong>Save & Restart</strong></li>
+                        </ol>
+                        <p style="margin-top: 12px;">Tick will restart and connect to your network. The AP will disappear once connected.</p>
+                    </div>
+                </div>
+
+                <div class="tutorial-step">
+                    <div class="step-number">6</div>
+                    <div class="step-content">
+                        <h3>Find Tick on Your Network</h3>
+                        <p>After connecting to your WiFi, access Tick using:</p>
+                        <div class="code-block" style="margin: 12px 0;">
+<span class="comment"># mDNS (if supported by your network)</span>
+<span class="string">http://tick-XXXXXX.local</span>
+
+<span class="comment"># Or use the IP address shown before restart</span>
+<span class="string">http://192.168.1.xxx</span></div>
+                        <p>Check your router's connected devices list if you need to find the IP address.</p>
+                    </div>
+                </div>
+
+                <div class="tutorial-step">
+                    <div class="step-number">7</div>
+                    <div class="step-content">
+                        <h3>Connect I2C Sensors (Optional)</h3>
+                        <p>To add external sensors:</p>
+                        <ol style="margin: 12px 0 0 20px; color: var(--text-secondary);">
+                            <li>Power off Tick (unplug USB)</li>
+                            <li>Connect your I2C sensor to the 4-pin JST connector</li>
+                            <li>Power on Tick</li>
+                            <li>Go to <strong>Settings → Sensors → + Add</strong></li>
+                            <li>Select your sensor type and configure</li>
+                        </ol>
+                        <p style="margin-top: 12px; color: var(--warning);">⚠️ Always connect/disconnect I2C sensors with power off.</p>
+                    </div>
+                </div>
+
+                <div class="tutorial-step">
+                    <div class="step-number">8</div>
+                    <div class="step-content">
+                        <h3>View Your Data</h3>
+                        <p>Return to the <strong>Dashboard</strong> tab to see your sensor readings. Data updates automatically based on your configured refresh rate.</p>
+                        <p style="margin-top: 12px;">Use the <strong>Console</strong> tab to view logs and send commands for troubleshooting.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Common Commands</h2>
+            <p class="section-subtitle">Use these in the Console tab</p>
+
+            <div class="specs-grid">
+                <div class="spec-group">
+                    <h3>Device Info</h3>
+                    <div class="spec-row"><span class="spec-label"><code>status</code></span><span class="spec-value">Show device status</span></div>
+                    <div class="spec-row"><span class="spec-label"><code>uptime</code></span><span class="spec-value">Show uptime info</span></div>
+                    <div class="spec-row"><span class="spec-label"><code>memory</code></span><span class="spec-value">Show memory usage</span></div>
+                    <div class="spec-row"><span class="spec-label"><code>network</code></span><span class="spec-value">Show WiFi info</span></div>
+                </div>
+
+                <div class="spec-group">
+                    <h3>Sensors</h3>
+                    <div class="spec-row"><span class="spec-label"><code>sensor list</code></span><span class="spec-value">List all sensors</span></div>
+                    <div class="spec-row"><span class="spec-label"><code>sensor read temp</code></span><span class="spec-value">Read specific sensor</span></div>
+                    <div class="spec-row"><span class="spec-label"><code>i2c scan</code></span><span class="spec-value">Scan I2C bus</span></div>
+                </div>
+
+                <div class="spec-group">
+                    <h3>System</h3>
+                    <div class="spec-row"><span class="spec-label"><code>restart</code></span><span class="spec-value">Soft restart device</span></div>
+                    <div class="spec-row"><span class="spec-label"><code>log show</code></span><span class="spec-value">Show recent logs</span></div>
+                    <div class="spec-row"><span class="spec-label"><code>help</code></span><span class="spec-value">Show all commands</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features" style="background: var(--bg-primary);">
+        <div class="container">
+            <h2 class="section-title">Cloud Setup (Optional)</h2>
+            <p class="section-subtitle">Connect to Twin API for remote monitoring</p>
+
+            <div class="tutorial-steps" style="max-width: 700px; margin: 0 auto;">
+                <div class="tutorial-step">
+                    <div class="step-number">A</div>
+                    <div class="step-content">
+                        <h3>Get Your Cloud Credentials</h3>
+                        <p>Contact i4Seer to receive your Twin API credentials:</p>
+                        <ul style="margin: 12px 0 0 20px; color: var(--text-secondary);">
+                            <li>API Endpoint URL</li>
+                            <li>Device ID (auto-generated from MAC)</li>
+                            <li>Device Key (secure token)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="tutorial-step">
+                    <div class="step-number">B</div>
+                    <div class="step-content">
+                        <h3>Enable Cloud Services</h3>
+                        <p>In the Tick web interface:</p>
+                        <ol style="margin: 12px 0 0 20px; color: var(--text-secondary);">
+                            <li>Go to <strong>Settings → Services</strong></li>
+                            <li>Enable <strong>Cloud Sync</strong> service</li>
+                            <li>Enter your API endpoint URL</li>
+                            <li>Save and restart</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="tutorial-step">
+                    <div class="step-number">C</div>
+                    <div class="step-content">
+                        <h3>Access Twin Dashboard</h3>
+                        <p>Open the Twin web dashboard in your browser. Enter your Device ID and Key to view your device remotely from anywhere.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Troubleshooting</h2>
+
+            <div class="features-grid" style="grid-template-columns: 1fr;">
+                <div class="protocol-card">
+                    <h3>❓ Can't find Tick's WiFi network</h3>
+                    <p>The access point only appears when Tick isn't connected to a WiFi network. If you've already configured WiFi, the AP won't show. Hold the reset button for 10 seconds to factory reset.</p>
+                </div>
+
+                <div class="protocol-card">
+                    <h3>❓ Dashboard shows "Loading..." forever</h3>
+                    <p>Check that you're connected to Tick's network (or the same network as Tick). Try refreshing the page. Check the Console tab for error messages.</p>
+                </div>
+
+                <div class="protocol-card">
+                    <h3>❓ I2C sensor not detected</h3>
+                    <p>Run <code>i2c scan</code> in the Console to see detected addresses. Verify wiring (VCC→3.3V, GND→GND, SDA→SDA, SCL→SCL). Some sensors need specific addresses configured.</p>
+                </div>
+
+                <div class="protocol-card">
+                    <h3>❓ Device keeps restarting</h3>
+                    <p>This usually indicates a power issue. Use a quality USB power source that can supply at least 500mA. Some USB ports on computers may not provide enough power.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact">
+        <div class="container">
+            <h2 class="section-title">Need Help?</h2>
+            <p>Our support team is here to assist with setup and configuration.</p>
+            <a href="mailto:hello@i4seer.com" class="contact-email">hello@i4seer.com</a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <span>&copy; 2025 i4Seer, Inc. All rights reserved.</span>
+                <span>Tick is a trademark of i4Seer, Inc.</span>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

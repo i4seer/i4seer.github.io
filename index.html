@@ -1,206 +1,302 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>i4Seer | Sensor Solutions</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      color: #1e1e1e;
-      background-color: #f9fafb;
-    }
-    header {
-      background-color: #ffffff;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 2rem;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-    }
-    .logo {
-      font-weight: 800;
-      font-size: 1.5rem;
-      color: #1e40af;
-    }
-    nav a {
-      margin-left: 1.5rem;
-      text-decoration: none;
-      color: #374151;
-      font-weight: 600;
-    }
-    .hero {
-      text-align: center;
-      padding: 6rem 2rem;
-      background: linear-gradient(to bottom right, #e0f2fe, #f0f9ff);
-    }
-    .hero h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-    }
-    .hero p {
-      font-size: 1.25rem;
-      max-width: 600px;
-      margin: 0 auto 2rem;
-    }
-    .btn {
-      background-color: #1e40af;
-      color: white;
-      padding: 0.75rem 1.5rem;
-      font-weight: 600;
-      border: none;
-      border-radius: 0.5rem;
-      cursor: pointer;
-      text-decoration: none;
-      margin: 0 0.5rem;
-    }
-    .section {
-      padding: 4rem 2rem;
-      max-width: 960px;
-      margin: 0 auto;
-    }
-    .features {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-    }
-    .feature {
-      background: white;
-      border-radius: 1rem;
-      padding: 1.5rem;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.05);
-    }
-    .product-image {
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-    .product-image img {
-      max-width: 360px;
-      width: 100%;
-      height: auto;
-      object-fit: contain;
-      border-radius: 1rem;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      margin: 0 auto;
-      display: block;
-    }
-    footer {
-      text-align: center;
-      padding: 2rem;
-      background-color: #f3f4f6;
-      color: #6b7280;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tick - Professional IoT sensor module by i4Seer. WiFi 6 connected, I2C expandable, cloud-ready edge device for industrial and commercial sensing applications.">
+    <title>Tick Sensor Module | i4Seer - The Foundation for Smarter Sensing</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
 </head>
 <body>
-  <header>
-    <div class="logo">i4Seer</div>
-    <nav>
-      <a href="#product">Product</a>
-      <a href="#docs">Docs</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo">
+                <svg class="logo-icon" viewBox="0 0 32 32" fill="none">
+                    <path d="M4 16 L12 24 L28 8" stroke="#4fc3f7" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                i4Seer
+            </a>
+            <nav class="nav">
+                <a href="index.html" class="active">Home</a>
+                <a href="pages/product.html">Product</a>
+                <a href="pages/features.html">Features</a>
+                <a href="pages/quickstart.html">Quick Start</a>
+                <a href="pages/protocols.html">Protocols</a>
+                <a href="#contact" class="nav-cta">Contact</a>
+            </nav>
+        </div>
+    </header>
 
-  <section class="hero">
-    <h1>Tick: The Foundation for Smarter Sensing</h1>
-    <p>Tick is a compact, Wi-Fi connected sensor that helps you monitor uptime, capture events, and stream data to your backend or the i4Seer Portal with ease.</p>
-    <a class="btn" href="#product">Explore Tick</a>
-    <a class="btn" href="#docs">Read Docs</a>
-  </section>
+    <section class="hero">
+        <div class="container">
+            <span class="badge">Now Available</span>
+            <h1>Meet <span>Tick</span></h1>
+            <p class="hero-tagline">A professional-grade IoT sensor module with WiFi 6 connectivity, I2C expansion, and cloud integration. Built for industrial reliability.</p>
+            <div class="hero-cta">
+                <a href="pages/product.html" class="btn btn-primary">Explore Product</a>
+                <a href="pages/quickstart.html" class="btn btn-secondary">Quick Start Guide</a>
+            </div>
+        </div>
+    </section>
 
-  <section id="product" class="section">
-    <h2>Meet Tick</h2>
-    <div class="product-image">
-      <img src="https://shop.m5stack.com/cdn/shop/files/7_1200x1200.webp?v=1711093978" alt="Tick Sensor Module" />
-    </div>
-    <p>Tick is a Wi-Fi connected sensor that delivers the number of ticks since reboot. It can report to the i4Seer Portal or to any JSON-compatible backend, and includes an internal web UI for seamless configuration.</p>
-    <p>Tick is the first of many sensors from i4Seer. As the foundational module in our growing platform, Tick paves the way for a robust ecosystem of connected, intelligent sensing devices that make edge data capture simpler and smarter.</p>
-    <div class="features">
-      <div class="feature">
-        <h3>Reports Ticks & Health</h3>
-        <p>Continuously reports ticks since last reboot and device health status to your portal or the i4Seer portal for uptime diagnostics and monitoring.</p>
-      </div>
-      <div class="feature">
-        <h3>Portal Integration</h3>
-        <p>Seamlessly integrates with the i4Seer Portal for real-time monitoring, diagnostics, and analytics.</p>
-      </div>
-      <div class="feature">
-        <h3>Configurable via Web UI</h3>
-        <p>Includes a local web interface for Wi-Fi setup, endpoint configuration, and debugging.</p>
-      </div>
-      <div class="feature">
-        <h3>Wi-Fi 6 Enabled</h3>
-        <p>Supports the latest Wi-Fi 6 (802.11ax) standard for faster, more reliable data delivery.</p>
-      </div>
-      <div class="feature">
-        <h3>USB-C & Sensor Expandability</h3>
-        <p>Features USB-C for power and programming, plus easy connector for I2C sensor extensions.</p>
-      </div>
-      <div class="feature">
-        <h3>Tech Platform</h3>
-        <p>Powered by the ESP32-C6 chip and built on MicroPython for flexibility, efficiency, and ease of development. Firmware is updated Over-The-Air (OTA) and is open source so you can customize as needed.</p>
-      </div>
-    </div>
-  </section>
+    <section class="product-showcase">
+        <div class="container">
+            <div class="product-image-container">
+                <img src="images/tick-device.svg" alt="Tick Sensor Module" class="product-image">
+            </div>
+        </div>
+    </section>
 
-  <section id="docs" class="section">
-    <h2>Documentation</h2>
-    <p>Start integrating Tick into your system quickly with our comprehensive guides.</p>
-    <ul>
-      <li><a href="#">Quick Start Guide</a></li>
-      <li><a href="#">Tick Communication Protocol</a></li>
-      <li><a href="#">Using the Tick Web UI</a></li>
-      <li><a href="#">Sending JSON to Custom Backends</a></li>
-    </ul>
-  </section>
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Why Choose Tick?</h2>
+            <p class="section-subtitle">Enterprise-ready sensor platform designed for reliability and ease of deployment</p>
 
-  <section id="about" class="section">
-    <h2>About i4Seer</h2>
-    <p>At Seer, we specialize in empowering industries with innovative sensor solutions and expert consulting. Our mission is to connect your business to the future through cutting-edge technology and comprehensive, tailored services.</p>
-    <p><strong>Applications:</strong></p>
-    <ul>
-      <li>Intelligent housing system</li>
-      <li>Industrial control system</li>
-      <li>Environmental monitoring system</li>
-      <li>Agricultural IoT systems</li>
-      <li>Consumer electronics</li>
-      <li>Service robots</li>
-    </ul>
-    <p>Discover how we can help you optimize, innovate, and succeed. Explore our services to see how we can support your business.</p>
-  </section>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📡</div>
+                    <h3>WiFi 6 Connectivity</h3>
+                    <p>Latest 802.11ax standard delivers faster speeds, better range, and improved performance in dense environments.</p>
+                </div>
 
-  <section id="contact" class="section">
-    <h2>Contact Us</h2>
-    <p>Have a question or want to collaborate on your sensor solution? Reach out to our team.</p>
-    <p>Email: <a href="mailto:hello@i4seer.com">hello@i4seer.com</a></p>
-  </section>
+                <div class="feature-card">
+                    <div class="feature-icon">🔌</div>
+                    <h3>I2C Sensor Expansion</h3>
+                    <p>4-pin I2C connector supports hundreds of compatible sensors. Temperature, humidity, pressure, air quality, and more.</p>
+                </div>
 
-  <footer>
-    <p>© 2025 i4Seer, Inc. All rights reserved.</p>
-    <p><a href="privacy.html" target="_blank" rel="noopener noreferrer">Privacy Policy</a></p>
-  </footer>
+                <div class="feature-card">
+                    <div class="feature-icon">☁️</div>
+                    <h3>Cloud Integration</h3>
+                    <p>Built-in Twin API support for Azure cloud connectivity. Real-time data sync, remote commands, and fleet management.</p>
+                </div>
 
-  <!-- Cookie Banner -->
-  <div id="cookie-banner" style="display:none; position: fixed; bottom: 0; left: 0; right: 0; background: #1e3a8a; color: white; padding: 1rem; text-align: center; z-index: 1000;">
-    This website uses cookies to enhance the user experience. 
-    <a href="privacy.html" target="_blank" style="color: #bbf7d0; text-decoration: underline;">Learn more</a>.
-    <button onclick="acceptCookies()" style="margin-left: 1rem; padding: 0.5rem 1rem; background: #10b981; border: none; color: white; border-radius: 0.25rem; cursor: pointer;">Accept</button>
-  </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌐</div>
+                    <h3>Local Web Interface</h3>
+                    <p>No app required. Access the dashboard, console, and settings directly from any browser on your network.</p>
+                </div>
 
-  <script>
-    function acceptCookies() {
-      localStorage.setItem('cookiesAccepted', 'true');
-      document.getElementById('cookie-banner').style.display = 'none';
-    }
+                <div class="feature-card">
+                    <div class="feature-icon">🔄</div>
+                    <h3>OTA Updates</h3>
+                    <p>Over-the-air firmware updates keep your devices current. Deploy updates across your entire fleet remotely.</p>
+                </div>
 
-    window.addEventListener('load', function () {
-      if (!localStorage.getItem('cookiesAccepted')) {
-        document.getElementById('cookie-banner').style.display = 'block';
-      }
-    });
-  </script>
+                <div class="feature-card">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>Industrial Grade</h3>
+                    <p>Black anodized aluminum enclosure with mounting holes. Designed for 24/7 operation in commercial environments.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="specs">
+        <div class="container">
+            <h2 class="section-title">Technical Specifications</h2>
+            <p class="section-subtitle">Built on proven technology for maximum reliability</p>
+
+            <div class="specs-grid">
+                <div class="spec-group">
+                    <h3>Processor</h3>
+                    <div class="spec-row">
+                        <span class="spec-label">Chip</span>
+                        <span class="spec-value">RP2350 (Pico 2W)</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">CPU</span>
+                        <span class="spec-value">Dual-core ARM Cortex-M33</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Clock Speed</span>
+                        <span class="spec-value">150 MHz</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">RAM</span>
+                        <span class="spec-value">520 KB SRAM</span>
+                    </div>
+                </div>
+
+                <div class="spec-group">
+                    <h3>Connectivity</h3>
+                    <div class="spec-row">
+                        <span class="spec-label">WiFi</span>
+                        <span class="spec-value">802.11ax (WiFi 6)</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Bands</span>
+                        <span class="spec-value">2.4 GHz</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Security</span>
+                        <span class="spec-value">WPA3</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Protocols</span>
+                        <span class="spec-value">HTTP, HTTPS, WebSocket</span>
+                    </div>
+                </div>
+
+                <div class="spec-group">
+                    <h3>Physical</h3>
+                    <div class="spec-row">
+                        <span class="spec-label">Dimensions</span>
+                        <span class="spec-value">65 × 38 × 12 mm</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Weight</span>
+                        <span class="spec-value">28g</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Enclosure</span>
+                        <span class="spec-value">Anodized Aluminum</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Color</span>
+                        <span class="spec-value">Matte Black</span>
+                    </div>
+                </div>
+
+                <div class="spec-group">
+                    <h3>Interfaces</h3>
+                    <div class="spec-row">
+                        <span class="spec-label">Power</span>
+                        <span class="spec-value">USB-C (5V)</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Expansion</span>
+                        <span class="spec-value">I2C 4-pin connector</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">I2C Voltage</span>
+                        <span class="spec-value">3.3V</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Power Draw</span>
+                        <span class="spec-value">&lt; 500mA typical</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="screenshots">
+        <div class="container">
+            <h2 class="section-title">Web Interface</h2>
+            <p class="section-subtitle">Intuitive dashboard accessible from any browser</p>
+
+            <div class="screenshot-grid">
+                <div class="screenshot-card">
+                    <div class="screenshot-image">[Dashboard Screenshot]</div>
+                    <div class="screenshot-info">
+                        <h4>Real-time Dashboard</h4>
+                        <p>Monitor all sensor readings at a glance with customizable widgets, sparklines, and historical data.</p>
+                    </div>
+                </div>
+
+                <div class="screenshot-card">
+                    <div class="screenshot-image">[Console Screenshot]</div>
+                    <div class="screenshot-info">
+                        <h4>Device Console</h4>
+                        <p>View live logs, send commands, and debug your device directly from the browser interface.</p>
+                    </div>
+                </div>
+
+                <div class="screenshot-card">
+                    <div class="screenshot-image">[Settings Screenshot]</div>
+                    <div class="screenshot-info">
+                        <h4>Configuration</h4>
+                        <p>Add sensors, configure services, manage WiFi settings, and update firmware—all from the web UI.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <h2 class="section-title">Simple Pricing</h2>
+            <p class="section-subtitle">Everything you need to get started</p>
+
+            <div class="price-card">
+                <h3>Tick Sensor Module</h3>
+                <div class="price">$89<span>/unit</span></div>
+                <ul class="price-includes">
+                    <li>Complete hardware module</li>
+                    <li>Pre-loaded firmware</li>
+                    <li>USB-C power cable</li>
+                    <li>I2C connector cable</li>
+                    <li>Quick start guide</li>
+                    <li>1 year firmware updates</li>
+                    <li>Email support</li>
+                </ul>
+                <a href="#contact" class="btn btn-primary" style="width: 100%;">Contact for Orders</a>
+            </div>
+
+            <p style="margin-top: 24px; color: var(--text-muted); font-size: 14px;">
+                Volume discounts available for orders of 10+ units.<br>
+                Custom firmware development available on request.
+            </p>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Get in Touch</h2>
+            <p>Ready to deploy smarter sensing? Have questions about Tick?</p>
+            <a href="mailto:hello@i4seer.com" class="contact-email">hello@i4seer.com</a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <svg class="logo-icon" viewBox="0 0 32 32" fill="none">
+                            <circle cx="16" cy="16" r="14" fill="#4fc3f7"/>
+                            <path d="M10 16 L14 20 L22 12" stroke="#1e1e1e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        i4Seer
+                    </a>
+                    <p>The Foundation for Smarter Sensing. Professional IoT solutions for industrial and commercial applications.</p>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="pages/product.html">Overview</a></li>
+                        <li><a href="pages/features.html">Features</a></li>
+                        <li><a href="pages/protocols.html">Protocols</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="pages/quickstart.html">Quick Start</a></li>
+                        <li><a href="pages/protocols.html">API Reference</a></li>
+                        <li><a href="#contact">Support</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="mailto:hello@i4seer.com">Email</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <span>&copy; 2025 i4Seer, Inc. All rights reserved.</span>
+                <span>Tick is a trademark of i4Seer, Inc.</span>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
