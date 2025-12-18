@@ -93,7 +93,73 @@
         </div>
     </section>
 
-    <section class="specs">
+    <section class="screenshots" style="background: var(--bg-primary); border: none;">
+        <div class="container">
+            <h2 class="section-title">Web Interface</h2>
+            <p class="section-subtitle">Intuitive dashboard accessible from any browser</p>
+
+            <div class="screenshot-grid">
+                <div class="screenshot-card">
+                    <div class="screenshot-image">
+                        <img src="images/screenshots/dashboard.png" alt="Tick Dashboard" style="width: 100%; height: auto; border-radius: 4px;">
+                    </div>
+                    <div class="screenshot-info">
+                        <h4>Real-time Dashboard</h4>
+                        <p>Monitor all sensor readings at a glance with customizable widgets, sparklines, and historical data.</p>
+                    </div>
+                </div>
+
+                <div class="screenshot-card">
+                    <div class="screenshot-image">
+                        <img src="images/screenshots/console.png" alt="Tick Console" style="width: 100%; height: auto; border-radius: 4px;">
+                    </div>
+                    <div class="screenshot-info">
+                        <h4>Device Console</h4>
+                        <p>View live logs, send commands, and debug your device directly from the browser interface.</p>
+                    </div>
+                </div>
+
+                <div class="screenshot-card">
+                    <div class="screenshot-image">
+                        <img src="images/screenshots/settings.png" alt="Tick Settings" style="width: 100%; height: auto; border-radius: 4px;">
+                    </div>
+                    <div class="screenshot-info">
+                        <h4>Configuration</h4>
+                        <p>Add sensors, configure services, manage WiFi settings, and update firmware—all from the web UI.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing" id="pricing" style="background: var(--bg-secondary); border-top: 1px solid var(--border-color);">
+        <div class="container">
+            <h2 class="section-title">Simple Pricing</h2>
+            <p class="section-subtitle">Everything you need to get started</p>
+
+            <div class="price-card">
+                <h3>Tick Sensor Module</h3>
+                <div class="price">$89<span>/unit</span></div>
+                <ul class="price-includes">
+                    <li>Complete hardware module</li>
+                    <li>Pre-loaded firmware</li>
+                    <li>USB-C power cable</li>
+                    <li>I2C connector cable</li>
+                    <li>Quick start guide</li>
+                    <li>1 year firmware updates</li>
+                    <li>Email support</li>
+                </ul>
+                <a href="#contact" class="btn btn-primary" style="width: 100%;">Contact for Orders</a>
+            </div>
+
+            <p style="margin-top: 24px; color: var(--text-muted); font-size: 14px;">
+                Volume discounts available for orders of 10+ units.<br>
+                Custom firmware development available on request.
+            </p>
+        </div>
+    </section>
+
+    <section class="specs" style="background: var(--bg-primary);">
         <div class="container">
             <h2 class="section-title">Technical Specifications</h2>
             <p class="section-subtitle">Built on proven technology for maximum reliability</p>
@@ -182,66 +248,6 @@
         </div>
     </section>
 
-    <section class="screenshots">
-        <div class="container">
-            <h2 class="section-title">Web Interface</h2>
-            <p class="section-subtitle">Intuitive dashboard accessible from any browser</p>
-
-            <div class="screenshot-grid">
-                <div class="screenshot-card">
-                    <div class="screenshot-image">[Dashboard Screenshot]</div>
-                    <div class="screenshot-info">
-                        <h4>Real-time Dashboard</h4>
-                        <p>Monitor all sensor readings at a glance with customizable widgets, sparklines, and historical data.</p>
-                    </div>
-                </div>
-
-                <div class="screenshot-card">
-                    <div class="screenshot-image">[Console Screenshot]</div>
-                    <div class="screenshot-info">
-                        <h4>Device Console</h4>
-                        <p>View live logs, send commands, and debug your device directly from the browser interface.</p>
-                    </div>
-                </div>
-
-                <div class="screenshot-card">
-                    <div class="screenshot-image">[Settings Screenshot]</div>
-                    <div class="screenshot-info">
-                        <h4>Configuration</h4>
-                        <p>Add sensors, configure services, manage WiFi settings, and update firmware—all from the web UI.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="pricing" id="pricing">
-        <div class="container">
-            <h2 class="section-title">Simple Pricing</h2>
-            <p class="section-subtitle">Everything you need to get started</p>
-
-            <div class="price-card">
-                <h3>Tick Sensor Module</h3>
-                <div class="price">$89<span>/unit</span></div>
-                <ul class="price-includes">
-                    <li>Complete hardware module</li>
-                    <li>Pre-loaded firmware</li>
-                    <li>USB-C power cable</li>
-                    <li>I2C connector cable</li>
-                    <li>Quick start guide</li>
-                    <li>1 year firmware updates</li>
-                    <li>Email support</li>
-                </ul>
-                <a href="#contact" class="btn btn-primary" style="width: 100%;">Contact for Orders</a>
-            </div>
-
-            <p style="margin-top: 24px; color: var(--text-muted); font-size: 14px;">
-                Volume discounts available for orders of 10+ units.<br>
-                Custom firmware development available on request.
-            </p>
-        </div>
-    </section>
-
     <section class="contact" id="contact">
         <div class="container">
             <h2 class="section-title">Get in Touch</h2>
@@ -256,47 +262,82 @@
                 <div class="footer-brand">
                     <a href="index.html" class="logo">
                         <svg class="logo-icon" viewBox="0 0 32 32" fill="none">
-                            <circle cx="16" cy="16" r="14" fill="#4fc3f7"/>
-                            <path d="M10 16 L14 20 L22 12" stroke="#1e1e1e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M4 16 L12 24 L28 8" stroke="#4fc3f7" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                         i4Seer
                     </a>
-                    <p>The Foundation for Smarter Sensing. Professional IoT solutions for industrial and commercial applications.</p>
+                    <p>IoT consulting and product development. We build connected sensor systems, custom firmware, and cloud integrations for industrial and commercial applications.</p>
                 </div>
 
-                <div class="footer-links">
-                    <h4>Product</h4>
-                    <ul>
-                        <li><a href="pages/product.html">Overview</a></li>
-                        <li><a href="pages/features.html">Features</a></li>
-                        <li><a href="pages/protocols.html">Protocols</a></li>
-                        <li><a href="#pricing">Pricing</a></li>
-                    </ul>
-                </div>
+                <div class="footer-nav">
+                    <div class="footer-links">
+                        <h4>Product</h4>
+                        <ul>
+                            <li><a href="pages/product.html">Overview</a></li>
+                            <li><a href="pages/features.html">Features</a></li>
+                            <li><a href="pages/protocols.html">Protocols</a></li>
+                            <li><a href="#pricing">Pricing</a></li>
+                        </ul>
+                    </div>
 
-                <div class="footer-links">
-                    <h4>Resources</h4>
-                    <ul>
-                        <li><a href="pages/quickstart.html">Quick Start</a></li>
-                        <li><a href="pages/protocols.html">API Reference</a></li>
-                        <li><a href="#contact">Support</a></li>
-                    </ul>
-                </div>
+                    <div class="footer-links">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li><a href="pages/quickstart.html">Quick Start</a></li>
+                            <li><a href="pages/protocols.html">API Reference</a></li>
+                            <li><a href="#contact">Support</a></li>
+                        </ul>
+                    </div>
 
-                <div class="footer-links">
-                    <h4>Company</h4>
-                    <ul>
-                        <li><a href="#contact">Contact</a></li>
-                        <li><a href="mailto:hello@i4seer.com">Email</a></li>
-                    </ul>
+                    <div class="footer-links">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="#contact">Custom Firmware</a></li>
+                            <li><a href="#contact">Hardware Design</a></li>
+                            <li><a href="#contact">Cloud Integration</a></li>
+                            <li><a href="#contact">IoT Consulting</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 
             <div class="footer-bottom">
-                <span>&copy; 2025 i4Seer, Inc. All rights reserved.</span>
-                <span>Tick is a trademark of i4Seer, Inc.</span>
+                <span>&copy; 2025 i4Seer, LLC. All rights reserved.</span>
+                <span class="footer-legal">
+                    <a href="pages/privacy.html">Privacy Policy</a>
+                    <span class="separator">|</span>
+                    <a href="pages/terms.html">Terms of Service</a>
+                </span>
             </div>
         </div>
     </footer>
+
+    <!-- Cookie Consent Banner -->
+    <div id="cookie-banner" class="cookie-banner" style="display: none;">
+        <div class="cookie-content">
+            <p>We use cookies to improve your experience. By continuing to use this site, you agree to our <a href="pages/privacy.html">Privacy Policy</a>.</p>
+            <div class="cookie-buttons">
+                <button id="cookie-accept" class="btn btn-primary">Accept</button>
+                <button id="cookie-decline" class="btn btn-secondary">Decline</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        (function() {
+            var consent = localStorage.getItem('cookie-consent');
+            if (!consent) {
+                document.getElementById('cookie-banner').style.display = 'flex';
+            }
+            document.getElementById('cookie-accept').onclick = function() {
+                localStorage.setItem('cookie-consent', 'accepted');
+                document.getElementById('cookie-banner').style.display = 'none';
+            };
+            document.getElementById('cookie-decline').onclick = function() {
+                localStorage.setItem('cookie-consent', 'declined');
+                document.getElementById('cookie-banner').style.display = 'none';
+            };
+        })();
+    </script>
 </body>
 </html>

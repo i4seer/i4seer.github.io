@@ -42,51 +42,32 @@
 
             <div class="screenshot-grid">
                 <div class="screenshot-card">
-                    <div class="screenshot-image" style="background: linear-gradient(135deg, #252526 0%, #1e1e1e 100%); padding: 20px;">
-                        <div style="text-align: left; width: 100%; font-family: monospace; font-size: 11px; color: #4fc3f7;">
-                            <div style="margin-bottom: 8px;">┌─ Dashboard ─────────────────┐</div>
-                            <div style="color: #888;">│ Temperature │ 72.4°F ▁▂▃▅▇ │</div>
-                            <div style="color: #888;">│ Humidity    │ 45.2%  ▂▃▄▅▆ │</div>
-                            <div style="color: #888;">│ Memory      │ 67.8%  [███░] │</div>
-                            <div>└─────────────────────────────┘</div>
-                        </div>
+                    <div class="screenshot-image">
+                        <img src="../images/screenshots/dashboard.png" alt="Tick Dashboard" style="width: 100%; height: auto; border-radius: 4px;">
                     </div>
                     <div class="screenshot-info">
                         <h4>Dashboard</h4>
-                        <p>Real-time sensor readings displayed as widgets. Sparkline charts show trends. Customizable refresh rates from 5 seconds to manual.</p>
+                        <p>Real-time sensor readings with device info, network status, and memory usage. Live sparkline charts show RSSI and memory trends. Configurable refresh rates.</p>
                     </div>
                 </div>
 
                 <div class="screenshot-card">
-                    <div class="screenshot-image" style="background: linear-gradient(135deg, #0c0c0c 0%, #1e1e1e 100%); padding: 20px;">
-                        <div style="text-align: left; width: 100%; font-family: monospace; font-size: 11px;">
-                            <div style="color: #4ec9b0;">[12:34:56] [INF] Sensor read complete</div>
-                            <div style="color: #4ec9b0;">[12:34:57] [INF] WiFi RSSI: -45 dBm</div>
-                            <div style="color: #f48771;">[12:34:58] [ERR] I2C timeout addr 0x76</div>
-                            <div style="color: #4fc3f7;">[12:34:59] [SYS] Reconnecting...</div>
-                            <div style="color: #dcdcaa;">$ status<span style="animation: blink 1s infinite;">_</span></div>
-                        </div>
+                    <div class="screenshot-image">
+                        <img src="../images/screenshots/console.png" alt="Tick Console" style="width: 100%; height: auto; border-radius: 4px;">
                     </div>
                     <div class="screenshot-info">
                         <h4>Console</h4>
-                        <p>Live log viewer with color-coded severity levels. Built-in command REPL for device control. Download logs for offline analysis.</p>
+                        <p>Live log viewer with color-coded messages. See startup sequence, sensor status, WiFi connection, and NTP sync. Built-in command REPL at the bottom.</p>
                     </div>
                 </div>
 
                 <div class="screenshot-card">
-                    <div class="screenshot-image" style="background: linear-gradient(135deg, #252526 0%, #1e1e1e 100%); padding: 20px;">
-                        <div style="text-align: left; width: 100%; font-family: monospace; font-size: 11px; color: #888;">
-                            <div style="color: #4fc3f7; margin-bottom: 8px;">── Sensors ──</div>
-                            <div>● temperature <span style="color: #4caf50;">running</span> [Edit]</div>
-                            <div>● humidity <span style="color: #4caf50;">running</span> [Edit]</div>
-                            <div style="color: #4fc3f7; margin: 8px 0;">── Services ──</div>
-                            <div>● heartbeat <span style="color: #4caf50;">running</span></div>
-                            <div>● cloud_sync <span style="color: #ffa726;">idle</span></div>
-                        </div>
+                    <div class="screenshot-image">
+                        <img src="../images/screenshots/settings.png" alt="Tick Settings Page" style="width: 100%; height: auto; border-radius: 4px;">
                     </div>
                     <div class="screenshot-info">
                         <h4>Settings</h4>
-                        <p>Configure sensors, services, WiFi, and device options. Add or remove I2C sensors. Manage cloud connection settings.</p>
+                        <p>Configure device name, timezone, WiFi credentials, and log settings. Backup and restore configurations. All settings persist across reboots.</p>
                     </div>
                 </div>
             </div>
@@ -237,12 +218,86 @@
 
     <footer class="site-footer">
         <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="../index.html" class="logo">
+                        <svg class="logo-icon" viewBox="0 0 32 32" fill="none">
+                            <path d="M4 16 L12 24 L28 8" stroke="#4fc3f7" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        i4Seer
+                    </a>
+                    <p>IoT consulting and product development. We build connected sensor systems, custom firmware, and cloud integrations for industrial and commercial applications.</p>
+                </div>
+
+                <div class="footer-nav">
+                    <div class="footer-links">
+                        <h4>Product</h4>
+                        <ul>
+                            <li><a href="product.html">Overview</a></li>
+                            <li><a href="features.html">Features</a></li>
+                            <li><a href="protocols.html">Protocols</a></li>
+                            <li><a href="../index.html#pricing">Pricing</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-links">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li><a href="quickstart.html">Quick Start</a></li>
+                            <li><a href="protocols.html">API Reference</a></li>
+                            <li><a href="../index.html#contact">Support</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-links">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="../index.html#contact">Custom Firmware</a></li>
+                            <li><a href="../index.html#contact">Hardware Design</a></li>
+                            <li><a href="../index.html#contact">Cloud Integration</a></li>
+                            <li><a href="../index.html#contact">IoT Consulting</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
             <div class="footer-bottom">
-                <span>&copy; 2025 i4Seer, Inc. All rights reserved.</span>
-                <span>Tick is a trademark of i4Seer, Inc.</span>
+                <span>&copy; 2025 i4Seer, LLC. All rights reserved.</span>
+                <span class="footer-legal">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <span class="separator">|</span>
+                    <a href="terms.html">Terms of Service</a>
+                </span>
             </div>
         </div>
     </footer>
+
+    <div id="cookie-banner" class="cookie-banner" style="display: none;">
+        <div class="cookie-content">
+            <p>We use cookies to improve your experience. By continuing to use this site, you agree to our <a href="privacy.html">Privacy Policy</a>.</p>
+            <div class="cookie-buttons">
+                <button id="cookie-accept" class="btn btn-primary">Accept</button>
+                <button id="cookie-decline" class="btn btn-secondary">Decline</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        (function() {
+            var consent = localStorage.getItem('cookie-consent');
+            if (!consent) {
+                document.getElementById('cookie-banner').style.display = 'flex';
+            }
+            document.getElementById('cookie-accept').onclick = function() {
+                localStorage.setItem('cookie-consent', 'accepted');
+                document.getElementById('cookie-banner').style.display = 'none';
+            };
+            document.getElementById('cookie-decline').onclick = function() {
+                localStorage.setItem('cookie-consent', 'declined');
+                document.getElementById('cookie-banner').style.display = 'none';
+            };
+        })();
+    </script>
 
     <style>
         @keyframes blink {

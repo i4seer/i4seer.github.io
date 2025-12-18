@@ -570,11 +570,22 @@ a:hover {
 
 .footer-brand .logo {
     margin-bottom: 12px;
+    display: inline-flex;
 }
 
 .footer-brand p {
     font-size: 13px;
     color: var(--text-secondary);
+}
+
+.footer-nav {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.footer-links {
+    padding-top: 0;
 }
 
 .footer-links h4 {
@@ -583,6 +594,7 @@ a:hover {
     letter-spacing: 1px;
     color: var(--text-primary);
     margin-bottom: 16px;
+    margin-top: 0;
 }
 
 .footer-links ul {
@@ -610,6 +622,63 @@ a:hover {
     align-items: center;
     font-size: 13px;
     color: var(--text-muted);
+}
+
+.footer-legal a {
+    color: var(--text-muted);
+}
+
+.footer-legal a:hover {
+    color: var(--accent);
+}
+
+.footer-legal .separator {
+    margin: 0 8px;
+    color: var(--border-color);
+}
+
+/* Cookie Consent Banner */
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--bg-tertiary);
+    border-top: 1px solid var(--border-color);
+    padding: 16px 20px;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+}
+
+.cookie-content {
+    max-width: 1100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.cookie-content p {
+    margin: 0;
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+
+.cookie-content a {
+    color: var(--accent);
+}
+
+.cookie-buttons {
+    display: flex;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.cookie-buttons .btn {
+    padding: 8px 20px;
+    font-size: 13px;
 }
 
 /* Badge/Tag */
