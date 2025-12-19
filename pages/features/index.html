@@ -22,7 +22,6 @@
                 <a href="/pages/product/">Product</a>
                 <a href="/pages/features/" class="active">Features</a>
                 <a href="/pages/quickstart/">Quick Start</a>
-                <a href="/pages/protocols/">Protocols</a>
                 <a href="/#contact" class="nav-cta">Contact</a>
             </nav>
         </div>
@@ -30,8 +29,53 @@
 
     <section class="hero" style="padding: 60px 0;">
         <div class="container">
-            <h1>Software <span>Features</span></h1>
-            <p class="hero-tagline">Powerful software makes Tick more than just hardware</p>
+            <h1>Tick <span>Features</span></h1>
+            <p class="hero-tagline">Powerful sensing capabilities out of the box, with room to grow</p>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Core Sensing Capabilities</h2>
+            <p class="section-subtitle">What Tick can detect and monitor right out of the box</p>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🔢</div>
+                    <h3>Incremental Counting</h3>
+                    <p>Persistent counters that survive power loss and reboots. Track events, cycles, pulses, or any activity. Counts are stored locally and synced to cloud.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Power Loss Detection</h3>
+                    <p>Automatic detection and logging of power outages. Track uptime, know exactly when power was lost and restored, and get alerts on recovery.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📶</div>
+                    <h3>Connection Monitoring</h3>
+                    <p>Monitor signal strength and connection status across WiFi, cellular, or LoRa links. Historical data helps identify connectivity issues before they impact operations.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📍</div>
+                    <h3>Movement & Tamper Detection</h3>
+                    <p>With an accelerometer sensor, detect when the device is moved, tilted, dropped, or tampered with. Protect assets that shouldn't be relocated.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🚶</div>
+                    <h3>Presence & Motion Sensing</h3>
+                    <p>Add a PIR sensor to detect people or animals passing by. Count foot traffic, monitor room occupancy, or create motion-triggered alerts and automations.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🔔</div>
+                    <h3>Threshold Alerts</h3>
+                    <p>Set thresholds on any sensor value. Get notified when counts exceed limits, temperatures cross boundaries, or any condition needs attention.</p>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -134,6 +178,30 @@
                 </div>
 
                 <div class="spec-group">
+                    <h3>Presence & Motion</h3>
+                    <div class="spec-row"><span class="spec-label">PIR (HC-SR501)</span><span class="spec-value">Human/animal detect</span></div>
+                    <div class="spec-row"><span class="spec-label">RCWL-0516</span><span class="spec-value">Microwave motion</span></div>
+                    <div class="spec-row"><span class="spec-label">VL53L0X</span><span class="spec-value">ToF distance/presence</span></div>
+                    <div class="spec-row"><span class="spec-label">AMG8833</span><span class="spec-value">Thermal imaging</span></div>
+                </div>
+
+                <div class="spec-group">
+                    <h3>Light & Detection</h3>
+                    <div class="spec-row"><span class="spec-label">TSL2591</span><span class="spec-value">Lux sensor</span></div>
+                    <div class="spec-row"><span class="spec-label">VEML7700</span><span class="spec-value">Light change detect</span></div>
+                    <div class="spec-row"><span class="spec-label">BH1750</span><span class="spec-value">On/off detection</span></div>
+                    <div class="spec-row"><span class="spec-label">TCS34725</span><span class="spec-value">RGB color sensing</span></div>
+                </div>
+
+                <div class="spec-group">
+                    <h3>Pressure & Airflow</h3>
+                    <div class="spec-row"><span class="spec-label">BMP390</span><span class="spec-value">Barometric pressure</span></div>
+                    <div class="spec-row"><span class="spec-label">DPS310</span><span class="spec-value">Differential pressure</span></div>
+                    <div class="spec-row"><span class="spec-label">SDP810</span><span class="spec-value">Fan airflow sensing</span></div>
+                    <div class="spec-row"><span class="spec-label">MS5611</span><span class="spec-value">High-res pressure</span></div>
+                </div>
+
+                <div class="spec-group">
                     <h3>Environmental</h3>
                     <div class="spec-row"><span class="spec-label">BME680</span><span class="spec-value">IAQ + VOC</span></div>
                     <div class="spec-row"><span class="spec-label">SCD40</span><span class="spec-value">CO2 400-5000 ppm</span></div>
@@ -142,25 +210,16 @@
                 </div>
 
                 <div class="spec-group">
-                    <h3>Light & Color</h3>
-                    <div class="spec-row"><span class="spec-label">TSL2591</span><span class="spec-value">Lux sensor</span></div>
-                    <div class="spec-row"><span class="spec-label">VEML7700</span><span class="spec-value">Ambient light</span></div>
-                    <div class="spec-row"><span class="spec-label">TCS34725</span><span class="spec-value">RGB color</span></div>
-                    <div class="spec-row"><span class="spec-label">AS7341</span><span class="spec-value">Spectral sensor</span></div>
-                </div>
-
-                <div class="spec-group">
                     <h3>Motion & Position</h3>
                     <div class="spec-row"><span class="spec-label">MPU6050</span><span class="spec-value">6-axis IMU</span></div>
                     <div class="spec-row"><span class="spec-label">LIS3DH</span><span class="spec-value">3-axis accel</span></div>
-                    <div class="spec-row"><span class="spec-label">VL53L0X</span><span class="spec-value">ToF distance</span></div>
+                    <div class="spec-row"><span class="spec-label">ICM-20948</span><span class="spec-value">9-axis IMU</span></div>
                     <div class="spec-row"><span class="spec-label">QMC5883L</span><span class="spec-value">Magnetometer</span></div>
                 </div>
             </div>
 
             <p style="text-align: center; color: var(--text-muted); font-size: 13px; margin-top: 24px;">
                 * DS18B20 requires 1-Wire adapter. Contact us for custom sensor integrations.
-            </p>
         </div>
     </section>
 
@@ -208,6 +267,55 @@
         </div>
     </section>
 
+    <section class="features" style="background: var(--bg-primary); border: none;">
+        <div class="container">
+            <h2 class="section-title">Integration & Automation</h2>
+            <p class="section-subtitle">Connect locally or remotely—Tick works with your existing systems</p>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🌐</div>
+                    <h3>Local HTTP API</h3>
+                    <p>RESTful endpoints accessible on your local network. Query sensor data, send commands, and configure settings without cloud dependency.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">☁️</div>
+                    <h3>Cloud Twin API</h3>
+                    <p>Azure-based REST API for remote access. Push readings, receive commands, and manage devices from anywhere with internet access.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🔗</div>
+                    <h3>Webhook Support</h3>
+                    <p>Trigger external systems on events. Send alerts to Slack, update databases, or integrate with automation platforms.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>JSON Data Format</h3>
+                    <p>All data exchanged in standard JSON. Easy parsing for any programming language or integration platform.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🏠</div>
+                    <h3>Home Assistant</h3>
+                    <p>Native integration with Home Assistant for smart home automation. Expose sensors and control devices through your HA dashboard.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📖</div>
+                    <h3>Full Documentation</h3>
+                    <p>Complete API reference with examples. Everything you need to build custom integrations.</p>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 32px;">
+                <a href="/pages/protocols/" class="btn btn-secondary">View API Documentation</a>
+            </div>
+        </div>
+    </section>
+
     <section class="contact">
         <div class="container">
             <h2 class="section-title">Questions About Features?</h2>
@@ -235,7 +343,6 @@
                         <ul>
                             <li><a href="/pages/product/">Overview</a></li>
                             <li><a href="/pages/features/">Features</a></li>
-                            <li><a href="/pages/protocols/">Protocols</a></li>
                             <li><a href="/#pricing">Pricing</a></li>
                         </ul>
                     </div>

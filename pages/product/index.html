@@ -22,7 +22,6 @@
                 <a href="/pages/product/" class="active">Product</a>
                 <a href="/pages/features/">Features</a>
                 <a href="/pages/quickstart/">Quick Start</a>
-                <a href="/pages/protocols/">Protocols</a>
                 <a href="/#contact" class="nav-cta">Contact</a>
             </nav>
         </div>
@@ -39,111 +38,6 @@
         <div class="container">
             <div class="product-image-container">
                 <img src="../../images/tick-device.svg" alt="Tick Sensor Module" class="product-image">
-            </div>
-        </div>
-    </section>
-
-    <section class="features" style="background: var(--bg-primary); border: none;">
-        <div class="container">
-            <h2 class="section-title">What's Inside</h2>
-            <p class="section-subtitle">Every component chosen for reliability and performance</p>
-
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">🧠</div>
-                    <h3>RP2350 Processor</h3>
-                    <p>Raspberry Pi's latest dual-core ARM Cortex-M33 running at 150 MHz with 520KB SRAM. Powerful enough for edge computing, efficient enough for 24/7 operation.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">📶</div>
-                    <h3>WiFi 6 Radio</h3>
-                    <p>CYW43439 wireless chip with 802.11ax support. Better range, faster speeds, and improved reliability in environments with many wireless devices.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">🔋</div>
-                    <h3>USB-C Power</h3>
-                    <p>Standard USB-C connector for easy power. Works with any 5V USB power source—wall adapters, battery packs, or powered USB hubs.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">🔧</div>
-                    <h3>I2C Expansion</h3>
-                    <p>4-pin JST connector provides 3.3V I2C bus access. Connect temperature sensors, air quality monitors, accelerometers, and hundreds of other I2C devices.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">🏭</div>
-                    <h3>Aluminum Enclosure</h3>
-                    <p>Black anodized aluminum case with mounting holes. Provides RF shielding, heat dissipation, and protection for industrial environments.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">💡</div>
-                    <h3>Status LED</h3>
-                    <p>Blue LED indicates device status at a glance. Solid for connected, blinking for activity, off for standby mode.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="specs">
-        <div class="container">
-            <h2 class="section-title">Full Specifications</h2>
-
-            <div class="specs-grid">
-                <div class="spec-group">
-                    <h3>Processor</h3>
-                    <div class="spec-row"><span class="spec-label">Chip</span><span class="spec-value">RP2350</span></div>
-                    <div class="spec-row"><span class="spec-label">Architecture</span><span class="spec-value">Dual ARM Cortex-M33</span></div>
-                    <div class="spec-row"><span class="spec-label">Clock Speed</span><span class="spec-value">150 MHz</span></div>
-                    <div class="spec-row"><span class="spec-label">SRAM</span><span class="spec-value">520 KB</span></div>
-                    <div class="spec-row"><span class="spec-label">Flash</span><span class="spec-value">4 MB</span></div>
-                    <div class="spec-row"><span class="spec-label">FPU</span><span class="spec-value">Yes (single precision)</span></div>
-                </div>
-
-                <div class="spec-group">
-                    <h3>Wireless</h3>
-                    <div class="spec-row"><span class="spec-label">WiFi Standard</span><span class="spec-value">802.11ax (WiFi 6)</span></div>
-                    <div class="spec-row"><span class="spec-label">Frequency</span><span class="spec-value">2.4 GHz</span></div>
-                    <div class="spec-row"><span class="spec-label">Security</span><span class="spec-value">WPA/WPA2/WPA3</span></div>
-                    <div class="spec-row"><span class="spec-label">Antenna</span><span class="spec-value">Integrated PCB</span></div>
-                    <div class="spec-row"><span class="spec-label">Range</span><span class="spec-value">Up to 50m (typical)</span></div>
-                </div>
-
-                <div class="spec-group">
-                    <h3>Power</h3>
-                    <div class="spec-row"><span class="spec-label">Input</span><span class="spec-value">USB-C (5V DC)</span></div>
-                    <div class="spec-row"><span class="spec-label">Typical Draw</span><span class="spec-value">~250 mA</span></div>
-                    <div class="spec-row"><span class="spec-label">Max Draw</span><span class="spec-value">500 mA</span></div>
-                    <div class="spec-row"><span class="spec-label">Power Consumption</span><span class="spec-value">~1.25W typical</span></div>
-                </div>
-
-                <div class="spec-group">
-                    <h3>I2C Interface</h3>
-                    <div class="spec-row"><span class="spec-label">Connector</span><span class="spec-value">4-pin JST-SH</span></div>
-                    <div class="spec-row"><span class="spec-label">Voltage</span><span class="spec-value">3.3V</span></div>
-                    <div class="spec-row"><span class="spec-label">Pins</span><span class="spec-value">VCC, GND, SDA, SCL</span></div>
-                    <div class="spec-row"><span class="spec-label">Speed</span><span class="spec-value">100/400 kHz</span></div>
-                    <div class="spec-row"><span class="spec-label">Pull-ups</span><span class="spec-value">Included</span></div>
-                </div>
-
-                <div class="spec-group">
-                    <h3>Physical</h3>
-                    <div class="spec-row"><span class="spec-label">Dimensions</span><span class="spec-value">65 × 38 × 12 mm</span></div>
-                    <div class="spec-row"><span class="spec-label">Weight</span><span class="spec-value">28g</span></div>
-                    <div class="spec-row"><span class="spec-label">Case Material</span><span class="spec-value">Aluminum (anodized)</span></div>
-                    <div class="spec-row"><span class="spec-label">Color</span><span class="spec-value">Matte Black</span></div>
-                    <div class="spec-row"><span class="spec-label">Mounting</span><span class="spec-value">4× M2.5 holes</span></div>
-                </div>
-
-                <div class="spec-group">
-                    <h3>Environmental</h3>
-                    <div class="spec-row"><span class="spec-label">Operating Temp</span><span class="spec-value">-10°C to +50°C</span></div>
-                    <div class="spec-row"><span class="spec-label">Storage Temp</span><span class="spec-value">-20°C to +70°C</span></div>
-                    <div class="spec-row"><span class="spec-label">Humidity</span><span class="spec-value">5-95% non-condensing</span></div>
-                </div>
             </div>
         </div>
     </section>
@@ -185,11 +79,214 @@
                 </div>
 
                 <div class="feature-card">
-                    <div class="feature-icon">🏠</div>
-                    <h3>Smart Spaces</h3>
-                    <p>Create intelligent environments that respond to occupancy, lighting, and environmental conditions automatically.</p>
+                    <div class="feature-icon">🌡️</div>
+                    <h3>Environmental Monitoring</h3>
+                    <p>Track temperature, humidity, air quality, and pressure. Monitor conditions for compliance, detect anomalies, and log data continuously.</p>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section class="features" style="background: var(--bg-primary); border: none;">
+        <div class="container">
+            <h2 class="section-title">Built-in Sensing Capabilities</h2>
+            <p class="section-subtitle">Ready to detect and count out of the box—no external sensors required</p>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🔢</div>
+                    <h3>Incremental Counting</h3>
+                    <p>Persistent counters that survive power loss. Track events, cycles, pulses, or any activity that needs counting. Know exactly when and how often things happen.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Power Loss Detection</h3>
+                    <p>Detect power outages and track uptime. Know when equipment lost power, how long it was off, and when it came back online.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📶</div>
+                    <h3>Connection Monitoring</h3>
+                    <p>Track connectivity status, signal strength, and connection drops across WiFi, cellular, or LoRa links. Get alerts when network issues affect operations.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📍</div>
+                    <h3>Movement Detection</h3>
+                    <p>With an optional accelerometer, detect when the device is moved, tilted, or tampered with. Monitor equipment that shouldn't be relocated.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🚶</div>
+                    <h3>Presence Sensing</h3>
+                    <p>Add a PIR sensor to detect when people or animals pass by. Count foot traffic, monitor occupancy, or trigger alerts on motion.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🌡️</div>
+                    <h3>Environmental Sensing</h3>
+                    <p>Connect temperature, humidity, air quality, or any I2C sensor. Expand capabilities as your monitoring needs grow.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">What's Inside</h2>
+            <p class="section-subtitle">Every component chosen for reliability and performance</p>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🧠</div>
+                    <h3>RP2350 Processor</h3>
+                    <p>Raspberry Pi's latest dual-core ARM Cortex-M33 running at 150 MHz with 520KB SRAM. Powerful enough for edge computing, efficient enough for 24/7 operation.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📶</div>
+                    <h3>Flexible Connectivity</h3>
+                    <p>WiFi 6 (802.11ax) standard. Optional LTE cellular or LoRa modules for remote deployments where WiFi isn't available.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🔋</div>
+                    <h3>USB-C Power</h3>
+                    <p>Standard USB-C connector for easy power. Works with any 5V USB power source—wall adapters, battery packs, or powered USB hubs.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🔧</div>
+                    <h3>I2C Expansion</h3>
+                    <p>4-pin JST connector provides 3.3V I2C bus access. Connect temperature sensors, air quality monitors, accelerometers, and hundreds of other I2C devices.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🏭</div>
+                    <h3>Aluminum Enclosure</h3>
+                    <p>Black anodized aluminum case with mounting holes. Provides RF shielding, heat dissipation, and protection for industrial environments.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">💡</div>
+                    <h3>Status LED</h3>
+                    <p>Blue LED indicates device status at a glance. Solid for connected, blinking for activity, off for standby mode.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features" style="background: var(--bg-primary); border: none;">
+        <div class="container">
+            <h2 class="section-title">Integration & Automation</h2>
+            <p class="section-subtitle">Connect locally or remotely—Tick works with your existing systems</p>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🌐</div>
+                    <h3>Local HTTP API</h3>
+                    <p>RESTful endpoints accessible on your local network. Query sensor data, send commands, and configure settings without cloud dependency.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">☁️</div>
+                    <h3>Cloud Twin API</h3>
+                    <p>Azure-based REST API for remote access. Push readings, receive commands, and manage devices from anywhere with internet access.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🔗</div>
+                    <h3>Webhook Support</h3>
+                    <p>Trigger external systems on events. Send alerts to Slack, update databases, or integrate with automation platforms.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>JSON Data Format</h3>
+                    <p>All data exchanged in standard JSON. Easy parsing for any programming language or integration platform.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🏠</div>
+                    <h3>Home Assistant</h3>
+                    <p>Native integration with Home Assistant for smart home automation. Expose sensors and control devices through your HA dashboard.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📖</div>
+                    <h3>Full Documentation</h3>
+                    <p>Complete API reference with examples. Everything you need to build custom integrations.</p>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 32px;">
+                <a href="/pages/protocols/" class="btn btn-secondary">View API Documentation</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="specs">
+        <div class="container">
+            <h2 class="section-title">Full Specifications</h2>
+
+            <div class="specs-grid">
+                <div class="spec-group">
+                    <h3>Processor</h3>
+                    <div class="spec-row"><span class="spec-label">Chip</span><span class="spec-value">RP2350</span></div>
+                    <div class="spec-row"><span class="spec-label">Architecture</span><span class="spec-value">Dual ARM Cortex-M33</span></div>
+                    <div class="spec-row"><span class="spec-label">Clock Speed</span><span class="spec-value">150 MHz</span></div>
+                    <div class="spec-row"><span class="spec-label">SRAM</span><span class="spec-value">520 KB</span></div>
+                    <div class="spec-row"><span class="spec-label">Flash</span><span class="spec-value">4 MB</span></div>
+                    <div class="spec-row"><span class="spec-label">FPU</span><span class="spec-value">Yes (single precision)</span></div>
+                </div>
+
+                <div class="spec-group">
+                    <h3>Connectivity</h3>
+                    <div class="spec-row"><span class="spec-label">WiFi</span><span class="spec-value">802.11ax (WiFi 6)</span></div>
+                    <div class="spec-row"><span class="spec-label">Cellular*</span><span class="spec-value">LTE Cat-M1 / NB-IoT</span></div>
+                    <div class="spec-row"><span class="spec-label">LoRa*</span><span class="spec-value">868/915 MHz</span></div>
+                    <div class="spec-row"><span class="spec-label">Security</span><span class="spec-value">WPA3 / TLS 1.3</span></div>
+                    <div class="spec-row"><span class="spec-label">Antenna</span><span class="spec-value">Integrated PCB</span></div>
+                </div>
+
+                <div class="spec-group">
+                    <h3>Power</h3>
+                    <div class="spec-row"><span class="spec-label">Input</span><span class="spec-value">USB-C (5V DC)</span></div>
+                    <div class="spec-row"><span class="spec-label">Typical Draw</span><span class="spec-value">~250 mA</span></div>
+                    <div class="spec-row"><span class="spec-label">Max Draw</span><span class="spec-value">500 mA</span></div>
+                    <div class="spec-row"><span class="spec-label">Power Consumption</span><span class="spec-value">~1.25W typical</span></div>
+                </div>
+
+                <div class="spec-group">
+                    <h3>I2C Interface</h3>
+                    <div class="spec-row"><span class="spec-label">Connector</span><span class="spec-value">4-pin JST-SH</span></div>
+                    <div class="spec-row"><span class="spec-label">Voltage</span><span class="spec-value">3.3V</span></div>
+                    <div class="spec-row"><span class="spec-label">Pins</span><span class="spec-value">VCC, GND, SDA, SCL</span></div>
+                    <div class="spec-row"><span class="spec-label">Speed</span><span class="spec-value">100/400 kHz</span></div>
+                    <div class="spec-row"><span class="spec-label">Pull-ups</span><span class="spec-value">Included</span></div>
+                </div>
+
+                <div class="spec-group">
+                    <h3>Physical</h3>
+                    <div class="spec-row"><span class="spec-label">Dimensions</span><span class="spec-value">65 × 38 × 12 mm</span></div>
+                    <div class="spec-row"><span class="spec-label">Weight</span><span class="spec-value">28g</span></div>
+                    <div class="spec-row"><span class="spec-label">Case Material</span><span class="spec-value">Aluminum (anodized)</span></div>
+                    <div class="spec-row"><span class="spec-label">Color</span><span class="spec-value">Matte Black</span></div>
+                    <div class="spec-row"><span class="spec-label">Mounting</span><span class="spec-value">4× M2.5 holes</span></div>
+                </div>
+
+                <div class="spec-group">
+                    <h3>Environmental</h3>
+                    <div class="spec-row"><span class="spec-label">Operating Temp</span><span class="spec-value">-10°C to +50°C</span></div>
+                    <div class="spec-row"><span class="spec-label">Storage Temp</span><span class="spec-value">-20°C to +70°C</span></div>
+                    <div class="spec-row"><span class="spec-label">Humidity</span><span class="spec-value">5-95% non-condensing</span></div>
+                </div>
+            </div>
+
+            <p style="text-align: center; color: var(--text-muted); font-size: 13px; margin-top: 24px;">
+                * Cellular and LoRa are optional expansion modules. Contact us for availability.
+            </p>
         </div>
     </section>
 
@@ -223,7 +320,6 @@
                         <ul>
                             <li><a href="/pages/product/">Overview</a></li>
                             <li><a href="/pages/features/">Features</a></li>
-                            <li><a href="/pages/protocols/">Protocols</a></li>
                             <li><a href="/#pricing">Pricing</a></li>
                         </ul>
                     </div>
