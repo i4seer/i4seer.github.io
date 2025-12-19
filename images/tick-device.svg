@@ -92,7 +92,7 @@
     <path d="M6 6 Q10 3 14 6" fill="none" stroke="#4fc3f7" stroke-width="2" stroke-linecap="round" opacity="0.8"/>
     <circle cx="10" cy="14" r="2" fill="#4fc3f7"/>
   </g>
-  <text x="185" y="195" font-family="monospace" font-size="8" fill="#666">WiFi 6</text>
+  <text x="210" y="195" font-family="monospace" font-size="8" fill="#666" text-anchor="middle">Wireless</text>
 
   <!-- Ventilation slots -->
   <g transform="translate(130, 170)">
