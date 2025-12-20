@@ -107,6 +107,41 @@ a:hover {
     background: var(--accent-hover) !important;
 }
 
+/* Hamburger Menu Button */
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 32px;
+    height: 32px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+}
+
+.nav-toggle span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--text-primary);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.nav-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.nav-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.nav-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
 /* Hero Section */
 .hero {
     padding: 80px 0;
@@ -704,8 +739,42 @@ a:hover {
         font-size: 1rem;
     }
 
+    /* Mobile Navigation */
+    .nav-toggle {
+        display: flex;
+    }
+
     .nav {
         display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--bg-secondary);
+        border-bottom: 1px solid var(--border-color);
+        flex-direction: column;
+        padding: 16px 20px;
+        gap: 0;
+    }
+
+    .nav.open {
+        display: flex;
+    }
+
+    .nav a {
+        padding: 12px 16px;
+        border-radius: 6px;
+        font-size: 16px;
+    }
+
+    .nav a.active {
+        background: transparent;
+        color: var(--accent);
+    }
+
+    .nav-cta {
+        margin-top: 8px;
+        text-align: center;
     }
 
     .features-grid {
@@ -714,6 +783,11 @@ a:hover {
 
     .footer-content {
         flex-direction: column;
+    }
+
+    .footer-nav {
+        flex-direction: column;
+        gap: 24px;
     }
 
     .footer-bottom {
@@ -729,5 +803,10 @@ a:hover {
 
     .tutorial-step:not(:last-child)::after {
         display: none;
+    }
+
+    .cookie-content {
+        flex-direction: column;
+        text-align: center;
     }
 }

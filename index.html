@@ -17,13 +17,18 @@
                 </svg>
                 i4Seer
             </a>
-            <nav class="nav">
+            <nav class="nav" id="nav-menu">
                 <a href="/" class="active">Home</a>
                 <a href="/pages/product/">Product</a>
                 <a href="/pages/features/">Features</a>
                 <a href="/pages/quickstart/">Quick Start</a>
                 <a href="#contact" class="nav-cta">Contact</a>
             </nav>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </header>
 
@@ -355,7 +360,7 @@
                     <strong style="color: var(--accent);">Seer</strong> means to foresee. At i4Seer, we build IoT systems that use data, connectivity, and intelligence to <strong>predict</strong> issues before they happen, <strong>monitor</strong> conditions in real-time, and <strong>optimize</strong> performance across industrial and commercial operations.
                 </p>
                 <p style="margin-top: 16px; color: var(--text-muted);">
-                    From counting cycles to tracking environmental conditions, our sensors give you the foresight to act before problems escalate.
+                    From counting cycles to tracking environmental conditions, our sensors give you the foresight to act.
                 </p>
             </div>
         </div>
@@ -437,6 +442,7 @@
 
     <script>
         (function() {
+            // Cookie consent
             var consent = localStorage.getItem('cookie-consent');
             if (!consent) {
                 document.getElementById('cookie-banner').style.display = 'flex';
@@ -449,6 +455,23 @@
                 localStorage.setItem('cookie-consent', 'declined');
                 document.getElementById('cookie-banner').style.display = 'none';
             };
+
+            // Mobile nav toggle
+            var navToggle = document.getElementById('nav-toggle');
+            var navMenu = document.getElementById('nav-menu');
+            if (navToggle && navMenu) {
+                navToggle.onclick = function() {
+                    navToggle.classList.toggle('active');
+                    navMenu.classList.toggle('open');
+                };
+                // Close menu when clicking a link
+                navMenu.querySelectorAll('a').forEach(function(link) {
+                    link.onclick = function() {
+                        navToggle.classList.remove('active');
+                        navMenu.classList.remove('open');
+                    };
+                });
+            }
         })();
     </script>
 </body>

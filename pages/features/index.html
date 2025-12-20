@@ -17,13 +17,18 @@
                 </svg>
                 i4Seer
             </a>
-            <nav class="nav">
+            <nav class="nav" id="nav-menu">
                 <a href="/">Home</a>
                 <a href="/pages/product/">Product</a>
                 <a href="/pages/features/" class="active">Features</a>
                 <a href="/pages/quickstart/">Quick Start</a>
                 <a href="/#contact" class="nav-cta">Contact</a>
             </nav>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </header>
 
@@ -298,9 +303,9 @@
                 </div>
 
                 <div class="feature-card">
-                    <div class="feature-icon">🏠</div>
-                    <h3>Home Assistant</h3>
-                    <p>Native integration with Home Assistant for smart home automation. Expose sensors and control devices through your HA dashboard.</p>
+                    <div class="feature-icon">🔌</div>
+                    <h3>Cloud Services</h3>
+                    <p>Connect to Home Assistant, IFTTT, The Things Network, and other cloud platforms. Trigger automations and sync data across systems.</p>
                 </div>
 
                 <div class="feature-card">
@@ -403,6 +408,22 @@
                 localStorage.setItem('cookie-consent', 'declined');
                 document.getElementById('cookie-banner').style.display = 'none';
             };
+
+            // Mobile nav toggle
+            var navToggle = document.getElementById('nav-toggle');
+            var navMenu = document.getElementById('nav-menu');
+            if (navToggle && navMenu) {
+                navToggle.onclick = function() {
+                    navToggle.classList.toggle('active');
+                    navMenu.classList.toggle('open');
+                };
+                navMenu.querySelectorAll('a').forEach(function(link) {
+                    link.onclick = function() {
+                        navToggle.classList.remove('active');
+                        navMenu.classList.remove('open');
+                    };
+                });
+            }
         })();
     </script>
 

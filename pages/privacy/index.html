@@ -17,13 +17,18 @@
                 </svg>
                 i4Seer
             </a>
-            <nav class="nav">
+            <nav class="nav" id="nav-menu">
                 <a href="/">Home</a>
                 <a href="/pages/product/">Product</a>
                 <a href="/pages/features/">Features</a>
                 <a href="/pages/quickstart/">Quick Start</a>
                 <a href="/#contact" class="nav-cta">Contact</a>
             </nav>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </header>
 
@@ -230,5 +235,25 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        (function() {
+            // Mobile nav toggle
+            var navToggle = document.getElementById('nav-toggle');
+            var navMenu = document.getElementById('nav-menu');
+            if (navToggle && navMenu) {
+                navToggle.onclick = function() {
+                    navToggle.classList.toggle('active');
+                    navMenu.classList.toggle('open');
+                };
+                navMenu.querySelectorAll('a').forEach(function(link) {
+                    link.onclick = function() {
+                        navToggle.classList.remove('active');
+                        navMenu.classList.remove('open');
+                    };
+                });
+            }
+        })();
+    </script>
 </body>
 </html>
