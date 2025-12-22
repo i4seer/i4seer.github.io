@@ -14,9 +14,7 @@
             <a href="/" class="logo">
                 <svg class="logo-icon" viewBox="0 0 32 32" fill="none">
                     <path d="M4 16 L12 24 L28 8" stroke="#4fc3f7" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                i4Seer
-            </a>
+                </svg><span class="logo-text">i4<span class="logo-accent">Seer</span></span></a>
             <nav class="nav" id="nav-menu">
                 <a href="/">Home</a>
                 <a href="/pages/product/">Product</a>
@@ -230,43 +228,134 @@
 
     <section class="features">
         <div class="container">
-            <h2 class="section-title">Software Capabilities</h2>
+            <h2 class="section-title">Reliability & Long-Term Operation</h2>
+            <p class="section-subtitle">Designed for unattended 24/7 deployments</p>
 
             <div class="features-grid">
                 <div class="feature-card">
-                    <div class="feature-icon">⏱️</div>
-                    <h3>Configurable Intervals</h3>
-                    <p>Set independent polling intervals for each sensor. From 1 second for fast-changing values to hours for slow trends.</p>
+                    <div class="feature-icon">🛡️</div>
+                    <h3>Hardware Watchdog</h3>
+                    <p>Configurable watchdog timer (up to 8.3 seconds) automatically restarts the device if firmware hangs. Crash recovery without human intervention.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🔄</div>
+                    <h3>Auto-Reboot Scheduling</h3>
+                    <p>Configure automatic reboots after N hours of operation. Prevent memory leaks and ensure fresh state. Data syncs before reboot.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🕐</div>
+                    <h3>NTP Time Sync</h3>
+                    <p>Automatic network time synchronization with configurable intervals. Accurate timestamps for all readings and logs, even after power loss.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Boot Mode Tracking</h3>
+                    <p>Know exactly why your device rebooted: power-on, watchdog reset, soft reset, or hard reset. Debug issues with complete reboot history.</p>
                 </div>
 
                 <div class="feature-card">
                     <div class="feature-icon">💾</div>
-                    <h3>Local Buffering</h3>
-                    <p>Readings buffered locally before cloud sync. Survives network outages. Configurable buffer size and retention.</p>
+                    <h3>Persistent Settings</h3>
+                    <p>Device settings and counter values survive power loss. Critical configuration stored in flash. No data lost on unexpected reboots.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🏠</div>
+                    <h3>Local Status Server</h3>
+                    <p>Built-in HTTP server on port 80. Check device status directly from any browser on your network—no cloud required.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features" style="background: var(--bg-primary); border: none;">
+        <div class="container">
+            <h2 class="section-title">Efficient Data Transfer</h2>
+            <p class="section-subtitle">Smart protocols minimize bandwidth while maximizing insights</p>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📉</div>
+                    <h3>Statistical Aggregation</h3>
+                    <p>Sensors report min, max, and sample count alongside current values. Get trend data without storing every reading. Reduces sync payloads by 50%+.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Binary Protocols</h3>
+                    <p>Compact binary format for sync and heartbeat payloads. Up to 255 sensors with 8 fields each in a single efficient packet.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">💓</div>
+                    <h3>Lightweight Heartbeat</h3>
+                    <p>Minimal status signal includes uptime, memory, RSSI, error count, and firmware version. Know your device is alive without full data sync.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">⏱️</div>
+                    <h3>Configurable Intervals</h3>
+                    <p>Independent polling and sync intervals per sensor. High-frequency for critical values, low-frequency for slow trends. Balance accuracy vs bandwidth.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🔀</div>
+                    <h3>Delta Sync</h3>
+                    <p>Only changed configurations pushed from cloud. Device applies updates incrementally without full profile reload.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📶</div>
+                    <h3>Connection Resilience</h3>
+                    <p>Readings buffered locally during network outages. Auto-retry with exponential backoff. No data lost on temporary disconnections.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Developer Tools</h2>
+            <p class="section-subtitle">Complete observability and control for builders</p>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">💻</div>
+                    <h3>40+ Built-in Commands</h3>
+                    <p>Status, sensor reads, service control, reboot, config, sync, logging, time—all accessible via console or cloud. JSON output for scripting.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📋</div>
+                    <h3>Profile-Based Config</h3>
+                    <p>JSON configuration files define sensors, services, and intervals. Inherit from base profiles. Deploy configs without firmware changes.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📝</div>
+                    <h3>Cloud Log Sync</h3>
+                    <p>Device logs upload to cloud with SYS/ERR/INF/DBG levels. Sequence numbers and trace IDs for correlation. Debug remotely without physical access.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Remote Commands</h3>
+                    <p>Queue commands from cloud dashboard. Device polls and executes with output capture. Up to 10KB response per command.</p>
                 </div>
 
                 <div class="feature-card">
                     <div class="feature-icon">🔄</div>
                     <h3>OTA Updates</h3>
-                    <p>Update firmware over-the-air via cloud command. No physical access required for software updates.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">🛡️</div>
-                    <h3>Watchdog</h3>
-                    <p>Hardware watchdog ensures recovery from crashes. Automatic restart if firmware hangs.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">📝</div>
-                    <h3>Logging</h3>
-                    <p>Comprehensive logging with severity levels. Stream to console, store locally, or sync to cloud.</p>
+                    <p>Update firmware over-the-air via cloud command. No physical access required. Deploy updates across your entire fleet.</p>
                 </div>
 
                 <div class="feature-card">
                     <div class="feature-icon">🌡️</div>
                     <h3>Units & Formatting</h3>
-                    <p>Configurable units (°C/°F, metric/imperial). Local timezone support for timestamps.</p>
+                    <p>Configurable units (°C/°F, metric/imperial). Local timezone support. Human-readable output or JSON for parsing.</p>
                 </div>
             </div>
         </div>
@@ -336,9 +425,7 @@
                     <a href="/" class="logo">
                         <svg class="logo-icon" viewBox="0 0 32 32" fill="none">
                             <path d="M4 16 L12 24 L28 8" stroke="#4fc3f7" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                        i4Seer
-                    </a>
+                        </svg><span class="logo-text">i4<span class="logo-accent">Seer</span></span></a>
                     <p>Seer means to foresee. We build IoT systems that predict, monitor, and optimize operations through connected sensors, data, and intelligence.</p>
                 </div>
 
@@ -356,6 +443,7 @@
                         <h4>Resources</h4>
                         <ul>
                             <li><a href="/pages/quickstart/">Quick Start</a></li>
+                            <li><a href="/pages/configuration/">Configuration</a></li>
                             <li><a href="/pages/protocols/">API Reference</a></li>
                             <li><a href="/#contact">Support</a></li>
                         </ul>

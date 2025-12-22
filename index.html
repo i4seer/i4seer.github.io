@@ -14,9 +14,7 @@
             <a href="/" class="logo">
                 <svg class="logo-icon" viewBox="0 0 32 32" fill="none">
                     <path d="M4 16 L12 24 L28 8" stroke="#4fc3f7" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                i4Seer
-            </a>
+                </svg><span class="logo-text">i4<span class="logo-accent">Seer</span></span></a>
             <nav class="nav" id="nav-menu">
                 <a href="/" class="active">Home</a>
                 <a href="/pages/product/">Product</a>
@@ -352,6 +350,51 @@
 
     <section class="features" style="background: var(--bg-secondary); border-top: 1px solid var(--border-color);">
         <div class="container">
+            <h2 class="section-title">Why Tick is Different</h2>
+            <p class="section-subtitle">Built for real-world reliability and operational efficiency</p>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🏠</div>
+                    <h3>Local-First Architecture</h3>
+                    <p>Built-in status server works without cloud connectivity. Monitor your devices directly on your local network. Cloud is optional, not required.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📉</div>
+                    <h3>Intelligent Aggregation</h3>
+                    <p>Statistical data compression (min/max/sample count) reduces bandwidth by 50%+. Send less data without losing insights.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🔄</div>
+                    <h3>Zero-Downtime Updates</h3>
+                    <p>Push configuration changes via cloud without rebooting. Profile-based configs update on the fly. No truck rolls required.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">👁️</div>
+                    <h3>Complete Observability</h3>
+                    <p>Device logs, remote commands, and heartbeat signals all captured in the cloud. Full visibility into every device, every moment.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>Long-Term Reliability</h3>
+                    <p>Hardware watchdog + configurable auto-reboot ensures unattended operation. Devices recover automatically from crashes or freezes.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🔧</div>
+                    <h3>Developer-Friendly</h3>
+                    <p>JSON configuration files, 40+ built-in commands, binary protocols for efficiency. Build integrations without black boxes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features" style="background: var(--bg-primary);">
+        <div class="container">
             <h2 class="section-title">Why i4Seer?</h2>
             <p class="section-subtitle">The name says it all</p>
 
@@ -381,9 +424,7 @@
                     <a href="/" class="logo">
                         <svg class="logo-icon" viewBox="0 0 32 32" fill="none">
                             <path d="M4 16 L12 24 L28 8" stroke="#4fc3f7" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                        i4Seer
-                    </a>
+                        </svg><span class="logo-text">i4<span class="logo-accent">Seer</span></span></a>
                     <p>Seer means to foresee. We build IoT systems that predict, monitor, and optimize operations through connected sensors, data, and intelligence.</p>
                 </div>
 
@@ -401,6 +442,7 @@
                         <h4>Resources</h4>
                         <ul>
                             <li><a href="/pages/quickstart/">Quick Start</a></li>
+                            <li><a href="/pages/configuration/">Configuration</a></li>
                             <li><a href="/pages/protocols/">API Reference</a></li>
                             <li><a href="#contact">Support</a></li>
                         </ul>
