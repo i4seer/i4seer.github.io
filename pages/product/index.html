@@ -18,6 +18,7 @@
             <nav class="nav" id="nav-menu">
                 <a href="/">Home</a>
                 <a href="/pages/product/" class="active">Product</a>
+                <a href="/pages/product/#pricing">Pricing</a>
                 <a href="/pages/features/">Features</a>
                 <a href="/#contact" class="nav-cta">Contact</a>
             </nav>
@@ -309,6 +310,179 @@
         </div>
     </section>
 
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <h2 class="section-title">Simple Pricing</h2>
+            <p class="section-subtitle">Pick your base, pick your sensing, pick your reporting plan</p>
+
+            <h3 style="text-align: center; color: var(--text-primary); margin-bottom: 24px;">1. Pick Your Base</h3>
+            <div class="features-grid" style="grid-template-columns: repeat(4, 1fr); margin-bottom: 48px;">
+                <div class="price-card" style="max-width: none;">
+                    <h3>Tick WiFi</h3>
+                    <div class="price">$89 <span>/unit</span></div>
+                    <ul class="price-includes">
+                        <li>WiFi Notecard module</li>
+                        <li>Notecarrier CX board + STM32 MCU</li>
+                        <li>Pre-loaded firmware</li>
+                        <li>USB-C power cable</li>
+                        <li>I2C Qwiic connector cable</li>
+                        <li>1 year firmware updates</li>
+                        <li>Email support</li>
+                    </ul>
+                </div>
+
+                <div class="price-card" style="max-width: none;">
+                    <h3>Tick Cell</h3>
+                    <div class="price">$129 <span>/unit</span></div>
+                    <ul class="price-includes">
+                        <li>Cellular LTE-M/NB-IoT Notecard + GPS</li>
+                        <li>500 MB prepaid data + 10 years service</li>
+                        <li>Notecarrier CX board + STM32 MCU</li>
+                        <li>Pre-loaded firmware</li>
+                        <li>USB-C power cable</li>
+                        <li>I2C Qwiic connector cable</li>
+                        <li>1 year firmware updates</li>
+                        <li>Email support</li>
+                    </ul>
+                    <p style="font-size: 12px; color: var(--text-muted); margin-top: 12px;">Additional data available when 500 MB is exhausted *</p>
+                </div>
+
+                <div class="price-card" style="max-width: none;">
+                    <h3>Tick Cell+WiFi</h3>
+                    <div class="price">$149 <span>/unit</span></div>
+                    <ul class="price-includes">
+                        <li>Cell+WiFi Notecard + GPS</li>
+                        <li>WiFi primary, cellular fallback</li>
+                        <li>500 MB prepaid data + 10 years service</li>
+                        <li>Notecarrier CX board + STM32 MCU</li>
+                        <li>Pre-loaded firmware</li>
+                        <li>USB-C power cable</li>
+                        <li>I2C Qwiic connector cable</li>
+                        <li>1 year firmware updates</li>
+                        <li>Email support</li>
+                    </ul>
+                    <p style="font-size: 12px; color: var(--text-muted); margin-top: 12px;">Additional data available when 500 MB is exhausted *</p>
+                </div>
+
+                <div class="price-card" style="max-width: none;">
+                    <h3>Tick LoRa</h3>
+                    <div class="price">$99 <span>/unit</span></div>
+                    <ul class="price-includes">
+                        <li>LoRa Notecard module</li>
+                        <li>Notecarrier CX board + STM32 MCU</li>
+                        <li>Pre-loaded firmware</li>
+                        <li>USB-C power cable</li>
+                        <li>I2C Qwiic connector cable</li>
+                        <li>1 year firmware updates</li>
+                        <li>Email support</li>
+                    </ul>
+                    <p style="font-size: 12px; color: var(--text-muted); margin-top: 12px;">Requires LoRa Router ($240) &mdash; one router supports many Tick LoRa devices</p>
+                </div>
+            </div>
+
+            <h3 style="text-align: center; color: var(--text-primary); margin-bottom: 24px;">2. Add On Any Additional Sensing</h3>
+            <div class="features-grid" style="max-width: 900px; margin: 0 auto 48px;">
+                <div class="spec-group">
+                    <h3>+ Environmental Sensor</h3>
+                    <div class="spec-row"><span class="spec-label">Sensor</span><span class="spec-value">BMP390</span></div>
+                    <div class="spec-row"><span class="spec-label">Measures</span><span class="spec-value">Pressure + Temperature</span></div>
+                    <div class="spec-row"><span class="spec-label">Connection</span><span class="spec-value">I2C Qwiic plug-and-play</span></div>
+                    <div class="spec-row" style="margin-top: 8px; padding-top: 12px; border-top: 1px solid var(--border-color);"><span class="spec-label" style="font-weight: 600; color: var(--accent);">Add</span><span class="spec-value" style="font-weight: 600; color: var(--accent);">+$39 /unit</span></div>
+                </div>
+
+                <div class="spec-group">
+                    <h3>+ Pressure Sensor</h3>
+                    <div class="spec-row"><span class="spec-label">Sensor</span><span class="spec-value">SM8436</span></div>
+                    <div class="spec-row"><span class="spec-label">Range</span><span class="spec-value">-20 to 500 Pa</span></div>
+                    <div class="spec-row"><span class="spec-label">Stats</span><span class="spec-value">min/max/stdev per read</span></div>
+                    <div class="spec-row"><span class="spec-label">Connection</span><span class="spec-value">I2C Qwiic plug-and-play</span></div>
+                    <div class="spec-row" style="margin-top: 8px; padding-top: 12px; border-top: 1px solid var(--border-color);"><span class="spec-label" style="font-weight: 600; color: var(--accent);">Add</span><span class="spec-value" style="font-weight: 600; color: var(--accent);">+$159 /unit</span></div>
+                </div>
+
+                <div class="spec-group">
+                    <h3>+ Custom Sensor</h3>
+                    <div class="spec-row"><span class="spec-label">Port</span><span class="spec-value">I2C Qwiic</span></div>
+                    <div class="spec-row"><span class="spec-label">Options</span><span class="spec-value">Air quality, CO2, humidity, vibration, light, and more</span></div>
+                    <div class="spec-row"><span class="spec-label">Includes</span><span class="spec-value">Firmware integration</span></div>
+                    <div class="spec-row" style="margin-top: 8px; padding-top: 12px; border-top: 1px solid var(--border-color);"><span class="spec-label" style="font-weight: 600; color: var(--accent);">Pricing</span><span class="spec-value" style="font-weight: 600; color: var(--accent);"><a href="#contact" style="color: var(--accent);">Contact Us</a></span></div>
+                </div>
+            </div>
+
+            <h3 style="text-align: center; color: var(--text-primary); margin-bottom: 24px;">3. Choose How You Report</h3>
+            <p style="text-align: center; color: var(--text-secondary); font-size: 14px; margin-bottom: 24px;">Let i4Seer manage your cloud reporting or host it yourself through Blues Notehub.</p>
+            <div class="features-grid" style="grid-template-columns: repeat(3, 1fr); max-width: 900px; margin: 0 auto 48px;">
+                <div class="price-card" style="max-width: none;">
+                    <h3>i4Seer Lite</h3>
+                    <div class="price">$10 <span>/device/mo</span></div>
+                    <ul class="price-includes">
+                        <li>We manage your Notehub project</li>
+                        <li>~100 reports/day included</li>
+                        <li>Reports every 60 minutes</li>
+                        <li>GPS updates every 2 hours</li>
+                        <li>Route setup &amp; monitoring</li>
+                        <li>Profile tuning &amp; support</li>
+                    </ul>
+                    <p style="font-size: 12px; color: var(--text-muted); margin-top: 12px;">Best for: long-term monitoring, battery-powered</p>
+                </div>
+
+                <div class="price-card" style="max-width: none; border-color: var(--accent); border-width: 2px;">
+                    <h3>i4Seer Standard</h3>
+                    <div class="price">$20 <span>/device/mo</span></div>
+                    <ul class="price-includes">
+                        <li>We manage your Notehub project</li>
+                        <li>~200 reports/day included</li>
+                        <li>Reports every 30 minutes</li>
+                        <li>GPS updates every hour</li>
+                        <li>Route setup &amp; monitoring</li>
+                        <li>Profile tuning &amp; support</li>
+                    </ul>
+                    <p style="font-size: 12px; color: var(--text-muted); margin-top: 12px;">Best for: facilities, HVAC, environmental monitoring</p>
+                </div>
+
+                <div class="price-card" style="max-width: none;">
+                    <h3>Host with Blues</h3>
+                    <div class="price">Free <span>to start</span></div>
+                    <ul class="price-includes">
+                        <li>Your own Blues Notehub account</li>
+                        <li>5,000 free events/month included</li>
+                        <li>$0.00075 per event after that</li>
+                        <li>Full dashboard &amp; route control</li>
+                        <li>You manage devices &amp; routes</li>
+                        <li>Scale on your own terms</li>
+                    </ul>
+                    <p style="font-size: 12px; color: var(--text-muted); margin-top: 12px;">Blues Notehub Essentials plan</p>
+                </div>
+            </div>
+
+            <h3 style="text-align: center; color: var(--text-primary); margin-bottom: 24px;">Services</h3>
+            <div class="features-grid" style="max-width: 700px; margin: 0 auto;">
+                <div class="spec-group">
+                    <h3>Custom Portal</h3>
+                    <p style="font-size: 14px; color: var(--text-secondary); margin-bottom: 12px;">White-label dashboard and management portal tailored to your brand and workflow. Real-time sensor data, alerts, and reporting.</p>
+                    <div class="spec-row" style="margin-top: 8px; padding-top: 12px; border-top: 1px solid var(--border-color);"><span class="spec-label" style="font-weight: 600; color: var(--accent);">Pricing</span><span class="spec-value" style="font-weight: 600; color: var(--accent);"><a href="#contact" style="color: var(--accent);">Contact Us</a></span></div>
+                </div>
+
+                <div class="spec-group">
+                    <h3>Custom Sensor Service</h3>
+                    <p style="font-size: 14px; color: var(--text-secondary); margin-bottom: 12px;">Need a sensor we don't offer? We design, integrate, and calibrate custom I2C sensor add-ons with matching firmware for your application.</p>
+                    <div class="spec-row" style="margin-top: 8px; padding-top: 12px; border-top: 1px solid var(--border-color);"><span class="spec-label" style="font-weight: 600; color: var(--accent);">Pricing</span><span class="spec-value" style="font-weight: 600; color: var(--accent);"><a href="#contact" style="color: var(--accent);">Contact Us</a></span></div>
+                </div>
+            </div>
+
+            <p style="text-align: center; color: var(--text-muted); font-size: 13px; margin-top: 32px;">
+                * Reports exceeding your plan's daily included amount are billed at $0.01 per report. Volume discounts available for 10+ devices.
+            </p>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Ready to Order?</h2>
+            <p>Contact us for orders, volume discounts, or custom requirements.</p>
+            <a href="mailto:hello@i4seer.com" class="contact-email">hello@i4seer.com</a>
+        </div>
+    </section>
+
     <section class="specs">
         <div class="container">
             <h2 class="section-title">Full Specifications</h2>
@@ -397,137 +571,6 @@
         </div>
     </section>
 
-    <section class="pricing" id="pricing">
-        <div class="container">
-            <h2 class="section-title">Simple Pricing</h2>
-            <p class="section-subtitle">Pick a base unit, add the sensors you need</p>
-
-            <div class="features-grid" style="margin-bottom: 40px;">
-                <div class="price-card" style="max-width: none;">
-                    <h3>Tick WiFi</h3>
-                    <div class="price">$89 <span>/unit</span></div>
-                    <ul class="price-includes">
-                        <li>WiFi Notecard module</li>
-                        <li>Notecarrier CX board + STM32 MCU</li>
-                        <li>Pre-loaded firmware</li>
-                        <li>USB-C power cable</li>
-                        <li>I2C Qwiic connector cable</li>
-                        <li>1 year firmware updates</li>
-                        <li>Email support</li>
-                    </ul>
-                </div>
-
-                <div class="price-card" style="max-width: none;">
-                    <h3>Tick Cell</h3>
-                    <div class="price">$129 <span>/unit</span></div>
-                    <ul class="price-includes">
-                        <li>Cellular LTE-M/NB-IoT Notecard + GPS</li>
-                        <li>Notecarrier CX board + STM32 MCU</li>
-                        <li>Pre-loaded firmware</li>
-                        <li>USB-C power cable</li>
-                        <li>I2C Qwiic connector cable</li>
-                        <li>1 year firmware updates</li>
-                        <li>Email support</li>
-                    </ul>
-                    <p style="font-size: 12px; color: var(--text-muted); margin-top: 12px;">Cellular data plan not included</p>
-                </div>
-
-                <div class="price-card" style="max-width: none;">
-                    <h3>Tick Cell+WiFi</h3>
-                    <div class="price">$149 <span>/unit</span></div>
-                    <ul class="price-includes">
-                        <li>Cell+WiFi Notecard + GPS</li>
-                        <li>WiFi primary, cellular fallback</li>
-                        <li>Notecarrier CX board + STM32 MCU</li>
-                        <li>Pre-loaded firmware</li>
-                        <li>USB-C power cable</li>
-                        <li>I2C Qwiic connector cable</li>
-                        <li>1 year firmware updates</li>
-                        <li>Email support</li>
-                    </ul>
-                    <p style="font-size: 12px; color: var(--text-muted); margin-top: 12px;">Cellular data plan not included</p>
-                </div>
-
-                <div class="price-card" style="max-width: none;">
-                    <h3>Tick LoRa</h3>
-                    <div class="price">$99 <span>/unit</span></div>
-                    <ul class="price-includes">
-                        <li>LoRa Notecard module</li>
-                        <li>Notecarrier CX board + STM32 MCU</li>
-                        <li>Pre-loaded firmware</li>
-                        <li>USB-C power cable</li>
-                        <li>I2C Qwiic connector cable</li>
-                        <li>1 year firmware updates</li>
-                        <li>Email support</li>
-                    </ul>
-                    <p style="font-size: 12px; color: var(--text-muted); margin-top: 12px;">LoRa gateway not included</p>
-                </div>
-
-                <div class="price-card" style="max-width: none; border-color: var(--accent); border-width: 2px;">
-                    <h3>Tick LoRa Router</h3>
-                    <div class="price">$240 <span>/unit</span></div>
-                    <ul class="price-includes">
-                        <li>Indoor LoRaWAN Gateway (8-channel)</li>
-                        <li>Pre-provisioned for Tick LoRa devices</li>
-                        <li>WiFi + Ethernet dual backhaul</li>
-                        <li>Power over Ethernet (PoE) support</li>
-                        <li>Built-in network server</li>
-                        <li>Web-based management interface</li>
-                        <li>DIN rail mountable</li>
-                    </ul>
-                    <p style="font-size: 12px; color: var(--text-muted); margin-top: 12px;">Required for Tick LoRa deployments</p>
-                </div>
-            </div>
-
-            <h3 style="text-align: center; color: var(--text-primary); margin-bottom: 24px;">Optional Sensor Add-Ons</h3>
-            <div class="features-grid" style="max-width: 700px; margin: 0 auto;">
-                <div class="spec-group">
-                    <h3>+ Environmental Sensor</h3>
-                    <div class="spec-row"><span class="spec-label">Sensor</span><span class="spec-value">BMP390</span></div>
-                    <div class="spec-row"><span class="spec-label">Measures</span><span class="spec-value">Pressure + Temperature</span></div>
-                    <div class="spec-row"><span class="spec-label">Connection</span><span class="spec-value">I2C Qwiic plug-and-play</span></div>
-                    <div class="spec-row" style="margin-top: 8px; padding-top: 12px; border-top: 1px solid var(--border-color);"><span class="spec-label" style="font-weight: 600; color: var(--accent);">Add</span><span class="spec-value" style="font-weight: 600; color: var(--accent);">+$39 /unit</span></div>
-                </div>
-
-                <div class="spec-group">
-                    <h3>+ Pressure Sensor</h3>
-                    <div class="spec-row"><span class="spec-label">Sensor</span><span class="spec-value">SM8436</span></div>
-                    <div class="spec-row"><span class="spec-label">Range</span><span class="spec-value">-20 to 500 Pa</span></div>
-                    <div class="spec-row"><span class="spec-label">Stats</span><span class="spec-value">min/max/stdev per read</span></div>
-                    <div class="spec-row"><span class="spec-label">Connection</span><span class="spec-value">I2C Qwiic plug-and-play</span></div>
-                    <div class="spec-row" style="margin-top: 8px; padding-top: 12px; border-top: 1px solid var(--border-color);"><span class="spec-label" style="font-weight: 600; color: var(--accent);">Add</span><span class="spec-value" style="font-weight: 600; color: var(--accent);">+$159 /unit</span></div>
-                </div>
-            </div>
-
-            <h3 style="text-align: center; color: var(--text-primary); margin-top: 48px; margin-bottom: 24px;">Services</h3>
-            <div class="features-grid" style="max-width: 700px; margin: 0 auto;">
-                <div class="spec-group">
-                    <h3>Custom Portal</h3>
-                    <p style="font-size: 14px; color: var(--text-secondary); margin-bottom: 12px;">White-label dashboard and management portal tailored to your brand and workflow. Real-time sensor data, alerts, and reporting.</p>
-                    <div class="spec-row" style="margin-top: 8px; padding-top: 12px; border-top: 1px solid var(--border-color);"><span class="spec-label" style="font-weight: 600; color: var(--accent);">Pricing</span><span class="spec-value" style="font-weight: 600; color: var(--accent);"><a href="#contact" style="color: var(--accent);">Contact Us</a></span></div>
-                </div>
-
-                <div class="spec-group">
-                    <h3>Custom Sensor Service</h3>
-                    <p style="font-size: 14px; color: var(--text-secondary); margin-bottom: 12px;">Need a sensor we don't offer? We design, integrate, and calibrate custom I2C sensor add-ons with matching firmware for your application.</p>
-                    <div class="spec-row" style="margin-top: 8px; padding-top: 12px; border-top: 1px solid var(--border-color);"><span class="spec-label" style="font-weight: 600; color: var(--accent);">Pricing</span><span class="spec-value" style="font-weight: 600; color: var(--accent);"><a href="#contact" style="color: var(--accent);">Contact Us</a></span></div>
-                </div>
-            </div>
-
-            <p style="text-align: center; color: var(--text-muted); font-size: 13px; margin-top: 32px;">
-                Volume discounts available for orders of 10+ units. Custom firmware development available on request.
-            </p>
-        </div>
-    </section>
-
-    <section class="contact" id="contact">
-        <div class="container">
-            <h2 class="section-title">Ready to Order?</h2>
-            <p>Contact us for orders, volume discounts, or custom requirements.</p>
-            <a href="mailto:hello@i4seer.com" class="contact-email">hello@i4seer.com</a>
-        </div>
-    </section>
-
     <footer class="site-footer">
         <div class="container">
             <div class="footer-content">
@@ -607,6 +650,21 @@
                     };
                 });
             }
+
+            // Highlight Pricing nav link when #pricing hash is active
+            var productLink = document.querySelector('.nav a[href="/pages/product/"]');
+            var pricingLink = document.querySelector('.nav a[href="/pages/product/#pricing"]');
+            function updateActiveNav() {
+                if (window.location.hash === '#pricing' && productLink && pricingLink) {
+                    productLink.classList.remove('active');
+                    pricingLink.classList.add('active');
+                } else if (productLink && pricingLink) {
+                    productLink.classList.add('active');
+                    pricingLink.classList.remove('active');
+                }
+            }
+            updateActiveNav();
+            window.addEventListener('hashchange', updateActiveNav);
         })();
     </script>
 </body>
