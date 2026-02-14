@@ -1,22 +1,23 @@
 /* i4Seer.com - Company Website Styles */
-/* Based on Tick device web UI dark theme */
+/* Light environmental theme with teal/ocean accents */
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-    --bg-primary: #1e1e1e;
-    --bg-secondary: #252526;
-    --bg-tertiary: #2d2d30;
-    --border-color: #3e3e42;
-    --text-primary: #cccccc;
-    --text-secondary: #888888;
-    --text-muted: #666666;
-    --accent: #4fc3f7;
-    --accent-hover: #7fd4fb;
-    --success: #4caf50;
-    --warning: #ffa726;
-    --error: #f48771;
-    --code-bg: #0c0c0c;
+    --bg-primary: #ffffff;
+    --bg-secondary: #f5fafa;
+    --bg-tertiary: #e8f4f3;
+    --border-color: #d0e4e1;
+    --text-primary: #1a2e2a;
+    --text-secondary: #4a6862;
+    --text-muted: #7a9a94;
+    --accent: #1a7a6d;
+    --accent-hover: #2eb8a3;
+    --accent-light: rgba(26, 122, 109, 0.08);
+    --success: #2d8a4e;
+    --warning: #d4860a;
+    --error: #d9534f;
+    --code-bg: #f0f7f6;
 }
 
 body {
@@ -46,7 +47,7 @@ a:hover {
 
 /* Header */
 .site-header {
-    background: var(--bg-secondary);
+    background: var(--bg-primary);
     border-bottom: 1px solid var(--border-color);
     padding: 1rem 0;
     position: sticky;
@@ -104,12 +105,12 @@ a:hover {
 
 .nav a.active {
     background: var(--accent);
-    color: var(--bg-primary);
+    color: #ffffff;
 }
 
 .nav-cta {
     background: var(--accent) !important;
-    color: var(--bg-primary) !important;
+    color: #ffffff !important;
 }
 
 .nav-cta:hover {
@@ -155,14 +156,14 @@ a:hover {
 .hero {
     padding: 80px 0;
     text-align: center;
-    background: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+    background: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
     border-bottom: 1px solid var(--border-color);
 }
 
 .hero h1 {
     font-size: 3rem;
     font-weight: 700;
-    color: #fff;
+    color: var(--text-primary);
     margin-bottom: 1rem;
 }
 
@@ -197,12 +198,12 @@ a:hover {
 
 .btn-primary {
     background: var(--accent);
-    color: var(--bg-primary);
+    color: #ffffff;
 }
 
 .btn-primary:hover {
     background: var(--accent-hover);
-    color: var(--bg-primary);
+    color: #ffffff;
 }
 
 .btn-secondary {
@@ -247,7 +248,7 @@ a:hover {
     text-align: center;
     font-size: 2rem;
     font-weight: 700;
-    color: #fff;
+    color: var(--text-primary);
     margin-bottom: 0.5rem;
 }
 
@@ -269,18 +270,19 @@ a:hover {
     border: 1px solid var(--border-color);
     border-radius: 12px;
     padding: 24px;
-    transition: border-color 0.2s, transform 0.2s;
+    transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
 }
 
 .feature-card:hover {
     border-color: var(--accent);
     transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(26, 122, 109, 0.1);
 }
 
 .feature-icon {
     width: 48px;
     height: 48px;
-    background: rgba(79, 195, 247, 0.1);
+    background: var(--accent-light);
     border-radius: 10px;
     display: flex;
     align-items: center;
@@ -292,7 +294,7 @@ a:hover {
 .feature-card h3 {
     font-size: 1.1rem;
     font-weight: 600;
-    color: #fff;
+    color: var(--text-primary);
     margin-bottom: 8px;
 }
 
@@ -385,7 +387,7 @@ a:hover {
 
 .screenshot-info h4 {
     font-size: 1rem;
-    color: #fff;
+    color: var(--text-primary);
     margin-bottom: 8px;
 }
 
@@ -426,7 +428,7 @@ a:hover {
     width: 48px;
     height: 48px;
     background: var(--accent);
-    color: var(--bg-primary);
+    color: #ffffff;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -443,7 +445,7 @@ a:hover {
 
 .step-content h3 {
     font-size: 1.1rem;
-    color: #fff;
+    color: var(--text-primary);
     margin-bottom: 8px;
 }
 
@@ -509,15 +511,15 @@ a:hover {
 }
 
 .code-block .keyword {
-    color: #c586c0;
+    color: #7b3fa0;
 }
 
 .code-block .string {
-    color: #ce9178;
+    color: #b85c2f;
 }
 
 .code-block .number {
-    color: #b5cea8;
+    color: #2d8a4e;
 }
 
 /* Pricing */
@@ -527,17 +529,17 @@ a:hover {
 }
 
 .price-card {
-    background: var(--bg-secondary);
+    background: var(--bg-primary);
     border: 2px solid var(--accent);
     border-radius: 16px;
-    padding: 40px;
+    padding: 32px;
     max-width: 400px;
     margin: 0 auto;
 }
 
 .price-card h3 {
     font-size: 1.5rem;
-    color: #fff;
+    color: var(--text-primary);
     margin-bottom: 8px;
 }
 
@@ -568,7 +570,7 @@ a:hover {
 }
 
 .price-includes li::before {
-    content: '✓';
+    content: '\2713';
     color: var(--success);
     font-weight: bold;
 }
@@ -687,12 +689,13 @@ a:hover {
     bottom: 0;
     left: 0;
     right: 0;
-    background: var(--bg-tertiary);
+    background: var(--bg-primary);
     border-top: 1px solid var(--border-color);
     padding: 16px 20px;
     z-index: 1000;
     display: flex;
     justify-content: center;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.08);
 }
 
 .cookie-content {
@@ -729,7 +732,7 @@ a:hover {
 .badge {
     display: inline-block;
     padding: 4px 10px;
-    background: rgba(79, 195, 247, 0.15);
+    background: var(--accent-light);
     color: var(--accent);
     border-radius: 4px;
     font-size: 12px;
@@ -759,7 +762,7 @@ a:hover {
         top: 100%;
         left: 0;
         right: 0;
-        background: var(--bg-secondary);
+        background: var(--bg-primary);
         border-bottom: 1px solid var(--border-color);
         flex-direction: column;
         padding: 16px 20px;

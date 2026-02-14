@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Tick Sensor Module - Complete product details, specifications, and use cases. Professional IoT edge device by i4Seer.">
+    <meta name="description" content="Tick Sensor Modules - Cellular, WiFi, Cell+WiFi, and LoRa variants with optional environmental and pressure sensors. Product details by i4Seer.">
     <title>Tick Product Details | i4Seer</title>
     <link rel="stylesheet" href="../../styles.css">
     <link rel="icon" type="image/svg+xml" href="../../images/favicon.svg">
@@ -13,13 +13,12 @@
         <div class="container header-inner">
             <a href="/" class="logo">
                 <svg class="logo-icon" viewBox="0 0 32 32" fill="none">
-                    <path d="M4 16 L12 24 L28 8" stroke="#4fc3f7" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M4 16 L12 24 L28 8" stroke="#1a7a6d" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg><span class="logo-text">i4<span class="logo-accent">Seer</span></span></a>
             <nav class="nav" id="nav-menu">
                 <a href="/">Home</a>
                 <a href="/pages/product/" class="active">Product</a>
                 <a href="/pages/features/">Features</a>
-                <a href="/pages/quickstart/">Quick Start</a>
                 <a href="/#contact" class="nav-cta">Contact</a>
             </nav>
             <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
@@ -32,8 +31,8 @@
 
     <section class="hero" style="padding: 60px 0;">
         <div class="container">
-            <h1><span>Tick</span> Sensor Module</h1>
-            <p class="hero-tagline">Professional-grade IoT edge device for industrial sensing applications</p>
+            <h1><span>Tick</span> Sensor Modules</h1>
+            <p class="hero-tagline">Four connectivity options, optional sensors. Same compact form factor, same firmware.</p>
         </div>
     </section>
 
@@ -47,44 +46,44 @@
 
     <section class="features">
         <div class="container">
-            <h2 class="section-title">Use Cases</h2>
-            <p class="section-subtitle">Tick is ideal for a wide range of applications</p>
+            <h2 class="section-title">Connectivity Options</h2>
+            <p class="section-subtitle">Every Tick uses a Blues Notecard radio module. Swap the Notecard to change connectivity without changing firmware.</p>
 
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">🏢</div>
-                    <h3>Building Monitoring</h3>
-                    <p>Track temperature, humidity, and air quality across facilities. Monitor HVAC performance and identify comfort issues before complaints arise.</p>
+            <div class="features-grid" style="grid-template-columns: repeat(3, 1fr);">
+                <div class="feature-card" style="border-color: var(--accent); border-width: 2px;">
+                    <div class="feature-icon">📡</div>
+                    <h3>Tick Cell</h3>
+                    <p>LTE-M / NB-IoT cellular with integrated GPS. Deploy anywhere with cell coverage, no local infrastructure required.</p>
+                    <ul style="margin-top: 12px; font-size: 13px; color: var(--text-secondary); list-style: none; padding: 0;">
+                        <li style="padding: 4px 0;">&#10003; Cellular LTE-M / NB-IoT</li>
+                        <li style="padding: 4px 0;">&#10003; Integrated GPS + cell-tower triangulation</li>
+                        <li style="padding: 4px 0;">&#10003; Store-and-forward in spotty coverage</li>
+                        <li style="padding: 4px 0;">&#10003; Requires cellular data plan</li>
+                    </ul>
                 </div>
 
-                <div class="feature-card">
-                    <div class="feature-icon">🏭</div>
-                    <h3>Industrial Sensing</h3>
-                    <p>Monitor equipment vibration, temperature, and operating conditions. Detect anomalies early to prevent costly downtime.</p>
+                <div class="feature-card" style="border-color: var(--accent); border-width: 2px;">
+                    <div class="feature-icon">📶</div>
+                    <h3>Tick WiFi & Cell+WiFi</h3>
+                    <p>WiFi for facilities with existing networks. Choose WiFi-only for lower cost, or Cell+WiFi for cellular fallback when WiFi drops.</p>
+                    <ul style="margin-top: 12px; font-size: 13px; color: var(--text-secondary); list-style: none; padding: 0;">
+                        <li style="padding: 4px 0;">&#10003; WiFi 802.11 b/g/n</li>
+                        <li style="padding: 4px 0;">&#10003; Cell+WiFi adds cellular fallback + GPS</li>
+                        <li style="padding: 4px 0;">&#10003; Works on existing WiFi infrastructure</li>
+                        <li style="padding: 4px 0;">&#10003; Higher throughput for data-heavy apps</li>
+                    </ul>
                 </div>
 
-                <div class="feature-card">
-                    <div class="feature-icon">🌱</div>
-                    <h3>Agriculture</h3>
-                    <p>Track soil moisture, ambient conditions, and greenhouse environments. Automate irrigation and optimize growing conditions.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">❄️</div>
-                    <h3>Cold Chain</h3>
-                    <p>Monitor refrigerated storage and transport. Get alerts when temperatures exceed thresholds to protect sensitive goods.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">🔬</div>
-                    <h3>Laboratory</h3>
-                    <p>Ensure precise environmental conditions for experiments. Log data continuously with cloud backup for compliance.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">🌡️</div>
-                    <h3>Environmental Monitoring</h3>
-                    <p>Track temperature, humidity, air quality, and pressure. Monitor conditions for compliance, detect anomalies, and log data continuously.</p>
+                <div class="feature-card" style="border-color: var(--accent); border-width: 2px;">
+                    <div class="feature-icon">🔗</div>
+                    <h3>Tick LoRa</h3>
+                    <p>Long-range, low-power radio for wide-area sensor networks. Connect dozens of Ticks to a single LoRa gateway.</p>
+                    <ul style="margin-top: 12px; font-size: 13px; color: var(--text-secondary); list-style: none; padding: 0;">
+                        <li style="padding: 4px 0;">&#10003; LoRa long-range radio</li>
+                        <li style="padding: 4px 0;">&#10003; Ultra-low power consumption</li>
+                        <li style="padding: 4px 0;">&#10003; No per-device cellular cost</li>
+                        <li style="padding: 4px 0;">&#10003; Requires LoRa gateway</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -92,44 +91,62 @@
 
     <section class="features" style="background: var(--bg-primary); border: none;">
         <div class="container">
-            <h2 class="section-title">Built-in Sensing Capabilities</h2>
-            <p class="section-subtitle">Ready to detect and count out of the box—no external sensors required</p>
+            <h2 class="section-title">Sensor Add-Ons</h2>
+            <p class="section-subtitle">Every Tick includes onboard temperature and voltage monitoring. Add optional I2C sensors via the Qwiic connector.</p>
 
             <div class="features-grid">
                 <div class="feature-card">
-                    <div class="feature-icon">🔢</div>
-                    <h3>Incremental Counting</h3>
-                    <p>Persistent counters that survive power loss. Track events, cycles, pulses, or any activity that needs counting. Know exactly when and how often things happen.</p>
+                    <div class="feature-icon">🌡</div>
+                    <h3>+ Environmental Sensor</h3>
+                    <p>BMP390 barometric pressure and precision temperature. Track weather, altitude changes, and ambient conditions.</p>
+                    <ul style="margin-top: 12px; font-size: 13px; color: var(--text-secondary); list-style: none; padding: 0;">
+                        <li style="padding: 4px 0;">&#10003; Barometric pressure: 300-1250 hPa</li>
+                        <li style="padding: 4px 0;">&#10003; Temperature: -40 to +85 C</li>
+                        <li style="padding: 4px 0;">&#10003; I2C Qwiic plug-and-play</li>
+                    </ul>
                 </div>
 
                 <div class="feature-card">
-                    <div class="feature-icon">⚡</div>
-                    <h3>Power Loss Detection</h3>
-                    <p>Detect power outages and track uptime. Know when equipment lost power, how long it was off, and when it came back online.</p>
+                    <div class="feature-icon">🌬</div>
+                    <h3>+ Pressure Sensor</h3>
+                    <p>SM8436 ultra-low differential pressure. Detect subtle airflow changes for HVAC, clean rooms, and ventilation.</p>
+                    <ul style="margin-top: 12px; font-size: 13px; color: var(--text-secondary); list-style: none; padding: 0;">
+                        <li style="padding: 4px 0;">&#10003; Range: -20 to 500 Pa</li>
+                        <li style="padding: 4px 0;">&#10003; Per-reading min/max/stdev stats</li>
+                        <li style="padding: 4px 0;">&#10003; I2C Qwiic plug-and-play</li>
+                    </ul>
                 </div>
 
                 <div class="feature-card">
-                    <div class="feature-icon">📶</div>
-                    <h3>Connection Monitoring</h3>
-                    <p>Track connectivity status, signal strength, and connection drops across WiFi, cellular, or LoRa links. Get alerts when network issues affect operations.</p>
+                    <div class="feature-icon">🔧</div>
+                    <h3>+ Custom Sensor</h3>
+                    <p>The I2C Qwiic port supports hundreds of sensor types. Contact us for humidity, air quality, CO2, motion, or any I2C integration.</p>
+                    <ul style="margin-top: 12px; font-size: 13px; color: var(--text-secondary); list-style: none; padding: 0;">
+                        <li style="padding: 4px 0;">&#10003; Any I2C / Qwiic sensor</li>
+                        <li style="padding: 4px 0;">&#10003; Firmware customization available</li>
+                        <li style="padding: 4px 0;">&#10003; Auto-detect sensor registry</li>
+                    </ul>
                 </div>
+            </div>
 
-                <div class="feature-card">
-                    <div class="feature-icon">📍</div>
-                    <h3>Movement Detection</h3>
-                    <p>With an optional accelerometer, detect when the device is moved, tilted, or tampered with. Monitor equipment that shouldn't be relocated.</p>
-                </div>
-
-                <div class="feature-card">
+            <h3 style="text-align: center; color: var(--text-primary); margin-top: 48px; margin-bottom: 24px;">Coming Soon</h3>
+            <div class="features-grid" style="grid-template-columns: repeat(3, 1fr);">
+                <div class="feature-card" style="opacity: 0.75; border-style: dashed;">
                     <div class="feature-icon">🚶</div>
-                    <h3>Presence Sensing</h3>
-                    <p>Add a PIR sensor to detect when people or animals pass by. Count foot traffic, monitor occupancy, or trigger alerts on motion.</p>
+                    <h3>+ Human Detection</h3>
+                    <p>PIR and thermal sensing for occupancy counting, room utilization, and people flow analytics. No cameras, no privacy concerns.</p>
                 </div>
 
-                <div class="feature-card">
-                    <div class="feature-icon">🌡️</div>
-                    <h3>Environmental Sensing</h3>
-                    <p>Connect temperature, humidity, air quality, or any I2C sensor. Expand capabilities as your monitoring needs grow.</p>
+                <div class="feature-card" style="opacity: 0.75; border-style: dashed;">
+                    <div class="feature-icon">🔊</div>
+                    <h3>+ Sound Detection</h3>
+                    <p>Acoustic monitoring for equipment noise levels, alarm detection, and ambient sound analysis. Threshold-based alerts without recording audio.</p>
+                </div>
+
+                <div class="feature-card" style="opacity: 0.75; border-style: dashed;">
+                    <div class="feature-icon">💡</div>
+                    <h3>+ And More</h3>
+                    <p>Air quality, CO2, humidity, vibration, and light sensing add-ons in development. Contact us to request a sensor or discuss your needs.</p>
                 </div>
             </div>
         </div>
@@ -143,38 +160,38 @@
             <div class="features-grid">
                 <div class="feature-card">
                     <div class="feature-icon">🧠</div>
-                    <h3>RP2350 Processor</h3>
-                    <p>Raspberry Pi's latest dual-core ARM Cortex-M33 running at 150 MHz with 520KB SRAM. Powerful enough for edge computing, efficient enough for 24/7 operation.</p>
+                    <h3>STM32L4 Processor</h3>
+                    <p>ARM Cortex-M4 at 80 MHz with 256KB Flash and 64KB SRAM. Ultra-low-power with 4uA idle current. Efficient enough for years of battery operation.</p>
                 </div>
 
                 <div class="feature-card">
                     <div class="feature-icon">📶</div>
-                    <h3>Flexible Connectivity</h3>
-                    <p>WiFi 6 (802.11ax) standard. Optional LTE cellular or LoRa modules for remote deployments where WiFi isn't available.</p>
+                    <h3>Swappable Notecard Radio</h3>
+                    <p>Blues Notecard module provides connectivity. Available in Cellular, WiFi, Cell+WiFi, and LoRa variants. Swap the radio without changing firmware.</p>
                 </div>
 
                 <div class="feature-card">
                     <div class="feature-icon">🔋</div>
                     <h3>USB-C Power</h3>
-                    <p>Standard USB-C connector for easy power. Works with any 5V USB power source—wall adapters, battery packs, or powered USB hubs.</p>
+                    <p>Standard USB-C connector for easy power. Works with any 5V USB power source—wall adapters, battery packs, or powered USB hubs. LiPo battery connector with charging circuit for portable deployments.</p>
                 </div>
 
                 <div class="feature-card">
                     <div class="feature-icon">🔧</div>
                     <h3>I2C Expansion</h3>
-                    <p>4-pin JST connector provides 3.3V I2C bus access. Connect temperature sensors, air quality monitors, accelerometers, and hundreds of other I2C devices.</p>
+                    <p>Qwiic/StemmaQT connector provides 3.3V I2C bus access. Connect temperature sensors, air quality monitors, accelerometers, and hundreds of other I2C devices.</p>
                 </div>
 
                 <div class="feature-card">
                     <div class="feature-icon">🏭</div>
-                    <h3>Aluminum Enclosure</h3>
-                    <p>Black anodized aluminum case with mounting holes. Provides RF shielding, heat dissipation, and protection for industrial environments.</p>
+                    <h3>Notecarrier CX Board</h3>
+                    <p>All-in-one carrier board with MCU, Notecard socket, battery charging, and expansion headers. 76mm x 38mm form factor.</p>
                 </div>
 
                 <div class="feature-card">
-                    <div class="feature-icon">💡</div>
-                    <h3>Status LED</h3>
-                    <p>Blue LED indicates device status at a glance. Solid for connected, blinking for activity, off for standby mode.</p>
+                    <div class="feature-icon">📍</div>
+                    <h3>Built-in GPS</h3>
+                    <p>Integrated GPS with cell-tower triangulation fallback. Track assets outdoors and indoors with automatic location updates.</p>
                 </div>
             </div>
         </div>
@@ -182,49 +199,112 @@
 
     <section class="features" style="background: var(--bg-primary); border: none;">
         <div class="container">
-            <h2 class="section-title">Integration & Automation</h2>
-            <p class="section-subtitle">Connect locally or remotely—Tick works with your existing systems</p>
+            <h2 class="section-title">Route Your Data Anywhere</h2>
+            <p class="section-subtitle">Sensor readings sync to Blues Notehub, then route directly into your existing environments &mdash; no new infrastructure required</p>
 
             <div class="features-grid">
                 <div class="feature-card">
-                    <div class="feature-icon">🌐</div>
-                    <h3>Local HTTP API</h3>
-                    <p>RESTful endpoints accessible on your local network. Query sensor data, send commands, and configure settings without cloud dependency.</p>
+                    <div class="feature-icon">☁️</div>
+                    <h3>AWS</h3>
+                    <p>Route events to AWS IoT Core, Lambda, S3, DynamoDB, or any AWS service. Build serverless pipelines from sensor data.</p>
                 </div>
 
                 <div class="feature-card">
                     <div class="feature-icon">☁️</div>
-                    <h3>Cloud Twin API</h3>
-                    <p>Azure-based REST API for remote access. Push readings, receive commands, and manage devices from anywhere with internet access.</p>
+                    <h3>Azure</h3>
+                    <p>Connect to Azure IoT Hub, Event Hubs, Functions, or Cosmos DB. Integrate with the full Azure cloud ecosystem.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">☁️</div>
+                    <h3>Google Cloud</h3>
+                    <p>Send data to Google Cloud Functions, Pub/Sub, BigQuery, or Firestore. Serverless event processing at scale.</p>
                 </div>
 
                 <div class="feature-card">
                     <div class="feature-icon">🔗</div>
-                    <h3>Webhook Support</h3>
-                    <p>Trigger external systems on events. Send alerts to Slack, update databases, or integrate with automation platforms.</p>
+                    <h3>HTTP/HTTPS Webhooks</h3>
+                    <p>Forward events to any HTTP/HTTPS endpoint. Connect to custom APIs, internal services, or third-party webhooks.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📡</div>
+                    <h3>MQTT</h3>
+                    <p>Publish to any MQTT broker. Lightweight pub/sub messaging ideal for real-time dashboards and event-driven systems.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">❄️</div>
+                    <h3>Snowflake</h3>
+                    <p>Stream sensor data directly into Snowflake via Snowpipe. Analyze IoT telemetry alongside your business data warehouse.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">💬</div>
+                    <h3>Slack &amp; Twilio</h3>
+                    <p>Instant Slack messages or Twilio SMS/voice alerts when sensors trigger thresholds. Real-time notifications to your team.</p>
                 </div>
 
                 <div class="feature-card">
                     <div class="feature-icon">📊</div>
-                    <h3>JSON Data Format</h3>
-                    <p>All data exchanged in standard JSON. Easy parsing for any programming language or integration platform.</p>
+                    <h3>Datacake, Blynk &amp; Qubitro</h3>
+                    <p>Low-code IoT dashboards out of the box. White-label options, multi-tenant management, and rapid deployment with no backend coding.</p>
                 </div>
 
                 <div class="feature-card">
-                    <div class="feature-icon">🏠</div>
-                    <h3>Home Assistant</h3>
-                    <p>Native integration with Home Assistant for smart home automation. Expose sensors and control devices through your HA dashboard.</p>
+                    <div class="feature-icon">🏭</div>
+                    <h3>ThingWorx &amp; RadResponder</h3>
+                    <p>Enterprise IoT platforms for industrial operations. Plus FEMA-partnered RadResponder for radiological monitoring and emergency response.</p>
                 </div>
 
                 <div class="feature-card">
-                    <div class="feature-icon">📖</div>
-                    <h3>Full Documentation</h3>
-                    <p>Complete API reference with examples. Everything you need to build custom integrations.</p>
+                    <div class="feature-icon">🔌</div>
+                    <h3>Proxy for Notecard Web</h3>
+                    <p>Enable Notecard web.get, web.put, and web.post requests through Notehub proxy routes for bidirectional cloud communication.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📋</div>
+                    <h3>JSON &amp; JSONata Transform</h3>
+                    <p>All data in standard JSON. Transform payloads with JSONata expressions before they reach your systems. Reshape data to fit your schema.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🔧</div>
+                    <h3>Your Existing Systems</h3>
+                    <p>Already running ERP, CMMS, SCADA, or a custom platform? Use HTTP/MQTT routes to send sensor data directly into the systems your team already uses.</p>
                 </div>
             </div>
 
-            <div style="text-align: center; margin-top: 32px;">
-                <a href="/pages/protocols/" class="btn btn-secondary">View API Documentation</a>
+            <div style="text-align: center; margin-top: 30px;">
+                <p style="color: var(--text-secondary); font-size: 0.95rem;">Each Route is configured per-project in Notehub. Target a fleet, specific devices, or individual event types. No firmware changes needed.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Device Management</h2>
+            <p class="section-subtitle">Remote configuration, OTA updates, and store-and-forward reliability</p>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🌐</div>
+                    <h3>Store &amp; Forward</h3>
+                    <p>Data queues in Notecard flash when offline. Syncs automatically when connectivity returns. No data lost during outages.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">⚙️</div>
+                    <h3>Remote Configuration</h3>
+                    <p>Switch operating profiles from the cloud. Adjust sync intervals, GPS behavior, and sensor rates without touching the device.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🔄</div>
+                    <h3>OTA Updates</h3>
+                    <p>Push firmware updates over the air. The Notecard can reflash the MCU remotely via any connectivity variant, even recovering from bricked firmware.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -235,60 +315,207 @@
 
             <div class="specs-grid">
                 <div class="spec-group">
-                    <h3>Processor</h3>
-                    <div class="spec-row"><span class="spec-label">Chip</span><span class="spec-value">RP2350</span></div>
-                    <div class="spec-row"><span class="spec-label">Architecture</span><span class="spec-value">Dual ARM Cortex-M33</span></div>
-                    <div class="spec-row"><span class="spec-label">Clock Speed</span><span class="spec-value">150 MHz</span></div>
-                    <div class="spec-row"><span class="spec-label">SRAM</span><span class="spec-value">520 KB</span></div>
-                    <div class="spec-row"><span class="spec-label">Flash</span><span class="spec-value">4 MB</span></div>
-                    <div class="spec-row"><span class="spec-label">FPU</span><span class="spec-value">Yes (single precision)</span></div>
+                    <h3>Onboard Processor</h3>
+                    <div class="spec-row"><span class="spec-label">Type</span><span class="spec-value">32-bit ARM microcontroller</span></div>
+                    <div class="spec-row"><span class="spec-label">Performance</span><span class="spec-value">80 MHz, hardware FPU</span></div>
+                    <div class="spec-row"><span class="spec-label">Memory</span><span class="spec-value">256 KB program + 64 KB data</span></div>
+                    <div class="spec-row"><span class="spec-label">Idle Power</span><span class="spec-value">4 µA (ultra-low standby)</span></div>
+                    <div class="spec-row"><span class="spec-label">Firmware</span><span class="spec-value">Arduino-based, OTA updatable</span></div>
                 </div>
 
                 <div class="spec-group">
-                    <h3>Connectivity</h3>
-                    <div class="spec-row"><span class="spec-label">WiFi</span><span class="spec-value">802.11ax (WiFi 6)</span></div>
-                    <div class="spec-row"><span class="spec-label">Cellular*</span><span class="spec-value">LTE Cat-M1 / NB-IoT</span></div>
-                    <div class="spec-row"><span class="spec-label">LoRa*</span><span class="spec-value">868/915 MHz</span></div>
-                    <div class="spec-row"><span class="spec-label">Security</span><span class="spec-value">WPA3 / TLS 1.3</span></div>
-                    <div class="spec-row"><span class="spec-label">Antenna</span><span class="spec-value">Integrated PCB</span></div>
+                    <h3>Connectivity (per variant)</h3>
+                    <div class="spec-row"><span class="spec-label">Tick Cell</span><span class="spec-value">LTE-M / NB-IoT + GPS</span></div>
+                    <div class="spec-row"><span class="spec-label">Tick WiFi</span><span class="spec-value">802.11 b/g/n</span></div>
+                    <div class="spec-row"><span class="spec-label">Tick Cell+WiFi</span><span class="spec-value">WiFi + Cell fallback + GPS</span></div>
+                    <div class="spec-row"><span class="spec-label">Tick LoRa</span><span class="spec-value">LoRa long-range radio</span></div>
+                    <div class="spec-row"><span class="spec-label">Security</span><span class="spec-value">TLS encrypted (all variants)</span></div>
+                    <div class="spec-row"><span class="spec-label">Antenna</span><span class="spec-value">Notecard onboard</span></div>
                 </div>
 
                 <div class="spec-group">
-                    <h3>Power</h3>
-                    <div class="spec-row"><span class="spec-label">Input</span><span class="spec-value">USB-C (5V DC)</span></div>
-                    <div class="spec-row"><span class="spec-label">Typical Draw</span><span class="spec-value">~250 mA</span></div>
-                    <div class="spec-row"><span class="spec-label">Max Draw</span><span class="spec-value">500 mA</span></div>
-                    <div class="spec-row"><span class="spec-label">Power Consumption</span><span class="spec-value">~1.25W typical</span></div>
+                    <h3>Power &amp; Wiring</h3>
+                    <div class="spec-row"><span class="spec-label">USB-C</span><span class="spec-value">5V wall adapter or USB hub</span></div>
+                    <div class="spec-row"><span class="spec-label">Battery</span><span class="spec-value">3.7V LiPo (JST PH) + charging</span></div>
+                    <div class="spec-row"><span class="spec-label">Input Range</span><span class="spec-value">2.5–5.5V DC</span></div>
+                    <div class="spec-row"><span class="spec-label">Typical Draw</span><span class="spec-value">~500 mA active</span></div>
+                    <div class="spec-row"><span class="spec-label">120V AC</span><span class="spec-value">Via USB-C wall adapter *</span></div>
+                    <div class="spec-row"><span class="spec-label">24V AC/DC</span><span class="spec-value">HVAC / BMS step-down converter *</span></div>
+                    <div class="spec-row"><span class="spec-label">12V DC</span><span class="spec-value">Security / intercom step-down *</span></div>
+                    <div class="spec-row"><span class="spec-label">PoE (48V)</span><span class="spec-value">PoE splitter to USB-C *</span></div>
+                    <div class="spec-row"><span class="spec-label">Solar</span><span class="spec-value">5V panel + LiPo battery</span></div>
+                    <div class="spec-row"><span class="spec-label">Hardwired</span><span class="spec-value">Terminal block to USB-C adapter *</span></div>
                 </div>
 
                 <div class="spec-group">
-                    <h3>I2C Interface</h3>
-                    <div class="spec-row"><span class="spec-label">Connector</span><span class="spec-value">4-pin JST-SH</span></div>
+                    <h3>Sensor Interface</h3>
+                    <div class="spec-row"><span class="spec-label">Connector</span><span class="spec-value">Qwiic / StemmaQT (I2C)</span></div>
                     <div class="spec-row"><span class="spec-label">Voltage</span><span class="spec-value">3.3V</span></div>
-                    <div class="spec-row"><span class="spec-label">Pins</span><span class="spec-value">VCC, GND, SDA, SCL</span></div>
-                    <div class="spec-row"><span class="spec-label">Speed</span><span class="spec-value">100/400 kHz</span></div>
-                    <div class="spec-row"><span class="spec-label">Pull-ups</span><span class="spec-value">Included</span></div>
+                    <div class="spec-row"><span class="spec-label">Wiring</span><span class="spec-value">4-pin plug-and-play cable</span></div>
+                    <div class="spec-row"><span class="spec-label">Speed</span><span class="spec-value">100 / 400 kHz</span></div>
+                    <div class="spec-row"><span class="spec-label">Daisy-chain</span><span class="spec-value">Multiple sensors on one bus</span></div>
+                    <div class="spec-row"><span class="spec-label">Pull-ups</span><span class="spec-value">Included on board</span></div>
+                </div>
+
+                <div class="spec-group">
+                    <h3>Pressure Sensor (add-on)</h3>
+                    <div class="spec-row"><span class="spec-label">Model</span><span class="spec-value">SM8436</span></div>
+                    <div class="spec-row"><span class="spec-label">Type</span><span class="spec-value">Differential pressure</span></div>
+                    <div class="spec-row"><span class="spec-label">Range</span><span class="spec-value">-20 to 500 Pa</span></div>
+                    <div class="spec-row"><span class="spec-label">Statistics</span><span class="spec-value">Min, max, stdev per reading</span></div>
+                    <div class="spec-row"><span class="spec-label">Sampling</span><span class="spec-value">Multi-sample noise reduction</span></div>
+                    <div class="spec-row"><span class="spec-label">Connection</span><span class="spec-value">I2C Qwiic plug-and-play</span></div>
+                </div>
+
+                <div class="spec-group">
+                    <h3>Environmental Sensor (add-on)</h3>
+                    <div class="spec-row"><span class="spec-label">Model</span><span class="spec-value">BMP390</span></div>
+                    <div class="spec-row"><span class="spec-label">Pressure</span><span class="spec-value">300–1250 hPa</span></div>
+                    <div class="spec-row"><span class="spec-label">Temperature</span><span class="spec-value">-40 to +85 °C</span></div>
+                    <div class="spec-row"><span class="spec-label">Connection</span><span class="spec-value">I2C Qwiic plug-and-play</span></div>
                 </div>
 
                 <div class="spec-group">
                     <h3>Physical</h3>
-                    <div class="spec-row"><span class="spec-label">Dimensions</span><span class="spec-value">65 × 38 × 12 mm</span></div>
-                    <div class="spec-row"><span class="spec-label">Weight</span><span class="spec-value">28g</span></div>
-                    <div class="spec-row"><span class="spec-label">Case Material</span><span class="spec-value">Aluminum (anodized)</span></div>
-                    <div class="spec-row"><span class="spec-label">Color</span><span class="spec-value">Matte Black</span></div>
-                    <div class="spec-row"><span class="spec-label">Mounting</span><span class="spec-value">4× M2.5 holes</span></div>
+                    <div class="spec-row"><span class="spec-label">Dimensions</span><span class="spec-value">76 × 38 mm (3.0 × 1.5 in)</span></div>
+                    <div class="spec-row"><span class="spec-label">Form Factor</span><span class="spec-value">Notecarrier CX board</span></div>
+                    <div class="spec-row"><span class="spec-label">Mounting</span><span class="spec-value">4× M2.5 holes, DIN rail *</span></div>
+                    <div class="spec-row"><span class="spec-label">Enclosure</span><span class="spec-value">IP65 options available *</span></div>
                 </div>
 
                 <div class="spec-group">
-                    <h3>Environmental</h3>
+                    <h3>Operating Conditions</h3>
                     <div class="spec-row"><span class="spec-label">Operating Temp</span><span class="spec-value">-10°C to +50°C</span></div>
                     <div class="spec-row"><span class="spec-label">Storage Temp</span><span class="spec-value">-20°C to +70°C</span></div>
-                    <div class="spec-row"><span class="spec-label">Humidity</span><span class="spec-value">5-95% non-condensing</span></div>
+                    <div class="spec-row"><span class="spec-label">Humidity</span><span class="spec-value">5–95% non-condensing</span></div>
                 </div>
             </div>
 
             <p style="text-align: center; color: var(--text-muted); font-size: 13px; margin-top: 24px;">
-                * Cellular and LoRa are optional expansion modules. Contact us for availability.
+                GPS is available on Cell and Cell+WiFi variants. LoRa requires a separate gateway. * Accessories sold separately &mdash; contact us for wiring, mounting, and enclosure options.
+            </p>
+        </div>
+    </section>
+
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <h2 class="section-title">Simple Pricing</h2>
+            <p class="section-subtitle">Pick a base unit, add the sensors you need</p>
+
+            <div class="features-grid" style="margin-bottom: 40px;">
+                <div class="price-card" style="max-width: none;">
+                    <h3>Tick WiFi</h3>
+                    <div class="price">$89 <span>/unit</span></div>
+                    <ul class="price-includes">
+                        <li>WiFi Notecard module</li>
+                        <li>Notecarrier CX board + STM32 MCU</li>
+                        <li>Pre-loaded firmware</li>
+                        <li>USB-C power cable</li>
+                        <li>I2C Qwiic connector cable</li>
+                        <li>1 year firmware updates</li>
+                        <li>Email support</li>
+                    </ul>
+                </div>
+
+                <div class="price-card" style="max-width: none;">
+                    <h3>Tick Cell</h3>
+                    <div class="price">$129 <span>/unit</span></div>
+                    <ul class="price-includes">
+                        <li>Cellular LTE-M/NB-IoT Notecard + GPS</li>
+                        <li>Notecarrier CX board + STM32 MCU</li>
+                        <li>Pre-loaded firmware</li>
+                        <li>USB-C power cable</li>
+                        <li>I2C Qwiic connector cable</li>
+                        <li>1 year firmware updates</li>
+                        <li>Email support</li>
+                    </ul>
+                    <p style="font-size: 12px; color: var(--text-muted); margin-top: 12px;">Cellular data plan not included</p>
+                </div>
+
+                <div class="price-card" style="max-width: none;">
+                    <h3>Tick Cell+WiFi</h3>
+                    <div class="price">$149 <span>/unit</span></div>
+                    <ul class="price-includes">
+                        <li>Cell+WiFi Notecard + GPS</li>
+                        <li>WiFi primary, cellular fallback</li>
+                        <li>Notecarrier CX board + STM32 MCU</li>
+                        <li>Pre-loaded firmware</li>
+                        <li>USB-C power cable</li>
+                        <li>I2C Qwiic connector cable</li>
+                        <li>1 year firmware updates</li>
+                        <li>Email support</li>
+                    </ul>
+                    <p style="font-size: 12px; color: var(--text-muted); margin-top: 12px;">Cellular data plan not included</p>
+                </div>
+
+                <div class="price-card" style="max-width: none;">
+                    <h3>Tick LoRa</h3>
+                    <div class="price">$99 <span>/unit</span></div>
+                    <ul class="price-includes">
+                        <li>LoRa Notecard module</li>
+                        <li>Notecarrier CX board + STM32 MCU</li>
+                        <li>Pre-loaded firmware</li>
+                        <li>USB-C power cable</li>
+                        <li>I2C Qwiic connector cable</li>
+                        <li>1 year firmware updates</li>
+                        <li>Email support</li>
+                    </ul>
+                    <p style="font-size: 12px; color: var(--text-muted); margin-top: 12px;">LoRa gateway not included</p>
+                </div>
+
+                <div class="price-card" style="max-width: none; border-color: var(--accent); border-width: 2px;">
+                    <h3>Tick LoRa Router</h3>
+                    <div class="price">$240 <span>/unit</span></div>
+                    <ul class="price-includes">
+                        <li>Indoor LoRaWAN Gateway (8-channel)</li>
+                        <li>Pre-provisioned for Tick LoRa devices</li>
+                        <li>WiFi + Ethernet dual backhaul</li>
+                        <li>Power over Ethernet (PoE) support</li>
+                        <li>Built-in network server</li>
+                        <li>Web-based management interface</li>
+                        <li>DIN rail mountable</li>
+                    </ul>
+                    <p style="font-size: 12px; color: var(--text-muted); margin-top: 12px;">Required for Tick LoRa deployments</p>
+                </div>
+            </div>
+
+            <h3 style="text-align: center; color: var(--text-primary); margin-bottom: 24px;">Optional Sensor Add-Ons</h3>
+            <div class="features-grid" style="max-width: 700px; margin: 0 auto;">
+                <div class="spec-group">
+                    <h3>+ Environmental Sensor</h3>
+                    <div class="spec-row"><span class="spec-label">Sensor</span><span class="spec-value">BMP390</span></div>
+                    <div class="spec-row"><span class="spec-label">Measures</span><span class="spec-value">Pressure + Temperature</span></div>
+                    <div class="spec-row"><span class="spec-label">Connection</span><span class="spec-value">I2C Qwiic plug-and-play</span></div>
+                    <div class="spec-row" style="margin-top: 8px; padding-top: 12px; border-top: 1px solid var(--border-color);"><span class="spec-label" style="font-weight: 600; color: var(--accent);">Add</span><span class="spec-value" style="font-weight: 600; color: var(--accent);">+$39 /unit</span></div>
+                </div>
+
+                <div class="spec-group">
+                    <h3>+ Pressure Sensor</h3>
+                    <div class="spec-row"><span class="spec-label">Sensor</span><span class="spec-value">SM8436</span></div>
+                    <div class="spec-row"><span class="spec-label">Range</span><span class="spec-value">-20 to 500 Pa</span></div>
+                    <div class="spec-row"><span class="spec-label">Stats</span><span class="spec-value">min/max/stdev per read</span></div>
+                    <div class="spec-row"><span class="spec-label">Connection</span><span class="spec-value">I2C Qwiic plug-and-play</span></div>
+                    <div class="spec-row" style="margin-top: 8px; padding-top: 12px; border-top: 1px solid var(--border-color);"><span class="spec-label" style="font-weight: 600; color: var(--accent);">Add</span><span class="spec-value" style="font-weight: 600; color: var(--accent);">+$159 /unit</span></div>
+                </div>
+            </div>
+
+            <h3 style="text-align: center; color: var(--text-primary); margin-top: 48px; margin-bottom: 24px;">Services</h3>
+            <div class="features-grid" style="max-width: 700px; margin: 0 auto;">
+                <div class="spec-group">
+                    <h3>Custom Portal</h3>
+                    <p style="font-size: 14px; color: var(--text-secondary); margin-bottom: 12px;">White-label dashboard and management portal tailored to your brand and workflow. Real-time sensor data, alerts, and reporting.</p>
+                    <div class="spec-row" style="margin-top: 8px; padding-top: 12px; border-top: 1px solid var(--border-color);"><span class="spec-label" style="font-weight: 600; color: var(--accent);">Pricing</span><span class="spec-value" style="font-weight: 600; color: var(--accent);"><a href="#contact" style="color: var(--accent);">Contact Us</a></span></div>
+                </div>
+
+                <div class="spec-group">
+                    <h3>Custom Sensor Service</h3>
+                    <p style="font-size: 14px; color: var(--text-secondary); margin-bottom: 12px;">Need a sensor we don't offer? We design, integrate, and calibrate custom I2C sensor add-ons with matching firmware for your application.</p>
+                    <div class="spec-row" style="margin-top: 8px; padding-top: 12px; border-top: 1px solid var(--border-color);"><span class="spec-label" style="font-weight: 600; color: var(--accent);">Pricing</span><span class="spec-value" style="font-weight: 600; color: var(--accent);"><a href="#contact" style="color: var(--accent);">Contact Us</a></span></div>
+                </div>
+            </div>
+
+            <p style="text-align: center; color: var(--text-muted); font-size: 13px; margin-top: 32px;">
+                Volume discounts available for orders of 10+ units. Custom firmware development available on request.
             </p>
         </div>
     </section>
@@ -296,11 +523,8 @@
     <section class="contact" id="contact">
         <div class="container">
             <h2 class="section-title">Ready to Order?</h2>
-            <p>Contact us for pricing, volume discounts, or custom requirements.</p>
+            <p>Contact us for orders, volume discounts, or custom requirements.</p>
             <a href="mailto:hello@i4seer.com" class="contact-email">hello@i4seer.com</a>
-            <div style="margin-top: 24px;">
-                <a href="/pages/quickstart/" class="btn btn-secondary">View Quick Start Guide</a>
-            </div>
         </div>
     </section>
 
@@ -310,49 +534,34 @@
                 <div class="footer-brand">
                     <a href="/" class="logo">
                         <svg class="logo-icon" viewBox="0 0 32 32" fill="none">
-                            <path d="M4 16 L12 24 L28 8" stroke="#4fc3f7" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M4 16 L12 24 L28 8" stroke="#1a7a6d" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg><span class="logo-text">i4<span class="logo-accent">Seer</span></span></a>
-                    <p>Seer means to foresee. We build IoT systems that predict, monitor, and optimize operations through connected sensors, data, and intelligence.</p>
+                    <p>Seer means to foresee. We build IoT systems that predict, monitor, and optimize operations through connected sensors and data.</p>
                 </div>
-
                 <div class="footer-nav">
                     <div class="footer-links">
                         <h4>Product</h4>
                         <ul>
                             <li><a href="/pages/product/">Overview</a></li>
                             <li><a href="/pages/features/">Features</a></li>
-                            <li><a href="/#pricing">Pricing</a></li>
                         </ul>
                     </div>
-
                     <div class="footer-links">
-                        <h4>Resources</h4>
+                        <h4>Company</h4>
                         <ul>
-                            <li><a href="/pages/quickstart/">Quick Start</a></li>
-                            <li><a href="/pages/configuration/">Configuration</a></li>
-                            <li><a href="/pages/protocols/">API Reference</a></li>
-                            <li><a href="/#contact">Support</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="footer-links">
-                        <h4>Services</h4>
-                        <ul>
-                            <li><a href="/#contact">Custom Firmware</a></li>
-                            <li><a href="/#contact">Hardware Design</a></li>
-                            <li><a href="/#contact">Cloud Integration</a></li>
-                            <li><a href="/#contact">IoT Consulting</a></li>
+                            <li><a href="/#contact">Contact</a></li>
+                            <li><a href="/pages/privacy/">Privacy Policy</a></li>
+                            <li><a href="/pages/terms/">Terms of Service</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
-
             <div class="footer-bottom">
-                <span>&copy; 2025 Institute for Seer, LLC. All rights reserved.</span>
+                <span>&copy; 2026 Institute for Seer, LLC. All rights reserved.</span>
                 <span class="footer-legal">
-                    <a href="/pages/privacy/">Privacy Policy</a>
+                    <a href="/pages/privacy/">Privacy</a>
                     <span class="separator">|</span>
-                    <a href="/pages/terms/">Terms of Service</a>
+                    <a href="/pages/terms/">Terms</a>
                 </span>
             </div>
         </div>
