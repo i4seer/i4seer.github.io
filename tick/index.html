@@ -40,7 +40,7 @@
       <h1 style="font-family: 'Russo One', sans-serif; color: var(--teal-glow); text-shadow: 0 0 20px rgba(46,230,208,0.6), 0 0 60px rgba(46,230,208,0.3); letter-spacing: 6px;">TICK</h1>
       <p class="subtitle" style="max-width: 650px;">The tech behind the scares. Every Version 3 Seer Frights device runs Tick &mdash; real firmware on real hardware. Wi-Fi, microcontrollers, and code you can read.</p>
       <div class="btn-group">
-        <a href="#devices" class="btn btn-glow" style="background: var(--teal-glow); box-shadow: 0 0 15px rgba(46,230,208,0.4);">See the Devices</a>
+        <a href="/tick/devices/" class="btn btn-glow" style="background: var(--teal-glow); box-shadow: 0 0 15px rgba(46,230,208,0.4);">See the Devices</a>
         <a href="/tick/buy/" class="btn btn-outline" style="color: var(--teal-glow); border-color: var(--teal-glow);">Get the Hardware</a>
       </div>
     </div>
@@ -61,70 +61,9 @@
     <div style="max-width: 750px; margin: 0 auto; text-align: center; line-height: 1.8; font-size: 1.05rem;">
       <p>Tick is firmware that runs on ESP32 microcontrollers. It handles Wi-Fi, LED patterns, audio playback, scheduling, and sensor data &mdash; everything the Version 3 devices need.</p>
       <br>
-      <p>Each device is self-contained. Plug it in, configure it from the setup page, and walk away. No server required. No internet required. Just the device and your phone. Firmware comes pre-loaded.</p>
+      <p>Each device is self-contained. Plug it in, configure it from the setup page, and walk away. No server required. No internet required. Just the device and your phone. Firmware is free on <a href="https://github.com/i4seer/seer-frights-firmware" style="color: var(--teal-glow);">GitHub</a>.</p>
       <br>
       <p>Want more control? Connect to the device's AP setup page from a browser. Want time sync across multiple devices? Add Wi-Fi. Each step is optional. Start simple.</p>
-    </div>
-  </section>
-
-  <!-- THE DEVICES -->
-  <section id="devices">
-    <h2 class="section-title" style="color: var(--teal-glow); text-shadow: 0 0 10px rgba(46,230,208,0.4);">The Devices</h2>
-    <p class="section-subtitle">One device per book. Each one does something different.</p>
-
-    <div style="max-width: 850px; margin: 0 auto; display: flex; gap: 2rem; flex-wrap: wrap; justify-content: center;">
-
-      <!-- SWAMP GLOW -->
-      <a href="/tick/swamp-glow/" style="text-decoration: none; color: inherit; flex: 1; min-width: 300px; max-width: 400px;">
-        <div class="char-card" style="border-color: #1a3a1a; cursor: pointer; transition: border-color 0.3s, box-shadow 0.3s; height: 100%;">
-          <div style="text-align: center; margin-bottom: 1rem;">
-            <img src="/images/tick-dont-go-into-the-swamp.png" alt="Tick Swamp Glow device" style="max-width: 160px; width: 100%; border-radius: 8px;">
-          </div>
-          <p style="color: var(--green-glow); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 0.3rem;">Seer Frights #1</p>
-          <h4 style="color: var(--green-glow); font-size: 1.2rem;">Swamp Glow</h4>
-          <p style="margin-top: 0.5rem;">ATOM Matrix with a 5&times;5 RGB LED grid. Glows green in the swamp. Breathes, pulses, flickers. Runs on a timer &mdash; two hours on, ten minutes dark. Built-in accelerometer detects if someone picks it up.</p>
-          <div style="margin-top: 1rem;">
-            <span style="display: inline-block; padding: 0.2rem 0.6rem; border: 1px solid #1a3a1a; border-radius: 4px; font-size: 0.8rem; color: var(--green-glow); margin-right: 0.4rem;">ATOM Matrix</span>
-            <span style="display: inline-block; padding: 0.2rem 0.6rem; border: 1px solid #1a3a1a; border-radius: 4px; font-size: 0.8rem; color: var(--green-glow);">~$15</span>
-          </div>
-          <p style="color: var(--green-glow); margin-top: 1rem; font-size: 0.9rem;">Hardware, code, step-by-step &rarr;</p>
-        </div>
-      </a>
-
-      <!-- ROUTE 13 -->
-      <a href="/tick/route-13/" style="text-decoration: none; color: inherit; flex: 1; min-width: 300px; max-width: 400px;">
-        <div class="char-card" style="border-color: #3a2a1a; cursor: pointer; transition: border-color 0.3s, box-shadow 0.3s; height: 100%;">
-          <div style="text-align: center; margin-bottom: 1rem;">
-            <img src="/images/tick-atom-matrix.png" alt="ATOM Matrix for Route 13" style="max-width: 160px; width: 100%; border-radius: 8px;">
-          </div>
-          <p style="color: var(--orange-sodium); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 0.3rem;">Seer Frights #2</p>
-          <h4 style="color: var(--orange-sodium); font-size: 1.2rem;">Route 13</h4>
-          <p style="margin-top: 0.5rem;">ATOM Matrix with a 5&times;5 RGB LED grid plus a pressure mat. Someone sits down &mdash; the grid lights up orange and shows &ldquo;13.&rdquo; Counts passengers up. The count never goes down.</p>
-          <div style="margin-top: 1rem;">
-            <span style="display: inline-block; padding: 0.2rem 0.6rem; border: 1px solid #3a2a1a; border-radius: 4px; font-size: 0.8rem; color: var(--orange-sodium); margin-right: 0.4rem;">ATOM Matrix</span>
-            <span style="display: inline-block; padding: 0.2rem 0.6rem; border: 1px solid #3a2a1a; border-radius: 4px; font-size: 0.8rem; color: var(--orange-sodium);">~$17</span>
-          </div>
-          <p style="color: var(--orange-sodium); margin-top: 1rem; font-size: 0.9rem;">Hardware, code, step-by-step &rarr;</p>
-        </div>
-      </a>
-
-      <!-- THREE-KNOCK -->
-      <a href="/tick/three-knock/" style="text-decoration: none; color: inherit; flex: 1; min-width: 300px; max-width: 400px;">
-        <div class="char-card" style="border-color: #3a2a1a; cursor: pointer; transition: border-color 0.3s, box-shadow 0.3s; height: 100%;">
-          <div style="text-align: center; margin-bottom: 1rem;">
-            <img src="/images/tick-atomic-echo.png" alt="ATOM Matrix + Atomic Echo Base" style="max-width: 160px; width: 100%; border-radius: 8px;">
-          </div>
-          <p style="color: var(--amber); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 0.3rem;">Seer Frights #3</p>
-          <h4 style="color: var(--amber); font-size: 1.2rem;">Three-Knock</h4>
-          <p style="margin-top: 0.5rem;">ATOM Matrix plugged into an Atomic Echo Base. Speaker, microphone, 5&times;5 LED grid. Plays a knock sound on a schedule &mdash; 3:07 AM, every night. LEDs flash amber. The mic listens for someone knocking back.</p>
-          <div style="margin-top: 1rem;">
-            <span style="display: inline-block; padding: 0.2rem 0.6rem; border: 1px solid #3a2a1a; border-radius: 4px; font-size: 0.8rem; color: var(--amber); margin-right: 0.4rem;">ATOM Matrix + Echo Base</span>
-            <span style="display: inline-block; padding: 0.2rem 0.6rem; border: 1px solid #3a2a1a; border-radius: 4px; font-size: 0.8rem; color: var(--amber);">~$21</span>
-          </div>
-          <p style="color: var(--amber); margin-top: 1rem; font-size: 0.9rem;">Hardware, code, step-by-step &rarr;</p>
-        </div>
-      </a>
-
     </div>
   </section>
 
@@ -137,8 +76,8 @@
 
       <div class="tick-step">
         <div class="tick-step-num" style="background: var(--teal-glow);">1</div>
-        <h4>Plug In</h4>
-        <p>Connect USB-C to power. The firmware is already on the device &mdash; no flashing, no setup tools. It boots in 2 seconds and starts running with default settings.</p>
+        <h4>Load the Firmware</h4>
+        <p><a href="https://github.com/i4seer/seer-frights-firmware/archive/refs/heads/main.zip" style="color: var(--teal-glow);">Download the firmware zip</a> and extract it. Connect the device via USB-C &mdash; it shows up as a <code style="background: #1a1a1a; padding: 0.15rem 0.4rem; color: var(--teal-glow); font-size: 0.9rem;">CIRCUITPY</code> drive. Copy your device&rsquo;s folder onto the drive. It reboots and starts running in 2 seconds.</p>
       </div>
 
       <div class="tick-step">
@@ -232,6 +171,7 @@
       <a href="/build-safety/">Build Safety</a>
       <a href="/affiliate-disclosure/">Affiliate Disclosure</a>
       <a href="/cookie-policy/">Cookie Policy</a>
+      <a href="/do-not-sell/">Do Not Sell My Info</a>
     </div>
 
     <p style="opacity: 0.4; font-size: 0.75rem; margin-top: 1rem; max-width: 800px; margin-left: auto; margin-right: auto;">
@@ -248,7 +188,7 @@
 
   <!-- COOKIE BANNER -->
   <div class="cookie-banner" id="cookie-banner">
-    <p>We use cookies to improve your experience. By continuing to use this site, you agree to our <a href="/privacy/">Privacy Policy</a>.</p>
+    <p>This site uses essential cookies for basic functionality. Non-essential cookies (analytics, preferences) are only set with your consent. See our <a href="/privacy/">Privacy Policy</a>.</p>
     <div class="cookie-buttons">
       <button class="cookie-accept" id="cookie-accept">Accept</button>
       <button class="cookie-decline" id="cookie-decline">Decline</button>

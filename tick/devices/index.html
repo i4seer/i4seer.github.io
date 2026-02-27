@@ -44,81 +44,15 @@
 
   <!-- DEVICES -->
   <section>
-    <div style="max-width: 850px; margin: 0 auto; display: flex; gap: 2rem; flex-wrap: wrap; justify-content: center;">
-
-      <!-- SWAMP GLOW -->
-      <div style="flex: 1; min-width: 300px; max-width: 400px;">
-        <div class="char-card" style="border-color: #1a3a1a; height: 100%;">
-          <div style="text-align: center; margin-bottom: 1rem;">
-            <img src="/images/tick-dont-go-into-the-swamp.png" alt="Tick Swamp Glow device" style="max-width: 160px; width: 100%; border-radius: 8px;">
-          </div>
-          <p style="color: var(--green-glow); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 0.3rem;">Seer Frights #1</p>
-          <h4 style="color: var(--green-glow); font-size: 1.2rem;">Swamp Glow</h4>
-          <p style="margin-top: 0.5rem;">ATOM Matrix with a 5&times;5 RGB LED grid. Glows green in the swamp. Breathes, pulses, flickers. Runs on a timer &mdash; two hours on, ten minutes dark. Built-in accelerometer detects if someone picks it up.</p>
-          <div style="margin-top: 1rem;">
-            <span style="display: inline-block; padding: 0.2rem 0.6rem; border: 1px solid #1a3a1a; border-radius: 4px; font-size: 0.8rem; color: var(--green-glow); margin-right: 0.4rem;">ATOM Matrix</span>
-            <span style="display: inline-block; padding: 0.2rem 0.6rem; border: 1px solid #1a3a1a; border-radius: 4px; font-size: 0.8rem; color: var(--green-glow);">~$15</span>
-          </div>
-          <div style="display: flex; gap: 0.6rem; margin-top: 1rem;">
-            <a href="/tick/buy/" class="btn btn-glow" style="font-size: 0.85rem; padding: 0.4rem 1rem;">Buy</a>
-            <a href="/tick/swamp-glow/" class="btn btn-outline" style="font-size: 0.85rem; padding: 0.4rem 1rem;">Build</a>
-          </div>
-        </div>
+    <div style="max-width: 700px; margin: 0 auto; text-align: center;">
+      <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
+        <a href="/tick/swamp-glow/" class="btn btn-glow" style="background: var(--green-glow); box-shadow: 0 0 15px rgba(57,255,20,0.4);">Swamp Glow Device</a>
+        <a href="/tick/route-13/" class="btn btn-glow" style="background: var(--orange-sodium); box-shadow: 0 0 15px rgba(255,140,66,0.4);">Route 13 Device</a>
+        <a href="/tick/three-knock/" class="btn btn-glow" style="background: var(--amber); box-shadow: 0 0 15px rgba(255,179,71,0.4);">Three-Knock Device</a>
       </div>
-
-      <!-- ROUTE 13 -->
-      <div style="flex: 1; min-width: 300px; max-width: 400px;">
-        <div class="char-card" style="border-color: #3a2a1a; height: 100%;">
-          <div style="text-align: center; margin-bottom: 1rem;">
-            <img src="/images/tick-atom-matrix.png" alt="ATOM Matrix for Route 13" style="max-width: 160px; width: 100%; border-radius: 8px;">
-          </div>
-          <p style="color: var(--orange-sodium); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 0.3rem;">Seer Frights #2</p>
-          <h4 style="color: var(--orange-sodium); font-size: 1.2rem;">Route 13</h4>
-          <p style="margin-top: 0.5rem;">ATOM Matrix with a 5&times;5 RGB LED grid plus a pressure mat. Someone sits down &mdash; the grid lights up orange and shows &ldquo;13.&rdquo; Counts passengers up. The count never goes down.</p>
-          <div style="margin-top: 1rem;">
-            <span style="display: inline-block; padding: 0.2rem 0.6rem; border: 1px solid #3a2a1a; border-radius: 4px; font-size: 0.8rem; color: var(--orange-sodium); margin-right: 0.4rem;">ATOM Matrix</span>
-            <span style="display: inline-block; padding: 0.2rem 0.6rem; border: 1px solid #3a2a1a; border-radius: 4px; font-size: 0.8rem; color: var(--orange-sodium);">~$17</span>
-          </div>
-          <div style="display: flex; gap: 0.6rem; margin-top: 1rem;">
-            <a href="/tick/buy/" class="btn btn-glow" style="background: var(--orange-sodium); box-shadow: 0 0 15px rgba(255,140,66,0.4); font-size: 0.85rem; padding: 0.4rem 1rem;">Buy</a>
-            <a href="/tick/route-13/" class="btn btn-outline" style="color: var(--orange-sodium); border-color: var(--orange-sodium); font-size: 0.85rem; padding: 0.4rem 1rem;">Build</a>
-          </div>
-        </div>
+      <div style="margin-top: 2rem;">
+        <a href="/tick/buy/" class="btn btn-outline" style="color: var(--teal-glow); border-color: var(--teal-glow);">Get the Hardware</a>
       </div>
-
-      <!-- THREE-KNOCK -->
-      <div style="flex: 1; min-width: 300px; max-width: 400px;">
-        <div class="char-card" style="border-color: #3a2a1a; height: 100%;">
-          <div style="text-align: center; margin-bottom: 1rem;">
-            <img src="/images/tick-atomic-echo.png" alt="ATOM Matrix + Atomic Echo Base" style="max-width: 160px; width: 100%; border-radius: 8px;">
-          </div>
-          <p style="color: var(--amber); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 0.3rem;">Seer Frights #3</p>
-          <h4 style="color: var(--amber); font-size: 1.2rem;">Three-Knock</h4>
-          <p style="margin-top: 0.5rem;">ATOM Matrix plugged into an Atomic Echo Base. Speaker, microphone, 5&times;5 LED grid. Plays a knock sound on a schedule &mdash; 3:07 AM, every night. LEDs flash amber. The mic listens for someone knocking back.</p>
-          <div style="margin-top: 1rem;">
-            <span style="display: inline-block; padding: 0.2rem 0.6rem; border: 1px solid #3a2a1a; border-radius: 4px; font-size: 0.8rem; color: var(--amber); margin-right: 0.4rem;">ATOM Matrix + Echo Base</span>
-            <span style="display: inline-block; padding: 0.2rem 0.6rem; border: 1px solid #3a2a1a; border-radius: 4px; font-size: 0.8rem; color: var(--amber);">~$21</span>
-          </div>
-          <div style="display: flex; gap: 0.6rem; margin-top: 1rem;">
-            <a href="/tick/buy/" class="btn btn-glow" style="background: var(--amber); box-shadow: 0 0 15px rgba(255,179,71,0.4); font-size: 0.85rem; padding: 0.4rem 1rem;">Buy</a>
-            <a href="/tick/three-knock/" class="btn btn-outline" style="color: var(--amber); border-color: var(--amber); font-size: 0.85rem; padding: 0.4rem 1rem;">Build</a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section>
-    <div style="max-width: 700px; margin: 0 auto; text-align: center; line-height: 1.8; font-size: 1.05rem;">
-      <p>Every Version 3 Seer Frights device runs <strong style="color: var(--teal-glow);">Tick</strong> &mdash; real firmware on real hardware. ESP32 microcontrollers, CircuitPython, Wi-Fi, and a setup page you open from your phone. No app. No internet required.</p>
-      <br>
-      <p>Firmware comes pre-loaded. Plug in, configure, walk away.</p>
-      <br>
-      <p style="opacity: 0.5; font-style: italic;">Each device stands alone. Pick the one that matches your book.</p>
-      <br>
-      <a href="/tick/buy/" class="btn btn-outline" style="color: var(--teal-glow); border-color: var(--teal-glow);">Get the Hardware</a>
     </div>
   </section>
 
@@ -138,6 +72,7 @@
       <a href="/build-safety/">Build Safety</a>
       <a href="/affiliate-disclosure/">Affiliate Disclosure</a>
       <a href="/cookie-policy/">Cookie Policy</a>
+      <a href="/do-not-sell/">Do Not Sell My Info</a>
     </div>
 
     <p style="opacity: 0.4; font-size: 0.75rem; margin-top: 1rem; max-width: 800px; margin-left: auto; margin-right: auto;">
@@ -154,7 +89,7 @@
 
   <!-- COOKIE BANNER -->
   <div class="cookie-banner" id="cookie-banner">
-    <p>We use cookies to improve your experience. By continuing to use this site, you agree to our <a href="/privacy/">Privacy Policy</a>.</p>
+    <p>This site uses essential cookies for basic functionality. Non-essential cookies (analytics, preferences) are only set with your consent. See our <a href="/privacy/">Privacy Policy</a>.</p>
     <div class="cookie-buttons">
       <button class="cookie-accept" id="cookie-accept">Accept</button>
       <button class="cookie-decline" id="cookie-decline">Decline</button>

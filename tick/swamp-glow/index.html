@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tick + ATOM Matrix — Swamp Glow | i4seer.com</title>
-  <meta name="description" content="The Swamp Glow Tick device. ATOM Matrix, 5x5 LED grid, CircuitPython. Pre-loaded firmware. AP setup, Wi-Fi.">
+  <meta name="description" content="The Swamp Glow Tick device. ATOM Matrix, 5x5 LED grid, CircuitPython. Free firmware on GitHub. AP setup, Wi-Fi.">
   <link rel="stylesheet" href="/style.css">
   <meta name="robots" content="index, follow">
   <meta name="copyright" content="Institute for Seer LLC">
@@ -38,7 +38,7 @@
     <div class="hero-content">
       <p class="tagline" style="color: var(--teal-glow); opacity: 0.6;">Tick + ATOM Matrix</p>
       <h1 style="font-family: 'Russo One', sans-serif; color: var(--green-glow); text-shadow: 0 0 20px rgba(57,255,20,0.5), 0 0 60px rgba(57,255,20,0.2); letter-spacing: 4px;">SWAMP GLOW</h1>
-      <p class="subtitle" style="max-width: 600px;">A 5&times;5 LED grid the size of a quarter. Firmware pre-loaded. Plug in, configure from the setup page, and drop it in the swamp.</p>
+      <p class="subtitle" style="max-width: 600px;">A 5&times;5 LED grid the size of a quarter. Grab the firmware from <a href="https://github.com/i4seer/seer-frights-firmware" style="color: var(--teal-glow);">GitHub</a>, flash it, configure from the setup page, and drop it in the swamp.</p>
     </div>
   </div>
 
@@ -62,7 +62,7 @@
         <tr style="border-bottom: 1px solid #222;"><td style="padding: 0.5rem 0; color: var(--teal-glow);">Motion</td><td style="padding: 0.5rem 0;">MPU6886 accelerometer + gyroscope</td></tr>
         <tr style="border-bottom: 1px solid #222;"><td style="padding: 0.5rem 0; color: var(--teal-glow);">Wireless</td><td style="padding: 0.5rem 0;">Wi-Fi (built in)</td></tr>
         <tr style="border-bottom: 1px solid #222;"><td style="padding: 0.5rem 0; color: var(--teal-glow);">Power</td><td style="padding: 0.5rem 0;">USB-C, 5V</td></tr>
-        <tr style="border-bottom: 1px solid #222;"><td style="padding: 0.5rem 0; color: var(--teal-glow);">Firmware</td><td style="padding: 0.5rem 0;">CircuitPython + Tick &mdash; pre-loaded</td></tr>
+        <tr style="border-bottom: 1px solid #222;"><td style="padding: 0.5rem 0; color: var(--teal-glow);">Firmware</td><td style="padding: 0.5rem 0;">CircuitPython + Tick &mdash; <a href="https://github.com/i4seer/seer-frights-firmware" style="color: var(--teal-glow);">get from GitHub</a></td></tr>
         <tr><td style="padding: 0.5rem 0; color: var(--teal-glow);">Button</td><td style="padding: 0.5rem 0;">1 button hidden under the LED grid</td></tr>
       </table>
     </div>
@@ -70,9 +70,10 @@
 
   <!-- STEP 1: PLUG IN -->
   <section>
-    <h2 class="section-title" style="color: var(--teal-glow); text-shadow: 0 0 10px rgba(46,230,208,0.4);">Step 1 &mdash; Plug In</h2>
+    <h2 class="section-title" style="color: var(--teal-glow); text-shadow: 0 0 10px rgba(46,230,208,0.4);">Step 1 &mdash; Load the Firmware</h2>
     <div style="max-width: 700px; margin: 0 auto; line-height: 1.8; font-size: 1.05rem;">
-      <p>Connect USB-C to power. The firmware is already on the device &mdash; no flashing, no setup tools, no code to compile. It boots in about 2 seconds.</p>
+      <p><a href="https://github.com/i4seer/seer-frights-firmware/archive/refs/heads/main.zip" style="color: var(--teal-glow);">Download the firmware zip</a> and extract it on your computer.</p>
+      <p style="margin-top: 1rem;">Connect the ATOM Matrix via USB-C. It shows up as a drive called <code style="background: #1a1a1a; padding: 0.15rem 0.4rem; color: var(--green-glow); font-size: 0.9rem;">CIRCUITPY</code>. Copy the <code style="background: #1a1a1a; padding: 0.15rem 0.4rem; color: var(--green-glow); font-size: 0.9rem;">swamp-glow</code> folder contents onto the drive. The device reboots automatically and starts running. It boots in about 2 seconds.</p>
 
       <p style="margin-top: 1rem;">What happens on boot:</p>
       <ul style="margin-top: 0.5rem; padding-left: 1.5rem;">
@@ -331,6 +332,7 @@ server.serve_forever(str(wifi.radio.ipv4_address_ap))</code></pre>
       <a href="/build-safety/">Build Safety</a>
       <a href="/affiliate-disclosure/">Affiliate Disclosure</a>
       <a href="/cookie-policy/">Cookie Policy</a>
+      <a href="/do-not-sell/">Do Not Sell My Info</a>
     </div>
 
     <p style="opacity: 0.4; font-size: 0.75rem; margin-top: 1rem; max-width: 800px; margin-left: auto; margin-right: auto;">
@@ -347,7 +349,7 @@ server.serve_forever(str(wifi.radio.ipv4_address_ap))</code></pre>
 
   <!-- COOKIE BANNER -->
   <div class="cookie-banner" id="cookie-banner">
-    <p>We use cookies to improve your experience. By continuing to use this site, you agree to our <a href="/privacy/">Privacy Policy</a>.</p>
+    <p>This site uses essential cookies for basic functionality. Non-essential cookies (analytics, preferences) are only set with your consent. See our <a href="/privacy/">Privacy Policy</a>.</p>
     <div class="cookie-buttons">
       <button class="cookie-accept" id="cookie-accept">Accept</button>
       <button class="cookie-decline" id="cookie-decline">Decline</button>

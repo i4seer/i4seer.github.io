@@ -48,6 +48,7 @@
     <p class="tagline" style="color: var(--amber); opacity: 0.8; font-size: 1.5rem;">&#9888; DON'T BUILD ALONE &#9888;</p>
     <p style="text-align: center; max-width: 700px; margin: 1rem auto 0; font-size: 0.95rem; opacity: 0.7;">The driver watches &mdash; and so should your adult. These are simple builds, but an adult should still be around. Especially for Version 2 with the soldering iron. Find an adult who knows what a capacitor is. If they don't &mdash; find a different adult.</p>
     <p style="text-align: center; max-width: 700px; margin: 1rem auto 0; font-size: 0.85rem; opacity: 0.4; font-style: italic;">I learned this from a library book and a retired electrician named Earl who lived two streets over. Earl had all his fingers. Learn from an Earl.</p>
+    <p style="text-align: center; max-width: 700px; margin: 1rem auto 0; font-size: 0.82rem; opacity: 0.5;">For builders aged 8+ with active adult supervision. By using these build instructions, you assume all risks of injury or damage that may result from constructing or operating this device. See <a href="/build-safety/" style="color: var(--amber);">Build Safety</a> and <a href="/terms/" style="color: var(--amber);">Terms of Use</a>.</p>
   </div>
 
   <!-- VERSION 1 -->
@@ -81,6 +82,7 @@
       <span class="version-label">Version 2 &mdash; The Real One</span>
       <h3 style="color: var(--orange-sodium); text-shadow: 0 0 15px rgba(255,140,66,0.3);">Step On It. It Pulses. Then Fades.</h3>
       <p><em>Same pressure mat, but now the LED pulses slowly for 30 seconds after someone sits down &mdash; then fades to dark. Requires soldering, a few small parts, and an adult who knows what a capacitor is.</em></p>
+      <p><strong>Low-voltage build.</strong> Use 2x AAA batteries (3V total). Do not connect to household electrical wiring.</p>
 
       <h4>What You Need</h4>
       <ul>
@@ -132,6 +134,9 @@
       <p><strong>Step 3 &mdash; Configure it.</strong> Hold the button for 3 seconds. The device becomes a Wi-Fi hotspot. Connect with your phone and open 192.168.4.1. A setup page loads right from the device. Set the trigger color, brightness, display pattern ("13" or passenger count), and how long the display stays lit after someone gets up. Save. Done.</p>
       <p><strong>Step 4 &mdash; Hide it.</strong> Tuck the ATOM Matrix behind furniture, under a shelf, inside a gap &mdash; LED grid facing out where people can see the glow. Run the pressure mat under a cushion, doormat, or rug. Run the USB cable to a hidden power source.</p>
 
+      <p style="margin-top: 1rem; font-size: 0.85rem; opacity: 0.6;"><strong>Firmware &amp; software:</strong> All code and firmware provided is for educational use only. No guarantees are made regarding performance, security, or interoperability. You are responsible for validating and testing any software before deployment.</p>
+      <p style="margin-top: 0.5rem; font-size: 0.85rem; opacity: 0.6;"><strong>Regulatory compliance:</strong> You are responsible for ensuring that all components used (including Wi-Fi&ndash;enabled devices) comply with applicable safety, electrical, and radio regulatory standards in your jurisdiction (e.g., FCC, CE).</p>
+
       <div class="note">
         Tick handles everything &mdash; pressure detection, LED patterns, timing, passenger counting. Configure from the setup page. Add Wi-Fi when you want browser control from another room. Total cost: about $17. No soldering required for the ATOM Matrix itself &mdash; just two jumper wires and a resistor to the mat.
       </div>
@@ -164,6 +169,40 @@
     </div>
   </div>
 
+  <!-- SAFETY & LEGAL NOTICE -->
+  <section>
+    <div style="max-width: 800px; margin: 0 auto;">
+      <div style="background: var(--bg-card); border: 1px solid #332200; padding: 1.5rem; line-height: 1.8; font-size: 0.88rem;">
+        <h3 style="color: var(--amber); font-family: 'Russo One', sans-serif; font-size: 1rem; margin-bottom: 1rem;">&#9888; Important Safety &amp; Legal Notice</h3>
+
+        <p>By accessing or using these build instructions, firmware, schematics, code samples, or related materials (the &ldquo;Materials&rdquo;), you acknowledge and agree to the following:</p>
+
+        <p style="margin-top: 1rem;"><strong style="color: var(--text-bright);">1. Educational Use Only</strong><br>
+        All Materials are provided for educational and informational purposes only. They are not professional engineering, electrical, or safety advice.</p>
+
+        <p style="margin-top: 1rem;"><strong style="color: var(--text-bright);">2. Assumption of Risk</strong><br>
+        Electronics projects involve inherent risks, including but not limited to electrical shock, burns, fire hazards, equipment damage, and personal injury. You assume all risks associated with building, modifying, or using any device described in these Materials.</p>
+
+        <p style="margin-top: 1rem;"><strong style="color: var(--text-bright);">3. Adult Supervision Required</strong><br>
+        These projects require tools and components (including soldering irons, power supplies, batteries, and microcontrollers) that may be hazardous. Individuals under 18 years of age must have active adult supervision. The Materials are not directed to children under 13.</p>
+
+        <p style="margin-top: 1rem;"><strong style="color: var(--text-bright);">4. No Warranties</strong><br>
+        The Materials are provided &ldquo;AS IS&rdquo; without warranties of any kind, express or implied, including but not limited to fitness for a particular purpose, merchantability, or non-infringement. We do not guarantee that any project will function as expected.</p>
+
+        <p style="margin-top: 1rem;"><strong style="color: var(--text-bright);">5. Limitation of Liability</strong><br>
+        To the maximum extent permitted by law, Institute for Seer LLC shall not be liable for any injury, loss, damage, or claim (including property damage, data loss, device malfunction, or personal injury) arising out of or related to the use or misuse of the Materials.</p>
+
+        <p style="margin-top: 1rem;"><strong style="color: var(--text-bright);">6. Third-Party Components</strong><br>
+        Projects may reference third-party hardware, software, firmware, cloud services, or development tools. We are not responsible for the safety, performance, availability, or compliance of any third-party components.</p>
+
+        <p style="margin-top: 1rem;"><strong style="color: var(--text-bright);">7. Code &amp; Firmware Use</strong><br>
+        Any code or firmware provided is for educational use. You are responsible for validating, testing, and securing any software before deploying it in real-world or commercial environments.</p>
+
+        <p style="margin-top: 1.2rem; opacity: 0.5; font-size: 0.82rem;">See also: <a href="/build-safety/" style="color: var(--amber);">Build Safety</a> &bull; <a href="/terms/" style="color: var(--amber);">Terms of Use</a></p>
+      </div>
+    </div>
+  </section>
+
   <!-- WHISPER -->
   <div class="whisper">
     <p>"We saw it . . ."</p>
@@ -184,6 +223,7 @@
       <a href="/build-safety/">Build Safety</a>
       <a href="/affiliate-disclosure/">Affiliate Disclosure</a>
       <a href="/cookie-policy/">Cookie Policy</a>
+      <a href="/do-not-sell/">Do Not Sell My Info</a>
     </div>
 
     <p style="opacity: 0.4; font-size: 0.75rem; margin-top: 1rem; max-width: 800px; margin-left: auto; margin-right: auto;">
@@ -200,7 +240,7 @@
 
   <!-- COOKIE BANNER -->
   <div class="cookie-banner" id="cookie-banner">
-    <p>We use cookies to improve your experience. By continuing to use this site, you agree to our <a href="/privacy/">Privacy Policy</a>.</p>
+    <p>This site uses essential cookies for basic functionality. Non-essential cookies (analytics, preferences) are only set with your consent. See our <a href="/privacy/">Privacy Policy</a>.</p>
     <div class="cookie-buttons">
       <button class="cookie-accept" id="cookie-accept">Accept</button>
       <button class="cookie-decline" id="cookie-decline">Decline</button>
