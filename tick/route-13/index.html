@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tick + ATOM Matrix — Route 13 | i4seer.com</title>
+  <meta name="description" content="The Route 13 Tick device. ATOM Matrix, 5x5 LED grid, pressure mat trigger, CircuitPython. Pre-loaded firmware. AP setup, Wi-Fi.">
+  <link rel="stylesheet" href="/style.css">
+  <meta name="robots" content="index, follow">
+  <meta name="copyright" content="Institute for Seer LLC">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+</head>
+<body class="tick-page">
+
+  <!-- NAV -->
+  <header style="border-bottom-color: var(--teal-glow); box-shadow: 0 4px 30px rgba(46, 230, 208, 0.15);">
+    <nav>
+      <div class="nav-top">
+        <a href="/tick/" class="logo" style="color: var(--teal-glow); text-shadow: 0 0 10px rgba(46,230,208,0.5), 0 0 30px rgba(46,230,208,0.2);">TICK<span>telemetry by i4seer</span></a>
+        <ul>
+          <li><a href="/">i4seer</a></li>
+          <li><a href="/seer-frights/">Seer Frights</a></li>
+          <li><a href="/tick/" class="active" style="color: var(--teal-glow);">Tick</a></li>
+        </ul>
+      </div>
+      <div class="nav-sub" style="border-top-color: #1a3a3a;">
+        <ul>
+          <li><a href="/tick/">Home</a></li>
+          <li><a href="/tick/devices/" class="active" style="color: var(--orange-sodium);">Devices</a></li>
+          <li><a href="/tick/buy/">Buy</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <div class="hero" style="min-height: 45vh; background: radial-gradient(ellipse at center bottom, rgba(255,140,66,0.06) 0%, rgba(46,230,208,0.04) 30%, transparent 60%), linear-gradient(180deg, #000 0%, #0a0a0a 50%, #0a1414 100%);">
+    <div class="hero-content">
+      <p class="tagline" style="color: var(--teal-glow); opacity: 0.6;">Tick + ATOM Matrix</p>
+      <h1 style="font-family: 'Russo One', sans-serif; color: var(--orange-sodium); text-shadow: 0 0 20px rgba(255,140,66,0.5), 0 0 60px rgba(255,140,66,0.2); letter-spacing: 4px;">ROUTE 13</h1>
+      <p class="subtitle" style="max-width: 600px;">A pressure mat and a 5&times;5 LED grid. Someone sits down &mdash; the device lights up orange and counts. Firmware pre-loaded. Configure from the setup page.</p>
+    </div>
+  </div>
+
+  <!-- DEVICE IMAGE -->
+  <section>
+    <div style="max-width: 700px; margin: 0 auto; text-align: center;">
+      <img src="/images/tick-atom-matrix.png" alt="ATOM Matrix" style="max-width: 300px; width: 100%; border-radius: 12px; border: 2px solid #1a3a3a; margin-bottom: 1rem;">
+      <p style="opacity: 0.4; font-size: 0.85rem;">ATOM Matrix &mdash; 24 &times; 24mm. 25 RGB LEDs. Accelerometer. Wi-Fi. USB-C. ~$15. Pressure mat adds ~$2.</p>
+    </div>
+  </section>
+
+  <!-- WHAT'S ON THE BOARD -->
+  <section>
+    <h2 class="section-title" style="color: var(--teal-glow); text-shadow: 0 0 10px rgba(46,230,208,0.4);">What&rsquo;s On the Board</h2>
+    <div style="max-width: 650px; margin: 0 auto; line-height: 1.8; font-size: 1.05rem;">
+      <p>The <strong><a href="/tick/buy/" style="color: var(--teal-glow);">ATOM Matrix</a></strong> &mdash; same board as the Swamp Glow. Everything built in except the pressure mat, which connects with two wires.</p>
+
+      <table style="width: 100%; border-collapse: collapse; font-size: 0.95rem; margin-top: 1.5rem;">
+        <tr style="border-bottom: 1px solid #222;"><td style="padding: 0.5rem 0; color: var(--orange-sodium);">LEDs</td><td style="padding: 0.5rem 0;">5&times;5 WS2812C RGB matrix &mdash; 25 LEDs, any color</td></tr>
+        <tr style="border-bottom: 1px solid #222;"><td style="padding: 0.5rem 0; color: var(--teal-glow);">Chip</td><td style="padding: 0.5rem 0;">ESP32-PICO-D4, dual-core 240 MHz, 4MB flash</td></tr>
+        <tr style="border-bottom: 1px solid #222;"><td style="padding: 0.5rem 0; color: var(--teal-glow);">Motion</td><td style="padding: 0.5rem 0;">MPU6886 accelerometer + gyroscope</td></tr>
+        <tr style="border-bottom: 1px solid #222;"><td style="padding: 0.5rem 0; color: var(--teal-glow);">Wireless</td><td style="padding: 0.5rem 0;">Wi-Fi (built in)</td></tr>
+        <tr style="border-bottom: 1px solid #222;"><td style="padding: 0.5rem 0; color: var(--teal-glow);">Power</td><td style="padding: 0.5rem 0;">USB-C, 5V</td></tr>
+        <tr style="border-bottom: 1px solid #222;"><td style="padding: 0.5rem 0; color: var(--teal-glow);">Firmware</td><td style="padding: 0.5rem 0;">CircuitPython + Tick &mdash; pre-loaded</td></tr>
+        <tr style="border-bottom: 1px solid #222;"><td style="padding: 0.5rem 0; color: var(--teal-glow);">Button</td><td style="padding: 0.5rem 0;">1 button hidden under the LED grid</td></tr>
+        <tr><td style="padding: 0.5rem 0; color: var(--orange-sodium);">Trigger</td><td style="padding: 0.5rem 0;">Pressure mat on GPIO 32 &mdash; two wires + 10K pull-up resistor</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <!-- STEP 1: PLUG IN -->
+  <section>
+    <h2 class="section-title" style="color: var(--teal-glow); text-shadow: 0 0 10px rgba(46,230,208,0.4);">Step 1 &mdash; Plug In</h2>
+    <div style="max-width: 700px; margin: 0 auto; line-height: 1.8; font-size: 1.05rem;">
+      <p>Connect USB-C to power. The firmware is already on the device &mdash; no flashing, no setup tools, no code to compile. It boots in about 2 seconds.</p>
+
+      <p style="margin-top: 1rem;">What happens on boot:</p>
+      <ul style="margin-top: 0.5rem; padding-left: 1.5rem;">
+        <li>The 5&times;5 LED grid shows a dim orange idle pattern</li>
+        <li>The pressure mat input starts polling on GPIO 32</li>
+        <li>Saved settings load from flash (color, brightness, pattern, trigger duration)</li>
+      </ul>
+
+      <p style="margin-top: 1rem;"><strong style="color: var(--orange-sodium);">Wiring the mat:</strong> One mat wire to GPIO 32 (G32). Other mat wire to GND. A 10K resistor between G32 and 3V3. Three connections total. When someone steps on the mat, GPIO 32 goes LOW and the firmware triggers the display.</p>
+    </div>
+  </section>
+
+  <!-- STEP 2: AP SETUP PAGE -->
+  <section>
+    <h2 class="section-title" style="color: var(--teal-glow); text-shadow: 0 0 10px rgba(46,230,208,0.4);">Step 2 &mdash; AP Setup Page</h2>
+    <p class="section-subtitle">The device becomes its own Wi-Fi hotspot. You connect to it and configure from a web page.</p>
+    <div style="max-width: 700px; margin: 0 auto; line-height: 1.8; font-size: 1.05rem;">
+
+      <p>Hold the button for 3 seconds. The LED grid turns <strong style="color: var(--amber);">yellow</strong> &mdash; the ATOM Matrix is now running as a Wi-Fi access point.</p>
+
+      <div class="tick-steps" style="margin: 1.5rem 0;">
+        <div class="tick-step">
+          <div class="tick-step-num" style="background: var(--orange-sodium);">1</div>
+          <h4>Connect your phone to the hotspot</h4>
+          <p>Wi-Fi name: <code style="background: #1a1a1a; padding: 0.15rem 0.4rem; color: var(--orange-sodium); font-size: 0.9rem;">Tick</code> &nbsp; Password: <code style="background: #1a1a1a; padding: 0.15rem 0.4rem; color: var(--orange-sodium); font-size: 0.9rem;">11111111</code></p>
+        </div>
+        <div class="tick-step">
+          <div class="tick-step-num" style="background: var(--orange-sodium);">2</div>
+          <h4>Open the setup page</h4>
+          <p>Go to <code style="background: #1a1a1a; padding: 0.15rem 0.4rem; color: var(--orange-sodium); font-size: 0.9rem;">http://192.168.4.1</code> in your phone&rsquo;s browser. A setup page loads &mdash; it&rsquo;s stored on the device itself, not the internet.</p>
+        </div>
+        <div class="tick-step">
+          <div class="tick-step-num" style="background: var(--orange-sodium);">3</div>
+          <h4>Configure the trigger</h4>
+          <p>Set the trigger color, brightness, display pattern (&ldquo;13&rdquo; or passenger count), and how long the LEDs stay lit after the pressure is released.</p>
+        </div>
+      </div>
+
+      <p>The setup page is embedded in the firmware &mdash; a single HTML file served from the device. No internet needed. Dark background, orange accents, Route 13 theme. It looks like it belongs to the book.</p>
+
+      <p style="opacity: 0.5; font-size: 0.9rem; margin-top: 1rem;">The AP page also lets you enter Wi-Fi credentials for Step 3 &mdash; but that&rsquo;s optional. You can use the device with just the AP page forever.</p>
+
+    </div>
+  </section>
+
+  <!-- STEP 3: WI-FI -->
+  <section>
+    <h2 class="section-title" style="color: var(--teal-glow); text-shadow: 0 0 10px rgba(46,230,208,0.4);">Step 3 &mdash; Wi-Fi</h2>
+    <p class="section-subtitle">Optional. Connect to your home network for remote control.</p>
+    <div style="max-width: 700px; margin: 0 auto; line-height: 1.8; font-size: 1.05rem;">
+
+      <p>On the AP setup page, there&rsquo;s a section for Wi-Fi credentials. Enter your network name and password. Hit save. The device reboots, connects to your Wi-Fi, and now you can reach it from any device on the same network.</p>
+
+      <p style="margin-top: 1rem;">With Wi-Fi, you can check the passenger count from another room. Reset the counter remotely. Change the trigger pattern. All from your browser.</p>
+
+      <p style="margin-top: 1rem;">If you have multiple devices on the same network &mdash; a Swamp Glow and a Route 13, for example &mdash; each one has its own IP. Bookmark them. Control any device from any browser on your network.</p>
+    </div>
+  </section>
+
+  <!-- UNDER THE HOOD -->
+  <section>
+    <h2 class="section-title" style="color: var(--orange-sodium); text-shadow: 0 0 10px rgba(255,140,66,0.4);">Under the Hood</h2>
+    <p class="section-subtitle">What&rsquo;s running on the device. CircuitPython.</p>
+    <div style="max-width: 700px; margin: 0 auto; line-height: 1.8; font-size: 1.05rem;">
+
+      <p>The ATOM Matrix runs CircuitPython with the Tick library. All the code lives on the <code style="background: #1a1a1a; padding: 0.15rem 0.4rem; color: var(--orange-sodium); font-size: 0.9rem;">CIRCUITPY</code> drive. Here&rsquo;s what it does:</p>
+
+      <h4 style="color: var(--orange-sodium); margin-top: 1.5rem;">Pressure Mat Input</h4>
+      <p>The mat connects to GPIO 32 with a pull-up resistor. When someone sits down, the pin goes LOW:</p>
+
+      <pre style="background: #111; border: 1px solid #222; border-radius: 8px; padding: 1.2rem; margin: 1rem 0; overflow-x: auto; font-size: 0.85rem; line-height: 1.6;"><code style="color: var(--text-main);"><span style="color: var(--teal-glow);">import</span> board
+<span style="color: var(--teal-glow);">import</span> digitalio
+
+<span style="color: #666;"># Pressure mat on GPIO 32 with internal pull-up</span>
+mat = digitalio.DigitalInOut(board.G32)
+mat.direction = digitalio.Direction.INPUT
+mat.pull = digitalio.Pull.UP
+
+<span style="color: var(--teal-glow);">def</span> <span style="color: var(--orange-sodium);">is_pressed</span>():
+    <span style="color: var(--teal-glow);">return not</span> mat.value  <span style="color: #666;"># LOW when pressed</span></code></pre>
+
+      <h4 style="color: var(--orange-sodium); margin-top: 1.5rem;">LED Display &mdash; &ldquo;13&rdquo; Pattern</h4>
+      <p>The 5&times;5 grid shows &ldquo;13&rdquo; in orange when triggered. Each LED maps to a position on the grid:</p>
+
+      <pre style="background: #111; border: 1px solid #222; border-radius: 8px; padding: 1.2rem; margin: 1rem 0; overflow-x: auto; font-size: 0.85rem; line-height: 1.6;"><code style="color: var(--text-main);"><span style="color: var(--teal-glow);">import</span> neopixel
+
+NUM_LEDS = <span style="color: var(--orange-sodium);">25</span>
+np = neopixel.NeoPixel(board.G27, NUM_LEDS, auto_write=<span style="color: var(--orange-sodium);">False</span>)
+
+<span style="color: #666;"># "13" on a 5x5 grid (0=off, 1=on)</span>
+PATTERN_13 = [
+    <span style="color: var(--orange-sodium);">0</span>,<span style="color: var(--orange-sodium);">1</span>,<span style="color: var(--orange-sodium);">0</span>,<span style="color: var(--orange-sodium);">1</span>,<span style="color: var(--orange-sodium);">1</span>,  <span style="color: #666;"># row 0</span>
+    <span style="color: var(--orange-sodium);">0</span>,<span style="color: var(--orange-sodium);">1</span>,<span style="color: var(--orange-sodium);">0</span>,<span style="color: var(--orange-sodium);">0</span>,<span style="color: var(--orange-sodium);">1</span>,  <span style="color: #666;"># row 1</span>
+    <span style="color: var(--orange-sodium);">0</span>,<span style="color: var(--orange-sodium);">1</span>,<span style="color: var(--orange-sodium);">0</span>,<span style="color: var(--orange-sodium);">1</span>,<span style="color: var(--orange-sodium);">1</span>,  <span style="color: #666;"># row 2</span>
+    <span style="color: var(--orange-sodium);">0</span>,<span style="color: var(--orange-sodium);">1</span>,<span style="color: var(--orange-sodium);">0</span>,<span style="color: var(--orange-sodium);">0</span>,<span style="color: var(--orange-sodium);">1</span>,  <span style="color: #666;"># row 3</span>
+    <span style="color: var(--orange-sodium);">0</span>,<span style="color: var(--orange-sodium);">1</span>,<span style="color: var(--orange-sodium);">0</span>,<span style="color: var(--orange-sodium);">1</span>,<span style="color: var(--orange-sodium);">1</span>,  <span style="color: #666;"># row 4</span>
+]
+
+<span style="color: var(--teal-glow);">def</span> <span style="color: var(--orange-sodium);">show_13</span>(r, g, b, brightness=<span style="color: var(--orange-sodium);">20</span>):
+    <span style="color: var(--teal-glow);">for</span> i <span style="color: var(--teal-glow);">in</span> range(NUM_LEDS):
+        <span style="color: var(--teal-glow);">if</span> PATTERN_13[i]:
+            np[i] = (r * brightness // <span style="color: var(--orange-sodium);">255</span>,
+                     g * brightness // <span style="color: var(--orange-sodium);">255</span>,
+                     b * brightness // <span style="color: var(--orange-sodium);">255</span>)
+        <span style="color: var(--teal-glow);">else</span>:
+            np[i] = (<span style="color: var(--orange-sodium);">0</span>, <span style="color: var(--orange-sodium);">0</span>, <span style="color: var(--orange-sodium);">0</span>)
+    np.show()</code></pre>
+
+      <h4 style="color: var(--orange-sodium); margin-top: 1.5rem;">Passenger Counter</h4>
+      <p>Every time the mat is pressed and released, the count goes up. The grid flashes the new number:</p>
+
+      <pre style="background: #111; border: 1px solid #222; border-radius: 8px; padding: 1.2rem; margin: 1rem 0; overflow-x: auto; font-size: 0.85rem; line-height: 1.6;"><code style="color: var(--text-main);">passenger_count = <span style="color: var(--orange-sodium);">0</span>
+was_pressed     = <span style="color: var(--orange-sodium);">False</span>
+display_until   = <span style="color: var(--orange-sodium);">0</span>
+
+<span style="color: var(--teal-glow);">while</span> <span style="color: var(--orange-sodium);">True</span>:
+    pressed = is_pressed()
+
+    <span style="color: #666;"># New press &mdash; count goes up</span>
+    <span style="color: var(--teal-glow);">if</span> pressed <span style="color: var(--teal-glow);">and not</span> was_pressed:
+        passenger_count += <span style="color: var(--orange-sodium);">1</span>
+        show_13(<span style="color: var(--orange-sodium);">255</span>, <span style="color: var(--orange-sodium);">140</span>, <span style="color: var(--orange-sodium);">66</span>)  <span style="color: #666;"># orange-sodium</span>
+        display_until = time.monotonic() + <span style="color: var(--orange-sodium);">30</span>
+
+    <span style="color: #666;"># Display timeout</span>
+    <span style="color: var(--teal-glow);">if</span> time.monotonic() > display_until:
+        np.fill((<span style="color: var(--orange-sodium);">0</span>, <span style="color: var(--orange-sodium);">0</span>, <span style="color: var(--orange-sodium);">0</span>))
+        np.show()
+
+    was_pressed = pressed
+    time.sleep(<span style="color: var(--orange-sodium);">0.05</span>)</code></pre>
+
+      <h4 style="color: var(--orange-sodium); margin-top: 1.5rem;">AP Setup Page</h4>
+      <p>When you hold the button, the device starts a web server:</p>
+
+      <pre style="background: #111; border: 1px solid #222; border-radius: 8px; padding: 1.2rem; margin: 1rem 0; overflow-x: auto; font-size: 0.85rem; line-height: 1.6;"><code style="color: var(--text-main);"><span style="color: var(--teal-glow);">import</span> wifi
+<span style="color: var(--teal-glow);">import</span> socketpool
+<span style="color: var(--teal-glow);">from</span> adafruit_httpserver <span style="color: var(--teal-glow);">import</span> Server, Request, Response
+
+<span style="color: #666;"># Start AP mode</span>
+wifi.radio.start_ap(ssid=<span style="color: var(--amber);">"Tick"</span>, password=<span style="color: var(--amber);">"11111111"</span>)
+
+pool = socketpool.SocketPool(wifi.radio)
+server = Server(pool, <span style="color: var(--amber);">"/static"</span>)
+
+@server.route(<span style="color: var(--amber);">"/"</span>)
+<span style="color: var(--teal-glow);">def</span> <span style="color: var(--orange-sodium);">index</span>(request: Request):
+    <span style="color: var(--teal-glow);">return</span> Response(request, body=SETUP_HTML,
+                    content_type=<span style="color: var(--amber);">"text/html"</span>)
+
+@server.route(<span style="color: var(--amber);">"/save"</span>, methods=[<span style="color: var(--amber);">"POST"</span>])
+<span style="color: var(--teal-glow);">def</span> <span style="color: var(--orange-sodium);">save</span>(request: Request):
+    save_settings(request.form_data)
+    <span style="color: var(--teal-glow);">return</span> Response(request, body=<span style="color: var(--amber);">"Saved. Rebooting..."</span>)
+
+server.serve_forever(str(wifi.radio.ipv4_address_ap))</code></pre>
+
+    </div>
+  </section>
+
+  <!-- MOUNT IT -->
+  <section>
+    <h2 class="section-title" style="color: var(--orange-sodium); text-shadow: 0 0 10px rgba(255,140,66,0.4);">Mount It</h2>
+    <div style="max-width: 700px; margin: 0 auto; line-height: 1.8; font-size: 1.05rem;">
+      <p>Two things to hide: the mat and the device.</p>
+      <ul style="padding-left: 1.5rem;">
+        <li><strong>The mat</strong> goes under a cushion, doormat, rug, or chair seat. Flat and thin &mdash; no one feels it through fabric.</li>
+        <li><strong>The ATOM Matrix</strong> hides nearby. Behind a table leg, under a shelf, inside a drawer with a gap. LED grid faces out so the glow is visible.</li>
+        <li><strong>Two wires</strong> run from the mat to GPIO 32 and GND on the ATOM Matrix. Route them along baseboards or under the rug.</li>
+        <li><strong>USB cable</strong> runs to a hidden power source &mdash; battery pack behind furniture, or a long cable to a hidden outlet.</li>
+      </ul>
+      <p style="margin-top: 1rem;">No soldering on the ATOM Matrix itself. The pressure mat connects with two jumper wires and a 10K resistor. The device is 24mm square &mdash; it fits behind almost anything.</p>
+    </div>
+  </section>
+
+  <!-- UPDATE FIRMWARE -->
+  <section>
+    <h2 class="section-title" style="color: var(--teal-glow); text-shadow: 0 0 10px rgba(46,230,208,0.4);">Update the Firmware</h2>
+    <p class="section-subtitle">Plug in USB. Drag and drop. Done.</p>
+    <div style="max-width: 700px; margin: 0 auto; line-height: 1.8; font-size: 1.05rem;">
+
+      <p>The device runs CircuitPython. When you plug it into a computer, it shows up as a USB drive called <code style="background: #1a1a1a; padding: 0.15rem 0.4rem; color: var(--orange-sodium); font-size: 0.9rem;">CIRCUITPY</code>. The Tick code is a set of <code style="background: #1a1a1a; padding: 0.15rem 0.4rem; color: var(--orange-sodium); font-size: 0.9rem;">.py</code> files on that drive. To update:</p>
+
+      <div class="tick-steps" style="margin: 1.5rem 0;">
+        <div class="tick-step">
+          <div class="tick-step-num" style="background: var(--teal-glow);">1</div>
+          <h4>Get the latest code</h4>
+          <p>Download the latest files from the i4seer GitHub repo:</p>
+          <pre style="background: #111; border: 1px solid #222; border-radius: 8px; padding: 0.8rem; margin: 0.5rem 0; overflow-x: auto; font-size: 0.85rem;"><code style="color: var(--teal-glow);">github.com/i4seer/tick-route-13</code></pre>
+          <p style="opacity: 0.5; font-size: 0.85rem;">Click the green <strong>Code</strong> button, then <strong>Download ZIP</strong>. Or use <code style="background: #1a1a1a; padding: 0.1rem 0.3rem; color: var(--teal-glow); font-size: 0.85rem;">git clone</code> if you know git.</p>
+        </div>
+        <div class="tick-step">
+          <div class="tick-step-num" style="background: var(--teal-glow);">2</div>
+          <h4>Plug in the device</h4>
+          <p>Connect via USB-C. A drive called <code style="background: #1a1a1a; padding: 0.15rem 0.4rem; color: var(--orange-sodium); font-size: 0.9rem;">CIRCUITPY</code> appears on your computer &mdash; just like a thumb drive.</p>
+        </div>
+        <div class="tick-step">
+          <div class="tick-step-num" style="background: var(--teal-glow);">3</div>
+          <h4>Copy the new files</h4>
+          <p>Drag the updated <code style="background: #1a1a1a; padding: 0.1rem 0.3rem; color: var(--orange-sodium); font-size: 0.85rem;">.py</code> files from the download onto the <code style="background: #1a1a1a; padding: 0.1rem 0.3rem; color: var(--orange-sodium); font-size: 0.85rem;">CIRCUITPY</code> drive. Replace the old files.</p>
+          <pre style="background: #111; border: 1px solid #222; border-radius: 8px; padding: 0.8rem; margin: 0.5rem 0; overflow-x: auto; font-size: 0.85rem;"><code style="color: var(--teal-glow);">CIRCUITPY/
+  code.py          <span style="color: #666;">&larr; main program</span>
+  tick_led.py      <span style="color: #666;">&larr; LED patterns + "13" display</span>
+  tick_web.py      <span style="color: #666;">&larr; AP setup page</span>
+  tick_trigger.py  <span style="color: #666;">&larr; pressure mat input + counter</span>
+  settings.toml    <span style="color: #666;">&larr; saved settings</span></code></pre>
+        </div>
+        <div class="tick-step">
+          <div class="tick-step-num" style="background: var(--teal-glow);">4</div>
+          <h4>Done</h4>
+          <p>The device reboots automatically when you save files. Your settings (color, brightness, pattern, trigger duration) are preserved. Unplug USB and it runs on its own.</p>
+        </div>
+      </div>
+
+      <p style="opacity: 0.4; font-size: 0.9rem;">Updates are optional. The device works out of the box. But if i4seer releases new patterns, bug fixes, or features &mdash; this is how you get them. No special tools. Just copy files.</p>
+
+    </div>
+  </section>
+
+  <!-- LINKS -->
+  <div class="full-width-bg" style="background: linear-gradient(180deg, var(--bg-dark) 0%, #0a1414 50%, var(--bg-dark) 100%); padding: 4rem 2rem;">
+    <div style="max-width: 700px; margin: 0 auto; text-align: center;">
+      <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
+        <a href="/build-it/route-13/" class="btn btn-glow" style="background: var(--orange-sodium); box-shadow: 0 0 15px rgba(255,140,66,0.4);">All 3 Build Versions</a>
+        <a href="/books/book2/" class="btn btn-outline" style="color: var(--orange-sodium); border-color: var(--orange-sodium);">Read Book 2</a>
+        <a href="/tick/route-13/" class="btn btn-outline" style="color: var(--teal-glow); border-color: var(--teal-glow);">About Tick</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo" style="font-family: 'Russo One', sans-serif; color: var(--teal-glow); font-size: 1.2rem; letter-spacing: 3px; text-shadow: 0 0 10px rgba(46,230,208,0.3);">TICK</div>
+    <p>&copy; 2026 Institute for Seer LLC. All rights reserved.</p>
+    <p style="opacity: 0.3;">Telemetry by i4seer</p>
+    <div class="footer-links">
+      <a href="/">i4seer</a>
+      <a href="/tick/">Tick</a>
+      <a href="/tick/devices/">Devices</a>
+      <a href="/seer-frights/">Seer Frights</a>
+      <a href="/privacy/">Privacy Policy</a>
+      <a href="/terms/">Terms of Use</a>
+      <a href="/build-safety/">Build Safety</a>
+      <a href="/affiliate-disclosure/">Affiliate Disclosure</a>
+      <a href="/cookie-policy/">Cookie Policy</a>
+    </div>
+
+    <p style="opacity: 0.4; font-size: 0.75rem; margin-top: 1rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+      Seer Frights&reg;, Tick&trade;, and i4seer&trade; are trademarks of Institute for Seer LLC.
+      All build instructions are provided for educational purposes only.
+      Adult supervision is required for electronics projects.
+      Institute for Seer LLC is not responsible for misuse of third-party components.
+    </p>
+
+    <p style="opacity: 0.3; font-size: 0.7rem; margin-top: 0.5rem;">
+      This website is operated in the United States.
+    </p>
+  </footer>
+
+  <!-- COOKIE BANNER -->
+  <div class="cookie-banner" id="cookie-banner">
+    <p>We use cookies to improve your experience. By continuing to use this site, you agree to our <a href="/privacy/">Privacy Policy</a>.</p>
+    <div class="cookie-buttons">
+      <button class="cookie-accept" id="cookie-accept">Accept</button>
+      <button class="cookie-decline" id="cookie-decline">Decline</button>
+    </div>
+  </div>
+  <script>
+    (function() {
+      if (!localStorage.getItem('cookie-consent')) {
+        document.getElementById('cookie-banner').style.display = 'flex';
+      }
+      document.getElementById('cookie-accept').onclick = function() {
+        localStorage.setItem('cookie-consent', 'accepted');
+        document.getElementById('cookie-banner').style.display = 'none';
+      };
+      document.getElementById('cookie-decline').onclick = function() {
+        localStorage.setItem('cookie-consent', 'declined');
+        document.getElementById('cookie-banner').style.display = 'none';
+      };
+    })();
+  </script>
+
+</body>
+</html>

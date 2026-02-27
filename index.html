@@ -1,530 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="i4Seer Tick - IoT sensor modules with cellular, WiFi, or LoRa connectivity. Optional environmental and pressure sensors. Monitor anywhere.">
-    <title>i4Seer - IoT Sensing for Smarter Operations</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>i4seer — Stories That Watch Back. Devices That Think Ahead.</title>
+  <meta name="description" content="i4seer: Seer Frights middle-grade horror book series and Tick IoT telemetry platform. Stories and technology by Institute for Seer LLC.">
+  <link rel="stylesheet" href="/style.css">
+  <meta name="robots" content="index, follow">
+  <meta name="copyright" content="Institute for Seer LLC">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
 </head>
-<body>
-    <header class="site-header">
-        <div class="container header-inner">
-            <a href="/" class="logo">
-                <svg class="logo-icon" viewBox="0 0 32 32" fill="none">
-                    <path d="M4 16 L12 24 L28 8" stroke="#1a7a6d" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg><span class="logo-text">i4<span class="logo-accent">Seer</span></span></a>
-            <nav class="nav" id="nav-menu">
-                <a href="/" class="active">Home</a>
-                <a href="/pages/product/">Product</a>
-                <a href="/pages/product/#pricing">Pricing</a>
-                <a href="/pages/features/">Features</a>
-                <a href="#contact" class="nav-cta">Contact</a>
-            </nav>
-            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+<body class="landing-page">
+
+  <!-- NAV -->
+  <header>
+    <nav>
+      <div class="nav-top">
+        <a href="/" class="logo" style="font-size: 1.6rem;">i4seer<span>Institute for Seer</span></a>
+        <ul>
+          <li><a href="/" class="active">i4seer</a></li>
+          <li><a href="/seer-frights/">Seer Frights</a></li>
+          <li><a href="/tick/">Tick</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <div class="hero" style="min-height: 60vh;">
+    <div class="hero-content">
+      <h1 class="landing-title">i4seer</h1>
+      <p class="subtitle" style="max-width: 700px; font-size: 1.3rem;">Stories that watch back. Devices that think ahead.</p>
+      <p class="subtitle" style="max-width: 600px; font-size: 0.95rem; opacity: 0.5; margin-top: 0;">We publish books. We build devices. We watch.</p>
+    </div>
+  </div>
+
+  <!-- TWO PROJECT CARDS -->
+  <section>
+    <h2 class="section-title">Our Projects</h2>
+    <p class="section-subtitle">Two sides of the same coin. One tells stories. The other builds the future.</p>
+
+    <div class="launch-grid">
+
+      <!-- SEER FRIGHTS -->
+      <a href="/seer-frights/" class="launch-card launch-seer">
+        <div class="launch-card-icon"><svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="8" y="4" width="24" height="32" rx="2" stroke="white" stroke-width="2.5" fill="none"/><path d="M8 10h24" stroke="white" stroke-width="2"/><line x1="14" y1="16" x2="26" y2="16" stroke="white" stroke-width="1.5" stroke-linecap="round"/><line x1="14" y1="20" x2="26" y2="20" stroke="white" stroke-width="1.5" stroke-linecap="round"/><line x1="14" y1="24" x2="22" y2="24" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+        <div class="launch-card-label">Books</div>
+        <h3>Seer Frights</h3>
+        <p class="launch-card-tagline">"We saw it . . ."</p>
+        <p>Middle-grade horror for ages 8&ndash;12. Three books (so far). Each one drops kids into an ordinary place that turns wrong. Smart scares, real mysteries, and devices you can actually build.</p>
+        <div class="launch-card-details">
+          <span>3 Books</span>
+          <span>3 Build Projects</span>
+          <span>Ages 8&ndash;12</span>
         </div>
-    </header>
+        <div class="launch-card-cta">Explore the Books &rarr;</div>
+      </a>
 
-    <section class="hero">
-        <div class="container">
-            <h1>Turn Activity into <span>Insight</span></h1>
-            <p class="hero-tagline">Make every tick count. Automated tracking of events, cycles, and pulses — replacing manual methods with real-time data that drives smarter decisions.</p>
-            <div class="hero-cta">
-                <a href="#models" class="btn btn-primary">See Models</a>
-                <a href="/pages/product/" class="btn btn-secondary">View Product</a>
-            </div>
+      <!-- TICK -->
+      <a href="/tick/" class="launch-card launch-tick">
+        <div class="launch-card-icon"><svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="20" cy="22" r="14" stroke="white" stroke-width="2.5" fill="none"/><line x1="20" y1="22" x2="20" y2="14" stroke="white" stroke-width="2.5" stroke-linecap="round"/><line x1="20" y1="22" x2="27" y2="22" stroke="white" stroke-width="2" stroke-linecap="round"/><line x1="17" y1="4" x2="23" y2="4" stroke="white" stroke-width="2.5" stroke-linecap="round"/><line x1="20" y1="4" x2="20" y2="8" stroke="white" stroke-width="2" stroke-linecap="round"/></svg></div>
+        <div class="launch-card-label">IoT</div>
+        <h3>Tick</h3>
+        <p class="launch-card-tagline">Telemetry by i4seer</p>
+        <p>The next step from the books. Real devices that sense, glow, and connect over Wi-Fi. Build what the villains built &mdash; then take your projects anywhere.</p>
+        <div class="launch-card-details">
+          <span>IoT Devices</span>
+          <span>WiFi</span>
+          <span>Sensing &bull; Telemetry</span>
         </div>
-    </section>
+        <div class="launch-card-cta">Explore Tick &rarr;</div>
+      </a>
 
-    <section class="features">
-        <div class="container">
-            <h2 class="section-title">The Problem with Manual Tracking</h2>
-            <p class="section-subtitle">Traditional methods create bottlenecks that cost time and money</p>
+    </div>
+  </section>
 
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">&#9201;</div>
-                    <h3>Work Interruptions</h3>
-                    <p>Manual cycle counts force staff to stop regular tasks. In high-volume environments, this creates constant workflow disruptions.</p>
-                </div>
+  <!-- ABOUT -->
+  <section>
+    <div style="text-align: center; margin-bottom: 1rem;">
+      <img src="/images/seer-icon.png" alt="i4seer eye" style="width: 160px; opacity: 0.8; filter: drop-shadow(0 0 20px rgba(232,220,200,0.4));">
+    </div>
+    <h2 class="section-title">About i4seer</h2>
+    <div style="max-width: 700px; margin: 0 auto; text-align: center; line-height: 1.8; font-size: 1.05rem;">
+      <p><strong style="color: var(--text-bright);">Institute for Seer</strong> is an independent publisher and technology studio. Right now we&rsquo;re building two things: stories that make kids look twice at the world around them, and devices that watch the world so you don&rsquo;t have to. Every book has a mystery, every mystery has a device, and every device actually works. The stories come first. The tech follows.</p>
+      <br>
+      <p><a href="/seer-frights/" style="color: var(--green-glow); text-decoration: none;"><strong>Seer Frights</strong></a> is our middle-grade horror series by B. Carter. Three books so far. Each one drops kids into an ordinary place that turns wrong &mdash; smart scares, real mysteries, and a device the villain built that readers can actually make.</p>
+      <br>
+      <p><a href="/tick/" style="color: var(--teal-glow); text-decoration: none;"><strong>Tick</strong></a> is the next step. Real IoT sensing devices and code you can read. Start with the projects from the books &mdash; then take them anywhere.</p>
+      <br>
+      <p style="opacity: 0.4; font-size: 0.9rem;">Different projects. Same instinct: pay attention to what&rsquo;s actually happening.</p>
+    </div>
+  </section>
 
-                <div class="feature-card">
-                    <div class="feature-icon">&#10060;</div>
-                    <h3>Human Error</h3>
-                    <p>Fatigue, distraction, and simple mistakes lead to miscounts. Even small errors compound across thousands of items.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">&#128200;</div>
-                    <h3>Delayed Data</h3>
-                    <p>Manual counts provide snapshots, not live data. By the time you have numbers, they're already outdated.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">&#128176;</div>
-                    <h3>Hidden Costs</h3>
-                    <p>Labor hours, stockouts, overstocking, and shrinkage from poor visibility add up to significant losses over time.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">&#128203;</div>
-                    <h3>Compliance Gaps</h3>
-                    <p>Paper logs and manual records create audit vulnerabilities. Missing or inconsistent documentation puts certifications at risk.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">&#128269;</div>
-                    <h3>Limited Visibility</h3>
-                    <p>Without continuous monitoring, you only see snapshots. Patterns, trends, and anomalies go undetected until problems escalate.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="features" style="background: var(--bg-primary); border: none;">
-        <div class="container">
-            <h2 class="section-title">Why IoT Sensing Matters</h2>
-            <p class="section-subtitle">Automated sensing creates significant operational improvements with minimal complexity</p>
-
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">&#9889;</div>
-                    <h3>Automation & Efficiency</h3>
-                    <p>Sensors work in the background while staff focus on value-added tasks. Faster cycle counts without interrupting operations.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">&#128202;</div>
-                    <h3>Real-Time Accuracy</h3>
-                    <p>Continuous monitoring eliminates errors common in manual systems. Data syncs instantly with your management systems.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">&#128176;</div>
-                    <h3>Cost Reduction</h3>
-                    <p>Reduce labor needs, prevent losses from miscounts, and avoid stockouts or overstocking. ROI that compounds over time.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">&#128276;</div>
-                    <h3>Proactive Alerts</h3>
-                    <p>Automated notifications when thresholds are crossed, pressure drops, or anomalies are detected. Act before problems escalate.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">&#128065;</div>
-                    <h3>Enhanced Visibility</h3>
-                    <p>Holistic views of operations — temperature, pressure, airflow, and asset status. See the full picture for better management.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">&#128737;</div>
-                    <h3>Loss Prevention</h3>
-                    <p>Continuous tracking improves accountability and reduces shrinkage from theft, damage, or errors.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="product-showcase" id="models" style="background: var(--bg-secondary);">
-        <div class="container">
-            <h2 class="section-title">Choose Your Tick</h2>
-            <p class="section-subtitle">Four connectivity options, same compact form factor. Pick the radio that fits your deployment.</p>
-
-            <div class="features-grid" style="margin-bottom: 40px; grid-template-columns: repeat(3, 1fr);">
-                <div class="feature-card" style="border-color: var(--accent); border-width: 2px;">
-                    <div class="feature-icon">&#128225;</div>
-                    <h3>Tick Cell</h3>
-                    <p>LTE-M / NB-IoT cellular with GPS. Deploy anywhere with cell coverage. Ideal for remote sites, asset tracking, and field monitoring.</p>
-                    <ul style="margin-top: 12px; font-size: 13px; color: var(--text-secondary); list-style: none; padding: 0;">
-                        <li style="padding: 4px 0;">&#10003; Cellular LTE-M / NB-IoT</li>
-                        <li style="padding: 4px 0;">&#10003; Integrated GPS</li>
-                        <li style="padding: 4px 0;">&#10003; No WiFi infrastructure needed</li>
-                    </ul>
-                </div>
-
-                <div class="feature-card" style="border-color: var(--accent); border-width: 2px;">
-                    <div class="feature-icon">&#128246;</div>
-                    <h3>Tick WiFi & Cell+WiFi</h3>
-                    <p>WiFi for facilities with existing networks. Choose WiFi-only for lower cost, or Cell+WiFi for cellular fallback when WiFi drops.</p>
-                    <ul style="margin-top: 12px; font-size: 13px; color: var(--text-secondary); list-style: none; padding: 0;">
-                        <li style="padding: 4px 0;">&#10003; WiFi 802.11 b/g/n</li>
-                        <li style="padding: 4px 0;">&#10003; Cell+WiFi adds cellular fallback + GPS</li>
-                        <li style="padding: 4px 0;">&#10003; Works on existing WiFi infrastructure</li>
-                    </ul>
-                </div>
-
-                <div class="feature-card" style="border-color: var(--accent); border-width: 2px;">
-                    <div class="feature-icon">&#128279;</div>
-                    <h3>Tick LoRa</h3>
-                    <p>Long-range, low-power radio for wide-area deployments. Connect dozens of sensors to a single LoRa gateway. Ultra-low bandwidth cost.</p>
-                    <ul style="margin-top: 12px; font-size: 13px; color: var(--text-secondary); list-style: none; padding: 0;">
-                        <li style="padding: 4px 0;">&#10003; LoRa long-range radio</li>
-                        <li style="padding: 4px 0;">&#10003; Ultra-low power</li>
-                        <li style="padding: 4px 0;">&#10003; Requires LoRa gateway</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="product-image-container">
-                <img src="images/tick-device.svg" alt="Tick Sensor Module" class="product-image">
-            </div>
-        </div>
-    </section>
-
-    <section class="features" id="add-ons" style="background: var(--bg-primary); border: none;">
-        <div class="container">
-            <h2 class="section-title">Sensor Add-Ons</h2>
-            <p class="section-subtitle">Every Tick includes onboard temperature and voltage monitoring. Add I2C sensors to expand capabilities.</p>
-
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">&#127777;</div>
-                    <h3>+ Environmental Sensor</h3>
-                    <p>BMP390 barometric pressure and temperature sensor. Track weather patterns, altitude changes, and ambient conditions with high accuracy.</p>
-                    <ul style="margin-top: 12px; font-size: 13px; color: var(--text-secondary); list-style: none; padding: 0;">
-                        <li style="padding: 4px 0;">&#10003; Barometric pressure (300-1250 hPa)</li>
-                        <li style="padding: 4px 0;">&#10003; Temperature (-40 to +85 C)</li>
-                        <li style="padding: 4px 0;">&#10003; I2C Qwiic plug-and-play</li>
-                    </ul>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">&#127788;</div>
-                    <h3>+ Pressure Sensor</h3>
-                    <p>SM8436 ultra-low differential pressure sensor. Detect subtle airflow and pressure differentials for HVAC, clean rooms, and ventilation.</p>
-                    <ul style="margin-top: 12px; font-size: 13px; color: var(--text-secondary); list-style: none; padding: 0;">
-                        <li style="padding: 4px 0;">&#10003; Ultra-low range (-20 to 500 Pa)</li>
-                        <li style="padding: 4px 0;">&#10003; Per-reading min, max, stdev, sample count</li>
-                        <li style="padding: 4px 0;">&#10003; Multi-sample noise reduction</li>
-                        <li style="padding: 4px 0;">&#10003; I2C Qwiic plug-and-play</li>
-                    </ul>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">&#128295;</div>
-                    <h3>+ Custom Sensor</h3>
-                    <p>The I2C Qwiic port supports hundreds of sensor types. Contact us to integrate humidity, air quality, CO2, motion, or any I2C sensor you need.</p>
-                    <ul style="margin-top: 12px; font-size: 13px; color: var(--text-secondary); list-style: none; padding: 0;">
-                        <li style="padding: 4px 0;">&#10003; Any I2C / Qwiic sensor</li>
-                        <li style="padding: 4px 0;">&#10003; Firmware customization available</li>
-                        <li style="padding: 4px 0;">&#10003; 3-step sensor registry</li>
-                    </ul>
-                </div>
-            </div>
-
-            <h3 style="text-align: center; color: var(--text-primary); margin-top: 48px; margin-bottom: 24px;">Coming Soon</h3>
-            <div class="features-grid" style="grid-template-columns: repeat(3, 1fr);">
-                <div class="feature-card" style="opacity: 0.75; border-style: dashed;">
-                    <div class="feature-icon">&#128100;</div>
-                    <h3>+ Human Detection</h3>
-                    <p>PIR and thermal sensing for occupancy counting, room utilization, and people flow analytics. No cameras, no privacy concerns.</p>
-                </div>
-
-                <div class="feature-card" style="opacity: 0.75; border-style: dashed;">
-                    <div class="feature-icon">&#128266;</div>
-                    <h3>+ Sound Detection</h3>
-                    <p>Acoustic monitoring for equipment noise levels, alarm detection, and ambient sound analysis. Threshold-based alerts without recording audio.</p>
-                </div>
-
-                <div class="feature-card" style="opacity: 0.75; border-style: dashed;">
-                    <div class="feature-icon">&#128161;</div>
-                    <h3>+ And More</h3>
-                    <p>Air quality, CO2, humidity, vibration, and light sensing add-ons in development. Contact us to request a sensor or discuss your needs.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="features" id="use-cases">
-        <div class="container">
-            <h2 class="section-title">Use Cases</h2>
-            <p class="section-subtitle">From remote sites to urban facilities, wherever conditions need monitoring</p>
-
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">&#127956;</div>
-                    <h3>Remote Sensing</h3>
-                    <p>Deploy Tick Cell in locations without WiFi. Cellular connectivity and battery operation let you monitor anywhere with cell coverage.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">&#127981;</div>
-                    <h3>Facility Management</h3>
-                    <p>Use Tick WiFi on existing networks to monitor building conditions, pressure differentials, and equipment health across your campus.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">&#127788;</div>
-                    <h3>HVAC & Clean Rooms</h3>
-                    <p>Add the pressure sensor for ultra-low differential monitoring (-20 to 500 Pa). Verify ventilation, track filter status, and maintain room pressurization.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">&#128205;</div>
-                    <h3>Asset Tracking</h3>
-                    <p>Tick Cell and Cell+WiFi include GPS. Track equipment, vehicles, and shipments with cellular triangulation fallback for indoor locations.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">&#127806;</div>
-                    <h3>Agriculture & Environment</h3>
-                    <p>Tick LoRa connects dozens of sensors across wide areas. Add environmental sensors for ambient conditions and soil monitoring.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">&#128666;</div>
-                    <h3>Cold Chain & Logistics</h3>
-                    <p>Tick Cell+WiFi with environmental sensor for always-connected temperature tracking. WiFi in the warehouse, cellular on the road.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="features" style="background: var(--bg-primary); border: none;">
-        <div class="container">
-            <h2 class="section-title">Built for Real Work</h2>
-            <p class="section-subtitle">Every Tick model includes these enterprise-ready capabilities</p>
-
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">&#9729;</div>
-                    <h3>Cloud Sync</h3>
-                    <p>Automatic store-and-forward to Blues Notehub. Data syncs when connected, queues when offline. Route to any backend via webhooks.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">&#9881;</div>
-                    <h3>Remote Configuration</h3>
-                    <p>Switch between operating profiles from the cloud. Adjust sync intervals, GPS behavior, and sensor rates without touching the device.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">&#128260;</div>
-                    <h3>OTA Firmware Updates</h3>
-                    <p>Push firmware updates over the air. Even bricked devices can be reflashed remotely through the Notecard's outboard update mechanism.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">&#128737;</div>
-                    <h3>Industrial Reliability</h3>
-                    <p>Hardware watchdog, automatic recovery, and scheduled reboots keep devices running unattended. Counters and state survive power loss.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">&#128267;</div>
-                    <h3>Flexible Power</h3>
-                    <p>USB-C or LiPo battery with onboard charging. Deploy with wall power, battery packs, or solar. Voltage and power-source monitoring built in.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">&#128268;</div>
-                    <h3>Swap Radio, Keep Firmware</h3>
-                    <p>All Tick models run the same firmware. Swap the Notecard radio module to change connectivity without changing code.</p>
-                </div>
-            </div>
-
-            <div style="text-align: center; margin-top: 40px;">
-                <a href="/pages/product/" class="btn btn-primary">Full Product Details</a>
-                <a href="/pages/features/" class="btn btn-secondary">All Features</a>
-            </div>
-        </div>
-    </section>
-
-    <section class="features" id="routes">
-        <div class="container">
-            <h2 class="section-title">Route Your Data Anywhere</h2>
-            <p class="section-subtitle">Sensor readings sync to Blues Notehub, then route directly into your existing environments &mdash; no new infrastructure required</p>
-
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">&#9729;</div>
-                    <h3>AWS</h3>
-                    <p>Route events to AWS IoT Core, Lambda, S3, DynamoDB, or any AWS service. Build serverless pipelines from sensor data.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">&#9729;</div>
-                    <h3>Azure</h3>
-                    <p>Connect to Azure IoT Hub, Event Hubs, Functions, or Cosmos DB. Integrate with the full Azure cloud ecosystem.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">&#9729;</div>
-                    <h3>Google Cloud</h3>
-                    <p>Send data to Google Cloud Functions, Pub/Sub, BigQuery, or Firestore. Serverless event processing at scale.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">&#128279;</div>
-                    <h3>HTTP / HTTPS Webhooks</h3>
-                    <p>Forward events to any HTTP/HTTPS endpoint. Connect to custom APIs, internal services, or third-party webhooks.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">&#128233;</div>
-                    <h3>MQTT</h3>
-                    <p>Publish to any MQTT broker. Lightweight pub/sub messaging designed for IoT &mdash; ideal for real-time dashboards and event-driven systems.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">&#10052;</div>
-                    <h3>Snowflake</h3>
-                    <p>Stream sensor data directly into Snowflake via Snowpipe. Analyze IoT telemetry alongside your business data warehouse.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">&#128172;</div>
-                    <h3>Slack &amp; Twilio</h3>
-                    <p>Get instant notifications via Slack messages or Twilio SMS/voice when sensors trigger alerts or thresholds are crossed.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">&#128202;</div>
-                    <h3>Datacake &amp; Blynk</h3>
-                    <p>Low-code IoT dashboards out of the box. Visualize sensor data, set up alerts, and build custom UIs &mdash; no backend coding required.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">&#128736;</div>
-                    <h3>ThingWorx</h3>
-                    <p>Enterprise IoT application platform for industrial operations. Build custom dashboards and analytics on top of your sensor data.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">&#128225;</div>
-                    <h3>Qubitro</h3>
-                    <p>No-code IoT cloud platform for system integrators. White-label dashboards, multi-tenant device management, and rapid deployment.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">&#9762;</div>
-                    <h3>RadResponder</h3>
-                    <p>FEMA-partnered radiological monitoring. Route radiation sensor data to RadResponder or MissionEdge for emergency response and compliance.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">&#128295;</div>
-                    <h3>Your Systems</h3>
-                    <p>Already running ERP, CMMS, SCADA, or a custom platform? Use HTTP/MQTT routes to send sensor data directly into the systems your team already uses.</p>
-                </div>
-            </div>
-
-            <div style="text-align: center; margin-top: 30px;">
-                <p style="color: var(--text-secondary); font-size: 0.95rem;">Each Route is configured per-project in Notehub. Target a fleet, specific devices, or individual event types. No firmware changes needed.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="features" style="background: var(--bg-primary); border: none;">
-        <div class="container">
-            <h2 class="section-title">Why i4Seer?</h2>
-            <p class="section-subtitle">The name says it all</p>
-            <div style="max-width: 700px; margin: 0 auto; text-align: center;">
-                <p style="color: var(--text-secondary); font-size: 1.1rem; line-height: 1.8; margin-bottom: 16px;">Seer means to foresee. At i4Seer, we build IoT systems that use data, connectivity, and intelligence to predict issues before they happen, monitor conditions in real-time, and optimize performance across industrial and commercial operations.</p>
-                <p style="color: var(--text-secondary); font-size: 1.1rem; line-height: 1.8;">From counting cycles to tracking environmental conditions, our sensors give you the foresight to act.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="contact" id="contact">
-        <div class="container">
-            <h2 class="section-title">Get in Touch</h2>
-            <p>Ready to deploy? Need help choosing a Tick model or sensor configuration?</p>
-            <a href="mailto:hello@i4seer.com" class="contact-email">hello@i4seer.com</a>
-        </div>
-    </section>
-
-    <footer class="site-footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <a href="/" class="logo">
-                        <svg class="logo-icon" viewBox="0 0 32 32" fill="none">
-                            <path d="M4 16 L12 24 L28 8" stroke="#1a7a6d" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg><span class="logo-text">i4<span class="logo-accent">Seer</span></span></a>
-                    <p>Seer means to foresee. We build IoT systems that predict, monitor, and optimize operations through connected sensors and data.</p>
-                </div>
-
-                <div class="footer-nav">
-                    <div class="footer-links">
-                        <h4>Product</h4>
-                        <ul>
-                            <li><a href="/pages/product/">Overview</a></li>
-                            <li><a href="/pages/features/">Features</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="footer-links">
-                        <h4>Company</h4>
-                        <ul>
-                            <li><a href="#contact">Contact</a></li>
-                            <li><a href="/pages/privacy/">Privacy Policy</a></li>
-                            <li><a href="/pages/terms/">Terms of Service</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="footer-bottom">
-                <span>&copy; 2026 Institute for Seer, LLC. All rights reserved.</span>
-                <span class="footer-legal">
-                    <a href="/pages/privacy/">Privacy</a>
-                    <span class="separator">|</span>
-                    <a href="/pages/terms/">Terms</a>
-                </span>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Cookie Consent Banner -->
-    <div id="cookie-banner" class="cookie-banner" style="display: none;">
-        <div class="cookie-content">
-            <p>We use cookies to improve your experience. By continuing to use this site, you agree to our <a href="/pages/privacy/">Privacy Policy</a>.</p>
-            <div class="cookie-buttons">
-                <button id="cookie-accept" class="btn btn-primary">Accept</button>
-                <button id="cookie-decline" class="btn btn-secondary">Decline</button>
-            </div>
-        </div>
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo" style="font-family: 'Russo One', sans-serif; color: var(--text-bright); font-size: 1.2rem; letter-spacing: 3px;">
+      i4seer
     </div>
 
-    <script>
-        (function() {
-            // Cookie consent
-            var consent = localStorage.getItem('cookie-consent');
-            if (!consent) {
-                document.getElementById('cookie-banner').style.display = 'flex';
-            }
-            document.getElementById('cookie-accept').onclick = function() {
-                localStorage.setItem('cookie-consent', 'accepted');
-                document.getElementById('cookie-banner').style.display = 'none';
-            };
-            document.getElementById('cookie-decline').onclick = function() {
-                localStorage.setItem('cookie-consent', 'declined');
-                document.getElementById('cookie-banner').style.display = 'none';
-            };
+    <p>&copy; 2026 Institute for Seer LLC. All rights reserved.</p>
 
-            // Mobile nav toggle
-            var navToggle = document.getElementById('nav-toggle');
-            var navMenu = document.getElementById('nav-menu');
-            if (navToggle && navMenu) {
-                navToggle.onclick = function() {
-                    navToggle.classList.toggle('active');
-                    navMenu.classList.toggle('open');
-                };
-                navMenu.querySelectorAll('a').forEach(function(link) {
-                    link.onclick = function() {
-                        navToggle.classList.remove('active');
-                        navMenu.classList.remove('open');
-                    };
-                });
-            }
-        })();
-    </script>
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/seer-frights/">Seer Frights</a>
+      <a href="/tick/">Tick</a>
+      <a href="/privacy/">Privacy Policy</a>
+      <a href="/terms/">Terms of Use</a>
+      <a href="/build-safety/">Build Safety</a>
+      <a href="/affiliate-disclosure/">Affiliate Disclosure</a>
+      <a href="/cookie-policy/">Cookie Policy</a>
+    </div>
+
+    <p style="opacity: 0.4; font-size: 0.75rem; margin-top: 1rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+      Seer Frights&reg;, Tick&trade;, and i4seer&trade; are trademarks of Institute for Seer LLC.
+      All build instructions are provided for educational purposes only.
+      Adult supervision is required for electronics projects.
+      Institute for Seer LLC is not responsible for misuse of third-party components.
+    </p>
+
+    <p style="opacity: 0.3; font-size: 0.7rem; margin-top: 0.5rem;">
+      This website is operated in the United States.
+    </p>
+  </footer>
+
+  <!-- COOKIE BANNER -->
+  <div class="cookie-banner" id="cookie-banner">
+    <p>We use cookies to improve your experience. By continuing to use this site, you agree to our <a href="/privacy/">Privacy Policy</a>.</p>
+    <div class="cookie-buttons">
+      <button class="cookie-accept" id="cookie-accept">Accept</button>
+      <button class="cookie-decline" id="cookie-decline">Decline</button>
+    </div>
+  </div>
+  <script>
+    (function() {
+      if (!localStorage.getItem('cookie-consent')) {
+        document.getElementById('cookie-banner').style.display = 'flex';
+      }
+      document.getElementById('cookie-accept').onclick = function() {
+        localStorage.setItem('cookie-consent', 'accepted');
+        document.getElementById('cookie-banner').style.display = 'none';
+      };
+      document.getElementById('cookie-decline').onclick = function() {
+        localStorage.setItem('cookie-consent', 'declined');
+        document.getElementById('cookie-banner').style.display = 'none';
+      };
+    })();
+  </script>
+
 </body>
 </html>

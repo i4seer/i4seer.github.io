@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Build Safety | i4seer.com</title>
+  <meta name="description" content="Build safety and educational disclaimer for Seer Frights electronics projects. Important safety information for parents and builders.">
+  <link rel="stylesheet" href="/style.css">
+  <meta name="robots" content="index, follow">
+  <meta name="copyright" content="Institute for Seer LLC">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+</head>
+<body class="landing-page">
+
+  <!-- NAV -->
+  <header>
+    <nav>
+      <div class="nav-top">
+        <a href="/" class="logo" style="font-size: 1.6rem;">i4seer<span>Institute for Seer</span></a>
+        <ul>
+          <li><a href="/" class="active">i4seer</a></li>
+          <li><a href="/seer-frights/">Seer Frights</a></li>
+          <li><a href="/tick/">Tick</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <div class="hero" style="min-height: 30vh;">
+    <div class="hero-content">
+      <h1 class="landing-title" style="font-size: clamp(2rem, 5vw, 3.5rem);">Build Safety &amp; Educational Disclaimer</h1>
+    </div>
+  </div>
+
+  <!-- BUILD SAFETY -->
+  <section>
+    <div style="max-width: 800px; margin: 0 auto; line-height: 1.8; font-size: 0.95rem;">
+
+      <div style="background: var(--bg-card); border: 1px solid #222; padding: 1.5rem; margin-bottom: 1.5rem;">
+        <p>The projects described in Seer Frights books and on this website are provided for educational purposes only.</p>
+      </div>
+
+      <div style="background: var(--bg-card); border: 1px solid #222; padding: 1.5rem; margin-bottom: 1.5rem;">
+        <h3 style="color: var(--text-bright); font-family: 'Russo One', sans-serif; font-size: 1rem; margin-bottom: 0.8rem;">Important Safety Information</h3>
+        <ul style="margin: 0.8rem 0 0 1.2rem; opacity: 0.8;">
+          <li>Adult supervision is required.</li>
+          <li>Soldering must be performed with proper ventilation.</li>
+          <li>Coin batteries can cause serious internal injury if swallowed. Seek immediate medical attention if ingestion is suspected.</li>
+          <li>Do not connect projects to household mains electricity.</li>
+          <li>Disconnect power if components become hot or damaged.</li>
+        </ul>
+      </div>
+
+      <div style="background: var(--bg-card); border: 1px solid #222; padding: 1.5rem; margin-bottom: 1.5rem;">
+        <p>All components are obtained from third-party vendors. Institute for Seer LLC is not responsible for third-party product performance or misuse.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo" style="font-family: 'Russo One', sans-serif; color: var(--text-bright); font-size: 1.2rem; letter-spacing: 3px;">
+      i4seer
+    </div>
+
+    <p>&copy; 2026 Institute for Seer LLC. All rights reserved.</p>
+
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/seer-frights/">Seer Frights</a>
+      <a href="/tick/">Tick</a>
+      <a href="/privacy/">Privacy Policy</a>
+      <a href="/terms/">Terms of Use</a>
+      <a href="/build-safety/">Build Safety</a>
+      <a href="/affiliate-disclosure/">Affiliate Disclosure</a>
+      <a href="/cookie-policy/">Cookie Policy</a>
+    </div>
+
+    <p style="opacity: 0.4; font-size: 0.75rem; margin-top: 1rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+      Seer Frights&reg;, Tick&trade;, and i4seer&trade; are trademarks of Institute for Seer LLC.
+      All build instructions are provided for educational purposes only.
+      Adult supervision is required for electronics projects.
+      Institute for Seer LLC is not responsible for misuse of third-party components.
+    </p>
+
+    <p style="opacity: 0.3; font-size: 0.7rem; margin-top: 0.5rem;">
+      This website is operated in the United States.
+    </p>
+  </footer>
+
+  <!-- COOKIE BANNER -->
+  <div class="cookie-banner" id="cookie-banner">
+    <p>We use cookies to improve your experience. By continuing to use this site, you agree to our <a href="/privacy/">Privacy Policy</a>.</p>
+    <div class="cookie-buttons">
+      <button class="cookie-accept" id="cookie-accept">Accept</button>
+      <button class="cookie-decline" id="cookie-decline">Decline</button>
+    </div>
+  </div>
+  <script>
+    (function() {
+      if (!localStorage.getItem('cookie-consent')) {
+        document.getElementById('cookie-banner').style.display = 'flex';
+      }
+      document.getElementById('cookie-accept').onclick = function() {
+        localStorage.setItem('cookie-consent', 'accepted');
+        document.getElementById('cookie-banner').style.display = 'none';
+      };
+      document.getElementById('cookie-decline').onclick = function() {
+        localStorage.setItem('cookie-consent', 'declined');
+        document.getElementById('cookie-banner').style.display = 'none';
+      };
+    })();
+  </script>
+
+</body>
+</html>
