@@ -27,29 +27,30 @@
         <ul>
           <li><a href="/seer-frights/">Home</a></li>
           <li><a href="/books/" class="active">Books</a></li>
-          <li><a href="/books/buy/">Buy</a></li>
           <li><a href="/build-it/">Build</a></li>
+          <li><a href="/books/buy/">Buy</a></li>
         </ul>
       </div>
     </nav>
   </header>
 
   <!-- BOOK HERO -->
-  <div class="book-hero" style="justify-content: center; text-align: center;">
+  <div class="book-hero">
     <div class="book-hero-img">
       <img src="/images/cover-dont-miss-the-bus-front.png" alt="Don't Miss the Bus cover — city bus driving through fog at night">
     </div>
-    <div class="book-hero-text" style="text-align: center;">
+    <div class="book-hero-text">
       <p class="book-number" style="color: var(--orange-sodium);">Seer Frights #2</p>
       <h1 style="color: var(--orange-sodium); text-shadow: 0 0 15px rgba(255,140,66,0.4), 0 3px 0 #804620;">Don't Miss the Bus</h1>
       <div class="book-blurb">
-        <p>The 7:15 bus. Route 13. Two kids. One wrong turn.</p>
+        <p>The 7:15 bus. Route 13. Two kids who don&rsquo;t know each other. One wrong turn.</p>
+        <p><strong>There is no driver.</strong></p>
         <br>
-        <p>The streets outside don't have signs. The other passengers aren't quite right. <strong>And the driver won't stop.</strong></p>
+        <p>The city&rsquo;s first autonomous bus &mdash; a sleek prototype that was never supposed to carry passengers &mdash; has quietly replaced the evening Route 13 run. Nobody announced it. Nobody approved it. The bus drives itself, the doors seal on their own, and the route it&rsquo;s following hasn&rsquo;t existed since 1998.</p>
         <br>
-        <p>Every Seer Frights book drops kids into an ordinary place that turns <em style="color: var(--orange-sodium);">wrong</em>. This time it's a city bus. This time there's no trail to follow back. This time &mdash; you can't just walk away.</p>
+        <p>Two kids and a handful of passengers are trapped inside a machine that&rsquo;s retracing a dead man&rsquo;s last drive &mdash; and the streets outside the windows aren&rsquo;t on any map.</p>
       </div>
-      <div class="book-meta" style="justify-content: center;">
+      <div class="book-meta">
         <div class="book-meta-item">
           <span style="color: var(--orange-sodium);">Ages</span>
           8&ndash;12
@@ -67,65 +68,92 @@
           Seer Frights #2
         </div>
       </div>
-      <div class="btn-group">
+      <div class="btn-group" style="justify-content: flex-start;">
         <a href="/books/buy/" class="btn btn-glow" style="background: var(--orange-sodium); box-shadow: 0 0 15px rgba(255,140,66,0.4);">Buy</a>
         <a href="/build-it/route-13/" class="btn btn-outline" style="color: var(--orange-sodium); border-color: var(--orange-sodium);">Build</a>
       </div>
     </div>
   </div>
 
-  <!-- TEASER -->
+  <!-- CHARACTERS -->
   <section>
-    <h2 class="section-title" style="color: var(--orange-sodium); text-shadow: 0 0 10px rgba(255,140,66,0.4), 0 3px 0 #804620;">What We Know So Far</h2>
-    <div style="max-width: 700px; margin: 0 auto; text-align: center; line-height: 1.9; font-size: 1.05rem;">
-      <p>Two kids get on a city bus after dark. The route is familiar. The driver is not.</p>
+    <h2 class="section-title" style="color: var(--orange-sodium); text-shadow: 0 0 10px rgba(255,140,66,0.4), 0 3px 0 #804620;">Who&rsquo;s Who</h2>
+    <p class="section-subtitle">Meet the passengers on the 7:15.</p>
+
+    <div class="characters-grid">
+
+      <div class="char-card">
+        <h4>Maya Chen</h4>
+        <p>The one who noticed the route was wrong. Planner, three colored pens, phone full of 847 photos of her late grandmother she never backed up. Sits fourth row, window, left &mdash; same seat every time. Notices when patterns break.</p>
+      </div>
+
+      <div class="char-card">
+        <h4>Darius Washington</h4>
+        <p>The one who wouldn&rsquo;t stop talking. Fresh fade, headphones that aren&rsquo;t connected to anything, beatboxing in the back row. Works at his uncle&rsquo;s barbershop after school. Treats the bus like his living room. Braver than anyone expected, including him.</p>
+      </div>
+
+      <div class="char-card">
+        <h4>Mrs. Gladys Park</h4>
+        <p>The one who remembered. Quilted tote bag, butterscotch candy, thermos of tea. Retired postal worker. Been riding Route 13 for twenty years. Was on the bus the night Frank didn&rsquo;t make it.</p>
+      </div>
+
+      <div class="char-card">
+        <h4>Victor Olvera</h4>
+        <p>The one who built the road. Frank&rsquo;s grandson. Systems engineer at Meridian Transit Systems. Mapped every block of the old Route 13 and fed it into the bus&rsquo;s memory. A memorial in code. Didn&rsquo;t mean for it to come alive.</p>
+      </div>
+
+      <div class="char-card">
+        <h4>The AV-9</h4>
+        <p>The bus. Autonomous, electric, sealed. No wheel, no driver, no way out. It was supposed to drive the current Route 13. Instead, it drives Frank&rsquo;s route &mdash; every turn, every stop, every pause &mdash; because someone who loved the driver programmed it to remember.</p>
+      </div>
+
+      <div class="char-card">
+        <h4>Frank Olvera</h4>
+        <p>The one who drove the bus. Twenty-eight years, Route 13, every day. Kept butterscotch in his shirt pocket. Died behind the wheel on November 3, 1998. Even when his heart was stopping, he was being careful.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- DEVICE BANNER -->
+  <div class="full-width-bg dark-green">
+    <div class="build-banner" style="max-width: 900px; margin: 0 auto;">
+      <h3 style="color: var(--orange-sodium);">The Route 13 Device</h3>
+      <p>A pressure mat hidden under a seat. Someone sits down &mdash; an orange &ldquo;13&rdquo; glows on the LED grid. The seat knows you&rsquo;re there. In the book, which seat you sit in matters. The pressure mat is the handshake.</p>
+      <a href="/build-it/route-13/" class="btn btn-glow" style="background: var(--orange-sodium); box-shadow: 0 0 15px rgba(255,140,66,0.4);">Build Your Own</a>
+      <p class="warning">&#9888; Don&rsquo;t build alone &mdash; adult supervision required</p>
+    </div>
+  </div>
+
+  <!-- EXCERPT -->
+  <section>
+    <h2 class="section-title" style="color: var(--orange-sodium); text-shadow: 0 0 10px rgba(255,140,66,0.4), 0 3px 0 #804620;">Read a Snippet</h2>
+    <div style="max-width: 700px; margin: 0 auto; line-height: 1.9; font-size: 1.05rem;">
+      <p>She looked toward the front of the bus &mdash; not at the road, not at the other passengers, but at the space where the driver should be. She&rsquo;d been looking at her phone for the first three stops. She hadn&rsquo;t looked up front. Now she did.</p>
       <br>
-      <p>The bus makes a turn that isn't on the map. The street signs disappear. The other passengers sit too still, smile too wide, and never look out the windows.</p>
+      <p>There was no driver.</p>
       <br>
-      <p>One kid wants to pull the cord and get off. The other says <em>wait</em>. The bus keeps moving. The doors stay closed.</p>
+      <p>Not &ldquo;the driver stepped away.&rdquo; Not &ldquo;the driver is behind a partition.&rdquo; There was no driver&rsquo;s seat. The entire front of the bus was different &mdash; where the steering wheel and the pedals and the rearview mirror and the heavy vinyl seat should have been, there was a curved white console. Smooth, seamless, like a kitchen countertop. A touchscreen, dark except for a faint blue glow. A camera array mounted on a slim brushed-steel pole. A small speaker recessed into the panel. No wheel. No pedals. No mirror. No human.</p>
       <br>
-      <p style="opacity: 0.5; font-style: italic;">And the driver &mdash; the driver just keeps driving.</p>
+      <p><strong>The bus was driving itself.</strong></p>
       <br>
+      <p>Maya sat up straight. She looked at the other passengers. Mrs. Park was sipping from her thermos, looking out the window with the calm contentment of a woman who&rsquo;d been riding this bus for twenty years and expected nothing surprising. Tyler was typing. The woman with the stroller was scrolling her phone. The teenagers were in their phones. The Back Row Kid had his eyes closed, mouth moving, deep in a beat.</p>
       <br>
-      <div class="age-badge" style="border-color: var(--orange-sodium); color: var(--orange-sodium); background: rgba(255,140,66,0.1);">Coming Soon</div>
+      <p>Nobody had noticed. Or nobody cared.</p>
+      <br>
+      <p style="opacity: 0.5; font-style: italic;">She reached for her phone. Her hand was steady &mdash; it was always steady when something was wrong. She didn&rsquo;t panic. She catalogued. She observed and recorded and filed. Panic was for people who didn&rsquo;t have systems. Maya had systems.</p>
     </div>
   </section>
 
   <!-- WHISPER -->
   <div class="whisper">
-    <p>"We saw it . . ."</p>
+    <p>"The seat remembers . . ."</p>
   </div>
-
-  <!-- OTHER BOOKS -->
-  <section>
-    <h2 class="section-title">While You Wait</h2>
-    <p class="section-subtitle">Catch up on the series.</p>
-    <div class="book-grid" style="max-width: 700px; margin: 0 auto;">
-      <div class="book-card book-1">
-        <img src="/images/cover-dont-go-into-the-swamp-front.jpg" alt="Don't Go Into the Swamp cover">
-        <div class="book-card-body">
-          <p class="book-number">Seer Frights #1</p>
-          <h3>Don't Go Into the Swamp</h3>
-          <p>Three kids. Brand-new shoes. One very bad idea.</p>
-          <a href="/books/book1/" class="btn btn-glow">Read</a>
-        </div>
-      </div>
-      <div class="book-card book-3">
-        <img src="/images/cover-dont-answer-the-door-front.png" alt="Don't Answer the Door cover">
-        <div class="book-card-body">
-          <p class="book-number" style="color: var(--amber);">Seer Frights #3</p>
-          <h3>Don't Answer the Door</h3>
-          <p>Summer camp. Three knocks. Every night at 3:07 AM.</p>
-          <a href="/books/book3/" class="btn btn-glow" style="background: var(--amber); box-shadow: 0 0 15px rgba(255,179,71,0.4);">Read</a>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- FOOTER -->
   <footer>
     <div class="footer-logo">SEER FRIGHTS</div>
-    <p>&copy; 2026 B. Carter. Published by Institute for Seer LLC. All rights reserved.</p>
+    <p>&copy; 2026 Institute for Seer LLC. All rights reserved.</p>
     <p>Ages 8&ndash;12 &bull; Middle-Grade Horror</p>
     <div class="footer-links">
       <a href="/">i4seer</a>

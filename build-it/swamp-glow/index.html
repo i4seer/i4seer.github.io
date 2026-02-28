@@ -27,8 +27,8 @@
         <ul>
           <li><a href="/seer-frights/">Home</a></li>
           <li><a href="/books/">Books</a></li>
-          <li><a href="/books/buy/">Buy</a></li>
           <li><a href="/build-it/" class="active">Build</a></li>
+          <li><a href="/books/buy/">Buy</a></li>
         </ul>
       </div>
     </nav>
@@ -58,7 +58,7 @@
       <p><em>If you can use tape, you can make this.</em></p>
 
       <h4>What You Need</h4>
-      <ul>
+      <ul class="checklist">
         <li>1 green LED, diffused (the soft kind &mdash; not the bright clear ones. Craft store or online. About a quarter.)</li>
         <li>1 CR2032 coin battery (the flat silver one from the drugstore) &mdash; OR 1 AAA battery if you can't find coin batteries. AAAs are in every junk drawer in America. The glow will be softer, which is actually better. Won't fit in a golf ball, so go bigger &mdash; a tennis-ball-sized ornament or a plastic Easter egg.</li>
         <li>1 tiny slide switch (optional &mdash; or just pull the battery out to turn it off)</li>
@@ -68,6 +68,7 @@
         <li>Green glass paint (optional &mdash; one coat makes it look swampy. Without it, the clear ball still glows green from the LED inside.)</li>
         <li>Fine sandpaper (optional &mdash; roughing up the ball makes the glow softer. But it works without it.)</li>
       </ul>
+      <p style="margin-top: 0.8rem;"><a href="/build-it/swamp-glow/parts/" style="color: var(--green-glow); font-size: 0.95rem;">Parts &mdash; where to buy each one &rarr;</a></p>
 
       <h4>How to Build It</h4>
       <p>The LED has two legs &mdash; one long, one short. The long leg is positive. The short leg is negative. Sandwich the coin battery between them &mdash; long leg on the flat side (+), short leg on the bumpy side (&minus;). It lights up. That's it. That's the whole circuit.</p>
@@ -85,24 +86,84 @@
  <!-- VERSION 2 -->
 <section style="padding-top: 0;">
   <div class="build-steps">
-    <span class="version-label">Version 2 &mdash; The Real One</span>
+    <span class="version-label">Version 2 &mdash; Go Further</span>
     <h3>CMOS 7555 Timer. Slow Pulse. Loops Forever.</h3>
     <p><em>This is what Mrs. Calhoun actually uses. Requires soldering and careful wiring.</em></p>
     <p><strong>Low-voltage build.</strong> Use 2x AAA batteries (3V total). Do not connect to household electrical wiring.</p>
 
     <h4>What You Need</h4>
-    <ul>
-      <li>1 CMOS 7555 timer (ICM7555 or TLC555, 8-pin DIP)</li>
-      <li>1 small piece of perfboard</li>
-      <li>1 green 5mm diffused LED</li>
-      <li>1 resistor, 330Ω (LED current limit)</li>
-      <li>1 resistor, 10kΩ (R1)</li>
-      <li>1 resistor, 2.2MΩ (R2)</li>
-      <li>1 electrolytic capacitor, 470µF (timing capacitor)</li>
-      <li>2x AAA battery holder (3V total)</li>
-      <li>1 small slide switch</li>
-      <li>Hookup wire</li>
-    </ul>
+
+      <div style="background: var(--bg-card); border: 1px solid #222; padding: 1.2rem 1.5rem; margin-bottom: 0.75rem; border-left: 3px solid var(--green-glow);">
+        <div style="display: flex; justify-content: space-between; align-items: baseline;">
+          <span style="font-size: 0.95rem;">CMOS 7555 timer (ICM7555 or TLC555, 8-pin DIP)</span>
+          <span style="color: var(--green-glow); font-size: 0.8rem; white-space: nowrap; margin-left: 1rem;">Qty: 1</span>
+        </div>
+      </div>
+
+      <div style="background: var(--bg-card); border: 1px solid #222; padding: 1.2rem 1.5rem; margin-bottom: 0.75rem; border-left: 3px solid var(--green-glow);">
+        <div style="display: flex; justify-content: space-between; align-items: baseline;">
+          <span style="font-size: 0.95rem;">Small piece of perfboard</span>
+          <span style="color: var(--green-glow); font-size: 0.8rem; white-space: nowrap; margin-left: 1rem;">Qty: 1</span>
+        </div>
+      </div>
+
+      <div style="background: var(--bg-card); border: 1px solid #222; padding: 1.2rem 1.5rem; margin-bottom: 0.75rem; border-left: 3px solid var(--green-glow);">
+        <div style="display: flex; justify-content: space-between; align-items: baseline;">
+          <span style="font-size: 0.95rem;">Green 5mm diffused LED</span>
+          <span style="color: var(--green-glow); font-size: 0.8rem; white-space: nowrap; margin-left: 1rem;">Qty: 1</span>
+        </div>
+      </div>
+
+      <div style="background: var(--bg-card); border: 1px solid #222; padding: 1.2rem 1.5rem; margin-bottom: 0.75rem; border-left: 3px solid var(--green-glow);">
+        <div style="display: flex; justify-content: space-between; align-items: baseline;">
+          <span style="font-size: 0.95rem;">Resistor, 330&Omega; (LED current limit)</span>
+          <span style="color: var(--green-glow); font-size: 0.8rem; white-space: nowrap; margin-left: 1rem;">Qty: 1</span>
+        </div>
+      </div>
+
+      <div style="background: var(--bg-card); border: 1px solid #222; padding: 1.2rem 1.5rem; margin-bottom: 0.75rem; border-left: 3px solid var(--green-glow);">
+        <div style="display: flex; justify-content: space-between; align-items: baseline;">
+          <span style="font-size: 0.95rem;">Resistor, 10k&Omega; (R1)</span>
+          <span style="color: var(--green-glow); font-size: 0.8rem; white-space: nowrap; margin-left: 1rem;">Qty: 1</span>
+        </div>
+      </div>
+
+      <div style="background: var(--bg-card); border: 1px solid #222; padding: 1.2rem 1.5rem; margin-bottom: 0.75rem; border-left: 3px solid var(--green-glow);">
+        <div style="display: flex; justify-content: space-between; align-items: baseline;">
+          <span style="font-size: 0.95rem;">Resistor, 2.2M&Omega; (R2)</span>
+          <span style="color: var(--green-glow); font-size: 0.8rem; white-space: nowrap; margin-left: 1rem;">Qty: 1</span>
+        </div>
+      </div>
+
+      <div style="background: var(--bg-card); border: 1px solid #222; padding: 1.2rem 1.5rem; margin-bottom: 0.75rem; border-left: 3px solid var(--green-glow);">
+        <div style="display: flex; justify-content: space-between; align-items: baseline;">
+          <span style="font-size: 0.95rem;">Electrolytic capacitor, 470&micro;F (timing capacitor)</span>
+          <span style="color: var(--green-glow); font-size: 0.8rem; white-space: nowrap; margin-left: 1rem;">Qty: 1</span>
+        </div>
+      </div>
+
+      <div style="background: var(--bg-card); border: 1px solid #222; padding: 1.2rem 1.5rem; margin-bottom: 0.75rem; border-left: 3px solid var(--green-glow);">
+        <div style="display: flex; justify-content: space-between; align-items: baseline;">
+          <span style="font-size: 0.95rem;">2&times; AAA battery holder (3V total)</span>
+          <span style="color: var(--green-glow); font-size: 0.8rem; white-space: nowrap; margin-left: 1rem;">Qty: 1</span>
+        </div>
+      </div>
+
+      <div style="background: var(--bg-card); border: 1px solid #222; padding: 1.2rem 1.5rem; margin-bottom: 0.75rem; border-left: 3px solid var(--green-glow);">
+        <div style="display: flex; justify-content: space-between; align-items: baseline;">
+          <span style="font-size: 0.95rem;">Small slide switch</span>
+          <span style="color: var(--green-glow); font-size: 0.8rem; white-space: nowrap; margin-left: 1rem;">Qty: 1</span>
+        </div>
+      </div>
+
+      <div style="background: var(--bg-card); border: 1px solid #222; padding: 1.2rem 1.5rem; margin-bottom: 0.75rem; border-left: 3px solid var(--green-glow);">
+        <div style="display: flex; justify-content: space-between; align-items: baseline;">
+          <span style="font-size: 0.95rem;">Hookup wire</span>
+          <span style="color: var(--green-glow); font-size: 0.8rem; white-space: nowrap; margin-left: 1rem;">1 spool</span>
+        </div>
+      </div>
+
+    <p style="margin-top: 0.8rem;"><a href="/build-it/swamp-glow/parts/" style="color: var(--green-glow); font-size: 0.95rem;">Parts &mdash; where to buy each one &rarr;</a></p>
 
     <h4>Pin Orientation</h4>
     <p>Hold the chip so the small notch faces left.</p>
@@ -177,17 +238,41 @@
   <!-- VERSION 3 -->
   <section style="padding-top: 0;">
     <div class="build-steps">
-      <span class="version-label">Version 3 &mdash; The Smart One</span>
+      <span class="version-label">Version 3 &mdash; Go Further</span>
       <h3>Tick. ATOM Matrix. Control from Your Phone.</h3>
       <p><em>This is the upgrade. A tiny computer with a 5&times;5 color LED grid, Wi-Fi, and an accelerometer &mdash; running Tick. Everything runs on the device itself. No server. No internet. Just the puck and your phone.</em></p>
 
       <h4>What You Need</h4>
-      <ul>
-        <li>1 <strong><a href="/tick/buy/" style="color: var(--green-glow);">ATOM Matrix</a></strong> &mdash; 24mm square, weighs 7 grams. ESP32 dual-core processor. 5&times;5 RGB LED matrix on the front (25 LEDs, any color, any pattern). Built-in accelerometer and gyroscope (MPU6886). One programmable button hidden under the LEDs. USB-C power. Wi-Fi built in. About $15.</li>
-        <li>1 USB-C cable</li>
-        <li>1 small waterproof power bank (or a long USB cable to a hidden outlet)</li>
-        <li>Same housing as Version 1 &amp; 2 &mdash; plastic ornament ball, aquarium silicone, sandpaper, green glass paint</li>
-      </ul>
+
+      <div style="background: var(--bg-card); border: 1px solid #222; padding: 1.2rem 1.5rem; margin-bottom: 0.75rem; border-left: 3px solid var(--green-glow);">
+        <div style="display: flex; justify-content: space-between; align-items: baseline;">
+          <span style="font-size: 0.95rem;">ATOM Matrix &mdash; 24mm square, 5&times;5 RGB LED matrix, Wi-Fi, accelerometer. About $15.</span>
+          <span style="color: var(--green-glow); font-size: 0.8rem; white-space: nowrap; margin-left: 1rem;">Qty: 1</span>
+        </div>
+      </div>
+
+      <div style="background: var(--bg-card); border: 1px solid #222; padding: 1.2rem 1.5rem; margin-bottom: 0.75rem; border-left: 3px solid var(--green-glow);">
+        <div style="display: flex; justify-content: space-between; align-items: baseline;">
+          <span style="font-size: 0.95rem;">USB-C cable</span>
+          <span style="color: var(--green-glow); font-size: 0.8rem; white-space: nowrap; margin-left: 1rem;">Qty: 1</span>
+        </div>
+      </div>
+
+      <div style="background: var(--bg-card); border: 1px solid #222; padding: 1.2rem 1.5rem; margin-bottom: 0.75rem; border-left: 3px solid var(--green-glow);">
+        <div style="display: flex; justify-content: space-between; align-items: baseline;">
+          <span style="font-size: 0.95rem;">Small waterproof power bank (or long USB cable to a hidden outlet)</span>
+          <span style="color: var(--green-glow); font-size: 0.8rem; white-space: nowrap; margin-left: 1rem;">Qty: 1</span>
+        </div>
+      </div>
+
+      <div style="background: var(--bg-card); border: 1px solid #222; padding: 1.2rem 1.5rem; margin-bottom: 0.75rem; border-left: 3px solid var(--green-glow);">
+        <div style="display: flex; justify-content: space-between; align-items: baseline;">
+          <span style="font-size: 0.95rem;">Same housing as Version 1 &amp; 2 &mdash; ornament ball, silicone, sandpaper, green glass paint</span>
+          <span style="color: var(--green-glow); font-size: 0.8rem; white-space: nowrap; margin-left: 1rem;">&mdash;</span>
+        </div>
+      </div>
+
+      <p style="margin-top: 0.8rem;"><a href="/build-it/swamp-glow/parts/" style="color: var(--green-glow); font-size: 0.95rem;">Parts &mdash; where to buy each one &rarr;</a></p>
 
       <h4>How to Build It</h4>
       <p><strong>Step 1 &mdash; Plug it in.</strong> Connect USB-C to power. The firmware is already on the ATOM Matrix &mdash; no flashing, no setup tools. It boots in 2 seconds and starts glowing with default settings.</p>
@@ -233,7 +318,7 @@
   <!-- FOOTER -->
   <footer>
     <div class="footer-logo">SEER FRIGHTS</div>
-    <p>&copy; 2026 B. Carter. Published by Institute for Seer LLC. All rights reserved.</p>
+    <p>&copy; 2026 Institute for Seer LLC. All rights reserved.</p>
     <p>Ages 8&ndash;12 &bull; Middle-Grade Horror</p>
     <div class="footer-links">
       <a href="/">i4seer</a>

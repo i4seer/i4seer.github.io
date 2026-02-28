@@ -27,8 +27,8 @@
         <ul>
           <li><a href="/seer-frights/">Home</a></li>
           <li><a href="/books/">Books</a></li>
-          <li><a href="/books/buy/">Buy</a></li>
           <li><a href="/build-it/" class="active">Build</a></li>
+          <li><a href="/books/buy/">Buy</a></li>
         </ul>
       </div>
     </nav>
@@ -58,12 +58,13 @@
       <p><em>No soldering. No wiring diagrams. If you can tape two things together, you can make this.</em></p>
 
       <h4>What You Need</h4>
-      <ul>
+      <ul class="checklist">
         <li>1 pressure mat switch (the flat, flexible kind &mdash; used in door chimes and Halloween props. Two thin strips that touch when you step on them. About the size of a welcome mat. Under $2 online.)</li>
         <li>1 orange LED, diffused (the soft kind, not the bright clear ones. Craft store or online. About a quarter.)</li>
         <li>1 CR2032 coin battery (the flat silver one from the drugstore)</li>
         <li>Electrical tape</li>
       </ul>
+      <p style="margin-top: 0.8rem;"><a href="/build-it/route-13/parts/" style="color: var(--orange-sodium); font-size: 0.95rem;">Parts &mdash; where to buy each one &rarr;</a></p>
 
       <h4>How to Build It</h4>
       <p>The pressure mat has two wires. The LED has two legs &mdash; one long (positive), one short (negative). Wire the mat in series with the LED and the battery. Long LED leg to battery positive (+). Short LED leg to one mat wire. Other mat wire to battery negative (&minus;). Wrap the connections with electrical tape.</p>
@@ -78,22 +79,70 @@
   <!-- VERSION 2 -->
   <section style="padding-top: 0;">
     <div class="build-steps" style="border-color: #333;">
-      <span class="version-label">Version 2 &mdash; The Real One</span>
+      <span class="version-label">Version 2 &mdash; Go Further</span>
       <h3 style="color: var(--orange-sodium); text-shadow: 0 0 15px rgba(255,140,66,0.3);">Step On It. It Pulses. Then Fades.</h3>
       <p><em>Same pressure mat, but now the LED pulses slowly for 30 seconds after someone sits down &mdash; then fades to dark. Requires soldering, a few small parts, and an adult who knows what a capacitor is.</em></p>
       <p><strong>Low-voltage build.</strong> Use 2x AAA batteries (3V total). Do not connect to household electrical wiring.</p>
 
       <h4>What You Need</h4>
-      <ul>
-        <li>1 pressure mat switch (same as Version 1)</li>
-        <li>1 orange LED, 5mm, diffused</li>
-        <li>1 555 timer chip (the classic 8-pin DIP &mdash; about a quarter online)</li>
-        <li>1 capacitor, 100 microfarad (electrolytic &mdash; sets the fade time)</li>
-        <li>1 resistor, 560 kilohm (works with the capacitor to set the 30-second fade)</li>
-        <li>1 resistor, 100 ohm (protects the LED)</li>
-        <li>2 AAA batteries + holder</li>
-        <li>Small perfboard, hookup wire, solder</li>
-      </ul>
+
+      <div style="background: var(--bg-card); border: 1px solid #222; padding: 1.2rem 1.5rem; margin-bottom: 0.75rem; border-left: 3px solid var(--orange-sodium);">
+        <div style="display: flex; justify-content: space-between; align-items: baseline;">
+          <span style="font-size: 0.95rem;">Pressure mat switch (same as Version 1)</span>
+          <span style="color: var(--orange-sodium); font-size: 0.8rem; white-space: nowrap; margin-left: 1rem;">Qty: 1</span>
+        </div>
+      </div>
+
+      <div style="background: var(--bg-card); border: 1px solid #222; padding: 1.2rem 1.5rem; margin-bottom: 0.75rem; border-left: 3px solid var(--orange-sodium);">
+        <div style="display: flex; justify-content: space-between; align-items: baseline;">
+          <span style="font-size: 0.95rem;">Orange LED, 5mm, diffused</span>
+          <span style="color: var(--orange-sodium); font-size: 0.8rem; white-space: nowrap; margin-left: 1rem;">Qty: 1</span>
+        </div>
+      </div>
+
+      <div style="background: var(--bg-card); border: 1px solid #222; padding: 1.2rem 1.5rem; margin-bottom: 0.75rem; border-left: 3px solid var(--orange-sodium);">
+        <div style="display: flex; justify-content: space-between; align-items: baseline;">
+          <span style="font-size: 0.95rem;">555 timer chip (classic 8-pin DIP)</span>
+          <span style="color: var(--orange-sodium); font-size: 0.8rem; white-space: nowrap; margin-left: 1rem;">Qty: 1</span>
+        </div>
+      </div>
+
+      <div style="background: var(--bg-card); border: 1px solid #222; padding: 1.2rem 1.5rem; margin-bottom: 0.75rem; border-left: 3px solid var(--orange-sodium);">
+        <div style="display: flex; justify-content: space-between; align-items: baseline;">
+          <span style="font-size: 0.95rem;">Capacitor, 100&micro;F electrolytic (sets the fade time)</span>
+          <span style="color: var(--orange-sodium); font-size: 0.8rem; white-space: nowrap; margin-left: 1rem;">Qty: 1</span>
+        </div>
+      </div>
+
+      <div style="background: var(--bg-card); border: 1px solid #222; padding: 1.2rem 1.5rem; margin-bottom: 0.75rem; border-left: 3px solid var(--orange-sodium);">
+        <div style="display: flex; justify-content: space-between; align-items: baseline;">
+          <span style="font-size: 0.95rem;">Resistor, 560k&Omega; (sets the 30-second fade)</span>
+          <span style="color: var(--orange-sodium); font-size: 0.8rem; white-space: nowrap; margin-left: 1rem;">Qty: 1</span>
+        </div>
+      </div>
+
+      <div style="background: var(--bg-card); border: 1px solid #222; padding: 1.2rem 1.5rem; margin-bottom: 0.75rem; border-left: 3px solid var(--orange-sodium);">
+        <div style="display: flex; justify-content: space-between; align-items: baseline;">
+          <span style="font-size: 0.95rem;">Resistor, 100&Omega; (protects the LED)</span>
+          <span style="color: var(--orange-sodium); font-size: 0.8rem; white-space: nowrap; margin-left: 1rem;">Qty: 1</span>
+        </div>
+      </div>
+
+      <div style="background: var(--bg-card); border: 1px solid #222; padding: 1.2rem 1.5rem; margin-bottom: 0.75rem; border-left: 3px solid var(--orange-sodium);">
+        <div style="display: flex; justify-content: space-between; align-items: baseline;">
+          <span style="font-size: 0.95rem;">2&times; AAA batteries + holder</span>
+          <span style="color: var(--orange-sodium); font-size: 0.8rem; white-space: nowrap; margin-left: 1rem;">Qty: 1</span>
+        </div>
+      </div>
+
+      <div style="background: var(--bg-card); border: 1px solid #222; padding: 1.2rem 1.5rem; margin-bottom: 0.75rem; border-left: 3px solid var(--orange-sodium);">
+        <div style="display: flex; justify-content: space-between; align-items: baseline;">
+          <span style="font-size: 0.95rem;">Small perfboard, hookup wire, solder</span>
+          <span style="color: var(--orange-sodium); font-size: 0.8rem; white-space: nowrap; margin-left: 1rem;">1 ea.</span>
+        </div>
+      </div>
+
+      <p style="margin-top: 0.8rem;"><a href="/build-it/route-13/parts/" style="color: var(--orange-sodium); font-size: 0.95rem;">Parts &mdash; where to buy each one &rarr;</a></p>
 
       <h4>How It Works</h4>
       <p>When the pressure mat closes the circuit, the 555 fires in monostable mode. The 560K resistor and 100&micro;F capacitor set the pulse duration to about 30 seconds. The LED lights up bright, then slowly fades as the capacitor drains. Even after the person gets up, the LED keeps glowing for a while &mdash; like the seat remembers.</p>
@@ -114,18 +163,48 @@
   <!-- VERSION 3 -->
   <section style="padding-top: 0;">
     <div class="build-steps" style="border-color: #333;">
-      <span class="version-label">Version 3 &mdash; The Smart One</span>
+      <span class="version-label">Version 3 &mdash; Go Further</span>
       <h3 style="color: var(--orange-sodium); text-shadow: 0 0 15px rgba(255,140,66,0.3);">Tick. ATOM Matrix. The Bus Knows You Sat Down.</h3>
       <p><em>This is the upgrade. A pressure mat wired to a tiny computer with a 5&times;5 color LED grid. Someone sits down &mdash; the grid lights up orange, shows "13", and counts passengers. Everything runs on the device. No server. No internet.</em></p>
 
       <h4>What You Need</h4>
-      <ul>
-        <li>1 <strong><a href="/tick/buy/" style="color: var(--orange-sodium);">ATOM Matrix</a></strong> &mdash; 24mm square, weighs 7 grams. ESP32 dual-core processor. 5&times;5 RGB LED matrix on the front (25 LEDs, any color, any pattern). Built-in accelerometer and gyroscope (MPU6886). USB-C power. Wi-Fi built in. About $15.</li>
-        <li>1 pressure mat switch (same as Versions 1 &amp; 2 &mdash; under $2)</li>
-        <li>1 USB-C cable</li>
-        <li>1 USB power source (wall adapter, power bank, or long USB extension to a hidden outlet)</li>
-        <li>2 short jumper wires + 1 resistor, 10K ohm (to wire the mat to the ATOM Matrix GPIO pin)</li>
-      </ul>
+
+      <div style="background: var(--bg-card); border: 1px solid #222; padding: 1.2rem 1.5rem; margin-bottom: 0.75rem; border-left: 3px solid var(--orange-sodium);">
+        <div style="display: flex; justify-content: space-between; align-items: baseline;">
+          <span style="font-size: 0.95rem;"><strong><a href="/tick/buy/" style="color: var(--orange-sodium);">ATOM Matrix</a></strong> &mdash; 24mm square, 5&times;5 RGB LED matrix, Wi-Fi, accelerometer. About $15.</span>
+          <span style="color: var(--orange-sodium); font-size: 0.8rem; white-space: nowrap; margin-left: 1rem;">Qty: 1</span>
+        </div>
+      </div>
+
+      <div style="background: var(--bg-card); border: 1px solid #222; padding: 1.2rem 1.5rem; margin-bottom: 0.75rem; border-left: 3px solid var(--orange-sodium);">
+        <div style="display: flex; justify-content: space-between; align-items: baseline;">
+          <span style="font-size: 0.95rem;">Pressure mat switch (same as Versions 1 &amp; 2)</span>
+          <span style="color: var(--orange-sodium); font-size: 0.8rem; white-space: nowrap; margin-left: 1rem;">Qty: 1</span>
+        </div>
+      </div>
+
+      <div style="background: var(--bg-card); border: 1px solid #222; padding: 1.2rem 1.5rem; margin-bottom: 0.75rem; border-left: 3px solid var(--orange-sodium);">
+        <div style="display: flex; justify-content: space-between; align-items: baseline;">
+          <span style="font-size: 0.95rem;">USB-C cable</span>
+          <span style="color: var(--orange-sodium); font-size: 0.8rem; white-space: nowrap; margin-left: 1rem;">Qty: 1</span>
+        </div>
+      </div>
+
+      <div style="background: var(--bg-card); border: 1px solid #222; padding: 1.2rem 1.5rem; margin-bottom: 0.75rem; border-left: 3px solid var(--orange-sodium);">
+        <div style="display: flex; justify-content: space-between; align-items: baseline;">
+          <span style="font-size: 0.95rem;">USB power source (wall adapter, power bank, or hidden outlet)</span>
+          <span style="color: var(--orange-sodium); font-size: 0.8rem; white-space: nowrap; margin-left: 1rem;">Qty: 1</span>
+        </div>
+      </div>
+
+      <div style="background: var(--bg-card); border: 1px solid #222; padding: 1.2rem 1.5rem; margin-bottom: 0.75rem; border-left: 3px solid var(--orange-sodium);">
+        <div style="display: flex; justify-content: space-between; align-items: baseline;">
+          <span style="font-size: 0.95rem;">2 short jumper wires + 1 resistor, 10K&Omega; (mat to GPIO pin)</span>
+          <span style="color: var(--orange-sodium); font-size: 0.8rem; white-space: nowrap; margin-left: 1rem;">1 set</span>
+        </div>
+      </div>
+
+      <p style="margin-top: 0.8rem;"><a href="/build-it/route-13/parts/" style="color: var(--orange-sodium); font-size: 0.95rem;">Parts &mdash; where to buy each one &rarr;</a></p>
 
       <h4>How to Build It</h4>
       <p><strong>Step 1 &mdash; Plug it in.</strong> Connect USB-C to power. The firmware is already on the ATOM Matrix &mdash; no flashing, no setup tools. It boots in 2 seconds and shows a dim orange idle pattern.</p>
@@ -173,7 +252,7 @@
   <!-- FOOTER -->
   <footer>
     <div class="footer-logo">SEER FRIGHTS</div>
-    <p>&copy; 2026 B. Carter. Published by Institute for Seer LLC. All rights reserved.</p>
+    <p>&copy; 2026 Institute for Seer LLC. All rights reserved.</p>
     <p>Ages 8&ndash;12 &bull; Middle-Grade Horror</p>
     <div class="footer-links">
       <a href="/">i4seer</a>

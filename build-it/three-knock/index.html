@@ -27,8 +27,8 @@
         <ul>
           <li><a href="/seer-frights/">Home</a></li>
           <li><a href="/books/">Books</a></li>
-          <li><a href="/books/buy/">Buy</a></li>
           <li><a href="/build-it/" class="active">Build</a></li>
+          <li><a href="/books/buy/">Buy</a></li>
         </ul>
       </div>
     </nav>
@@ -58,12 +58,13 @@
       <p><em>No wiring. No programming. If you can press a button, you can make this.</em></p>
 
       <h4>What You Need</h4>
-      <ul>
+      <ul class="checklist">
         <li>1 piezo disc, 27mm (the flat brass kind &mdash; looks like a tiny gold coin with two wires. About the size of a quarter. Electronics store or online. About a dime.)</li>
         <li>1 AAA battery (from the junk drawer, the TV remote, wherever)</li>
         <li>1 tactile push button, 6x6mm (the tiny clicky kind you see inside electronics &mdash; four little legs, about the size of a pencil eraser. You can buy a bag of 100 for a couple bucks online. You only need one.)</li>
         <li>Electrical tape</li>
       </ul>
+      <p style="margin-top: 0.8rem;"><a href="/build-it/three-knock/parts/" style="color: var(--amber); font-size: 0.95rem;">Parts &mdash; where to buy each one &rarr;</a></p>
 
       <h4>How to Build It</h4>
       <p>The piezo disc has two wires &mdash; one red, one black. Tape one wire to one end of the battery. Tape the other wire to one leg of the push button. Run a short wire from the other leg of the button to the other end of the battery. That's the whole circuit.</p>
@@ -82,13 +83,43 @@
       <h3 style="color: var(--amber); text-shadow: 0 0 15px rgba(255,179,71,0.3);">Hands-Free. It Ticks on Its Own.</h3>
 
       <h4>What You Need</h4>
-      <ul>
-        <li>1 piezo disc, 27mm (same as above)</li>
-        <li>1 AAA battery</li>
-        <li>1 blinking LED (the kind that blinks on its own &mdash; about twenty cents. The blink is built into the LED. No chip needed.)</li>
-        <li>1 push button (to start and stop it &mdash; push on, push off)</li>
-        <li>Electrical tape</li>
-      </ul>
+
+      <div style="background: var(--bg-card); border: 1px solid #222; padding: 1.2rem 1.5rem; margin-bottom: 0.75rem; border-left: 3px solid var(--amber);">
+        <div style="display: flex; justify-content: space-between; align-items: baseline;">
+          <span style="font-size: 0.95rem;">Piezo disc, 27mm (same as above)</span>
+          <span style="color: var(--amber); font-size: 0.8rem; white-space: nowrap; margin-left: 1rem;">Qty: 1</span>
+        </div>
+      </div>
+
+      <div style="background: var(--bg-card); border: 1px solid #222; padding: 1.2rem 1.5rem; margin-bottom: 0.75rem; border-left: 3px solid var(--amber);">
+        <div style="display: flex; justify-content: space-between; align-items: baseline;">
+          <span style="font-size: 0.95rem;">AAA battery</span>
+          <span style="color: var(--amber); font-size: 0.8rem; white-space: nowrap; margin-left: 1rem;">Qty: 1</span>
+        </div>
+      </div>
+
+      <div style="background: var(--bg-card); border: 1px solid #222; padding: 1.2rem 1.5rem; margin-bottom: 0.75rem; border-left: 3px solid var(--amber);">
+        <div style="display: flex; justify-content: space-between; align-items: baseline;">
+          <span style="font-size: 0.95rem;">Blinking LED (blinks on its own &mdash; no chip needed)</span>
+          <span style="color: var(--amber); font-size: 0.8rem; white-space: nowrap; margin-left: 1rem;">Qty: 1</span>
+        </div>
+      </div>
+
+      <div style="background: var(--bg-card); border: 1px solid #222; padding: 1.2rem 1.5rem; margin-bottom: 0.75rem; border-left: 3px solid var(--amber);">
+        <div style="display: flex; justify-content: space-between; align-items: baseline;">
+          <span style="font-size: 0.95rem;">Push button (push on, push off)</span>
+          <span style="color: var(--amber); font-size: 0.8rem; white-space: nowrap; margin-left: 1rem;">Qty: 1</span>
+        </div>
+      </div>
+
+      <div style="background: var(--bg-card); border: 1px solid #222; padding: 1.2rem 1.5rem; margin-bottom: 0.75rem; border-left: 3px solid var(--amber);">
+        <div style="display: flex; justify-content: space-between; align-items: baseline;">
+          <span style="font-size: 0.95rem;">Electrical tape</span>
+          <span style="color: var(--amber); font-size: 0.8rem; white-space: nowrap; margin-left: 1rem;">1 roll</span>
+        </div>
+      </div>
+
+      <p style="margin-top: 0.8rem;"><a href="/build-it/three-knock/parts/" style="color: var(--amber); font-size: 0.95rem;">Parts &mdash; where to buy each one &rarr;</a></p>
 
       <h4>How to Build It</h4>
       <p>Wire the blinking LED in series with the piezo disc and the battery, with the push button in the circuit. Press the button to close the circuit. The LED pulses on and off automatically. Each pulse sends a <em>tick</em> through the piezo. Tape the disc to a door and it sounds like a faint, steady tapping. <em>Tick... tick... tick...</em></p>
@@ -105,9 +136,41 @@
   <!-- VERSION 3 -->
   <section style="padding-top: 0;">
     <div class="build-steps" style="border-color: #333;">
-      <span class="version-label">Version 3 &mdash; The Real One</span>
+      <span class="version-label">Version 3 &mdash; Go Further</span>
       <h3 style="color: var(--amber); text-shadow: 0 0 15px rgba(255,179,71,0.3);">Tick. ATOM Matrix. Atomic Echo Base. 3:07 AM. Every Night.</h3>
       <p><em>This is what Hargrave actually uses in the book. Tick devices with Atomic Echo Bases hidden behind door frames, a Wi-Fi network, and a timer set for 3:07 AM. Three knocks. Every cabin. Same time. Same spacing. Every single night.</em></p>
+
+      <h4>What You Need</h4>
+
+      <div style="background: var(--bg-card); border: 1px solid #222; padding: 1.2rem 1.5rem; margin-bottom: 0.75rem; border-left: 3px solid var(--amber);">
+        <div style="display: flex; justify-content: space-between; align-items: baseline;">
+          <span style="font-size: 0.95rem;"><strong><a href="/tick/buy/" style="color: var(--amber);">ATOM Matrix</a></strong> &mdash; 24mm square, 5&times;5 RGB LED matrix, Wi-Fi. About $15.</span>
+          <span style="color: var(--amber); font-size: 0.8rem; white-space: nowrap; margin-left: 1rem;">Qty: 1</span>
+        </div>
+      </div>
+
+      <div style="background: var(--bg-card); border: 1px solid #222; padding: 1.2rem 1.5rem; margin-bottom: 0.75rem; border-left: 3px solid var(--amber);">
+        <div style="display: flex; justify-content: space-between; align-items: baseline;">
+          <span style="font-size: 0.95rem;">Atomic Echo Base (speaker + microphone board)</span>
+          <span style="color: var(--amber); font-size: 0.8rem; white-space: nowrap; margin-left: 1rem;">Qty: 1</span>
+        </div>
+      </div>
+
+      <div style="background: var(--bg-card); border: 1px solid #222; padding: 1.2rem 1.5rem; margin-bottom: 0.75rem; border-left: 3px solid var(--amber);">
+        <div style="display: flex; justify-content: space-between; align-items: baseline;">
+          <span style="font-size: 0.95rem;">USB-C cable</span>
+          <span style="color: var(--amber); font-size: 0.8rem; white-space: nowrap; margin-left: 1rem;">Qty: 1</span>
+        </div>
+      </div>
+
+      <div style="background: var(--bg-card); border: 1px solid #222; padding: 1.2rem 1.5rem; margin-bottom: 0.75rem; border-left: 3px solid var(--amber);">
+        <div style="display: flex; justify-content: space-between; align-items: baseline;">
+          <span style="font-size: 0.95rem;">USB power source (wall adapter or battery pack)</span>
+          <span style="color: var(--amber); font-size: 0.8rem; white-space: nowrap; margin-left: 1rem;">Qty: 1</span>
+        </div>
+      </div>
+
+      <p style="margin-top: 0.8rem;"><a href="/build-it/three-knock/parts/" style="color: var(--amber); font-size: 0.95rem;">Parts &mdash; where to buy each one &rarr;</a></p>
 
       <h4>The Setup</h4>
       <p>The <strong><a href="/tick/buy/" style="color: var(--amber);">ATOM Matrix</a></strong> plugs into the <strong>Atomic Echo Base</strong> &mdash; a speaker and microphone board. He recorded the knock sound himself &mdash; his knuckle on a pine door, three times, slow and even. Each device connects to the camp Wi-Fi, syncs time via NTP, and waits.</p>
@@ -153,7 +216,7 @@
   <!-- FOOTER -->
   <footer>
     <div class="footer-logo">SEER FRIGHTS</div>
-    <p>&copy; 2026 B. Carter. Published by Institute for Seer LLC. All rights reserved.</p>
+    <p>&copy; 2026 Institute for Seer LLC. All rights reserved.</p>
     <p>Ages 8&ndash;12 &bull; Middle-Grade Horror</p>
     <div class="footer-links">
       <a href="/">i4seer</a>

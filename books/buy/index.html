@@ -27,8 +27,8 @@
         <ul>
           <li><a href="/seer-frights/">Home</a></li>
           <li><a href="/books/">Books</a></li>
-          <li><a href="/books/buy/" class="active">Buy</a></li>
           <li><a href="/build-it/">Build</a></li>
+          <li><a href="/books/buy/" class="active">Buy</a></li>
         </ul>
       </div>
     </nav>
@@ -63,6 +63,8 @@
             <a href="#" class="btn btn-glow" style="font-size: 0.85rem;">Kindle eBook</a>
             <a href="#" class="btn btn-glow" style="font-size: 0.85rem; cursor: default; opacity: 0.6;">Paperback &mdash; Coming Soon</a>
             <a href="/books/book1/" class="btn btn-outline" style="font-size: 0.85rem;">Read</a>
+            <a href="/build-it/swamp-glow/" class="btn btn-outline" style="font-size: 0.85rem;">Build</a>
+            <a href="/build-it/swamp-glow/parts/" class="btn btn-outline" style="font-size: 0.85rem;">Parts</a>
           </div>
         </div>
       </div>
@@ -80,6 +82,8 @@
           <div style="display: flex; gap: 0.8rem; flex-wrap: wrap;">
             <a href="#" class="btn btn-glow" style="background: var(--orange-sodium); box-shadow: 0 0 15px rgba(255,140,66,0.4); font-size: 0.85rem; cursor: default; opacity: 0.6;">March 2026</a>
             <a href="/books/book2/" class="btn btn-outline" style="color: var(--orange-sodium); border-color: var(--orange-sodium); font-size: 0.85rem;">Read</a>
+            <a href="/build-it/route-13/" class="btn btn-outline" style="color: var(--orange-sodium); border-color: var(--orange-sodium); font-size: 0.85rem;">Build</a>
+            <a href="/build-it/route-13/parts/" class="btn btn-outline" style="color: var(--orange-sodium); border-color: var(--orange-sodium); font-size: 0.85rem;">Parts</a>
           </div>
         </div>
       </div>
@@ -97,19 +101,46 @@
           <div style="display: flex; gap: 0.8rem; flex-wrap: wrap;">
             <a href="#" class="btn btn-glow" style="background: var(--amber); box-shadow: 0 0 15px rgba(255,179,71,0.4); font-size: 0.85rem; cursor: default; opacity: 0.6;">April 2026</a>
             <a href="/books/book3/" class="btn btn-outline" style="color: var(--amber); border-color: var(--amber); font-size: 0.85rem;">Read</a>
+            <a href="/build-it/three-knock/" class="btn btn-outline" style="color: var(--amber); border-color: var(--amber); font-size: 0.85rem;">Build</a>
+            <a href="/build-it/three-knock/parts/" class="btn btn-outline" style="color: var(--amber); border-color: var(--amber); font-size: 0.85rem;">Parts</a>
           </div>
         </div>
+      </div>
+
+      <div style="max-width: 600px; margin: 1.5rem auto 0; text-align: center; line-height: 1.8;">
+        <p style="opacity: 0.5; font-size: 0.9rem;">All books are available on Amazon. Kindle eBooks are delivered instantly. Paperbacks ship from Amazon.</p>
+        <p style="opacity: 0.3; font-size: 0.8rem; margin-top: 0.3rem;">Published by Institute for Seer LLC. Each book stands alone &mdash; read them in any order.</p>
+
       </div>
 
     </div>
   </section>
 
-  <!-- AMAZON NOTE -->
-  <section>
-    <div style="max-width: 600px; margin: 0 auto; text-align: center; line-height: 1.8;">
-      <p style="opacity: 0.5; font-size: 0.9rem;">All books are available on Amazon. Kindle eBooks are delivered instantly. Paperbacks ship from Amazon.</p>
-      <br>
-      <p style="opacity: 0.3; font-size: 0.8rem;">Published by Institute for Seer LLC. Each book stands alone &mdash; read them in any order.</p>
+  <!-- BUY KITS -->
+  <section id="kits">
+    <h2 class="section-title">Buy Kits</h2>
+    <p class="section-subtitle">Everything you need to build the devices. One box. No hunting for parts.</p>
+
+    <div style="max-width: 600px; margin: 0 auto; text-align: center;">
+      <div class="char-card" style="border-color: var(--green-dim); padding: 2rem 1.5rem;">
+        <p style="color: var(--green-glow); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 0.5rem;">Status</p>
+        <h3 style="font-size: 1.4rem; margin-bottom: 0.8rem;">Gathering in Progress</h3>
+        <p style="opacity: 0.7; line-height: 1.7; margin-bottom: 1.5rem;">We're sourcing components and assembling the first batch of kits. Email us to get notified when they're ready to ship.</p>
+        <p style="color: var(--green-glow); font-size: 1.4rem; margin-top: 0.5rem;">
+          <span id="kit-email" style="cursor: pointer;" title="Click to copy">frights.kit@i4seer.com</span>
+          <span id="kit-copy-msg" style="font-size: 0.75rem; color: var(--green-glow); opacity: 0; transition: opacity 0.3s; margin-left: 0.3rem;">Copied!</span>
+        </p>
+        <script>
+          document.getElementById('kit-email').addEventListener('click', function() {
+            navigator.clipboard.writeText('frights.kit@i4seer.com');
+            var msg = document.getElementById('kit-copy-msg');
+            msg.style.opacity = '1';
+            setTimeout(function() { msg.style.opacity = '0'; }, 1500);
+          });
+        </script>
+        <p style="opacity: 0.35; font-size: 0.75rem; margin-top: 1rem;">No spam. One email when kits are live. That's it.</p>
+        <p style="opacity: 0.7; line-height: 1.7; margin-top: 1.2rem;">Want an adventure? Gather your own parts &mdash; check the <a href="/build-it/" style="color: var(--green-glow);">parts list</a> for available suppliers.</p>
+      </div>
     </div>
   </section>
 
@@ -121,7 +152,7 @@
   <!-- FOOTER -->
   <footer>
     <div class="footer-logo">SEER FRIGHTS</div>
-    <p>&copy; 2026 B. Carter. Published by Institute for Seer LLC. All rights reserved.</p>
+    <p>&copy; 2026 Institute for Seer LLC. All rights reserved.</p>
     <p>Ages 8&ndash;12 &bull; Middle-Grade Horror</p>
     <div class="footer-links">
       <a href="/">i4seer</a>
