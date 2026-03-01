@@ -1181,3 +1181,145 @@ footer .footer-links a:hover {
 .tick-step p:last-child {
   margin-bottom: 0;
 }
+
+/* ========== SEER FRIGHTS FEATURE BLOCK ========== */
+
+.seer-feature {
+  position: relative;
+  overflow: hidden;
+  padding: 120px 0;
+  max-width: none;
+  color: #eafbea;
+  background: #070c08;
+}
+
+.seer-container {
+  position: relative;
+  z-index: 3;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.seer-left {
+  max-width: 680px;
+}
+
+.seer-eyebrow {
+  font-family: 'Russo One', sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #7CFF4F;
+  opacity: 0.8;
+}
+
+.seer-title {
+  font-family: 'Creepster', cursive;
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  margin: 12px 0 8px;
+  letter-spacing: 2px;
+  color: #9CFF66;
+  text-shadow: 0 0 18px rgba(124,255,79,0.25);
+}
+
+.seer-tagline {
+  font-family: 'Creepster', cursive;
+  font-size: 1.1rem;
+  font-style: italic;
+  opacity: 0.75;
+  margin-bottom: 24px;
+}
+
+.seer-description {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #c8d8c8;
+  margin-bottom: 40px;
+}
+
+.seer-dual {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.seer-pill {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  padding: 20px 24px;
+  background: rgba(20, 35, 25, 0.6);
+  border: 1px solid rgba(124,255,79,0.15);
+  border-radius: 8px;
+  backdrop-filter: blur(6px);
+  transition: all 0.3s ease;
+  min-width: 240px;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.seer-pill:hover {
+  border-color: rgba(124,255,79,0.4);
+  box-shadow: 0 0 18px rgba(124,255,79,0.15);
+  transform: translateY(-3px);
+}
+
+.seer-pill-icon {
+  font-size: 1.5rem;
+}
+
+.seer-pill h4 {
+  font-family: 'Russo One', sans-serif;
+  margin: 0 0 4px;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  color: #7CFF4F;
+}
+
+.seer-pill p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #d5e3d5;
+}
+
+.seer-btn {
+  display: inline-block;
+  padding: 14px 32px;
+  font-family: 'Russo One', sans-serif;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: #0b120d;
+  background: #7CFF4F;
+  border-radius: 4px;
+  transition: all 0.25s ease;
+}
+
+.seer-btn:hover {
+  background: #9CFF66;
+  box-shadow: 0 0 20px rgba(124,255,79,0.35);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .seer-feature {
+    padding: 80px 0;
+  }
+
+  .seer-dual {
+    flex-direction: column;
+  }
+
+  .seer-pill {
+    width: 100%;
+    min-width: 0;
+  }
+}
