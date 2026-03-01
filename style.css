@@ -1182,12 +1182,12 @@ footer .footer-links a:hover {
   margin-bottom: 0;
 }
 
-/* ========== SEER FRIGHTS FEATURE BLOCK ========== */
+/* ========== SEER FRIGHTS FEATURE BLOCK (mobile-first) ========== */
 
 .seer-feature {
   position: relative;
   overflow: hidden;
-  padding: 120px 0;
+  padding: 60px 0;
   max-width: none;
   color: #eafbea;
   background: #070c08;
@@ -1196,22 +1196,18 @@ footer .footer-links a:hover {
 .seer-container {
   position: relative;
   z-index: 3;
-  max-width: 1200px;
+  max-width: 640px;
   margin: 0 auto;
   padding: 0 24px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
 }
 
-.seer-left {
-  max-width: 680px;
+.seer-content {
+  text-align: center;
 }
 
 .seer-eyebrow {
   font-family: 'Russo One', sans-serif;
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #7CFF4F;
@@ -1220,8 +1216,8 @@ footer .footer-links a:hover {
 
 .seer-title {
   font-family: 'Creepster', cursive;
-  font-size: clamp(2.5rem, 4vw, 3.5rem);
-  margin: 12px 0 8px;
+  font-size: 2.2rem;
+  margin: 8px 0 6px;
   letter-spacing: 2px;
   color: #9CFF66;
   text-shadow: 0 0 18px rgba(124,255,79,0.25);
@@ -1229,97 +1225,136 @@ footer .footer-links a:hover {
 
 .seer-tagline {
   font-family: 'Creepster', cursive;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-style: italic;
-  opacity: 0.75;
-  margin-bottom: 24px;
+  opacity: 0.7;
+  margin-bottom: 20px;
 }
 
 .seer-description {
-  font-size: 1.05rem;
+  font-size: 0.95rem;
   line-height: 1.6;
   color: #c8d8c8;
-  margin-bottom: 40px;
+  margin-bottom: 32px;
 }
 
 .seer-dual {
   display: flex;
-  gap: 24px;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-bottom: 40px;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 32px;
+  align-items: center;
 }
 
 .seer-pill {
   display: flex;
-  gap: 16px;
+  gap: 14px;
   align-items: center;
-  padding: 20px 24px;
+  padding: 16px 20px;
   background: rgba(20, 35, 25, 0.6);
   border: 1px solid rgba(124,255,79,0.15);
   border-radius: 8px;
   backdrop-filter: blur(6px);
-  transition: all 0.3s ease;
-  min-width: 240px;
   text-decoration: none;
   color: inherit;
   cursor: pointer;
 }
 
-.seer-pill:hover {
-  border-color: rgba(124,255,79,0.4);
-  box-shadow: 0 0 18px rgba(124,255,79,0.15);
-  transform: translateY(-3px);
-}
-
-.seer-pill-icon {
-  font-size: 1.5rem;
-}
-
 .seer-pill h4 {
   font-family: 'Russo One', sans-serif;
   margin: 0 0 4px;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   letter-spacing: 1px;
   color: #7CFF4F;
 }
 
 .seer-pill p {
   margin: 0;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   color: #d5e3d5;
 }
 
 .seer-btn {
-  display: inline-block;
+  display: block;
+  width: 100%;
   padding: 14px 32px;
   font-family: 'Russo One', sans-serif;
   font-size: 0.9rem;
   letter-spacing: 1px;
   text-decoration: none;
+  text-align: center;
   color: #0b120d;
   background: #7CFF4F;
   border-radius: 4px;
-  transition: all 0.25s ease;
 }
 
-.seer-btn:hover {
-  background: #9CFF66;
-  box-shadow: 0 0 20px rgba(124,255,79,0.35);
-  transform: translateY(-2px);
-}
-
-@media (max-width: 768px) {
+/* Desktop enhancements */
+@media (min-width: 900px) {
   .seer-feature {
-    padding: 80px 0;
+    padding: 120px 0;
+  }
+
+  .seer-container {
+    max-width: 1100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .seer-content {
+    max-width: 640px;
+  }
+
+  .seer-title {
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
+  }
+
+  .seer-tagline {
+    font-size: 1.1rem;
+  }
+
+  .seer-description {
+    font-size: 1.05rem;
+    margin-bottom: 40px;
   }
 
   .seer-dual {
-    flex-direction: column;
+    flex-direction: row;
+    gap: 24px;
+    margin-bottom: 40px;
+    justify-content: center;
   }
 
   .seer-pill {
-    width: 100%;
-    min-width: 0;
+    padding: 20px 24px;
+    gap: 16px;
+    min-width: 240px;
+    transition: all 0.3s ease;
+  }
+
+  .seer-pill:hover {
+    border-color: rgba(124,255,79,0.4);
+    box-shadow: 0 0 18px rgba(124,255,79,0.15);
+    transform: translateY(-3px);
+  }
+
+  .seer-pill h4 {
+    font-size: 0.9rem;
+  }
+
+  .seer-pill p {
+    font-size: 0.9rem;
+  }
+
+  .seer-btn {
+    display: inline-block;
+    width: auto;
+    transition: all 0.25s ease;
+  }
+
+  .seer-btn:hover {
+    background: #9CFF66;
+    box-shadow: 0 0 20px rgba(124,255,79,0.35);
+    transform: translateY(-2px);
   }
 }
