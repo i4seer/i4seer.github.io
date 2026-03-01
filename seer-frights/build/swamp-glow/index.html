@@ -20,7 +20,7 @@
         <ul>
           <li><a href="/">i4seer</a></li>
           <li><a href="/seer-frights/" class="active">Seer Frights</a></li>
-          <li><a href="/tick/">Tick</a></li>
+          <!-- <li><a href="/tick/">Tick</a></li> -->
         </ul>
       </div>
       <div class="nav-sub">
@@ -54,189 +54,114 @@
   <section>
     <div class="build-steps">
       <span class="version-label">Version 1 &mdash; The Easy One</span>
-      <h3>No Soldering. No Wiring. Ten Minutes.</h3>
+      <h3>No Soldering. No Wiring. A Few Minutes.</h3>
       <p><em>If you can use tape, you can make this.</em></p>
 
-      <h4>What You Need</h4>
+      <div style="margin: 1.5rem 0;">
+        <img src="/images/version-1-swamp-puck.png" alt="Version 1 — LED + Battery" style="max-width: 50%; height: auto; border-radius: 4px; opacity: 0.9;">
+      </div>
+
+      <h4>Parts</h4>
       <ul class="checklist">
-        <li>1 green LED, diffused (the soft kind &mdash; not the bright clear ones. Craft store or online. About a quarter.)</li>
-        <li>1 CR2032 coin battery (the flat silver one from the drugstore) &mdash; OR 1 AAA battery if you can't find coin batteries. AAAs are in every junk drawer in America. The glow will be softer, which is actually better. Won't fit in a golf ball, so go bigger &mdash; a tennis-ball-sized ornament or a plastic Easter egg.</li>
-        <li>1 tiny slide switch (optional &mdash; or just pull the battery out to turn it off)</li>
+        <li>1 green LED</li>
+        <li>1 CR2032 coin battery</li>
         <li>Electrical tape</li>
-        <li>1 plastic ornament ball from the craft store (the kind that splits in half &mdash; clear, round, about the size of a golf ball)</li>
-        <li>Aquarium silicone (optional &mdash; makes it waterproof. Skip this if you're not putting it in water.)</li>
-        <li>Green glass paint (optional &mdash; one coat makes it look swampy. Without it, the clear ball still glows green from the LED inside.)</li>
-        <li>Fine sandpaper (optional &mdash; roughing up the ball makes the glow softer. But it works without it.)</li>
+        <li>1 clear plastic ball (ornament, capsule toy, Easter egg &mdash; anything see-through)</li>
       </ul>
       <p style="margin-top: 0.8rem;"><a href="/seer-frights/build/swamp-glow/parts/" style="color: var(--green-glow); font-size: 0.95rem;">Parts &mdash; where to buy each one &rarr;</a></p>
 
-      <h4>How to Build It</h4>
-      <p>The LED has two legs &mdash; one long, one short. The long leg is positive. The short leg is negative. Sandwich the coin battery between them &mdash; long leg on the flat side (+), short leg on the bumpy side (&minus;). It lights up. That's it. That's the whole circuit.</p>
-      <p>Wrap a piece of electrical tape around the battery and the legs to hold it together. If you want a switch, tape the slide switch between the long leg and the battery &mdash; slide on, it glows. Slide off, it stops.</p>
-      <p>Tuck the whole thing inside half the ornament ball. LED facing out. Close the ball. If you want it waterproof, seal the seam with aquarium silicone and let it cure overnight. Sand the outside so it's frosted. One coat of green glass paint. Let dry.</p>
+      <h4>The Circuit</h4>
+      <p><strong>Step 1 &mdash; The LED.</strong> It has two legs. The long leg is positive (+). The short leg is negative (&minus;). That's the only thing you need to remember.</p>
+      <p><strong>Step 2 &mdash; The battery.</strong> The flat side with the + is positive. The bumpy side is negative.</p>
+      <p><strong>Step 3 &mdash; Sandwich.</strong> Long leg on the flat side (+). Short leg on the bumpy side (&minus;). It lights up. That's the whole circuit.</p>
+      <p style="font-size: 0.9rem; opacity: 0.7;">The LED only lights when both legs are touching the battery &mdash; positive and negative connected at the same time, forming a complete loop. Electricity only travels around complete paths.</p>
+      <p><strong>Step 4 &mdash; Tape it.</strong> Wrap electrical tape around the battery and legs to hold it together.</p>
+      <p style="font-size: 0.9rem; opacity: 0.7;"><em>Doesn't light? Flip the LED around &mdash; it might be backward. Still nothing? Check that the tape is pressing both legs firmly against the battery.</em></p>
 
-      <p style="margin-top: 1rem; font-size: 0.85rem; opacity: 0.6;"><strong>Water safety:</strong> Even sealed housings can leak. Water and batteries don't mix &mdash; keep battery connections dry. Retrieve devices after use. Do not leave unattended in water overnight.</p>
+      <h4>The Puck</h4>
+      <p>Tuck the whole thing inside any clear ball &mdash; plastic ornament, capsule toy shell, clear Easter egg. Seal it, frost it with sandpaper, done. Green LED inside a frosted ball looks swampy without paint.</p>
 
-      <div class="note">
-        You now have a glowing green swamp puck. Total cost: about a dollar. Total time: ten minutes. Total soldering: zero. It won't cycle on and off &mdash; it just glows steady until the battery dies (a few days). But in the dark, sitting on a tree root or dropped in shallow water, it looks exactly the same. Spooky enough.
-      </div>
+      <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.7;"><em>Want a switch? A tiny slide switch between the long leg and the battery. Slide on, it glows. Slide off, it stops.</em></p>
+
+      <p style="margin-top: 1rem; font-size: 0.85rem; opacity: 0.6;"><strong>Safety:</strong> Keep coin batteries away from small children &mdash; they're a choking and ingestion hazard.</p>
     </div>
   </section>
 
  <!-- VERSION 2 -->
 <section style="padding-top: 0;">
   <div class="build-steps">
-    <span class="version-label">Version 2 &mdash; The Timer Build</span>
-    <h3>CMOS 7555 Timer. Slow Pulse. Loops Forever.</h3>
-    <p><em>This is what Mrs. Calhoun actually uses. Requires soldering and careful wiring.</em></p>
-    <p><strong>Low-voltage build.</strong> Use 2x AAA batteries (3V total). Do not connect to household electrical wiring.</p>
+    <span class="version-label">Version 2 &mdash; The Programmable One</span>
+    <h3>ATtiny85. Any Pattern. Fits in a Golf Ball.</h3>
+    <p><em>Same green LED, same housing &mdash; but now you control the pattern. A tiny chip smaller than a dime tells the LED what to do.</em></p>
 
-    <h4>What You Need</h4>
+    <div style="margin: 1.5rem 0;">
+      <img src="/images/swampglow-v2.png" alt="Swamp Glow Version 2 — ATtiny85 wiring diagram" style="max-width: 50%; height: auto; border: 1px solid #222;">
+    </div>
 
-      <div style="background: var(--bg-card); border: 1px solid #222; padding: 1.2rem 1.5rem; margin-bottom: 0.75rem; border-left: 3px solid var(--green-glow);">
-        <div style="display: flex; justify-content: space-between; align-items: baseline;">
-          <span style="font-size: 0.95rem;">CMOS 7555 timer (ICM7555 or TLC555, 8-pin DIP)</span>
-          <span style="color: var(--green-glow); font-size: 0.8rem; white-space: nowrap; margin-left: 1rem;">Qty: 1</span>
-        </div>
-      </div>
-
-      <div style="background: var(--bg-card); border: 1px solid #222; padding: 1.2rem 1.5rem; margin-bottom: 0.75rem; border-left: 3px solid var(--green-glow);">
-        <div style="display: flex; justify-content: space-between; align-items: baseline;">
-          <span style="font-size: 0.95rem;">Small piece of perfboard</span>
-          <span style="color: var(--green-glow); font-size: 0.8rem; white-space: nowrap; margin-left: 1rem;">Qty: 1</span>
-        </div>
-      </div>
-
-      <div style="background: var(--bg-card); border: 1px solid #222; padding: 1.2rem 1.5rem; margin-bottom: 0.75rem; border-left: 3px solid var(--green-glow);">
-        <div style="display: flex; justify-content: space-between; align-items: baseline;">
-          <span style="font-size: 0.95rem;">Green 5mm diffused LED</span>
-          <span style="color: var(--green-glow); font-size: 0.8rem; white-space: nowrap; margin-left: 1rem;">Qty: 1</span>
-        </div>
-      </div>
-
-      <div style="background: var(--bg-card); border: 1px solid #222; padding: 1.2rem 1.5rem; margin-bottom: 0.75rem; border-left: 3px solid var(--green-glow);">
-        <div style="display: flex; justify-content: space-between; align-items: baseline;">
-          <span style="font-size: 0.95rem;">Resistor, 330&Omega; (LED current limit)</span>
-          <span style="color: var(--green-glow); font-size: 0.8rem; white-space: nowrap; margin-left: 1rem;">Qty: 1</span>
-        </div>
-      </div>
-
-      <div style="background: var(--bg-card); border: 1px solid #222; padding: 1.2rem 1.5rem; margin-bottom: 0.75rem; border-left: 3px solid var(--green-glow);">
-        <div style="display: flex; justify-content: space-between; align-items: baseline;">
-          <span style="font-size: 0.95rem;">Resistor, 10k&Omega; (R1)</span>
-          <span style="color: var(--green-glow); font-size: 0.8rem; white-space: nowrap; margin-left: 1rem;">Qty: 1</span>
-        </div>
-      </div>
-
-      <div style="background: var(--bg-card); border: 1px solid #222; padding: 1.2rem 1.5rem; margin-bottom: 0.75rem; border-left: 3px solid var(--green-glow);">
-        <div style="display: flex; justify-content: space-between; align-items: baseline;">
-          <span style="font-size: 0.95rem;">Resistor, 2.2M&Omega; (R2)</span>
-          <span style="color: var(--green-glow); font-size: 0.8rem; white-space: nowrap; margin-left: 1rem;">Qty: 1</span>
-        </div>
-      </div>
-
-      <div style="background: var(--bg-card); border: 1px solid #222; padding: 1.2rem 1.5rem; margin-bottom: 0.75rem; border-left: 3px solid var(--green-glow);">
-        <div style="display: flex; justify-content: space-between; align-items: baseline;">
-          <span style="font-size: 0.95rem;">Electrolytic capacitor, 470&micro;F (timing capacitor)</span>
-          <span style="color: var(--green-glow); font-size: 0.8rem; white-space: nowrap; margin-left: 1rem;">Qty: 1</span>
-        </div>
-      </div>
-
-      <div style="background: var(--bg-card); border: 1px solid #222; padding: 1.2rem 1.5rem; margin-bottom: 0.75rem; border-left: 3px solid var(--green-glow);">
-        <div style="display: flex; justify-content: space-between; align-items: baseline;">
-          <span style="font-size: 0.95rem;">2&times; AAA battery holder (3V total)</span>
-          <span style="color: var(--green-glow); font-size: 0.8rem; white-space: nowrap; margin-left: 1rem;">Qty: 1</span>
-        </div>
-      </div>
-
-      <div style="background: var(--bg-card); border: 1px solid #222; padding: 1.2rem 1.5rem; margin-bottom: 0.75rem; border-left: 3px solid var(--green-glow);">
-        <div style="display: flex; justify-content: space-between; align-items: baseline;">
-          <span style="font-size: 0.95rem;">Small slide switch</span>
-          <span style="color: var(--green-glow); font-size: 0.8rem; white-space: nowrap; margin-left: 1rem;">Qty: 1</span>
-        </div>
-      </div>
-
-      <div style="background: var(--bg-card); border: 1px solid #222; padding: 1.2rem 1.5rem; margin-bottom: 0.75rem; border-left: 3px solid var(--green-glow);">
-        <div style="display: flex; justify-content: space-between; align-items: baseline;">
-          <span style="font-size: 0.95rem;">Hookup wire</span>
-          <span style="color: var(--green-glow); font-size: 0.8rem; white-space: nowrap; margin-left: 1rem;">1 spool</span>
-        </div>
-      </div>
-
+    <h4>Parts</h4>
+    <ul class="checklist">
+      <li>1 ATtiny85 chip (8-pin DIP)</li>
+      <li>1 green LED (same as Version 1)</li>
+      <li>1 resistor, 150&Omega;</li>
+      <li>1 CR2032 coin battery (same as Version 1)</li>
+      <li>1 CR2032 battery holder with leads and switch</li>
+      <li>1 clear plastic ball (same as Version 1)</li>
+    </ul>
     <p style="margin-top: 0.8rem;"><a href="/seer-frights/build/swamp-glow/parts/" style="color: var(--green-glow); font-size: 0.95rem;">Parts &mdash; where to buy each one &rarr;</a></p>
 
     <h4>Pin Orientation</h4>
-    <p>Hold the chip so the small notch faces left.</p>
+    <p>Hold the chip so the small notch or dot faces left.</p>
     <p>
-      Bottom-left is <strong>Pin 1</strong>.  
-      Top-left is <strong>Pin 8</strong>.  
+      Bottom-left is <strong>Pin 1</strong>.
+      Top-left is <strong>Pin 8</strong>.
       Pins count counter-clockwise.
     </p>
 
     <h4>Pin Reference</h4>
     <ul>
-      <li>Pin 1 &mdash; Ground</li>
-      <li>Pin 2 &mdash; Trigger</li>
-      <li>Pin 3 &mdash; Output</li>
-      <li>Pin 4 &mdash; Reset</li>
-      <li>Pin 5 &mdash; Control (leave unused)</li>
-      <li>Pin 6 &mdash; Threshold</li>
-      <li>Pin 7 &mdash; Discharge</li>
-      <li>Pin 8 &mdash; VCC (+3V)</li>
+      <li>Pin 1 &mdash; RESET (leave unconnected)</li>
+      <li>Pin 2 &mdash; PB3</li>
+      <li>Pin 3 &mdash; PB4</li>
+      <li>Pin 4 &mdash; GND (ground)</li>
+      <li>Pin 5 &mdash; PB0 &larr; <strong>LED output</strong></li>
+      <li>Pin 6 &mdash; PB1</li>
+      <li>Pin 7 &mdash; PB2</li>
+      <li>Pin 8 &mdash; VCC (+3V power)</li>
     </ul>
 
-    <h4>Step 1 &mdash; Mount the Chip</h4>
-    <p>Solder the 7555 to the perfboard. Keep the notch facing left for reference. Trim excess leads.</p>
+    <h4>Step 1 &mdash; Program the Chip</h4>
+    <p>Use a <a href="https://www.amazon.com/Tiny-AVR-Programmer-for-Arduino/dp/B0BK9S6BXN" target="_blank" style="color: var(--green-glow);">Tiny AVR Programmer board</a> (~$10) &mdash; plug the ATtiny85 into the socket, plug the board into USB, and upload a short program from the Arduino IDE. Six lines. One time. After that, the chip remembers.</p>
+    <pre style="background: var(--bg-card); border: 1px solid #222; padding: 1rem; font-size: 0.85rem; overflow-x: auto; border-left: 3px solid var(--green-glow);">void setup() { pinMode(0, OUTPUT); }
+void loop() {
+  digitalWrite(0, HIGH);   // LED on
+  delay(7200000);          // 2 hours
+  digitalWrite(0, LOW);    // LED off
+  delay(600000);           // 10 minutes
+}</pre>
 
-    <h4>Step 2 &mdash; Power Connections</h4>
+    <h4>Step 2 &mdash; Connect It</h4>
+    <p>Three connections. No soldering. Bend the resistor legs and LED legs directly onto the chip pins &mdash; they're long enough.</p>
     <ul>
-      <li>Solder <strong>Pin 1</strong> to battery negative (ground).</li>
-      <li>Solder <strong>Pin 8</strong> to battery positive (+3V).</li>
-      <li>Connect <strong>Pin 4</strong> to Pin 8 (+3V).</li>
-      <li>Leave <strong>Pin 5</strong> unconnected.</li>
+      <li><strong>Pin 5 (PB0)</strong> &rarr; either leg of the 150&Omega; resistor (it works both ways) &rarr; other resistor leg to LED long leg (+).</li>
+      <li><strong>Pin 8 (VCC)</strong> &rarr; red wire from battery holder.</li>
+      <li><strong>Pin 4 (GND)</strong> &rarr; black wire from battery holder and LED short leg.</li>
     </ul>
+    <p style="font-size: 0.9rem; opacity: 0.7;"><em>Tape it together with electrical tape. The battery holder has a built-in on/off switch.</em></p>
 
-    <h4>Step 3 &mdash; Create the Timing Loop (Astable Mode)</h4>
-    <ul>
-      <li>Connect <strong>Pin 2</strong> to <strong>Pin 6</strong> (solder a short jumper between them).</li>
-      <li>Solder the <strong>10kΩ resistor (R1)</strong> between <strong>Pin 7</strong> and <strong>Pin 8 (+3V)</strong>.</li>
-      <li>Solder the <strong>2.2MΩ resistor (R2)</strong> between <strong>Pin 7</strong> and the <strong>Pin 2/6 junction</strong>.</li>
-      <li>Solder the <strong>470µF capacitor</strong> between the <strong>Pin 2/6 junction</strong> and <strong>Pin 1 (ground)</strong>.</li>
-    </ul>
-    <p><strong>Important:</strong> The capacitor stripe (negative side) goes to ground (Pin 1).</p>
+    <h4>Step 3 &mdash; Puck It</h4>
+    <p>Same as Version 1 &mdash; tuck it in a clear ball, seal it, frost it, done. The ATtiny85 is small enough to fit in a golf ball with the coin battery.</p>
 
-    <h4>Step 4 &mdash; Connect the LED</h4>
-    <ul>
-      <li>Solder the <strong>330Ω resistor</strong> to <strong>Pin 3 (Output)</strong>.</li>
-      <li>Connect the other end of the 330Ω resistor to the <strong>long leg of the LED</strong>.</li>
-      <li>Connect the short leg of the LED to <strong>Pin 1 (ground)</strong>.</li>
-    </ul>
-
-    <h4>Step 5 &mdash; Add the Switch</h4>
-    <p>Insert the slide switch between the battery positive lead and Pin 8.  
-    Slide ON to power the circuit.</p>
-
-    <h4>How It Works</h4>
-    <p>The capacitor slowly charges through the resistors. When it reaches a threshold, the chip switches states and discharges the capacitor. This repeats automatically.</p>
-    <p>The large 2.2MΩ resistor and 470µF capacitor slow the timing, creating a long, breathing pulse.</p>
-
-    <h4>Testing</h4>
-    <p>Insert batteries and turn the switch on.</p>
-    <p>The LED should slowly cycle on and off.</p>
-    <p>If it does not, disconnect power and re-check wiring. Nothing should become hot.</p>
-
-    <h4>Housing</h4>
-    <p>Mount the perfboard and battery pack inside the ornament housing. Keep battery connections dry and seal carefully if placing near moisture.</p>
-    <p style="margin-top: 0.5rem; font-size: 0.85rem; opacity: 0.6;"><strong>Water safety:</strong> Even sealed housings can leak. Water exposure still carries risks to electronics and batteries. Retrieve devices after use and inspect seals regularly.</p>
+    <h4>Troubleshooting</h4>
+    <p>Doesn't light? Check LED polarity (long leg to resistor side). Check resistor is between pin 5 and the LED, not bypassed. Check battery is seated. Try flipping the LED.</p>
 
     <div class="note">
-      Once it works, it feels less like a circuit and more like a small machine that breathes.
+      Runs on a CR2032 coin battery &mdash; same as Version 1. No soldering. Fits in the same golf ball. The only difference: now it pulses.
     </div>
   </div>
 </section>
 
-  <!-- VERSION 3 -->
-  <section style="padding-top: 0;">
+  <!-- VERSION 3 (hidden for now) -->
+  <section style="padding-top: 0; display: none;">
     <div class="build-steps">
       <span class="version-label">Version 3 &mdash; Go Further</span>
       <h3>Tick. ATOM Matrix. Control from Your Phone.</h3>
@@ -296,8 +221,9 @@
     <div style="max-width: 700px; margin: 0 auto; line-height: 1.8; font-size: 1.05rem;">
       <p>On stakes in the mud. Wedged into tree roots. Sitting on stumps. Drop them right into shallow water &mdash; the housing holds tight enough to sit submerged for hours. Those ones make the water itself glow from underneath. Looks like something's down there, looking up.</p>
       <br>
-      <p><strong style="color: var(--text-bright);">Version 3:</strong> Same placement, but the USB cable needs to reach a battery pack. Tuck the power bank into a waterproof bag and bury it in the mud next to the roots. Or use a long USB cable run to a hidden outlet if you&rsquo;re close enough to the house.</p>
-      <br>
+      <!-- Version 3 placement hidden for now -->
+      <!--<p><strong style="color: var(--text-bright);">Version 3:</strong> Same placement, but the USB cable needs to reach a battery pack. Tuck the power bank into a waterproof bag and bury it in the mud next to the roots. Or use a long USB cable run to a hidden outlet if you&rsquo;re close enough to the house.</p>
+      <br>-->
       <p><strong style="color: var(--text-bright);">The glow should look <em>alive</em>.</strong> Not electronic. Not a flashlight. Alive. Like the swamp is watching you back. If it looks like a gadget, you did it wrong. Sand the shell. Rough it up. Let it sit in the mud for a day. It should look like something you <em>found</em>, not something you <em>bought</em>.</p>
     </div>
   </section>

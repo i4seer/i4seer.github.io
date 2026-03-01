@@ -20,7 +20,7 @@
         <ul>
           <li><a href="/">i4seer</a></li>
           <li><a href="/seer-frights/" class="active">Seer Frights</a></li>
-          <li><a href="/tick/">Tick</a></li>
+          <!-- <li><a href="/tick/">Tick</a></li> -->
         </ul>
       </div>
       <div class="nav-sub">
@@ -101,41 +101,27 @@
 
       <!-- VERSION 2 -->
       <h3 style="color: var(--orange-sodium); font-family: 'Russo One', sans-serif; font-size: 1rem; margin-top: 2.5rem; margin-bottom: 0.5rem; letter-spacing: 2px;">VERSION 2 &mdash; ADD THESE</h3>
-      <p style="font-size: 0.85rem; opacity: 0.5; margin-bottom: 1rem;">Building Version 2? You still need the pressure mat and LED from above, plus these extra parts. Requires soldering. Buy extras of both Version 1 and Version 2 parts &mdash; in case you want to build more or need to replace one that didn&rsquo;t work out.</p>
+      <p style="font-size: 0.85rem; opacity: 0.5; margin-bottom: 1rem;">Building Version 2? You still need the LED and CR2032 battery from above, plus these extra parts. Version 2 uses a thin-film pressure sensor instead of the flat mat. No soldering required.</p>
 
       <div style="background: var(--bg-card); border: 1px solid #222; padding: 1.5rem; margin-bottom: 1rem; border-left: 3px solid #7a5a2a;">
         <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.5rem;">
-          <h4 style="color: var(--orange-sodium); font-family: 'Russo One', sans-serif; font-size: 0.9rem;">555 timer IC</h4>
+          <h4 style="color: var(--orange-sodium); font-family: 'Russo One', sans-serif; font-size: 0.9rem;">ATtiny85 chip (8-pin DIP)</h4>
           <span style="color: var(--orange-sodium); font-size: 0.8rem; white-space: nowrap;">Qty: 1</span>
         </div>
-        <p style="font-size: 0.9rem; opacity: 0.7; margin-bottom: 0.8rem;">The classic NE555, 8-pin DIP package. About $0.25 each. The chip that makes the LED pulse and fade.</p>
+        <p style="font-size: 0.9rem; opacity: 0.7; margin-bottom: 0.8rem;">ATTINY85-20PU. Tiny 8-pin microcontroller &mdash; program it once, it remembers forever. Runs on 2.7&ndash;5.5V. 5-pack for $13.99 &mdash; gives you spares.</p>
         <div style="display: flex; gap: 0.6rem; flex-wrap: wrap;">
-          <a href="https://www.amazon.com/s?k=NE555+timer+DIP" target="_blank" rel="noopener" style="color: var(--orange-sodium); font-size: 0.85rem;">Amazon &rarr;</a>
-          <a href="https://www.mouser.com/c/semiconductors/timer-ics/?q=NE555" target="_blank" rel="noopener" style="color: var(--orange-sodium); font-size: 0.85rem;">Mouser &rarr;</a>
+          <a href="https://www.amazon.com/Original-Atmel-Dip-8-ATTINY85-20PU-Tiny85-20Pu/dp/B06W9JBJJ6" target="_blank" rel="noopener" style="color: var(--orange-sodium); font-size: 0.85rem;">Amazon (5-pack) &rarr;</a>
         </div>
       </div>
 
       <div style="background: var(--bg-card); border: 1px solid #222; padding: 1.5rem; margin-bottom: 1rem; border-left: 3px solid #7a5a2a;">
         <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.5rem;">
-          <h4 style="color: var(--orange-sodium); font-family: 'Russo One', sans-serif; font-size: 0.9rem;">Resistor, 560k&Omega;</h4>
+          <h4 style="color: var(--orange-sodium); font-family: 'Russo One', sans-serif; font-size: 0.9rem;">Thin-film pressure sensor (RP-S40-ST)</h4>
           <span style="color: var(--orange-sodium); font-size: 0.8rem; white-space: nowrap;">Qty: 1</span>
         </div>
-        <p style="font-size: 0.9rem; opacity: 0.7; margin-bottom: 0.8rem;">Works with the capacitor to set the 30-second fade time. 1/4 watt. Green-blue-yellow color bands.</p>
+        <p style="font-size: 0.9rem; opacity: 0.7; margin-bottom: 0.8rem;">A flat resistive strip &mdash; resistance drops when pressed. About the size of a finger. Reads as analog input on the ATtiny85. Thin enough to hide under a cushion or mat. Under $3.</p>
         <div style="display: flex; gap: 0.6rem; flex-wrap: wrap;">
-          <a href="https://www.amazon.com/s?k=560k+ohm+resistor" target="_blank" rel="noopener" style="color: var(--orange-sodium); font-size: 0.85rem;">Amazon &rarr;</a>
-          <a href="https://www.mouser.com/c/passive-components/resistors/through-hole-resistors/?resistance=560+kOhms" target="_blank" rel="noopener" style="color: var(--orange-sodium); font-size: 0.85rem;">Mouser &rarr;</a>
-        </div>
-      </div>
-
-      <div style="background: var(--bg-card); border: 1px solid #222; padding: 1.5rem; margin-bottom: 1rem; border-left: 3px solid #7a5a2a;">
-        <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.5rem;">
-          <h4 style="color: var(--orange-sodium); font-family: 'Russo One', sans-serif; font-size: 0.9rem;">Resistor, 100&Omega;</h4>
-          <span style="color: var(--orange-sodium); font-size: 0.8rem; white-space: nowrap;">Qty: 1</span>
-        </div>
-        <p style="font-size: 0.9rem; opacity: 0.7; margin-bottom: 0.8rem;">Protects the LED from too much current. 1/4 watt. Brown-black-brown color bands.</p>
-        <div style="display: flex; gap: 0.6rem; flex-wrap: wrap;">
-          <a href="https://www.amazon.com/s?k=100+ohm+resistor" target="_blank" rel="noopener" style="color: var(--orange-sodium); font-size: 0.85rem;">Amazon &rarr;</a>
-          <a href="https://www.mouser.com/c/passive-components/resistors/through-hole-resistors/?resistance=100+Ohms" target="_blank" rel="noopener" style="color: var(--orange-sodium); font-size: 0.85rem;">Mouser &rarr;</a>
+          <a href="https://www.amazon.com/RP-S40-ST-Pressure-Accuracy-Resistor-Intelligent/dp/B0DKJPNR2N" target="_blank" rel="noopener" style="color: var(--orange-sodium); font-size: 0.85rem;">Amazon &rarr;</a>
         </div>
       </div>
 
@@ -144,59 +130,47 @@
           <h4 style="color: var(--orange-sodium); font-family: 'Russo One', sans-serif; font-size: 0.9rem;">Resistor, 10k&Omega;</h4>
           <span style="color: var(--orange-sodium); font-size: 0.8rem; white-space: nowrap;">Qty: 1</span>
         </div>
-        <p style="font-size: 0.9rem; opacity: 0.7; margin-bottom: 0.8rem;">Pull-up resistor for the trigger pin. 1/4 watt. Brown-black-orange color bands.</p>
+        <p style="font-size: 0.9rem; opacity: 0.7; margin-bottom: 0.8rem;">Pull-down resistor for the pressure sensor. 1/4 watt. Brown-black-orange color bands. Connects Pin 7 to GND so the analog reading stays low when nobody is pressing the sensor. 100-pack.</p>
         <div style="display: flex; gap: 0.6rem; flex-wrap: wrap;">
-          <a href="https://www.amazon.com/s?k=10k+ohm+resistor" target="_blank" rel="noopener" style="color: var(--orange-sodium); font-size: 0.85rem;">Amazon &rarr;</a>
-          <a href="https://www.mouser.com/c/passive-components/resistors/through-hole-resistors/?resistance=10+kOhms" target="_blank" rel="noopener" style="color: var(--orange-sodium); font-size: 0.85rem;">Mouser &rarr;</a>
+          <a href="https://www.amazon.com/10K-Resistor-Tolerance-Resistors-Resistance/dp/B0B4JFPHTW" target="_blank" rel="noopener" style="color: var(--orange-sodium); font-size: 0.85rem;">Amazon (100-pack) &rarr;</a>
         </div>
       </div>
 
       <div style="background: var(--bg-card); border: 1px solid #222; padding: 1.5rem; margin-bottom: 1rem; border-left: 3px solid #7a5a2a;">
         <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.5rem;">
-          <h4 style="color: var(--orange-sodium); font-family: 'Russo One', sans-serif; font-size: 0.9rem;">Electrolytic capacitor, 100&micro;F</h4>
+          <h4 style="color: var(--orange-sodium); font-family: 'Russo One', sans-serif; font-size: 0.9rem;">Tiny AVR Programmer</h4>
           <span style="color: var(--orange-sodium); font-size: 0.8rem; white-space: nowrap;">Qty: 1</span>
         </div>
-        <p style="font-size: 0.9rem; opacity: 0.7; margin-bottom: 0.8rem;">Sets the fade time. 16V or higher rated. The stripe marks the negative side. Watch polarity.</p>
+        <p style="font-size: 0.9rem; opacity: 0.7; margin-bottom: 0.8rem;">USB programmer board with a built-in socket. Plug the ATtiny85 in, plug into USB, upload from the Arduino IDE. $16.99.</p>
         <div style="display: flex; gap: 0.6rem; flex-wrap: wrap;">
-          <a href="https://www.amazon.com/s?k=100uF+electrolytic+capacitor" target="_blank" rel="noopener" style="color: var(--orange-sodium); font-size: 0.85rem;">Amazon &rarr;</a>
-          <a href="https://www.mouser.com/c/passive-components/capacitors/aluminum-electrolytic-capacitors/?capacitance=100+%C2%B5F" target="_blank" rel="noopener" style="color: var(--orange-sodium); font-size: 0.85rem;">Mouser &rarr;</a>
+          <a href="https://www.amazon.com/Tiny-AVR-Programmer-for-Arduino/dp/B0BK9S6BXN" target="_blank" rel="noopener" style="color: var(--orange-sodium); font-size: 0.85rem;">Amazon &rarr;</a>
         </div>
       </div>
 
       <div style="background: var(--bg-card); border: 1px solid #222; padding: 1.5rem; margin-bottom: 1rem; border-left: 3px solid #7a5a2a;">
         <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.5rem;">
-          <h4 style="color: var(--orange-sodium); font-family: 'Russo One', sans-serif; font-size: 0.9rem;">2&times; AAA battery holder</h4>
+          <h4 style="color: var(--orange-sodium); font-family: 'Russo One', sans-serif; font-size: 0.9rem;">Resistor, 150&Omega; (for the LED)</h4>
           <span style="color: var(--orange-sodium); font-size: 0.8rem; white-space: nowrap;">Qty: 1</span>
         </div>
-        <p style="font-size: 0.9rem; opacity: 0.7; margin-bottom: 0.8rem;">Holds 2 AAA batteries in series for 3V total. Replaces the CR2032 from Version 1. With wire leads.</p>
+        <p style="font-size: 0.9rem; opacity: 0.7; margin-bottom: 0.8rem;">LED current limiter. 1/4 watt. Brown-green-brown color bands. 100-pack for $5.49.</p>
         <div style="display: flex; gap: 0.6rem; flex-wrap: wrap;">
-          <a href="https://www.amazon.com/s?k=2+AAA+battery+holder+wire" target="_blank" rel="noopener" style="color: var(--orange-sodium); font-size: 0.85rem;">Amazon &rarr;</a>
+          <a href="https://www.amazon.com/EDGELEC-Resistor-Tolerance-Resistance-Optional/dp/B07HDH2M4M" target="_blank" rel="noopener" style="color: var(--orange-sodium); font-size: 0.85rem;">Amazon (EDGELEC 100-pack) &rarr;</a>
         </div>
       </div>
 
       <div style="background: var(--bg-card); border: 1px solid #222; padding: 1.5rem; margin-bottom: 1rem; border-left: 3px solid #7a5a2a;">
         <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.5rem;">
-          <h4 style="color: var(--orange-sodium); font-family: 'Russo One', sans-serif; font-size: 0.9rem;">Perfboard, small</h4>
+          <h4 style="color: var(--orange-sodium); font-family: 'Russo One', sans-serif; font-size: 0.9rem;">CR2032 battery holder with leads</h4>
           <span style="color: var(--orange-sodium); font-size: 0.8rem; white-space: nowrap;">Qty: 1</span>
         </div>
-        <p style="font-size: 0.9rem; opacity: 0.7; margin-bottom: 0.8rem;">Small piece of prototyping board with holes. Solder the timer circuit onto this.</p>
+        <p style="font-size: 0.9rem; opacity: 0.7; margin-bottom: 0.8rem;">Snap-in holder with red (+) and black (&minus;) wires and built-in on/off switch. Red wire to VCC (pin 8), black wire to GND (pin 4). No extra hookup wire needed. 6-pack for $5.59.</p>
         <div style="display: flex; gap: 0.6rem; flex-wrap: wrap;">
-          <a href="https://www.amazon.com/s?k=small+perfboard+prototype" target="_blank" rel="noopener" style="color: var(--orange-sodium); font-size: 0.85rem;">Amazon &rarr;</a>
+          <a href="https://www.amazon.com/Coliao-cr2032-Battery-Holder-CR2032/dp/B09QKRZBHC" target="_blank" rel="noopener" style="color: var(--orange-sodium); font-size: 0.85rem;">Amazon (Coliao 6-pack) &rarr;</a>
         </div>
       </div>
 
-      <div style="background: var(--bg-card); border: 1px solid #222; padding: 1.5rem; margin-bottom: 1rem; border-left: 3px solid #7a5a2a;">
-        <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.5rem;">
-          <h4 style="color: var(--orange-sodium); font-family: 'Russo One', sans-serif; font-size: 0.9rem;">Hookup wire + solder</h4>
-          <span style="color: var(--orange-sodium); font-size: 0.8rem; white-space: nowrap;">1 spool ea.</span>
-        </div>
-        <p style="font-size: 0.9rem; opacity: 0.7; margin-bottom: 0.8rem;">22 AWG solid-core hookup wire. Rosin-core solder. You&rsquo;ll also need a soldering iron (not included &mdash; borrow one).</p>
-        <div style="display: flex; gap: 0.6rem; flex-wrap: wrap;">
-          <a href="https://www.amazon.com/s?k=22+AWG+hookup+wire+solid+core" target="_blank" rel="noopener" style="color: var(--orange-sodium); font-size: 0.85rem;">Amazon &rarr;</a>
-        </div>
-      </div>
-
-      <!-- VERSION 3 -->
+      <!-- VERSION 3 (hidden for now) -->
+      <div style="display: none;">
       <h3 style="color: var(--orange-sodium); font-family: 'Russo One', sans-serif; font-size: 1rem; margin-top: 2.5rem; margin-bottom: 0.5rem; letter-spacing: 2px;">VERSION 3 &mdash; GO FURTHER</h3>
       <p style="font-size: 0.85rem; opacity: 0.5; margin-bottom: 1rem;">Building Version 3? You still need the pressure mat from Version 1. No soldering required for the ATOM Matrix itself &mdash; just two jumper wires and a resistor to the mat.</p>
 
@@ -251,6 +225,7 @@
           <a href="https://www.amazon.com/s?k=jumper+wires+male" target="_blank" rel="noopener" style="color: var(--orange-sodium); font-size: 0.85rem;">Amazon &rarr;</a>
         </div>
       </div>
+      </div><!-- end hidden VERSION 3 -->
 
       <p style="text-align: center; opacity: 0.3; font-size: 0.8rem; margin-top: 2rem; line-height: 1.6;">Third-party sellers set their own prices, shipping, and policies. See our <a href="/terms/#section-15" style="color: var(--orange-sodium);">Terms of Use</a> for details.</p>
 
