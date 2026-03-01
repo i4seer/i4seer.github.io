@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Build the Route 13 — Seer Frights #2 Device | i4seer.com</title>
+  <title>Build the Route 13 — Seer Frights #2 Device | i4Seer.com</title>
   <meta name="description" content="Build the Route 13 from Seer Frights Book 2. A pressure-triggered device that lights up when someone sits down. Three versions from the driver's field notes.">
   <link rel="stylesheet" href="/style.css">
   <meta name="robots" content="index, follow">
@@ -18,7 +18,7 @@
       <div class="nav-top">
         <a href="/seer-frights/" class="logo">SEER FRIGHTS<span>We saw it . . .</span></a>
         <ul>
-          <li><a href="/">i4seer</a></li>
+          <li><a href="/">i4Seer</a></li>
           <li><a href="/seer-frights/" class="active">Seer Frights</a></li>
           <!-- <li><a href="/tick/">Tick</a></li> -->
         </ul>
@@ -59,16 +59,17 @@
 
       <h4>What You Need</h4>
       <ul class="checklist">
-        <li>1 pressure mat switch (the flat, flexible kind &mdash; used in door chimes and Halloween props. Two thin strips that touch when you step on them. About the size of a welcome mat. Under $2 online.)</li>
+        <li>1 pressure sensor &mdash; use any of these: a pressure mat switch (the flat kind from door chimes, under $2), a thin-film pressure sensor (RP-S40-ST, under $3), or make your own from two sheets of aluminum foil separated by a piece of foam with a hole in the center.</li>
         <li>1 orange LED, diffused (the soft kind, not the bright clear ones. Craft store or online. About a quarter.)</li>
-        <li>1 CR2032 coin battery (the flat silver one from the drugstore)</li>
-        <li>Electrical tape</li>
+        <li>1 CR2032 coin battery (the flat silver one from the drugstore) <span style="font-size: 0.65rem; padding: 0.15rem 0.5rem; border-radius: 9999px; border: 1px solid #444; opacity: 0.5; margin-left: 0.3rem;">#1 Swamp Glow</span><span style="font-size: 0.65rem; padding: 0.15rem 0.5rem; border-radius: 9999px; border: 1px solid #444; opacity: 0.5; margin-left: 0.2rem;">#2 Route 13</span></li>
+        <li>Electrical tape <span style="font-size: 0.65rem; padding: 0.15rem 0.5rem; border-radius: 9999px; border: 1px solid #444; opacity: 0.5; margin-left: 0.3rem;">#1 Swamp Glow</span><span style="font-size: 0.65rem; padding: 0.15rem 0.5rem; border-radius: 9999px; border: 1px solid #444; opacity: 0.5; margin-left: 0.2rem;">#2 Route 13</span><span style="font-size: 0.65rem; padding: 0.15rem 0.5rem; border-radius: 9999px; border: 1px solid #444; opacity: 0.5; margin-left: 0.2rem;">#3 Three-Knock</span></li>
       </ul>
       <p style="margin-top: 0.8rem;"><a href="/seer-frights/build/route-13/parts/" style="color: var(--orange-sodium); font-size: 0.95rem;">Parts &mdash; where to buy each one &rarr;</a></p>
 
       <h4>How to Build It</h4>
       <p>The pressure mat has two wires. The LED has two legs &mdash; one long (positive), one short (negative). Wire the mat in series with the LED and the battery. Long LED leg to battery positive (+). Short LED leg to one mat wire. Other mat wire to battery negative (&minus;). Wrap the connections with electrical tape.</p>
       <p>Slide the mat under a chair cushion, a doormat, a rug &mdash; anywhere someone will step or sit. Run the LED wire to wherever you want the glow to appear. When weight hits the mat, the circuit closes and the LED lights up orange. Lift the weight, it goes dark.</p>
+      <p style="font-size: 0.9rem; opacity: 0.7;"><em>If you use the RP-S40-ST thin-film sensor instead of a mat, it works the same way &mdash; wire it in series. The difference: the harder someone presses, the brighter the LED glows. Light step, dim glow. Heavy step, bright glow.</em></p>
 
       <div class="note">
         That's Version 1. Someone sits down, a light turns on somewhere. That's all it takes. Total cost: about $3. Total time: five minutes. Total soldering: zero. Simple, cheap, and creepy.
@@ -85,13 +86,13 @@
 
       <h4>Parts</h4>
       <ul class="checklist">
-        <li>1 ATtiny85 chip (8-pin DIP)</li>
+        <li>1 ATtiny85 chip (8-pin DIP) <span style="font-size: 0.65rem; padding: 0.15rem 0.5rem; border-radius: 9999px; border: 1px solid #444; opacity: 0.5; margin-left: 0.3rem;">#1 Swamp Glow</span><span style="font-size: 0.65rem; padding: 0.15rem 0.5rem; border-radius: 9999px; border: 1px solid #444; opacity: 0.5; margin-left: 0.2rem;">#2 Route 13</span><span style="font-size: 0.65rem; padding: 0.15rem 0.5rem; border-radius: 9999px; border: 1px solid #444; opacity: 0.5; margin-left: 0.2rem;">#3 Three-Knock</span></li>
         <li>1 thin-film pressure sensor (RP-S40-ST &mdash; a flat resistive strip that changes resistance when pressed)</li>
         <li>1 orange LED (same as Version 1)</li>
-        <li>1 resistor, 150&Omega; (for the LED)</li>
+        <li>1 resistor, 150&Omega; (for the LED) <span style="font-size: 0.65rem; padding: 0.15rem 0.5rem; border-radius: 9999px; border: 1px solid #444; opacity: 0.5; margin-left: 0.3rem;">#1 Swamp Glow</span><span style="font-size: 0.65rem; padding: 0.15rem 0.5rem; border-radius: 9999px; border: 1px solid #444; opacity: 0.5; margin-left: 0.2rem;">#2 Route 13</span></li>
         <li>1 resistor, 10k&Omega; (pull-down for the sensor)</li>
-        <li>1 CR2032 coin battery (same as Version 1)</li>
-        <li>1 CR2032 battery holder with leads and switch</li>
+        <li>1 CR2032 coin battery (same as Version 1) <span style="font-size: 0.65rem; padding: 0.15rem 0.5rem; border-radius: 9999px; border: 1px solid #444; opacity: 0.5; margin-left: 0.3rem;">#1 Swamp Glow</span><span style="font-size: 0.65rem; padding: 0.15rem 0.5rem; border-radius: 9999px; border: 1px solid #444; opacity: 0.5; margin-left: 0.2rem;">#2 Route 13</span></li>
+        <li>1 CR2032 battery holder with leads and switch <span style="font-size: 0.65rem; padding: 0.15rem 0.5rem; border-radius: 9999px; border: 1px solid #444; opacity: 0.5; margin-left: 0.3rem;">#1 Swamp Glow</span><span style="font-size: 0.65rem; padding: 0.15rem 0.5rem; border-radius: 9999px; border: 1px solid #444; opacity: 0.5; margin-left: 0.2rem;">#2 Route 13</span><span style="font-size: 0.65rem; padding: 0.15rem 0.5rem; border-radius: 9999px; border: 1px solid #444; opacity: 0.5; margin-left: 0.2rem;">#3 Three-Knock</span></li>
       </ul>
       <p style="margin-top: 0.8rem;"><a href="/seer-frights/build/route-13/parts/" style="color: var(--orange-sodium); font-size: 0.95rem;">Parts &mdash; where to buy each one &rarr;</a></p>
 
@@ -246,7 +247,7 @@ void loop() {
     <p>&copy; 2026 Institute for Seer LLC. All rights reserved.</p>
     <p>Ages 8&ndash;12 &bull; Middle-Grade Horror</p>
     <div class="footer-links">
-      <a href="/">i4seer</a>
+      <a href="/">i4Seer</a>
       <a href="/seer-frights/">Seer Frights</a>
       <a href="/seer-frights/books/">Books</a>
       <a href="/seer-frights/build/">Build</a>
@@ -259,7 +260,7 @@ void loop() {
     </div>
 
     <p style="opacity: 0.4; font-size: 0.75rem; margin-top: 1rem; max-width: 800px; margin-left: auto; margin-right: auto;">
-      Seer Frights&reg;, Tick&trade;, and i4seer&trade; are trademarks of Institute for Seer LLC.
+      Seer Frights&reg;, Tick&trade;, and i4Seer&trade; are trademarks of Institute for Seer LLC.
       All build instructions are provided for educational purposes only.
       Adult supervision is required for electronics projects.
       Institute for Seer LLC is not responsible for misuse of third-party components.

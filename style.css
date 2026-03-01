@@ -1,4 +1,4 @@
-/* SEER FRIGHTS - i4seer.com */
+/* SEER FRIGHTS - i4Seer.com */
 /* Goosebumps-inspired: bold, spooky, fun for ages 8-12 */
 
 @import url('https://fonts.googleapis.com/css2?family=Creepster&family=Russo+One&family=Inter:wght@400;600;700;900&display=swap');
@@ -647,6 +647,82 @@ section {
   opacity: 0.75;
 }
 
+/* ========== HERO WITH BACKGROUND IMAGE ========== */
+.hero-bg {
+  background: url('/images/seer-frights-background-01-full.png') center center / cover no-repeat !important;
+  position: relative;
+}
+
+.hero-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at center, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 80%),
+    linear-gradient(180deg, transparent 0%, rgba(10, 10, 10, 0.7) 100%);
+  z-index: 1;
+}
+
+.hero-bg .hero-content {
+  z-index: 3;
+}
+
+.hero-bg::before {
+  background: linear-gradient(transparent, var(--bg-dark));
+  z-index: 2;
+}
+
+/* ========== 404 PAGE ========== */
+.hero-404 {
+  background: url('/images/seer-frights-background-01-full.png') center center / cover no-repeat !important;
+  min-height: 80vh;
+  position: relative;
+}
+
+.hero-404::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at center, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.35) 70%),
+    linear-gradient(180deg, transparent 0%, rgba(10, 10, 10, 0.6) 100%);
+  z-index: 1;
+}
+
+.hero-404 .hero-content {
+  z-index: 3;
+}
+
+.hero-404::before {
+  background: linear-gradient(transparent, var(--bg-dark));
+  z-index: 2;
+}
+
+/* ========== LANDING HERO BACKGROUND ========== */
+.hero-landing-bg {
+  background: url('/images/seer-background-01-full.png') center center / cover no-repeat !important;
+  position: relative;
+}
+
+.hero-landing-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at center, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 80%),
+    linear-gradient(180deg, transparent 0%, rgba(10, 10, 10, 0.7) 100%);
+  z-index: 1;
+}
+
+.hero-landing-bg .hero-content {
+  z-index: 3;
+}
+
+.hero-landing-bg::before {
+  background: linear-gradient(transparent, var(--bg-dark));
+  z-index: 2;
+}
+
 /* ========== SERIES BANNER ========== */
 .series-banner {
   background: linear-gradient(90deg, transparent, rgba(57, 255, 20, 0.05), transparent);
@@ -781,7 +857,7 @@ footer .footer-links a:hover {
   .launch-grid { grid-template-columns: 1fr; }
 }
 
-/* ========== LANDING PAGE (i4seer parent brand — warm gold accent) ========== */
+/* ========== LANDING PAGE (i4Seer parent brand — warm gold accent) ========== */
 :root {
   --teal: #1a9a8a;
   --teal-glow: #2ee6d0;
@@ -790,6 +866,10 @@ footer .footer-links a:hover {
 .landing-page header {
   border-bottom-color: var(--warm-gold-dim);
   box-shadow: 0 4px 30px rgba(232, 220, 200, 0.06);
+}
+
+.landing-page nav a {
+  text-transform: none;
 }
 
 .landing-page nav a:hover,
@@ -804,17 +884,23 @@ footer .footer-links a:hover {
 }
 
 .landing-page .hero h1 {
+  font-family: 'Russo One', sans-serif;
+  text-transform: none;
   color: var(--warm-gold);
   text-shadow: 0 0 20px rgba(232, 220, 200, 0.5), 0 0 60px rgba(232, 220, 200, 0.2), 0 4px 0 var(--warm-gold-dim);
   animation: none;
 }
 
 .landing-page .section-title {
+  font-family: 'Russo One', sans-serif;
+  text-transform: none;
   color: var(--warm-gold);
   text-shadow: 0 0 10px rgba(232, 220, 200, 0.3), 0 3px 0 var(--warm-gold-dim);
 }
 
 .landing-page .logo {
+  font-family: 'Russo One', sans-serif;
+  text-transform: none;
   color: var(--warm-gold);
   text-shadow: 0 0 10px rgba(232, 220, 200, 0.4), 0 0 30px rgba(232, 220, 200, 0.15);
 }
@@ -832,6 +918,7 @@ footer .footer-links a:hover {
   font-size: clamp(3rem, 8vw, 5rem);
   color: var(--text-bright);
   letter-spacing: 6px;
+  text-transform: none;
   text-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
   margin-bottom: 1rem;
 }
