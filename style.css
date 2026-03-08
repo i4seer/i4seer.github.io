@@ -1,7 +1,7 @@
 /* SEER FRIGHTS - i4Seer.com */
 /* Stories that watch back. Devices that think ahead. */
 
-@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Russo+One&family=Inter:wght@400;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Rubik:wght@400;600;700;900&family=Russo+One&family=Inter:wght@400;600;700;900&display=swap');
 
 :root {
   --green-glow: #2acc10;
@@ -369,7 +369,7 @@ section {
 }
 
 .book-card h3 {
-  font-family: 'Creepster', cursive;
+  font-family: 'Rubik', sans-serif;
   font-size: 1.8rem;
   color: var(--text-bright);
   margin-bottom: 0.8rem;
