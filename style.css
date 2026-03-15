@@ -318,6 +318,10 @@ section {
   min-width: 0;
 }
 
+#books a img:hover {
+  transform: translateY(-4px);
+}
+
 .book-card {
   background: var(--bg-card);
   border: 1px solid #222;
@@ -401,6 +405,22 @@ section {
 .book-card.book-3 { --accent: var(--orange-sodium); }
 .book-card.book-3::before { background: var(--orange-sodium); }
 .book-card.book-3:hover { border-color: var(--orange-sodium); box-shadow: 0 10px 40px rgba(255, 140, 66, 0.15); }
+
+.book-card.book-4 { --accent: #c4a35a; }
+.book-card.book-4::before { background: #c4a35a; }
+.book-card.book-4:hover { border-color: #c4a35a; box-shadow: 0 10px 40px rgba(196, 163, 90, 0.15); }
+
+.book-card.book-5 { --accent: #e07040; }
+.book-card.book-5::before { background: #e07040; }
+.book-card.book-5:hover { border-color: #e07040; box-shadow: 0 10px 40px rgba(224, 112, 64, 0.15); }
+
+.book-card.book-6 { --accent: #7a9ec4; }
+.book-card.book-6::before { background: #7a9ec4; }
+.book-card.book-6:hover { border-color: #7a9ec4; box-shadow: 0 10px 40px rgba(122, 158, 196, 0.15); }
+
+.book-card.book-7 { --accent: #b07acc; }
+.book-card.book-7::before { background: #b07acc; }
+.book-card.book-7:hover { border-color: #b07acc; box-shadow: 0 10px 40px rgba(176, 122, 204, 0.15); }
 
 /* ========== BOOK DETAIL PAGE ========== */
 .book-hero {

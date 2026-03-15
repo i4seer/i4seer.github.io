@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Build the Three-Knock Device — Seer Frights Device | i4Seer.com</title>
-  <meta name="description" content="Build the Three-Knock Device from Seer Frights Book 3. A coin vibration motor that knocks on doors. Three versions from Hargrave's field notes.">
+  <meta name="description" content="Build the Three-Knock Device from Seer Frights Book 3. A coin motor that knocks on doors. Three versions from Hargrave's field notes.">
   <link rel="stylesheet" href="/style.css">
   <meta name="robots" content="index, follow">
   <meta name="copyright" content="Institute for Seer LLC">
@@ -39,7 +39,7 @@
     <div class="hero-content">
       <p class="tagline" style="color: var(--amber); opacity: 0.7;">From Don't Open the Door</p>
       <h1 style="color: var(--amber); text-shadow: 0 0 20px rgba(255,179,71,0.6), 0 0 60px rgba(255,179,71,0.3), 0 4px 0 #805b24;">The Three-Knock Device</h1>
-      <p class="subtitle">Garrett Hargrave's vibration motor knocker that taps three times through a cabin door. Three versions: manual, auto-tick, and the real setup.</p>
+      <p class="subtitle">Garrett Hargrave's coin motor knocker that taps three times through a cabin door. Three versions: manual, auto-tick, and the real setup.</p>
     </div>
   </div>
 
@@ -59,7 +59,7 @@
 
       <h4>What You Need</h4>
       <ul class="checklist">
-        <li>1 coin vibration motor, 10mm (the flat round kind &mdash; looks like a tiny silver disc with two wires. About the size of a dime. About fifty cents.)</li>
+        <li>1 coin motor, 10mm (the flat round kind &mdash; looks like a tiny silver disc with two wires. About the size of a dime. About fifty cents.)</li>
         <li>1 AAA battery (from the junk drawer, the TV remote, wherever)</li>
         <li>Electrical tape <span style="font-size: 0.65rem; padding: 0.15rem 0.5rem; border-radius: 9999px; border: 1px solid #444; opacity: 0.5; margin-left: 0.3rem;">#1 Swamp Glow</span><span style="font-size: 0.65rem; padding: 0.15rem 0.5rem; border-radius: 9999px; border: 1px solid #444; opacity: 0.5; margin-left: 0.2rem;">#2 Route 13</span><span style="font-size: 0.65rem; padding: 0.15rem 0.5rem; border-radius: 9999px; border: 1px solid #444; opacity: 0.5; margin-left: 0.2rem;">#3 Three-Knock</span></li>
       </ul>
@@ -86,7 +86,7 @@
       <h4>Parts</h4>
       <ul class="checklist">
         <li>1 ATtiny85 chip (8-pin DIP) <span style="font-size: 0.65rem; padding: 0.15rem 0.5rem; border-radius: 9999px; border: 1px solid #444; opacity: 0.5; margin-left: 0.3rem;">#1 Swamp Glow</span><span style="font-size: 0.65rem; padding: 0.15rem 0.5rem; border-radius: 9999px; border: 1px solid #444; opacity: 0.5; margin-left: 0.2rem;">#2 Route 13</span><span style="font-size: 0.65rem; padding: 0.15rem 0.5rem; border-radius: 9999px; border: 1px solid #444; opacity: 0.5; margin-left: 0.2rem;">#3 Three-Knock</span></li>
-        <li>1 coin vibration motor, 10mm (same as Version 1)</li>
+        <li>1 coin motor, 10mm (same as Version 1)</li>
         <li>1 CR2032 coin battery <span style="font-size: 0.65rem; padding: 0.15rem 0.5rem; border-radius: 9999px; border: 1px solid #444; opacity: 0.5; margin-left: 0.3rem;">#1 Swamp Glow</span><span style="font-size: 0.65rem; padding: 0.15rem 0.5rem; border-radius: 9999px; border: 1px solid #444; opacity: 0.5; margin-left: 0.2rem;">#2 Route 13</span><span style="font-size: 0.65rem; padding: 0.15rem 0.5rem; border-radius: 9999px; border: 1px solid #444; opacity: 0.5; margin-left: 0.2rem;">#3 Three-Knock</span></li>
         <li>1 CR2032 battery holder with leads and switch <span style="font-size: 0.65rem; padding: 0.15rem 0.5rem; border-radius: 9999px; border: 1px solid #444; opacity: 0.5; margin-left: 0.3rem;">#1 Swamp Glow</span><span style="font-size: 0.65rem; padding: 0.15rem 0.5rem; border-radius: 9999px; border: 1px solid #444; opacity: 0.5; margin-left: 0.2rem;">#2 Route 13</span><span style="font-size: 0.65rem; padding: 0.15rem 0.5rem; border-radius: 9999px; border: 1px solid #444; opacity: 0.5; margin-left: 0.2rem;">#3 Three-Knock</span></li>
       </ul>
@@ -132,8 +132,8 @@ void loop() {
       <h4>Step 2 &mdash; Connect It</h4>
       <p>Three connections. No soldering. Bend the wires directly onto the chip pins.</p>
       <ul>
-        <li><strong>Pin 5 (PB0)</strong> &rarr; one wire from the vibration motor.</li>
-        <li><strong>Pin 4 (GND)</strong> &rarr; other wire from the vibration motor and black wire from battery holder.</li>
+        <li><strong>Pin 5 (PB0)</strong> &rarr; one wire from the coin motor.</li>
+        <li><strong>Pin 4 (GND)</strong> &rarr; other wire from the coin motor and black wire from battery holder.</li>
         <li><strong>Pin 8 (VCC)</strong> &rarr; red wire from battery holder.</li>
       </ul>
       <p style="font-size: 0.9rem; opacity: 0.7;"><em>Tape it together with electrical tape. The battery holder has a built-in on/off switch.</em></p>
@@ -145,7 +145,7 @@ void loop() {
       <p>No sound? Check that the motor wires are on Pin 5 and Pin 4. Check battery is seated. Try swapping the wires. If the knock sounds too quiet, try a different surface &mdash; wood carries sound best. If you want faster or slower knocks, change <code>delay(1500)</code> in the code.</p>
 
       <div class="note">
-        No soldering. The ATtiny85 controls the pattern in code &mdash; three knocks, then 24 hours of silence, exactly like the story. The vibration motor pressed flat against a door sounds like a real knock through wood. Turn it on once. It runs every night at the same time. Same chip used in the Swamp Glow and Route 13 builds.
+        No soldering. The ATtiny85 controls the pattern in code &mdash; three knocks, then 24 hours of silence, exactly like the story. The coin motor pressed flat against a door sounds like a real knock through wood. Turn it on once. It runs every night at the same time. Same chip used in the Swamp Glow and Route 13 builds.
       </div>
     </div>
   </section>
