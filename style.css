@@ -19,6 +19,10 @@
   --purple-soft: #b388ff;
   --warm-gold: #e8dcc8;
   --warm-gold-dim: #3a3228;
+  --sepia: #c4a882;
+  --sepia-glow: #d4b896;
+  --sepia-dim: #3a2e22;
+  --teal-glow: #2accc0;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -1409,4 +1413,45 @@ footer .footer-links a:hover {
     box-shadow: 0 0 20px rgba(124,255,79,0.35);
     transform: translateY(-2px);
   }
+}
+
+/* ========== SEER WARNS ========== */
+
+.warns-header header,
+body.warns-page header {
+  border-bottom-color: var(--sepia);
+  box-shadow: 0 4px 20px rgba(196, 168, 130, 0.1);
+}
+
+.btn-warns {
+  background: var(--sepia);
+  color: #0a0a0a;
+  font-weight: 700;
+  box-shadow: 0 0 15px rgba(196, 168, 130, 0.3);
+}
+
+.btn-warns:hover {
+  background: var(--sepia-glow);
+  box-shadow: 0 0 25px rgba(196, 168, 130, 0.5);
+}
+
+.btn-warns-outline {
+  border: 1px solid var(--sepia);
+  color: var(--sepia);
+  background: transparent;
+}
+
+.btn-warns-outline:hover {
+  background: rgba(196, 168, 130, 0.1);
+}
+
+.whisper-warns {
+  text-align: center;
+  padding: 3rem 1rem;
+  font-family: 'Inter', sans-serif;
+  font-style: italic;
+  font-size: 1.2rem;
+  color: var(--sepia);
+  opacity: 0.5;
+  letter-spacing: 2px;
 }
