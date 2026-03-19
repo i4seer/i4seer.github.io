@@ -727,6 +727,29 @@ section {
   z-index: 2;
 }
 
+/* ========== SEER WARNS HERO BACKGROUND ========== */
+.hero-warns-bg {
+  background: url('/images/seer-warns-background-01-full.png') center center / cover no-repeat !important;
+  position: relative;
+}
+
+.hero-warns-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  z-index: 1;
+}
+
+.hero-warns-bg .hero-content {
+  z-index: 3;
+}
+
+.hero-warns-bg::before {
+  background: linear-gradient(transparent, var(--bg-dark));
+  z-index: 2;
+}
+
 /* ========== 404 PAGE ========== */
 .hero-404 {
   background: url('/images/seer-frights-background-01-full.png') center center / cover no-repeat !important;
@@ -925,7 +948,7 @@ footer .footer-links a:hover {
 }
 
 .landing-page nav a {
-  text-transform: none;
+  text-transform: uppercase;
 }
 
 .landing-page nav a:hover,
@@ -956,7 +979,8 @@ footer .footer-links a:hover {
 
 .landing-page .logo {
   font-family: 'Russo One', sans-serif;
-  text-transform: none;
+  text-transform: uppercase;
+  letter-spacing: 4px;
   color: var(--warm-gold);
   text-shadow: 0 0 10px rgba(232, 220, 200, 0.4), 0 0 30px rgba(232, 220, 200, 0.15);
 }
@@ -1454,4 +1478,95 @@ body.warns-page header {
   color: var(--sepia);
   opacity: 0.5;
   letter-spacing: 2px;
+}
+
+/* Seer Warns — font and color overrides */
+body.warns-page .logo {
+  font-family: 'Russo One', sans-serif;
+  letter-spacing: 4px;
+  color: var(--sepia);
+  text-shadow: none;
+}
+
+body.warns-page .logo:hover {
+  text-shadow: 0 0 10px rgba(196, 168, 130, 0.3);
+}
+
+body.warns-page header {
+  border-bottom-color: var(--sepia);
+}
+
+body.warns-page nav a.active {
+  color: var(--sepia);
+  text-shadow: 0 0 8px rgba(196, 168, 130, 0.3);
+}
+
+body.warns-page .hero h1 {
+  font-family: 'Russo One', sans-serif;
+  letter-spacing: 4px;
+  color: var(--sepia-glow);
+  text-shadow: 0 0 12px rgba(196, 168, 130, 0.4);
+  -webkit-text-stroke: 0;
+}
+
+body.warns-page .section-title {
+  font-family: 'Russo One', sans-serif;
+  letter-spacing: 2px;
+  color: var(--sepia-glow);
+  text-shadow: 0 0 8px rgba(196, 168, 130, 0.3);
+}
+
+body.warns-page .book-hero-text h1 {
+  font-family: 'Russo One', sans-serif;
+  letter-spacing: 2px;
+  color: var(--sepia-glow);
+  text-shadow: 0 0 10px rgba(196, 168, 130, 0.3);
+}
+
+body.warns-page .book-number {
+  color: var(--sepia);
+}
+
+body.warns-page .footer-logo {
+  font-family: 'Russo One', sans-serif;
+  letter-spacing: 3px;
+  color: var(--sepia);
+  text-shadow: 0 0 8px rgba(196, 168, 130, 0.2);
+}
+
+body.warns-page .btn-glow {
+  background: var(--sepia);
+  box-shadow: 0 0 10px rgba(196, 168, 130, 0.3), 0 0 20px rgba(196, 168, 130, 0.15);
+}
+
+body.warns-page .btn-glow:hover {
+  box-shadow: 0 0 18px rgba(196, 168, 130, 0.5), 0 0 35px rgba(196, 168, 130, 0.3);
+}
+
+body.warns-page .btn-outline {
+  color: var(--sepia);
+  border-color: var(--sepia);
+}
+
+body.warns-page .btn-outline:hover {
+  background: rgba(196, 168, 130, 0.08);
+  box-shadow: 0 0 12px rgba(196, 168, 130, 0.2);
+}
+
+body.warns-page .char-card {
+  border-color: var(--sepia-dim);
+}
+
+body.warns-page .char-card h4 {
+  color: var(--sepia);
+}
+
+/* Seer Warns feature on i4Seer landing page */
+.seer-warns-feature .seer-title {
+  font-family: 'Russo One', sans-serif;
+  letter-spacing: 4px;
+}
+
+.seer-warns-feature .seer-tagline {
+  font-family: 'Inter', sans-serif;
 }
