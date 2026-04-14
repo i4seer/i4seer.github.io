@@ -10,6 +10,22 @@
   <meta name="copyright" content="Institute for Seer LLC">
   <link rel="icon" type="image/svg+xml" href="/images/favicon-tick.svg">
   <link rel="alternate icon" href="/favicon.ico" type="image/x-icon">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="i4Seer">
+  <meta property="og:url" content="https://www.i4seer.com/tick/">
+  <meta property="og:title" content="SEER Tick — LoRaWAN IoT Monitoring Platform">
+  <meta property="og:description" content="Monitor what matters. Anywhere you need it. Rugged LoRaWAN sensors, private gateways, secure cloud console, and email and Teams alerts. Microsoft and Google sign-in, fleet RBAC, full audit.">
+  <meta property="og:image" content="https://www.i4seer.com/images/tick-product.png">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SEER Tick — LoRaWAN IoT Monitoring Platform">
+  <meta name="twitter:description" content="Monitor what matters. Anywhere you need it. Rugged LoRaWAN sensors, private gateways, secure cloud console, and email and Teams alerts. Microsoft and Google sign-in, fleet RBAC, full audit.">
+  <meta name="twitter:image" content="https://www.i4seer.com/images/tick-product.png">
+  <!-- Canonical -->
+  <link rel="canonical" href="https://www.i4seer.com/tick/">
+  <!-- Plausible Analytics -->
+  <script defer data-domain="i4seer.com" src="https://plausible.io/js/script.js"></script>
 </head>
 <body class="tick-page">
 
@@ -30,20 +46,28 @@
   </header>
 
   <!-- HERO -->
-  <div class="hero hero-tick-bg" style="min-height: 70vh;">
-    <div class="hero-content">
-      <p class="tagline" style="color: var(--teal-glow); opacity: 0.6;">i4Seer presents</p>
-      <h1 style="font-family: 'Russo One', sans-serif; letter-spacing: 6px; color: var(--teal-glow); text-shadow: 0 0 20px rgba(46, 230, 208, 0.5), 0 0 60px rgba(46, 230, 208, 0.2); -webkit-text-stroke: 0;">SEER TICK</h1>
-      <p class="subtitle" style="max-width: 760px; font-size: 1.4rem; color: var(--text-bright);">Monitor what matters. Anywhere you need it.</p>
-      <p class="subtitle" style="max-width: 720px; font-size: 1.05rem; opacity: 0.75; margin-top: 0.75rem;">SEER Tick delivers rugged, battery-efficient LoRaWAN sensors, private gateways, and a secure cloud console &mdash; built for operators who need focused simplicity, private control, and no vendor lock-in.</p>
-      <div class="hero-cta-row">
-        <a href="https://tick.i4seer.com" target="_blank" rel="noopener" class="btn btn-glow" style="background: var(--teal-glow); color: #0a0a0a; box-shadow: 0 0 15px rgba(46, 230, 208,0.4);">Visit the Portal &rarr;</a>
-        <a href="#where-to-buy" class="btn btn-outline" style="border-color: var(--teal-glow); color: var(--teal-glow);">Where to Buy</a>
-        <a href="mailto:sales@i4seer.com" class="btn btn-outline" style="border-color: var(--teal-glow); color: var(--teal-glow);">Contact Sales</a>
+  <div class="hero hero-tick-bg tick-hero" style="min-height: 70vh;">
+    <div class="tick-hero-grid">
+
+      <div class="tick-hero-text">
+        <p class="tagline" style="color: var(--teal-glow); opacity: 0.6;">i4Seer presents</p>
+        <h1 style="font-family: 'Russo One', sans-serif; letter-spacing: 6px; color: var(--teal-glow); text-shadow: 0 0 20px rgba(46, 230, 208, 0.5), 0 0 60px rgba(46, 230, 208, 0.2); -webkit-text-stroke: 0;">SEER TICK</h1>
+        <p class="subtitle" style="font-size: 1.4rem; color: var(--text-bright);">Monitor what matters. Anywhere you need it.</p>
+        <p class="subtitle" style="font-size: 1.05rem; opacity: 0.75; margin-top: 0.75rem;">SEER Tick delivers rugged, battery-efficient LoRaWAN sensors, private gateways, a secure cloud console, and email &amp; Teams alerts &mdash; built for operators who need focused simplicity, private control, and no vendor lock-in.</p>
+        <div class="hero-cta-row" style="justify-content: flex-start;">
+          <a href="https://tick.i4seer.com" target="_blank" rel="noopener" class="btn btn-glow" style="background: var(--teal-glow); color: #0a0a0a; box-shadow: 0 0 15px rgba(46, 230, 208,0.4);">Visit the Portal &rarr;</a>
+          <a href="#where-to-buy" class="btn btn-outline" style="border-color: var(--teal-glow); color: var(--teal-glow);">Where to Buy</a>
+          <a href="mailto:sales@i4seer.com" class="btn btn-outline" style="border-color: var(--teal-glow); color: var(--teal-glow);">Contact Sales</a>
+        </div>
+        <p style="margin-top: 1.25rem; font-size: 0.85rem; opacity: 0.65;">
+          Already a customer? <a href="https://tick.i4seer.com/login" target="_blank" rel="noopener" style="color: var(--teal-glow); text-decoration: none; border-bottom: 1px dotted var(--teal-glow);">Sign in &rarr;</a>
+        </p>
       </div>
-      <p style="margin-top: 1.25rem; font-size: 0.85rem; opacity: 0.65;">
-        Already a customer? <a href="https://tick.i4seer.com/login" target="_blank" rel="noopener" style="color: var(--teal-glow); text-decoration: none; border-bottom: 1px dotted var(--teal-glow);">Sign in &rarr;</a>
-      </p>
+
+      <div class="tick-hero-image">
+        <img src="/images/tick-product.png" alt="SEER Tick LoRaWAN sensor device">
+      </div>
+
     </div>
   </div>
 
@@ -93,6 +117,7 @@
       <div class="tick-badge">Microsoft 365 / Entra ID</div>
       <div class="tick-badge">Google Workspace</div>
       <div class="tick-badge">Fleet RBAC</div>
+      <div class="tick-badge">Email &amp; Teams Alerts</div>
       <div class="tick-badge">Audit Trail</div>
       <div class="tick-badge">Open API</div>
     </div>
@@ -102,17 +127,17 @@
   <section id="what-is-tick">
     <h2 class="section-title" style="font-family: 'Russo One', sans-serif; letter-spacing: 2px; color: var(--teal-glow); text-shadow: 0 0 8px rgba(46, 230, 208,0.3);">The Platform</h2>
     <div style="max-width: 760px; margin: 0 auto; text-align: center; line-height: 1.9; font-size: 1.05rem;">
-      <p>SEER Tick is an integrated monitoring platform for temperature, humidity, and environmental tracking across distributed operations. It combines <strong style="color: var(--text-bright);">rugged LoRaWAN sensors</strong>, <strong style="color: var(--text-bright);">private gateways</strong>, and a <strong style="color: var(--text-bright);">secure cloud console</strong> &mdash; three parts of one system, one vendor, one support line.</p>
+      <p>SEER Tick is an integrated monitoring platform for temperature, humidity, and environmental tracking across distributed operations. It combines <strong style="color: var(--text-bright);">rugged LoRaWAN sensors</strong>, <strong style="color: var(--text-bright);">private gateways</strong>, a <strong style="color: var(--text-bright);">secure cloud console</strong>, and <strong style="color: var(--text-bright);">email &amp; Teams alerts</strong> &mdash; one coherent system, one vendor, one support line.</p>
       <br>
-      <p>Built for operators who need focused simplicity instead of bloated commercial suites. Battery life measured in years. Private network control. Role-based access. Full audit. And an open API so your data is always yours.</p>
+      <p>Built for operators who need focused simplicity instead of bloated commercial suites. Battery life measured in years. Private network control. Role-based access. Alerts when thresholds are crossed or devices go silent. Full audit. And an open API so your data is always yours.</p>
     </div>
   </section>
 
-  <!-- THREE PRODUCTS -->
+  <!-- PRODUCTS -->
   <section>
-    <h2 class="section-title" style="font-family: 'Russo One', sans-serif; letter-spacing: 2px; color: var(--teal-glow); text-shadow: 0 0 8px rgba(46, 230, 208,0.3);">Sensors, Gateways, Console</h2>
+    <h2 class="section-title" style="font-family: 'Russo One', sans-serif; letter-spacing: 2px; color: var(--teal-glow); text-shadow: 0 0 8px rgba(46, 230, 208,0.3);">Sensors, Gateways, Console, Alerts</h2>
     <div style="max-width: 760px; margin: 0 auto 2.5rem; text-align: center; line-height: 1.85; font-size: 1.02rem; opacity: 0.85;">
-      <p>Three integrated parts. One coherent system. Each piece designed to do its job simply, ruggedly, and without surprises.</p>
+      <p>Four integrated parts. One coherent system. Each piece designed to do its job simply, ruggedly, and without surprises.</p>
     </div>
 
     <div style="max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.75rem; padding: 0 1.5rem;">
@@ -157,15 +182,28 @@
       </div>
 
       <div class="tick-product-card">
+        <div class="tick-product-letter">A</div>
+        <h3>Alerts</h3>
+        <p class="tick-product-tagline">Email &amp; Microsoft Teams</p>
+        <ul class="tick-product-list">
+          <li>Threshold rules on any metric</li>
+          <li>Silence alerts when devices go quiet</li>
+          <li>Email via Azure Communication Services</li>
+          <li>Teams Adaptive Cards via webhook</li>
+          <li>Per-recipient rate limiting &amp; digests</li>
+        </ul>
+      </div>
+
+      <div class="tick-product-card">
         <div class="tick-product-letter">API</div>
         <h3>Open API</h3>
         <p class="tick-product-tagline">No vendor lock-in</p>
         <ul class="tick-product-list">
-          <li>24 REST endpoints for every resource</li>
+          <li>REST endpoints for every resource</li>
           <li>Same OAuth &amp; RBAC as the console</li>
           <li>Integrate with Power BI, Grafana, Slack</li>
           <li>Export telemetry to your data lake</li>
-          <li>Build your own dashboards and alerts</li>
+          <li>Build your own dashboards and reports</li>
         </ul>
       </div>
 
@@ -235,6 +273,298 @@
 
     <div style="max-width: 760px; margin: 2rem auto 0; text-align: center; line-height: 1.8; font-size: 0.95rem; opacity: 0.7;">
       <p>A non-admin with no fleet grants signs in successfully but sees an empty console until an admin assigns fleets. A device that sits in zero fleets is invisible to non-admins. The model scales from a single operator watching six devices to dozens of operators across hundreds of fleets.</p>
+    </div>
+  </section>
+
+  <!-- ALERTS -->
+  <section>
+    <h2 class="section-title" style="font-family: 'Russo One', sans-serif; letter-spacing: 2px; color: var(--teal-glow); text-shadow: 0 0 8px rgba(46, 230, 208,0.3);">Alerts &amp; Monitoring</h2>
+    <div style="max-width: 760px; margin: 0 auto 2rem; text-align: center; line-height: 1.9; font-size: 1.05rem;">
+      <p>Author threshold rules against any metric. Get notified by <strong style="color: var(--text-bright);">email</strong> or <strong style="color: var(--text-bright);">Microsoft Teams</strong> when a device crosses the line &mdash; or goes silent. Every firing is logged, attributed, and rate-limited so a fleet-wide event can&rsquo;t flood an operator&rsquo;s inbox.</p>
+    </div>
+
+    <!-- Alerts console screenshot -->
+    <div class="tick-screenshot tick-screenshot-alerts">
+      <img src="/images/tick-alerts-console.png"
+           alt="SEER Tick Alerts console showing rule editor and fired events"
+           onerror="this.parentElement.classList.add('tick-screenshot-placeholder'); this.style.display='none';">
+      <div class="tick-screenshot-fallback">
+        <div class="tick-screenshot-chrome">
+          <span class="tick-dot tick-dot-red"></span>
+          <span class="tick-dot tick-dot-yellow"></span>
+          <span class="tick-dot tick-dot-green"></span>
+          <span class="tick-chrome-url">tick.i4seer.com/alerts</span>
+        </div>
+        <div class="tick-screenshot-body">
+          <div class="tick-screenshot-icon">&#128276;</div>
+          <div class="tick-screenshot-label">Alerts Console</div>
+          <div class="tick-screenshot-sub">Rule editor &middot; Event history &middot; Teams &amp; Email delivery</div>
+          <div class="tick-screenshot-hint">Drop a screenshot at<br><code>/images/tick-alerts-console.png</code></div>
+        </div>
+      </div>
+    </div>
+
+    <div style="max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; padding: 0 1.5rem;">
+
+      <div class="tick-feat-card">
+        <h4>Threshold Rules</h4>
+        <p>Fire on temperature, humidity, battery, signal strength, or any metric your devices report. Comparison operators, duration windows, cooldowns. Scope to all devices, a fleet, or a single sensor.</p>
+      </div>
+
+      <div class="tick-feat-card">
+        <h4>Silence Detection</h4>
+        <p><code>no_uplink</code> rules catch the most important question: is the device still alive? Fires when a sensor has been quiet longer than the threshold. Never-seen devices fire immediately so you catch provisioning failures on day one.</p>
+      </div>
+
+      <div class="tick-feat-card">
+        <h4>Email Delivery</h4>
+        <p>Powered by <strong style="color: var(--text-bright);">Azure Communication Services</strong>. Pay-as-you-go at a fraction of a cent per message. Start with an Azure-managed domain in ten minutes or use your own custom domain with SPF/DKIM for branded sender addresses.</p>
+      </div>
+
+      <div class="tick-feat-card">
+        <h4>Microsoft Teams</h4>
+        <p>Adaptive Cards posted directly to any channel via incoming webhook. Shows device, metric, condition, value, timestamp, and an <em>Open Dashboard</em> button. Works with classic connectors and the new Workflows automation.</p>
+      </div>
+
+      <div class="tick-feat-card">
+        <h4>Rate Limiting</h4>
+        <p>Rolling one-hour cap per recipient (default 20/hour, configurable). When the cap hits, suppression counts are tracked and a single digest email summarizes what got dropped. A fleet-wide event cannot flood an inbox.</p>
+      </div>
+
+      <div class="tick-feat-card">
+        <h4>Event History</h4>
+        <p>Every firing is written to <strong style="color: var(--text-bright);">AlertEvents</strong> with identity, delivery status, and any errors. Full searchable history for compliance, forensics, and post-incident review.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- QUICK TOUR -->
+  <section>
+    <h2 class="section-title" style="font-family: 'Russo One', sans-serif; letter-spacing: 2px; color: var(--teal-glow); text-shadow: 0 0 8px rgba(46, 230, 208,0.3);">Quick Tour</h2>
+    <div style="max-width: 760px; margin: 0 auto 2.5rem; text-align: center; line-height: 1.9; font-size: 1.05rem;">
+      <p>What the console actually looks like. Every screenshot below is from the live <a href="https://tick.i4seer.com" target="_blank" rel="noopener" style="color: var(--teal-glow);">tick.i4seer.com</a> portal.</p>
+    </div>
+
+    <div class="tick-tour-grid">
+
+      <!-- Device list -->
+      <div class="tick-tour-item">
+        <div class="tick-screenshot">
+          <img src="/images/tick-tour-devices.png"
+               alt="SEER Tick devices list"
+               onerror="this.parentElement.classList.add('tick-screenshot-placeholder'); this.style.display='none';">
+          <div class="tick-screenshot-fallback">
+            <div class="tick-screenshot-chrome">
+              <span class="tick-dot tick-dot-red"></span>
+              <span class="tick-dot tick-dot-yellow"></span>
+              <span class="tick-dot tick-dot-green"></span>
+              <span class="tick-chrome-url">tick.i4seer.com/devices</span>
+            </div>
+            <div class="tick-screenshot-body">
+              <div class="tick-screenshot-icon">&#128225;</div>
+              <div class="tick-screenshot-label">Devices</div>
+              <div class="tick-screenshot-sub">Fleet &middot; Status &middot; Last Seen &middot; Battery</div>
+              <div class="tick-screenshot-hint"><code>/images/tick-tour-devices.png</code></div>
+            </div>
+          </div>
+        </div>
+        <h4>1. Device List</h4>
+        <p>Every sensor at a glance. Fleet membership, current status, last uplink, battery level, signal strength. Click any row to drill in.</p>
+      </div>
+
+      <!-- Device detail / telemetry -->
+      <div class="tick-tour-item">
+        <div class="tick-screenshot">
+          <img src="/images/tick-tour-telemetry.png"
+               alt="SEER Tick telemetry chart"
+               onerror="this.parentElement.classList.add('tick-screenshot-placeholder'); this.style.display='none';">
+          <div class="tick-screenshot-fallback">
+            <div class="tick-screenshot-chrome">
+              <span class="tick-dot tick-dot-red"></span>
+              <span class="tick-dot tick-dot-yellow"></span>
+              <span class="tick-dot tick-dot-green"></span>
+              <span class="tick-chrome-url">tick.i4seer.com/device/&hellip;</span>
+            </div>
+            <div class="tick-screenshot-body">
+              <div class="tick-screenshot-icon">&#128200;</div>
+              <div class="tick-screenshot-label">Telemetry</div>
+              <div class="tick-screenshot-sub">Temperature &middot; Humidity &middot; Battery &middot; RSSI</div>
+              <div class="tick-screenshot-hint"><code>/images/tick-tour-telemetry.png</code></div>
+            </div>
+          </div>
+        </div>
+        <h4>2. Telemetry History</h4>
+        <p>Every metric plotted over time. Zoom, pan, export CSV, or hit the API for the raw data. Retention is yours to configure.</p>
+      </div>
+
+      <!-- Fleets -->
+      <div class="tick-tour-item">
+        <div class="tick-screenshot">
+          <img src="/images/tick-tour-fleets.png"
+               alt="SEER Tick fleets management"
+               onerror="this.parentElement.classList.add('tick-screenshot-placeholder'); this.style.display='none';">
+          <div class="tick-screenshot-fallback">
+            <div class="tick-screenshot-chrome">
+              <span class="tick-dot tick-dot-red"></span>
+              <span class="tick-dot tick-dot-yellow"></span>
+              <span class="tick-dot tick-dot-green"></span>
+              <span class="tick-chrome-url">tick.i4seer.com/fleets</span>
+            </div>
+            <div class="tick-screenshot-body">
+              <div class="tick-screenshot-icon">&#127760;</div>
+              <div class="tick-screenshot-label">Fleets</div>
+              <div class="tick-screenshot-sub">Group by site, customer, or purpose</div>
+              <div class="tick-screenshot-hint"><code>/images/tick-tour-fleets.png</code></div>
+            </div>
+          </div>
+        </div>
+        <h4>3. Fleet Management</h4>
+        <p>Organize devices by site, customer, or purpose. Assign operators to specific fleets with viewer or editor roles. Full audit on every change.</p>
+      </div>
+
+      <!-- Rule editor -->
+      <div class="tick-tour-item">
+        <div class="tick-screenshot">
+          <img src="/images/tick-tour-rule-editor.png"
+               alt="SEER Tick alert rule editor"
+               onerror="this.parentElement.classList.add('tick-screenshot-placeholder'); this.style.display='none';">
+          <div class="tick-screenshot-fallback">
+            <div class="tick-screenshot-chrome">
+              <span class="tick-dot tick-dot-red"></span>
+              <span class="tick-dot tick-dot-yellow"></span>
+              <span class="tick-dot tick-dot-green"></span>
+              <span class="tick-chrome-url">tick.i4seer.com/alerts/new</span>
+            </div>
+            <div class="tick-screenshot-body">
+              <div class="tick-screenshot-icon">&#9881;</div>
+              <div class="tick-screenshot-label">Rule Editor</div>
+              <div class="tick-screenshot-sub">Metric &middot; Operator &middot; Threshold &middot; Channels</div>
+              <div class="tick-screenshot-hint"><code>/images/tick-tour-rule-editor.png</code></div>
+            </div>
+          </div>
+        </div>
+        <h4>4. Alert Rule Editor</h4>
+        <p>Pick a metric, an operator, a threshold, and a delivery channel. Scope to all devices, a fleet, or a single sensor. Enable, disable, or duplicate existing rules.</p>
+      </div>
+
+      <!-- Users -->
+      <div class="tick-tour-item">
+        <div class="tick-screenshot">
+          <img src="/images/tick-tour-users.png"
+               alt="SEER Tick users and roles"
+               onerror="this.parentElement.classList.add('tick-screenshot-placeholder'); this.style.display='none';">
+          <div class="tick-screenshot-fallback">
+            <div class="tick-screenshot-chrome">
+              <span class="tick-dot tick-dot-red"></span>
+              <span class="tick-dot tick-dot-yellow"></span>
+              <span class="tick-dot tick-dot-green"></span>
+              <span class="tick-chrome-url">tick.i4seer.com/users</span>
+            </div>
+            <div class="tick-screenshot-body">
+              <div class="tick-screenshot-icon">&#128101;</div>
+              <div class="tick-screenshot-label">Users</div>
+              <div class="tick-screenshot-sub">Admin &middot; Editor &middot; Viewer per fleet</div>
+              <div class="tick-screenshot-hint"><code>/images/tick-tour-users.png</code></div>
+            </div>
+          </div>
+        </div>
+        <h4>5. Users &amp; Roles</h4>
+        <p>Invite by email. Assign per-fleet roles. Admins bypass fleets entirely. Every sign-in, every permission change, every invitation is recorded.</p>
+      </div>
+
+      <!-- Audit log -->
+      <div class="tick-tour-item">
+        <div class="tick-screenshot">
+          <img src="/images/tick-tour-audit.png"
+               alt="SEER Tick audit log"
+               onerror="this.parentElement.classList.add('tick-screenshot-placeholder'); this.style.display='none';">
+          <div class="tick-screenshot-fallback">
+            <div class="tick-screenshot-chrome">
+              <span class="tick-dot tick-dot-red"></span>
+              <span class="tick-dot tick-dot-yellow"></span>
+              <span class="tick-dot tick-dot-green"></span>
+              <span class="tick-chrome-url">tick.i4seer.com/audit</span>
+            </div>
+            <div class="tick-screenshot-body">
+              <div class="tick-screenshot-icon">&#128196;</div>
+              <div class="tick-screenshot-label">Audit</div>
+              <div class="tick-screenshot-sub">Every action, timestamped and attributed</div>
+              <div class="tick-screenshot-hint"><code>/images/tick-tour-audit.png</code></div>
+            </div>
+          </div>
+        </div>
+        <h4>6. Audit Log</h4>
+        <p>Every downlink, every mode change, every user action, every alert firing. Searchable, filterable, exportable. Compliance and post-incident review, solved.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- WHO IT'S FOR / USE CASES -->
+  <section>
+    <h2 class="section-title" style="font-family: 'Russo One', sans-serif; letter-spacing: 2px; color: var(--teal-glow); text-shadow: 0 0 8px rgba(46, 230, 208,0.3);">Who It&rsquo;s For</h2>
+    <div style="max-width: 760px; margin: 0 auto 2.5rem; text-align: center; line-height: 1.9; font-size: 1.05rem;">
+      <p>SEER Tick fits operators who need coverage more than throughput, private control more than SaaS polish, and audit trails more than flashy UI. Here are the deployment shapes we design for.</p>
+    </div>
+
+    <div style="max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.75rem; padding: 0 1.5rem;">
+
+      <div class="tick-use-case">
+        <div class="tick-use-case-label">COLD CHAIN</div>
+        <h4>Cold Storage &amp; Refrigeration</h4>
+        <p>Walk-in freezers, refrigerated warehouses, cold-chain logistics. Temperature thresholds on every door. Silence alerts when a sensor drops offline &mdash; before the regulator finds out.</p>
+      </div>
+
+      <div class="tick-use-case">
+        <div class="tick-use-case-label">FACILITIES</div>
+        <h4>Facility &amp; Building Monitoring</h4>
+        <p>Data centers, server rooms, museum archives, research freezers, greenhouses. Temperature, humidity, airflow. Fleet-scoped roles so site managers see their own building and nothing else.</p>
+      </div>
+
+      <div class="tick-use-case">
+        <div class="tick-use-case-label">REMOTE ASSETS</div>
+        <h4>Remote &amp; Unattended Sites</h4>
+        <p>Pump houses, outbuildings, utility cabinets, off-grid field stations. Years of battery life, LoRaWAN miles of range, no cellular bill. Check in once a day or once an hour.</p>
+      </div>
+
+      <div class="tick-use-case">
+        <div class="tick-use-case-label">MULTI-TENANT</div>
+        <h4>MSPs &amp; Multi-Customer Ops</h4>
+        <p>Managed service providers deploying to multiple customers. Each customer gets their own fleet, their own operators, their own audit scope. One console, full tenant isolation.</p>
+      </div>
+
+    </div>
+
+    <!-- Case study placeholder — ready for a real deployment story -->
+    <div class="tick-case-study">
+      <div class="tick-case-study-badge">CASE STUDY</div>
+      <blockquote>
+        <p>&ldquo;We needed a monitoring stack that didn&rsquo;t put our data in someone else&rsquo;s cloud, didn&rsquo;t require a separate SIM for every sensor, and didn&rsquo;t bury the audit trail behind a paywall. Tick was the only platform that checked all three boxes.&rdquo;</p>
+        <footer>
+          <strong>Your first customer</strong><br>
+          <span>A story goes here when one is ready to be told.</span>
+        </footer>
+      </blockquote>
+      <div class="tick-case-study-stats">
+        <div class="tick-case-study-stat">
+          <div class="tick-case-study-number">N</div>
+          <div class="tick-case-study-label">sensors deployed</div>
+        </div>
+        <div class="tick-case-study-stat">
+          <div class="tick-case-study-number">N</div>
+          <div class="tick-case-study-label">sites covered</div>
+        </div>
+        <div class="tick-case-study-stat">
+          <div class="tick-case-study-number">N</div>
+          <div class="tick-case-study-label">months in production</div>
+        </div>
+        <div class="tick-case-study-stat">
+          <div class="tick-case-study-number">99.x%</div>
+          <div class="tick-case-study-label">delivery reliability</div>
+        </div>
+      </div>
+      <p class="tick-case-study-note">Interested in becoming our first named case study? <a href="mailto:sales@i4seer.com?subject=Case%20Study%20Interest">Get in touch</a> &mdash; early customers get pilot pricing in exchange for a story we can tell.</p>
     </div>
   </section>
 

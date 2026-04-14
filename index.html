@@ -10,6 +10,22 @@
   <meta name="copyright" content="Institute for Seer LLC">
   <link rel="icon" type="image/svg+xml" href="/images/favicon-i4seer.svg">
   <link rel="alternate icon" href="/favicon.ico" type="image/x-icon">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="i4Seer">
+  <meta property="og:url" content="https://www.i4seer.com/">
+  <meta property="og:title" content="i4Seer — Books and Devices by Institute for Seer">
+  <meta property="og:description" content="Independent publisher of dark horror fiction and builder of SEER Tick, an IoT monitoring platform. Books that watch back. Devices that think ahead.">
+  <meta property="og:image" content="https://www.i4seer.com/images/seer-icon-small.png">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="i4Seer — Books and Devices by Institute for Seer">
+  <meta name="twitter:description" content="Independent publisher of dark horror fiction and builder of SEER Tick, an IoT monitoring platform. Books that watch back. Devices that think ahead.">
+  <meta name="twitter:image" content="https://www.i4seer.com/images/seer-icon-small.png">
+  <!-- Canonical -->
+  <link rel="canonical" href="https://www.i4seer.com/">
+  <!-- Plausible Analytics -->
+  <script defer data-domain="i4seer.com" src="https://plausible.io/js/script.js"></script>
 </head>
 <body class="landing-page">
 
@@ -30,15 +46,33 @@
   </header>
 
   <!-- HERO -->
-  <div class="hero hero-landing-bg" style="min-height: 75vh;">
-    <div class="hero-content">
-      <h1 class="landing-title">i4Seer</h1>
-      <p class="subtitle" style="max-width: 700px; font-size: 1.3rem;">Stories that watch back. Devices that think ahead.</p>
-      <p class="subtitle" style="max-width: 600px; font-size: 0.95rem; opacity: 0.5; margin-top: 0;">An independent publisher and technology studio. We publish books. We build devices.</p>
-      <div class="hero-cta-row">
-        <a href="#books-pillar" class="btn btn-glow">Read the Books</a>
-        <a href="#tech-pillar" class="btn btn-outline" style="border-color: var(--teal-glow); color: var(--teal-glow);">Explore Tick &rarr;</a>
+  <div class="hero hero-landing-bg landing-hero" style="min-height: 80vh;">
+    <div class="landing-hero-grid">
+
+      <div class="landing-hero-text">
+        <h1 class="landing-title">i4Seer</h1>
+        <p class="subtitle" style="font-size: 1.3rem;">Stories that watch back.<br>Devices that think ahead.</p>
+        <p class="subtitle" style="font-size: 0.95rem; opacity: 0.55; margin-top: 0.5rem;">An independent publisher and technology studio. We publish books. We build devices.</p>
+        <div class="hero-cta-row">
+          <a href="#books-pillar" class="btn btn-glow">Read the Books</a>
+          <a href="#tech-pillar" class="btn btn-outline" style="border-color: var(--teal-glow); color: var(--teal-glow);">Explore Tick &rarr;</a>
+        </div>
       </div>
+
+      <div class="landing-hero-duality" aria-hidden="true">
+        <div class="duality-book">
+          <img src="/images/cover-the-puca-front.jpg" alt="">
+        </div>
+        <div class="duality-divider"></div>
+        <div class="duality-device">
+          <img src="/images/tick-product.png" alt="">
+        </div>
+        <div class="duality-caption">
+          <span class="duality-label duality-label-books">BOOKS</span>
+          <span class="duality-label duality-label-tech">TECH</span>
+        </div>
+      </div>
+
     </div>
   </div>
 
@@ -67,8 +101,8 @@
         <p class="pillar-subtitle">SEER Tick</p>
         <ul class="pillar-stats">
           <li><strong>Monitor</strong> what matters</li>
-          <li>Sensors &middot; Gateways &middot; Console</li>
-          <li>Private LoRaWAN &middot; Fleet RBAC</li>
+          <li>Sensors &middot; Gateways &middot; Alerts</li>
+          <li>Email &amp; Teams &middot; Fleet RBAC</li>
         </ul>
         <span class="pillar-arrow">Explore Tick &darr;</span>
       </a>
@@ -93,15 +127,15 @@
 
         <p class="seer-description">
           Rugged, battery-efficient LoRaWAN sensors, private gateways,
-          and a secure cloud console. Built for operators who need focused
-          simplicity, private control, and no vendor lock-in.
+          a secure cloud console, and email &amp; Teams alerts. Built for
+          operators who need focused simplicity and private control.
         </p>
 
         <div class="seer-dual">
 
           <a href="/tick/" class="seer-pill" style="border-color: rgba(46, 230, 208,0.3);">
             <h4 style="color: var(--teal-glow);">PLATFORM</h4>
-            <p>Sensors &middot; Gateways &middot; Console</p>
+            <p>Sensors &middot; Gateways &middot; Alerts</p>
           </a>
 
           <a href="https://tick.i4seer.com" target="_blank" rel="noopener" class="seer-pill" style="border-color: rgba(46, 230, 208,0.3);">
@@ -274,7 +308,7 @@
   <!-- ABOUT -->
   <section>
     <div style="text-align: center; margin-bottom: 1rem;">
-      <img src="/images/seer-icon.png" alt="i4Seer eye" style="width: 160px; opacity: 0.8; filter: drop-shadow(0 0 20px rgba(232,220,200,0.4));">
+      <img src="/images/seer-icon-small.png" alt="i4Seer eye" style="width: 160px; opacity: 0.8; filter: drop-shadow(0 0 20px rgba(232,220,200,0.4));">
     </div>
     <h2 class="section-title">About i4Seer</h2>
     <div style="max-width: 700px; margin: 0 auto; text-align: center; line-height: 1.8; font-size: 1.05rem;">
@@ -286,7 +320,7 @@
       <br>
       <p><a href="/seer-fairies/" style="color: var(--fae-gold); text-decoration: none;"><strong>Seer Fairies</strong></a> is our dark fae horror series for upper middle grade and lower YA. Ancient European fae are waking in American towns where the knowing that once managed them has been forgotten.</p>
       <br>
-      <p><a href="/tick/" style="color: var(--teal-glow); text-decoration: none;"><strong>SEER Tick</strong></a> is our IoT monitoring platform. Rugged LoRaWAN sensors, private gateways, and a secure cloud console at <a href="https://tick.i4seer.com" target="_blank" rel="noopener" style="color: var(--teal-glow); text-decoration: none;">tick.i4seer.com</a>. Built for operators who want focused simplicity instead of bloated commercial suites.</p>
+      <p><a href="/tick/" style="color: var(--teal-glow); text-decoration: none;"><strong>SEER Tick</strong></a> is our IoT monitoring platform. Rugged LoRaWAN sensors, private gateways, a secure cloud console, and email &amp; Teams alerts at <a href="https://tick.i4seer.com" target="_blank" rel="noopener" style="color: var(--teal-glow); text-decoration: none;">tick.i4seer.com</a>. Built for operators who want focused simplicity instead of bloated commercial suites.</p>
       <br>
       <p style="opacity: 0.4; font-size: 0.9rem;">Different projects. Same instinct: pay attention to what&rsquo;s actually happening.</p>
     </div>
