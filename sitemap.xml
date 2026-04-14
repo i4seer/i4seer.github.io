@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Home -->
+  <url>
+    <loc>https://i4seer.com/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- About & Press -->
+  <url>
+    <loc>https://i4seer.com/about/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://i4seer.com/press/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Tick -->
+  <url>
+    <loc>https://i4seer.com/tick/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Seer Frights -->
+  <url>
+    <loc>https://i4seer.com/seer-frights/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://i4seer.com/seer-frights/books/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://i4seer.com/seer-frights/books/book1/</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://i4seer.com/seer-frights/books/book2/</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://i4seer.com/seer-frights/books/book3/</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://i4seer.com/seer-frights/buy/</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://i4seer.com/seer-frights/build/</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://i4seer.com/seer-frights/build/swamp-glow/</loc>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://i4seer.com/seer-frights/build/route-13/</loc>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://i4seer.com/seer-frights/build/three-knock/</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- Seer Warns -->
+  <url>
+    <loc>https://i4seer.com/seer-warns/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://i4seer.com/seer-warns/books/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://i4seer.com/seer-warns/books/book1/</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Seer Fairies -->
+  <url>
+    <loc>https://i4seer.com/seer-fairies/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://i4seer.com/seer-fairies/books/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://i4seer.com/seer-fairies/books/book1/</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://i4seer.com/seer-fairies/books/book4/</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Legal -->
+  <url>
+    <loc>https://i4seer.com/privacy/</loc>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://i4seer.com/terms/</loc>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://i4seer.com/cookie-policy/</loc>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://i4seer.com/build-safety/</loc>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://i4seer.com/affiliate-disclosure/</loc>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://i4seer.com/do-not-sell/</loc>
+    <priority>0.3</priority>
+  </url>
+
+</urlset>

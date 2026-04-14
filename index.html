@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>i4Seer — Stories That Watch Back. Devices That Think Ahead.</title>
-  <meta name="description" content="i4Seer: Seer Frights horror book series and Tick IoT telemetry platform. Stories and technology by Institute for Seer LLC.">
+  <title>i4Seer — Books and Devices by Institute for Seer</title>
+  <meta name="description" content="i4Seer: independent publisher of dark horror fiction and builder of the Tick IoT telemetry platform. Books that watch back. Devices that think ahead.">
   <link rel="stylesheet" href="/style.css">
   <meta name="robots" content="index, follow">
   <meta name="copyright" content="Institute for Seer LLC">
-  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" type="image/svg+xml" href="/images/favicon-i4seer.svg">
+  <link rel="alternate icon" href="/favicon.ico" type="image/x-icon">
 </head>
 <body class="landing-page">
 
@@ -19,9 +20,10 @@
         <a href="/" class="logo">I4SEER<span>Institute for Seer</span></a>
         <ul>
           <li><a href="/" class="active">i4Seer</a></li>
+          <li><a href="/tick/">Tick</a></li>
           <li><a href="/seer-frights/">Seer Frights</a></li>
           <li><a href="/seer-warns/">Seer Warns</a></li>
-          <!-- <li><a href="/tick/">Tick</a></li> -->
+          <li><a href="/seer-fairies/">Seer Fairies</a></li>
         </ul>
       </div>
     </nav>
@@ -32,15 +34,130 @@
     <div class="hero-content">
       <h1 class="landing-title">i4Seer</h1>
       <p class="subtitle" style="max-width: 700px; font-size: 1.3rem;">Stories that watch back. Devices that think ahead.</p>
-      <p class="subtitle" style="max-width: 600px; font-size: 0.95rem; opacity: 0.5; margin-top: 0;">We publish books. We build devices. We watch.</p>
+      <p class="subtitle" style="max-width: 600px; font-size: 0.95rem; opacity: 0.5; margin-top: 0;">An independent publisher and technology studio. We publish books. We build devices.</p>
+      <div class="hero-cta-row">
+        <a href="#books-pillar" class="btn btn-glow">Read the Books</a>
+        <a href="#tech-pillar" class="btn btn-outline" style="border-color: var(--teal-glow); color: var(--teal-glow);">Explore Tick &rarr;</a>
+      </div>
     </div>
   </div>
 
-  <!-- OUR PROJECTS -->
+  <!-- TWO PILLARS -->
   <section>
-    <h2 class="section-title">Our Projects</h2>
-    <p class="section-subtitle">Two sides of the same coin. One tells stories. The other builds the future.</p>
+    <h2 class="section-title">What We Do</h2>
+    <p class="section-subtitle">Two halves of one studio. Fiction on one side, hardware on the other. Same instinct: pay attention to what&rsquo;s actually happening.</p>
+
+    <div class="two-pillars">
+
+      <a href="#books-pillar" class="pillar pillar-books">
+        <div class="pillar-icon">&#128218;</div>
+        <h3>BOOKS</h3>
+        <p class="pillar-subtitle">Institute for Seer Press</p>
+        <ul class="pillar-stats">
+          <li><strong>3 series</strong> in active publication</li>
+          <li><strong>45+ novels</strong> planned across all series</li>
+          <li>Horror &middot; Dark fae &middot; Literary</li>
+        </ul>
+        <span class="pillar-arrow">Browse books &darr;</span>
+      </a>
+
+      <a href="#tech-pillar" class="pillar pillar-tech">
+        <div class="pillar-icon">&#9889;</div>
+        <h3>TECH</h3>
+        <p class="pillar-subtitle">SEER Tick</p>
+        <ul class="pillar-stats">
+          <li><strong>Monitor</strong> what matters</li>
+          <li>Sensors &middot; Gateways &middot; Console</li>
+          <li>Private LoRaWAN &middot; Fleet RBAC</li>
+        </ul>
+        <span class="pillar-arrow">Explore Tick &darr;</span>
+      </a>
+
+    </div>
   </section>
+
+  <!-- ================================================================= -->
+  <!-- TECH PILLAR — Tick feature section                                 -->
+  <!-- ================================================================= -->
+  <div id="tech-pillar"></div>
+
+  <!-- TICK FEATURE -->
+  <section class="seer-feature seer-tick-feature" style="background: #050a0a;">
+    <div class="seer-container">
+      <div class="seer-content">
+
+        <span class="seer-eyebrow" style="color: var(--teal-glow);">IoT MONITORING</span>
+
+        <h2 class="seer-title" style="color: var(--teal-glow);">SEER TICK</h2>
+        <p class="seer-tagline" style="color: var(--teal-glow); opacity: 0.6;">&ldquo;Monitor what matters. Anywhere you need it.&rdquo;</p>
+
+        <p class="seer-description">
+          Rugged, battery-efficient LoRaWAN sensors, private gateways,
+          and a secure cloud console. Built for operators who need focused
+          simplicity, private control, and no vendor lock-in.
+        </p>
+
+        <div class="seer-dual">
+
+          <a href="/tick/" class="seer-pill" style="border-color: rgba(46, 230, 208,0.3);">
+            <h4 style="color: var(--teal-glow);">PLATFORM</h4>
+            <p>Sensors &middot; Gateways &middot; Console</p>
+          </a>
+
+          <a href="https://tick.i4seer.com/login" target="_blank" rel="noopener" class="seer-pill" style="border-color: rgba(46, 230, 208,0.3);">
+            <h4 style="color: var(--teal-glow);">SIGN IN</h4>
+            <p>tick.i4seer.com &middot; Secure Portal</p>
+          </a>
+
+        </div>
+
+        <!-- FLOW DIAGRAM -->
+        <div class="tick-device-visual tick-device-visual-home" aria-hidden="true">
+          <div class="tick-device-row">
+            <div class="tick-device-node tick-node-green">
+              <div class="tick-node-dot"></div>
+              <div class="tick-node-label">Sensor</div>
+              <div class="tick-node-sub">healthy</div>
+            </div>
+            <div class="tick-device-link"></div>
+            <div class="tick-device-node tick-node-blue">
+              <div class="tick-node-dot"></div>
+              <div class="tick-node-label">Sensor</div>
+              <div class="tick-node-sub">transmitting</div>
+            </div>
+            <div class="tick-device-link"></div>
+            <div class="tick-device-node tick-node-gateway">
+              <div class="tick-node-dot"></div>
+              <div class="tick-node-label">Gateway</div>
+              <div class="tick-node-sub">online</div>
+            </div>
+            <div class="tick-device-link"></div>
+            <div class="tick-device-node tick-node-cloud">
+              <div class="tick-node-dot"></div>
+              <div class="tick-node-label">Cloud</div>
+              <div class="tick-node-sub">ingesting</div>
+            </div>
+            <div class="tick-device-link"></div>
+            <div class="tick-device-node tick-node-console">
+              <div class="tick-node-dot"></div>
+              <div class="tick-node-label">Console</div>
+              <div class="tick-node-sub">live</div>
+            </div>
+          </div>
+        </div>
+
+        <a href="/tick/" class="seer-btn" style="background: var(--teal-glow); color: #0a0a0a;">
+          EXPLORE TICK &rarr;
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================= -->
+  <!-- BOOKS PILLAR — anchor for the book series feature sections below  -->
+  <!-- ================================================================= -->
+  <div id="books-pillar"></div>
 
   <!-- SEER FRIGHTS FEATURE -->
   <section class="seer-feature">
@@ -116,18 +233,43 @@
     </div>
   </section>
 
-  <!-- TICK (hidden for now) -->
-  <!--<section class="seer-feature" style="background: #070c0c;">
+  <!-- SEER FAIRIES FEATURE -->
+  <section class="seer-feature seer-fairies-feature" style="background: #0c0a05;">
     <div class="seer-container">
-      <div class="seer-left">
-        <span class="seer-eyebrow" style="color: var(--teal-glow);">IoT</span>
-        <h2 class="seer-title" style="color: var(--teal-glow);">Tick</h2>
-        <p class="seer-tagline">Telemetry by i4Seer</p>
-        <p class="seer-description">The next step from the books. Real devices that sense, glow, and connect over Wi-Fi. Build what the villains built &mdash; then take your projects anywhere.</p>
-        <a href="/tick/" class="seer-btn" style="background: var(--teal-glow);">EXPLORE TICK &rarr;</a>
+      <div class="seer-content">
+
+        <span class="seer-eyebrow" style="color: var(--fae-gold);">DARK FAE HORROR</span>
+
+        <h2 class="seer-title">SEER FAIRIES</h2>
+        <p class="seer-tagline">&ldquo;We saw them waking.&rdquo;</p>
+
+        <p class="seer-description">
+          Ancient European fae are waking in American towns where the rules
+          were forgotten. 22 standalone novels. Any book can be read first.
+        </p>
+
+        <div class="seer-dual">
+
+          <a href="/seer-fairies/" class="seer-pill" style="border-color: rgba(232,184,74,0.3);">
+            <h4 style="color: var(--fae-gold);">STORY</h4>
+            <p>22 Standalone Novels &middot; Upper MG / YA</p>
+          </a>
+
+          <a href="/seer-fairies/books/book1/" class="seer-pill" style="border-color: rgba(232,184,74,0.3);">
+            <h4 style="color: var(--fae-gold);">BOOK 1</h4>
+            <p>The P&uacute;ca &middot; Available Now</p>
+          </a>
+
+        </div>
+
+        <a href="/seer-fairies/" class="seer-btn" style="background: var(--fae-gold); color: #0a0a0a;">
+          EXPLORE THE SERIES &rarr;
+        </a>
+
       </div>
     </div>
-  </section>-->
+  </section>
+
 
   <!-- ABOUT -->
   <section>
@@ -142,9 +284,10 @@
       <br>
       <p><a href="/seer-warns/" style="color: var(--sepia); text-decoration: none;"><strong>Seer Warns</strong></a> is our adult literary horror series. Standalone novels about ordinary people who receive warnings so precise they cannot be doubted &mdash; and walk into the fire anyway.</p>
       <br>
-      <!-- Tick paragraph hidden for now -->
-      <!--<p><a href="/tick/" style="color: var(--teal-glow); text-decoration: none;"><strong>Tick</strong></a> is the next step. Real IoT sensing devices and code you can read. Start with the projects from the books &mdash; then take them anywhere.</p>
-      <br>-->
+      <p><a href="/seer-fairies/" style="color: var(--fae-gold); text-decoration: none;"><strong>Seer Fairies</strong></a> is our dark fae horror series for upper middle grade and lower YA. Ancient European fae are waking in American towns where the knowing that once managed them has been forgotten.</p>
+      <br>
+      <p><a href="/tick/" style="color: var(--teal-glow); text-decoration: none;"><strong>SEER Tick</strong></a> is our IoT monitoring platform. Rugged LoRaWAN sensors, private gateways, and a secure cloud console at <a href="https://tick.i4seer.com" target="_blank" rel="noopener" style="color: var(--teal-glow); text-decoration: none;">tick.i4seer.com</a>. Built for operators who want focused simplicity instead of bloated commercial suites.</p>
+      <br>
       <p style="opacity: 0.4; font-size: 0.9rem;">Different projects. Same instinct: pay attention to what&rsquo;s actually happening.</p>
     </div>
   </section>
@@ -159,9 +302,12 @@
 
     <div class="footer-links">
       <a href="/">Home</a>
+      <a href="/about/">About</a>
+      <a href="/press/">Press Kit</a>
       <a href="/seer-frights/">Seer Frights</a>
       <a href="/seer-warns/">Seer Warns</a>
-      <!-- <a href="/tick/">Tick</a> -->
+      <a href="/seer-fairies/">Seer Fairies</a>
+      <a href="/tick/">Tick</a>
       <a href="/privacy/">Privacy Policy</a>
       <a href="/terms/">Terms of Use</a>
       <a href="/build-safety/">Build Safety</a>
@@ -171,7 +317,7 @@
     </div>
 
     <p style="opacity: 0.4; font-size: 0.75rem; margin-top: 1rem; max-width: 800px; margin-left: auto; margin-right: auto;">
-      Seer Frights&reg;, Tick&trade;, and i4Seer&trade; are trademarks of Institute for Seer LLC.
+      Tick&trade;, Seer Frights&reg;, Seer Warns&trade;, Seer Fairies&trade;, and i4Seer&trade; are trademarks of Institute for Seer LLC.
       All build instructions are provided for educational purposes only.
       Adult supervision is required for electronics projects.
       Institute for Seer LLC is not responsible for misuse of third-party components.

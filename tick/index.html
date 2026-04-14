@@ -3,182 +3,403 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tick — The Tech Behind the Scares | i4Seer.com</title>
-  <meta name="description" content="Tick by i4Seer: the firmware and hardware behind every Version 3 Seer Frights device. ATOM Matrix, Wi-Fi, CircuitPython. One board, three projects.">
+  <title>Tick — IoT Telemetry by i4Seer</title>
+  <meta name="description" content="Tick is an ESP32 + LoRaWAN IoT telemetry platform by Institute for Seer. Low-power field devices, Azure cloud ingest, live dashboard at tick.i4seer.com.">
   <link rel="stylesheet" href="/style.css">
   <meta name="robots" content="index, follow">
   <meta name="copyright" content="Institute for Seer LLC">
-  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" type="image/svg+xml" href="/images/favicon-tick.svg">
+  <link rel="alternate icon" href="/favicon.ico" type="image/x-icon">
 </head>
 <body class="tick-page">
 
   <!-- NAV -->
-  <header style="border-bottom-color: var(--teal-glow); box-shadow: 0 4px 30px rgba(46, 230, 208, 0.15);">
+  <header style="border-bottom-color: var(--teal-glow); box-shadow: 0 4px 20px rgba(46, 230, 208,0.1);">
     <nav>
       <div class="nav-top">
-        <a href="/tick/" class="logo" style="color: var(--teal-glow); text-shadow: 0 0 10px rgba(46,230,208,0.5), 0 0 30px rgba(46,230,208,0.2);">TICK<span>telemetry by i4Seer</span></a>
+        <a href="/tick/" class="logo" style="font-family: 'Russo One', sans-serif; letter-spacing: 4px; color: var(--teal-glow); text-shadow: 0 0 10px rgba(46, 230, 208, 0.4), 0 0 25px rgba(46, 230, 208, 0.2);">TICK<span style="color: var(--teal-glow); opacity: 0.5;">Telemetry by i4Seer</span></a>
         <ul>
           <li><a href="/">i4Seer</a></li>
-          <li><a href="/seer-frights/">Seer Frights</a></li>
           <li><a href="/tick/" class="active" style="color: var(--teal-glow);">Tick</a></li>
-        </ul>
-      </div>
-      <div class="nav-sub" style="border-top-color: #1a3a3a;">
-        <ul>
-          <li><a href="/tick/" class="active" style="color: var(--teal-glow);">Home</a></li>
-          <li><a href="/tick/devices/">Devices</a></li>
-          <li><a href="/tick/buy/">Buy</a></li>
+          <li><a href="/seer-frights/">Seer Frights</a></li>
+          <li><a href="/seer-warns/">Seer Warns</a></li>
+          <li><a href="/seer-fairies/">Seer Fairies</a></li>
         </ul>
       </div>
     </nav>
   </header>
 
   <!-- HERO -->
-  <div class="hero" style="min-height: 60vh; background: radial-gradient(ellipse at center bottom, rgba(46,230,208,0.08) 0%, transparent 60%), linear-gradient(180deg, #000 0%, #0a0a0a 50%, #0a1414 100%);">
+  <div class="hero hero-tick-bg" style="min-height: 70vh;">
     <div class="hero-content">
       <p class="tagline" style="color: var(--teal-glow); opacity: 0.6;">i4Seer presents</p>
-      <h1 style="font-family: 'Russo One', sans-serif; color: var(--teal-glow); text-shadow: 0 0 20px rgba(46,230,208,0.6), 0 0 60px rgba(46,230,208,0.3); letter-spacing: 6px;">TICK</h1>
-      <p class="subtitle" style="max-width: 650px;">The tech behind the scares. Every Version 3 Seer Frights device runs Tick &mdash; real firmware on real hardware. Wi-Fi, microcontrollers, and code you can read.</p>
-      <div class="btn-group">
-        <a href="/tick/devices/" class="btn btn-glow" style="background: var(--teal-glow); box-shadow: 0 0 15px rgba(46,230,208,0.4);">See the Devices</a>
-        <a href="/tick/buy/" class="btn btn-outline" style="color: var(--teal-glow); border-color: var(--teal-glow);">Get the Hardware</a>
+      <h1 style="font-family: 'Russo One', sans-serif; letter-spacing: 6px; color: var(--teal-glow); text-shadow: 0 0 20px rgba(46, 230, 208, 0.5), 0 0 60px rgba(46, 230, 208, 0.2); -webkit-text-stroke: 0;">SEER TICK</h1>
+      <p class="subtitle" style="max-width: 760px; font-size: 1.4rem; color: var(--text-bright);">Monitor what matters. Anywhere you need it.</p>
+      <p class="subtitle" style="max-width: 720px; font-size: 1.05rem; opacity: 0.75; margin-top: 0.75rem;">SEER Tick delivers rugged, battery-efficient LoRaWAN sensors, private gateways, and a secure cloud console &mdash; built for operators who need focused simplicity, private control, and no vendor lock-in.</p>
+      <div class="hero-cta-row">
+        <a href="https://tick.i4seer.com/login" target="_blank" rel="noopener" class="btn btn-glow" style="background: var(--teal-glow); color: #0a0a0a; box-shadow: 0 0 15px rgba(46, 230, 208,0.4);">Sign In to Portal &rarr;</a>
+        <a href="#where-to-buy" class="btn btn-outline" style="border-color: var(--teal-glow); color: var(--teal-glow);">Where to Buy</a>
+        <a href="mailto:sales@i4seer.com" class="btn btn-outline" style="border-color: var(--teal-glow); color: var(--teal-glow);">Contact Sales</a>
       </div>
     </div>
   </div>
 
-  <!-- BRIDGE FROM SEER FRIGHTS -->
-  <div class="series-banner">
-    <p style="text-align: center; max-width: 700px; margin: 0 auto; font-size: 1.1rem; line-height: 1.8;">
-      <strong style="color: var(--green-glow);">Versions 1 and 2</strong> use LEDs, batteries, and junk drawer parts. They work. They scare people. But they're simple. <strong style="color: var(--teal-glow);">Version 3 is Tick.</strong> A real microcontroller running real firmware. Configure from the setup page. Add Wi-Fi when you're ready. Code you can read and modify.
-    </p>
-  </div>
+  <!-- DEVICE VISUAL -->
+  <section style="padding: 1rem 1rem 0;">
+    <div class="tick-device-visual" aria-hidden="true">
+      <div class="tick-device-row">
+        <div class="tick-device-node tick-node-green">
+          <div class="tick-node-dot"></div>
+          <div class="tick-node-label">Sensor</div>
+          <div class="tick-node-sub">healthy</div>
+        </div>
+        <div class="tick-device-link"></div>
+        <div class="tick-device-node tick-node-blue">
+          <div class="tick-node-dot"></div>
+          <div class="tick-node-label">Sensor</div>
+          <div class="tick-node-sub">transmitting</div>
+        </div>
+        <div class="tick-device-link"></div>
+        <div class="tick-device-node tick-node-gateway">
+          <div class="tick-node-dot"></div>
+          <div class="tick-node-label">Gateway</div>
+          <div class="tick-node-sub">online</div>
+        </div>
+        <div class="tick-device-link"></div>
+        <div class="tick-device-node tick-node-cloud">
+          <div class="tick-node-dot"></div>
+          <div class="tick-node-label">Cloud</div>
+          <div class="tick-node-sub">ingesting</div>
+        </div>
+        <div class="tick-device-link"></div>
+        <div class="tick-device-node tick-node-console">
+          <div class="tick-node-dot"></div>
+          <div class="tick-node-label">Console</div>
+          <div class="tick-node-sub">live</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BADGE ROW -->
+  <section style="padding: 2rem 1rem;">
+    <div class="tick-badges">
+      <div class="tick-badge">LoRaWAN</div>
+      <div class="tick-badge">Private Gateways</div>
+      <div class="tick-badge">Secure Console</div>
+      <div class="tick-badge">Microsoft 365 / Entra ID</div>
+      <div class="tick-badge">Google Workspace</div>
+      <div class="tick-badge">Fleet RBAC</div>
+      <div class="tick-badge">Audit Trail</div>
+      <div class="tick-badge">Open API</div>
+    </div>
+  </section>
 
   <!-- WHAT IS TICK -->
-  <section>
-    <h2 class="section-title" style="color: var(--teal-glow); text-shadow: 0 0 10px rgba(46,230,208,0.4);">What Is Tick?</h2>
-    <p class="section-subtitle">Firmware for tiny devices. Built for the books. Open for everything else.</p>
-
-    <div style="max-width: 750px; margin: 0 auto; text-align: center; line-height: 1.8; font-size: 1.05rem;">
-      <p>Tick is firmware that runs on ESP32 microcontrollers. It handles Wi-Fi, LED patterns, audio playback, scheduling, and sensor data &mdash; everything the Version 3 devices need.</p>
+  <section id="what-is-tick">
+    <h2 class="section-title" style="font-family: 'Russo One', sans-serif; letter-spacing: 2px; color: var(--teal-glow); text-shadow: 0 0 8px rgba(46, 230, 208,0.3);">The Platform</h2>
+    <div style="max-width: 760px; margin: 0 auto; text-align: center; line-height: 1.9; font-size: 1.05rem;">
+      <p>SEER Tick is an integrated monitoring platform for temperature, humidity, and environmental tracking across distributed operations. It combines <strong style="color: var(--text-bright);">rugged LoRaWAN sensors</strong>, <strong style="color: var(--text-bright);">private gateways</strong>, and a <strong style="color: var(--text-bright);">secure cloud console</strong> &mdash; three parts of one system, one vendor, one support line.</p>
       <br>
-      <p>Each device is self-contained. Plug it in, configure it from the setup page, and walk away. No server required. No internet required. Just the device and your phone. Firmware is free on <a href="https://github.com/i4seer/seer-frights-firmware" style="color: var(--teal-glow);">GitHub</a>.</p>
-      <br>
-      <p>Want more control? Connect to the device's AP setup page from a browser. Want time sync across multiple devices? Add Wi-Fi. Each step is optional. Start simple.</p>
+      <p>Built for operators who need focused simplicity instead of bloated commercial suites. Battery life measured in years. Private network control. Role-based access. Full audit. And an open API so your data is always yours.</p>
     </div>
   </section>
 
-  <!-- HOW IT WORKS -->
+  <!-- THREE PRODUCTS -->
   <section>
-    <h2 class="section-title" style="color: var(--teal-glow); text-shadow: 0 0 10px rgba(46,230,208,0.4);">How Every Device Works</h2>
-    <p class="section-subtitle">Same progression. Simple to advanced. Your choice how far to go.</p>
+    <h2 class="section-title" style="font-family: 'Russo One', sans-serif; letter-spacing: 2px; color: var(--teal-glow); text-shadow: 0 0 8px rgba(46, 230, 208,0.3);">Sensors, Gateways, Console</h2>
+    <div style="max-width: 760px; margin: 0 auto 2.5rem; text-align: center; line-height: 1.85; font-size: 1.02rem; opacity: 0.85;">
+      <p>Three integrated parts. One coherent system. Each piece designed to do its job simply, ruggedly, and without surprises.</p>
+    </div>
 
-    <div class="tick-steps">
+    <div style="max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.75rem; padding: 0 1.5rem;">
 
-      <div class="tick-step">
-        <div class="tick-step-num" style="background: var(--teal-glow);">1</div>
-        <h4>Load the Firmware</h4>
-        <p><a href="https://github.com/i4seer/seer-frights-firmware/archive/refs/heads/main.zip" style="color: var(--teal-glow);">Download the firmware zip</a> and extract it. Connect the device via USB-C &mdash; it shows up as a <code style="background: #1a1a1a; padding: 0.15rem 0.4rem; color: var(--teal-glow); font-size: 0.9rem;">CIRCUITPY</code> drive. Copy your device&rsquo;s folder onto the drive. It reboots and starts running in 2 seconds.</p>
+      <div class="tick-product-card">
+        <div class="tick-product-letter">T</div>
+        <h3>Sensors</h3>
+        <p class="tick-product-tagline">Battery-powered LoRaWAN devices</p>
+        <ul class="tick-product-list">
+          <li>Temperature, humidity, battery, RSSI</li>
+          <li>Years of battery life</li>
+          <li>Remote mode &amp; interval control</li>
+          <li>LED diagnostics in the field</li>
+          <li>OTAA join, encrypted uplinks</li>
+        </ul>
       </div>
 
-      <div class="tick-step">
-        <div class="tick-step-num" style="background: var(--teal-glow);">2</div>
-        <h4>AP Setup Page</h4>
-        <p>Hold the button for 3 seconds. The device becomes a Wi-Fi hotspot. Connect with your phone and open <strong style="color: var(--teal-glow);">192.168.4.1</strong>. A setup page loads from the device. Set colors, brightness, patterns, schedules, upload audio &mdash; all from a browser. No app needed.</p>
+      <div class="tick-product-card">
+        <div class="tick-product-letter">G</div>
+        <h3>Gateways</h3>
+        <p class="tick-product-tagline">Private network infrastructure</p>
+        <ul class="tick-product-list">
+          <li>Multi-region LoRaWAN (US915, EU868, AS923)</li>
+          <li>Auto time-sync and health monitoring</li>
+          <li>Remote provisioning and onboarding</li>
+          <li>Private LNS &mdash; your data, your network</li>
+          <li>Swap hardware without touching devices</li>
+        </ul>
       </div>
 
-      <div class="tick-step">
-        <div class="tick-step-num" style="background: var(--teal-glow);">3</div>
-        <h4>Wi-Fi</h4>
-        <p>Optional. Enter your network credentials on the setup page. The device joins Wi-Fi, syncs time via NTP, and becomes controllable from any browser on the network. Multiple devices sync to the same clock.</p>
+      <div class="tick-product-card">
+        <div class="tick-product-letter">C</div>
+        <h3>Console &amp; Portal</h3>
+        <p class="tick-product-tagline">Secure cloud management</p>
+        <ul class="tick-product-list">
+          <li>Fleet organization by site or customer</li>
+          <li>Role-based access: Admin / Editor / Viewer</li>
+          <li>Telemetry history &amp; data exploration</li>
+          <li>Remote downlinks &amp; device control</li>
+          <li>Complete audit log of every action</li>
+        </ul>
+      </div>
+
+      <div class="tick-product-card">
+        <div class="tick-product-letter">API</div>
+        <h3>Open API</h3>
+        <p class="tick-product-tagline">No vendor lock-in</p>
+        <ul class="tick-product-list">
+          <li>24 REST endpoints for every resource</li>
+          <li>Same OAuth &amp; RBAC as the console</li>
+          <li>Integrate with Power BI, Grafana, Slack</li>
+          <li>Export telemetry to your data lake</li>
+          <li>Build your own dashboards and alerts</li>
+        </ul>
       </div>
 
     </div>
   </section>
 
-  <!-- WHAT'S UNDER THE HOOD -->
+  <!-- CONSOLE & AUTH -->
   <section>
-    <h2 class="section-title" style="color: var(--teal-glow); text-shadow: 0 0 10px rgba(46,230,208,0.4);">Under the Hood</h2>
-    <p class="section-subtitle">Real hardware. Real code. All CircuitPython.</p>
+    <h2 class="section-title" style="font-family: 'Russo One', sans-serif; letter-spacing: 2px; color: var(--teal-glow); text-shadow: 0 0 8px rgba(46, 230, 208,0.3);">The Console</h2>
+    <div style="max-width: 760px; margin: 0 auto; text-align: center; line-height: 1.9; font-size: 1.05rem; margin-bottom: 2rem;">
+      <p>The Tick Console is a single-page portal for managing devices, fleets, users, and telemetry. Sign in with your existing corporate identity &mdash; <strong style="color: var(--text-bright);">Microsoft</strong> or <strong style="color: var(--text-bright);">Google</strong> &mdash; no new passwords, no new accounts, no identity silos.</p>
+    </div>
 
-    <div class="characters-grid">
+    <div style="max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; padding: 0 1.5rem;">
 
-      <div class="char-card" style="border-color: #1a3a3a;">
-        <h4 style="color: var(--teal-glow);">ESP32</h4>
-        <p>Dual-core 240 MHz processor. 4&ndash;8MB flash. Wi-Fi built in. Runs CircuitPython &mdash; code you can read and edit. Small enough to hide anywhere.</p>
+      <div class="tick-feat-card">
+        <h4>Microsoft Sign-In</h4>
+        <p>Built on <strong style="color: var(--text-bright);">Azure Static Web Apps</strong>&rsquo; managed identity provider. Works with any Microsoft account &mdash; personal, work, or school. Zero AAD registration required. Your org&rsquo;s existing Microsoft Entra tenants plug in out of the box.</p>
       </div>
 
-      <div class="char-card" style="border-color: #1a3a3a;">
-        <h4 style="color: var(--teal-glow);">CIRCUITPY Drive</h4>
-        <p>Plug in USB and the device shows up as a thumb drive. Settings, audio files, and code all live on the drive. Update by dragging and dropping files.</p>
+      <div class="tick-feat-card">
+        <h4>Google Workspace Sign-In</h4>
+        <p>Register a single OAuth app in Google Cloud Console and Workspace users get one-click access. The same allowlist and role model apply to both providers.</p>
       </div>
 
-      <div class="char-card" style="border-color: #1a3a3a;">
-        <h4 style="color: var(--teal-glow);">WebServer</h4>
-        <p>The AP setup page runs on the ESP32's built-in web server. HTML, CSS, and a form &mdash; all served from the device. No internet required.</p>
+      <div class="tick-feat-card">
+        <h4>Allowlist Enforcement</h4>
+        <p>Only pre-invited emails can sign in. New operators are added by an admin in the Users blade. Revoke access in one click. Every sign-in attempt is logged, successful or not.</p>
       </div>
 
-      <div class="char-card" style="border-color: #1a3a3a;">
-        <h4 style="color: var(--teal-glow);">NeoPixel / I2S</h4>
-        <p>NeoPixel drives the 5&times;5 LED matrix. I2S drives the Atomic Echo Base speaker and mic for Three-Knock. Each device page shows the actual code.</p>
-      </div>
-
-      <div class="char-card" style="border-color: #1a3a3a;">
-        <h4 style="color: var(--teal-glow);">Sensors</h4>
-        <p>MPU6886 accelerometer built into every ATOM Matrix. ES8311 audio codec and MEMS mic on the Atomic Echo Base. Pressure mat input on GPIO for Route 13.</p>
+      <div class="tick-feat-card">
+        <h4>Bootstrap Admin</h4>
+        <p>First-run protection: a configured bootstrap email auto-promotes to admin on its first successful sign-in, so a fresh deployment is never locked out of its own Users table.</p>
       </div>
 
     </div>
   </section>
 
-  <!-- THE PATH -->
+  <!-- FLEETS & RBAC -->
   <section>
-    <h2 class="section-title" style="color: var(--teal-glow); text-shadow: 0 0 10px rgba(46,230,208,0.4);">The Path</h2>
-    <div style="max-width: 700px; margin: 0 auto; text-align: center; line-height: 1.8; font-size: 1.05rem;">
-      <p><strong style="color: var(--green-glow);">Version 1</strong> &mdash; junk drawer parts. LEDs, batteries, tape. You learn circuits.</p>
-      <br>
-      <p><strong style="color: var(--green-glow);">Version 2</strong> &mdash; better parts, better housing. Timers, resistors, switches. You learn soldering.</p>
-      <br>
-      <p><strong style="color: var(--teal-glow);">Version 3 (Tick)</strong> &mdash; a real microcontroller running real firmware. Wi-Fi, setup pages, code. You learn programming.</p>
-      <br>
-      <p style="opacity: 0.4; font-size: 0.9rem;">Same project, three levels. Pick the one that matches where you are.</p>
+    <h2 class="section-title" style="font-family: 'Russo One', sans-serif; letter-spacing: 2px; color: var(--teal-glow); text-shadow: 0 0 8px rgba(46, 230, 208,0.3);">Fleets &amp; Roles</h2>
+    <div style="max-width: 760px; margin: 0 auto; text-align: center; line-height: 1.9; font-size: 1.05rem; margin-bottom: 2rem;">
+      <p>Devices are organized into <strong style="color: var(--text-bright);">fleets</strong>. Operators are granted per-fleet roles. A device can live in multiple fleets. A user can be viewer in one fleet and editor in another. <strong style="color: var(--text-bright);">Editor wins</strong> when roles overlap on a single device.</p>
+    </div>
+
+    <div style="max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; padding: 0 1.5rem;">
+
+      <div class="tick-role-card">
+        <div class="tick-role-label">ADMIN</div>
+        <h4>Full Platform Access</h4>
+        <p>Sees and edits everything. Manages users, fleets, device assignments, and the audit log. Bypasses fleet membership entirely. The role that runs the platform.</p>
+      </div>
+
+      <div class="tick-role-card">
+        <div class="tick-role-label">EDITOR</div>
+        <h4>Per-Fleet Operator</h4>
+        <p>Sees devices in granted fleets. Sends downlinks: mode changes, sleep modes, confirmed delivery toggles, reboots, counter resets. Cannot modify fleet membership or invite users.</p>
+      </div>
+
+      <div class="tick-role-card">
+        <div class="tick-role-label">VIEWER</div>
+        <h4>Per-Fleet Observer</h4>
+        <p>Read-only access to devices in granted fleets. Sees telemetry, device health, configuration history. Perfect for stakeholders and monitoring dashboards that shouldn&rsquo;t touch production.</p>
+      </div>
+
+    </div>
+
+    <div style="max-width: 760px; margin: 2rem auto 0; text-align: center; line-height: 1.8; font-size: 0.95rem; opacity: 0.7;">
+      <p>A non-admin with no fleet grants signs in successfully but sees an empty console until an admin assigns fleets. A device that sits in zero fleets is invisible to non-admins. The model scales from a single operator watching six devices to dozens of operators across hundreds of fleets.</p>
     </div>
   </section>
 
-  <!-- BOTTOM CTA -->
+  <!-- DEVICE & PLATFORM FEATURES -->
   <section>
-    <div style="max-width: 700px; margin: 0 auto; text-align: center;">
-      <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
-        <a href="/tick/swamp-glow/" class="btn btn-glow" style="background: var(--green-glow); box-shadow: 0 0 15px rgba(57,255,20,0.4);">Swamp Glow Device</a>
-        <a href="/tick/three-knock/" class="btn btn-glow" style="background: var(--amber); box-shadow: 0 0 15px rgba(255,179,71,0.4);">Three-Knock Device</a>
-        <a href="/tick/route-13/" class="btn btn-glow" style="background: var(--orange-sodium); box-shadow: 0 0 15px rgba(255,140,66,0.4);">Route 13 Device</a>
-        <a href="/tick/buy/" class="btn btn-outline" style="color: var(--teal-glow); border-color: var(--teal-glow);">Get the Hardware</a>
+    <h2 class="section-title" style="font-family: 'Russo One', sans-serif; letter-spacing: 2px; color: var(--teal-glow); text-shadow: 0 0 8px rgba(46, 230, 208,0.3);">Platform Features</h2>
+    <div style="max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; padding: 0 1.5rem;">
+
+      <div class="tick-feat-card">
+        <h4>LoRaWAN Long Range</h4>
+        <p>Miles of range, sub-gigahertz spectrum, no Wi-Fi required. Runs on public networks (The Things Network) or your own private LNS. Regional parameters for US915, EU868, AS923, and beyond.</p>
       </div>
+
+      <div class="tick-feat-card">
+        <h4>Always-Sleep Firmware</h4>
+        <p>Devices spend 99%+ of their life in deep sleep. Wake, OTAA join, transmit, sleep. Battery budget measured in years, not weeks. Solar-ready for truly unattended deployments.</p>
+      </div>
+
+      <div class="tick-feat-card">
+        <h4>Eight Interval Modes</h4>
+        <p>Normal (15 min), Test (1 min), Active (5 min), Hourly, Quarter (4 hr), Daily, Silent (24 hr), Config (30 min). Switch any device&rsquo;s reporting cadence remotely from the console.</p>
+      </div>
+
+      <div class="tick-feat-card">
+        <h4>Config Self-Reporting</h4>
+        <p>Every boot, every device reports its own firmware version, mode, and settings on the config port. The cloud always knows what&rsquo;s actually deployed &mdash; not what it <em>thinks</em> is deployed.</p>
+      </div>
+
+      <div class="tick-feat-card">
+        <h4>Unified Downlink Protocol</h4>
+        <p>Single downlink port, compact one-byte command table. Mode change, reboot, counter reset, confirmed-delivery toggle, config report request. <code>/down/replace</code> semantics &mdash; only the last command wins.</p>
+      </div>
+
+      <div class="tick-feat-card">
+        <h4>LED Diagnostics</h4>
+        <p>White / yellow / green / blue / red status LEDs. One glance tells you: unprovisioned, joining, healthy, transmitting, or errored. Field-serviceable without a laptop.</p>
+      </div>
+
+      <div class="tick-feat-card">
+        <h4>USB Provisioning</h4>
+        <p>Flash firmware and write device credentials over USB with zero manual config-file editing. Devices ship unprovisioned and get their identity burned in at deploy time.</p>
+      </div>
+
+      <div class="tick-feat-card">
+        <h4>Gateway Management</h4>
+        <p>Onboard, monitor, and decommission LoRaWAN gateways from the console. Basics Station over port 8887. Multi-gateway, multi-site ready &mdash; swap hardware without touching the devices.</p>
+      </div>
+
+      <div class="tick-feat-card">
+        <h4>Full Audit Trail</h4>
+        <p>Every downlink, every mode change, every fleet assignment, every user invitation, every device state transition. Timestamped, identity-attributed, filterable. Compliance and forensics, solved.</p>
+      </div>
+
+      <div class="tick-feat-card">
+        <h4>Ingest Webhook Auth</h4>
+        <p>TTI webhooks authenticate with a shared-secret header against the ingest endpoint. Webhook identity is separate from operator identity in the audit log. Forge-resistant, replay-resistant, fast.</p>
+      </div>
+
+      <div class="tick-feat-card">
+        <h4>REST API</h4>
+        <p>24 first-party endpoints for devices, fleets, users, audit, and telemetry. Same OAuth and role model as the console. Build your own integrations, dashboards, or alerting pipelines.</p>
+      </div>
+
+      <div class="tick-feat-card">
+        <h4>Runs on Free Tier</h4>
+        <p>Azure Static Web App (free). Azure Table Storage (pennies). The Things Network (free community edition) or TTI Cloud (paid tenant). The entire platform fits in a shoebox budget.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- DEPLOYMENT / CASE STUDY -->
+  <section>
+    <h2 class="section-title" style="font-family: 'Russo One', sans-serif; letter-spacing: 2px; color: var(--teal-glow); text-shadow: 0 0 8px rgba(46, 230, 208,0.3);">Built for the Field</h2>
+    <div style="max-width: 900px; margin: 0 auto; padding: 0 1.5rem;">
+
+      <div class="tick-deployment">
+        <div class="tick-deployment-stat">
+          <div class="tick-stat-number">Years</div>
+          <div class="tick-stat-label">Battery life per sensor</div>
+        </div>
+        <div class="tick-deployment-stat">
+          <div class="tick-stat-number">Miles</div>
+          <div class="tick-stat-label">LoRaWAN range from gateway</div>
+        </div>
+        <div class="tick-deployment-stat">
+          <div class="tick-stat-number">Minutes</div>
+          <div class="tick-stat-label">To onboard a new device</div>
+        </div>
+        <div class="tick-deployment-stat">
+          <div class="tick-stat-number">24/7</div>
+          <div class="tick-stat-label">Autonomous operation</div>
+        </div>
+      </div>
+
+      <div style="max-width: 720px; margin: 2.5rem auto 0; text-align: center; line-height: 1.85; font-size: 1rem; opacity: 0.85;">
+        <p>SEER Tick is designed for operators monitoring cold chain, facilities, remote assets, environmental conditions, and anything else where coverage matters more than throughput. Private network. Private data. No cellular contracts. No surprise bills.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHERE TO BUY / PRICING -->
+  <section id="where-to-buy">
+    <h2 class="section-title" style="font-family: 'Russo One', sans-serif; letter-spacing: 2px; color: var(--teal-glow); text-shadow: 0 0 8px rgba(46, 230, 208,0.3);">Where to Buy</h2>
+    <div style="max-width: 760px; margin: 0 auto 2rem; text-align: center; line-height: 1.9; font-size: 1.05rem;">
+      <p>SEER Tick is sold directly. Every deployment is different &mdash; number of sensors, site layout, gateway coverage, integration requirements &mdash; so we build quotes around what you actually need instead of shoving everyone through a self-serve checkout.</p>
+    </div>
+
+    <div style="max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; padding: 0 1.5rem;">
+
+      <div class="tick-feat-card">
+        <h4>Pilot Deployments</h4>
+        <p>Start with a small fleet and a single gateway. Typical pilot: a handful of sensors covering one site. Gets you from zero to live telemetry in under a week.</p>
+      </div>
+
+      <div class="tick-feat-card">
+        <h4>Production Rollouts</h4>
+        <p>Scale to dozens or hundreds of devices across multiple sites. Multi-gateway, multi-fleet, and delegated per-site administration built in from day one.</p>
+      </div>
+
+      <div class="tick-feat-card">
+        <h4>Custom Integrations</h4>
+        <p>Already have Power BI, Grafana, Slack, or a data warehouse? The open API plugs in without changing your existing stack. We&rsquo;ll help you wire it up.</p>
+      </div>
+
+    </div>
+
+    <div style="text-align: center; padding: 2.5rem 1rem 1rem;">
+      <a href="mailto:sales@i4seer.com?subject=SEER%20Tick%20Quote%20Request" class="btn btn-glow" style="background: var(--teal-glow); color: #0a0a0a; box-shadow: 0 0 20px rgba(46, 230, 208,0.4); font-size: 1.05rem; padding: 0.9rem 2.25rem;">Request a Quote &rarr;</a>
+      <p style="margin-top: 1rem; opacity: 0.6; font-size: 0.9rem;">
+        Sales: <a href="mailto:sales@i4seer.com" style="color: var(--teal-glow);">sales@i4seer.com</a>
+        &nbsp;&middot;&nbsp;
+        Support: <a href="mailto:support@i4seer.com" style="color: var(--teal-glow);">support@i4seer.com</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ABOUT i4SEER -->
+  <section>
+    <h2 class="section-title" style="font-family: 'Russo One', sans-serif; letter-spacing: 2px; color: var(--teal-glow); text-shadow: 0 0 8px rgba(46, 230, 208,0.3);">Who Builds This</h2>
+    <div style="max-width: 720px; margin: 0 auto; text-align: center; line-height: 1.9; font-size: 1.05rem;">
+      <p>SEER Tick is built by <a href="/" style="color: var(--teal-glow); text-decoration: none;">Institute for Seer LLC</a>, an independent publisher and technology studio. We also publish the <a href="/seer-frights/" style="color: var(--green-glow); text-decoration: none;">Seer Frights</a>, <a href="/seer-warns/" style="color: var(--sepia);">Seer Warns</a>, and <a href="/seer-fairies/" style="color: var(--fae-gold);">Seer Fairies</a> horror fiction series. The same instinct drives both halves: pay attention to what&rsquo;s actually happening.</p>
+      <br>
+      <p style="opacity: 0.4; font-size: 0.9rem;">Stories that watch back. Devices that think ahead.</p>
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer>
-    <div class="footer-logo" style="font-family: 'Russo One', sans-serif; color: var(--teal-glow); font-size: 1.2rem; letter-spacing: 3px; text-shadow: 0 0 10px rgba(46,230,208,0.3);">TICK</div>
+    <div class="footer-logo" style="font-family: 'Russo One', sans-serif; color: var(--teal-glow); letter-spacing: 3px;">TICK</div>
     <p>&copy; 2026 Institute for Seer LLC. All rights reserved.</p>
-    <p style="opacity: 0.3;">Telemetry by i4Seer</p>
     <div class="footer-links">
       <a href="/">i4Seer</a>
-      <a href="/tick/devices/">Devices</a>
-      <a href="/tick/buy/">Buy</a>
+      <a href="/about/">About</a>
+      <a href="/press/">Press Kit</a>
+      <a href="/tick/">Tick</a>
+      <a href="https://tick.i4seer.com" target="_blank" rel="noopener">Dashboard</a>
       <a href="/seer-frights/">Seer Frights</a>
+      <a href="/seer-warns/">Seer Warns</a>
+      <a href="/seer-fairies/">Seer Fairies</a>
       <a href="/privacy/">Privacy Policy</a>
       <a href="/terms/">Terms of Use</a>
-      <a href="/build-safety/">Build Safety</a>
-      <a href="/affiliate-disclosure/">Affiliate Disclosure</a>
       <a href="/cookie-policy/">Cookie Policy</a>
       <a href="/do-not-sell/">Do Not Sell My Info</a>
     </div>
 
     <p style="opacity: 0.4; font-size: 0.75rem; margin-top: 1rem; max-width: 800px; margin-left: auto; margin-right: auto;">
-      Seer Frights&reg;, Tick&trade;, and i4Seer&trade; are trademarks of Institute for Seer LLC.
-      All build instructions are provided for educational purposes only.
-      Adult supervision is required for electronics projects.
-      Institute for Seer LLC is not responsible for misuse of third-party components.
+      Tick&trade;, Seer Frights&reg;, Seer Warns&trade;, Seer Fairies&trade;, and i4Seer&trade; are trademarks of Institute for Seer LLC.
     </p>
 
     <p style="opacity: 0.3; font-size: 0.7rem; margin-top: 0.5rem;">
