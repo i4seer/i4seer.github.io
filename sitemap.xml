@@ -51,6 +51,10 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.i4seer.com/seer-frights/books/book11/</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.i4seer.com/seer-frights/buy/</loc>
     <priority>0.7</priority>
   </url>
@@ -86,6 +90,14 @@
     <loc>https://www.i4seer.com/seer-warns/books/book1/</loc>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://www.i4seer.com/seer-warns/books/book2/</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.i4seer.com/seer-warns/books/book5/</loc>
+    <priority>0.7</priority>
+  </url>
 
   <!-- Seer Fairies -->
   <url>
@@ -104,6 +116,10 @@
   </url>
   <url>
     <loc>https://www.i4seer.com/seer-fairies/books/book4/</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.i4seer.com/seer-fairies/books/book5/</loc>
     <priority>0.7</priority>
   </url>
 

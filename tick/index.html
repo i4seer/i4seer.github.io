@@ -15,12 +15,12 @@
   <meta property="og:site_name" content="i4Seer">
   <meta property="og:url" content="https://www.i4seer.com/tick/">
   <meta property="og:title" content="SEER Tick — LoRaWAN IoT Monitoring Platform">
-  <meta property="og:description" content="Monitor what matters. Anywhere you need it. Rugged LoRaWAN sensors, private gateways, secure cloud console, and email and Teams alerts. Microsoft and Google sign-in, fleet RBAC, full audit.">
+  <meta property="og:description" content="Monitor what matters. Anywhere you need it. Rugged LoRaWAN sensors, private gateways, secure cloud console, email and Teams alerts, and bearer tokens for Grafana and Power BI. Microsoft and Google sign-in, fleet RBAC, full audit with CSV export.">
   <meta property="og:image" content="https://www.i4seer.com/images/tick-product.png">
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="SEER Tick — LoRaWAN IoT Monitoring Platform">
-  <meta name="twitter:description" content="Monitor what matters. Anywhere you need it. Rugged LoRaWAN sensors, private gateways, secure cloud console, and email and Teams alerts. Microsoft and Google sign-in, fleet RBAC, full audit.">
+  <meta name="twitter:description" content="Monitor what matters. Anywhere you need it. Rugged LoRaWAN sensors, private gateways, secure cloud console, email and Teams alerts, and bearer tokens for Grafana and Power BI. Microsoft and Google sign-in, fleet RBAC, full audit with CSV export.">
   <meta name="twitter:image" content="https://www.i4seer.com/images/tick-product.png">
   <!-- Canonical -->
   <link rel="canonical" href="https://www.i4seer.com/tick/">
@@ -51,7 +51,7 @@
       <p class="tagline" style="color: var(--teal-glow); opacity: 0.6;">i4Seer presents</p>
       <h1 style="font-family: 'Russo One', sans-serif; letter-spacing: 6px; color: var(--teal-glow); text-shadow: 0 0 20px rgba(46, 230, 208, 0.5), 0 0 60px rgba(46, 230, 208, 0.2); -webkit-text-stroke: 0;">SEER TICK</h1>
       <p class="subtitle" style="max-width: 760px; font-size: 1.4rem; color: var(--text-bright);">Monitor what matters. Anywhere you need it.</p>
-      <p class="subtitle" style="max-width: 720px; font-size: 1.05rem; opacity: 0.75; margin-top: 0.75rem;">SEER Tick delivers rugged, battery-efficient LoRaWAN sensors, private gateways, a secure cloud console, and email &amp; Teams alerts &mdash; built for operators who need focused simplicity, private control, and no vendor lock-in.</p>
+      <p class="subtitle" style="max-width: 720px; font-size: 1.05rem; opacity: 0.75; margin-top: 0.75rem;">SEER Tick delivers rugged, battery-efficient LoRaWAN sensors, private gateways, a secure cloud console, email &amp; Teams alerts, and bearer tokens for Grafana and Power BI &mdash; built for operators who need focused simplicity, private control, and no vendor lock-in.</p>
       <div class="hero-cta-row">
         <a href="https://tick.i4seer.com" target="_blank" rel="noopener" class="btn btn-glow" style="background: var(--teal-glow); color: #0a0a0a; box-shadow: 0 0 15px rgba(46, 230, 208,0.4);">Visit the Portal &rarr;</a>
         <a href="#where-to-buy" class="btn btn-outline" style="border-color: var(--teal-glow); color: var(--teal-glow);">Where to Buy</a>
@@ -110,8 +110,11 @@
       <div class="tick-badge">Google Workspace</div>
       <div class="tick-badge">Fleet RBAC</div>
       <div class="tick-badge">Email &amp; Teams Alerts</div>
-      <div class="tick-badge">Audit Trail</div>
-      <div class="tick-badge">Open API</div>
+      <div class="tick-badge">Quiet Hours</div>
+      <div class="tick-badge">API Tokens</div>
+      <div class="tick-badge">Rate-Limited Ingest</div>
+      <div class="tick-badge">Audit Trail + Export</div>
+      <div class="tick-badge">Grafana &amp; Power BI Ready</div>
     </div>
   </section>
 
@@ -121,7 +124,7 @@
     <div style="max-width: 760px; margin: 0 auto; text-align: center; line-height: 1.9; font-size: 1.05rem;">
       <p>SEER Tick is an integrated monitoring platform for temperature, humidity, and environmental tracking across distributed operations. It combines <strong style="color: var(--text-bright);">rugged LoRaWAN sensors</strong>, <strong style="color: var(--text-bright);">private gateways</strong>, a <strong style="color: var(--text-bright);">secure cloud console</strong>, and <strong style="color: var(--text-bright);">email &amp; Teams alerts</strong> &mdash; one coherent system, one vendor, one support line.</p>
       <br>
-      <p>Built for operators who need focused simplicity instead of bloated commercial suites. Battery life measured in years. Private network control. Role-based access. Alerts when thresholds are crossed or devices go silent. Full audit. And an open API so your data is always yours.</p>
+      <p>Built for operators who need focused simplicity instead of bloated commercial suites. Battery life measured in years. Private network control. Role-based access. Alerts when thresholds are crossed or devices go silent. Rate-limited ingest that absorbs bad-actor floods. Bearer tokens for Grafana, Power BI, and your own scripts. Audit trail with configurable retention and CSV export. And an open API so your data is always yours.</p>
     </div>
   </section>
 
@@ -183,14 +186,14 @@
       </div>
 
       <div class="tick-product-card">
-        <h3>Open API</h3>
+        <h3>Open API &amp; Tokens</h3>
         <p class="tick-product-tagline">No vendor lock-in</p>
         <ul class="tick-product-list">
           <li>REST endpoints for every resource</li>
-          <li>Same OAuth &amp; RBAC as the console</li>
-          <li>Integrate with Power BI, Grafana, Slack</li>
-          <li>Export telemetry to your data lake</li>
-          <li>Build your own dashboards and reports</li>
+          <li>Bearer tokens for Grafana, Power BI, CI</li>
+          <li>Three scopes: owner / fleet / global-readonly</li>
+          <li>Sha256-hashed, optional expiry, one-click revoke</li>
+          <li>Rate-limited ingest (<code>/api/ingest</code>)</li>
         </ul>
       </div>
 
@@ -321,6 +324,16 @@
       <div class="tick-feat-card">
         <h4>Event History</h4>
         <p>Every firing is written to <strong style="color: var(--text-bright);">AlertEvents</strong> with identity, delivery status, and any errors. Full searchable history for compliance, forensics, and post-incident review.</p>
+      </div>
+
+      <div class="tick-feat-card">
+        <h4>Quiet Hours</h4>
+        <p>Per-rule <code>HH:MM&ndash;HH:MM</code> windows (UTC). Suppress email and Teams delivery during off-hours &mdash; the rule still fires and the dashboard still shows the alarm, but nobody gets paged. Crosses-midnight aware. Night-shift support has never been easier.</p>
+      </div>
+
+      <div class="tick-feat-card">
+        <h4>Test-Fire</h4>
+        <p>One-click synthetic firing through each rule&rsquo;s configured channels. Validates email, Teams webhooks, routing, and payload formatting without waiting for a real threshold breach. Bypasses rate limits and cooldowns; writes a <code>kind=test</code> row to the event history.</p>
       </div>
 
     </div>
@@ -482,7 +495,57 @@
           </div>
         </div>
         <h4>6. Audit Log</h4>
-        <p>Every downlink, every mode change, every user action, every alert firing. Searchable, filterable, exportable. Compliance and post-incident review, solved.</p>
+        <p>Every downlink, every mode change, every user action, every alert firing. Searchable, filterable, CSV-exportable. Configurable retention with automatic pruning.</p>
+      </div>
+
+      <!-- Gateway health -->
+      <div class="tick-tour-item">
+        <div class="tick-screenshot">
+          <img src="/images/tick-tour-gateways.png"
+               alt="SEER Tick gateway health"
+               onerror="this.parentElement.classList.add('tick-screenshot-placeholder'); this.style.display='none';">
+          <div class="tick-screenshot-fallback">
+            <div class="tick-screenshot-chrome">
+              <span class="tick-dot tick-dot-red"></span>
+              <span class="tick-dot tick-dot-yellow"></span>
+              <span class="tick-dot tick-dot-green"></span>
+              <span class="tick-chrome-url">tick.i4seer.com/gateways</span>
+            </div>
+            <div class="tick-screenshot-body">
+              <div class="tick-screenshot-icon">&#128225;</div>
+              <div class="tick-screenshot-label">Gateway Health</div>
+              <div class="tick-screenshot-sub">Healthy / Stale / Offline &middot; Uplink rate</div>
+              <div class="tick-screenshot-hint"><code>/images/tick-tour-gateways.png</code></div>
+            </div>
+          </div>
+        </div>
+        <h4>7. Gateway Health</h4>
+        <p>Summary row of healthy / stale / offline counts plus lifetime traffic totals and uplink rate. Per-gateway rows sorted by staleness so the sick ones float to the top. Read-for-all.</p>
+      </div>
+
+      <!-- API Tokens -->
+      <div class="tick-tour-item">
+        <div class="tick-screenshot">
+          <img src="/images/tick-tour-tokens.png"
+               alt="SEER Tick API tokens management"
+               onerror="this.parentElement.classList.add('tick-screenshot-placeholder'); this.style.display='none';">
+          <div class="tick-screenshot-fallback">
+            <div class="tick-screenshot-chrome">
+              <span class="tick-dot tick-dot-red"></span>
+              <span class="tick-dot tick-dot-yellow"></span>
+              <span class="tick-dot tick-dot-green"></span>
+              <span class="tick-chrome-url">tick.i4seer.com/tokens</span>
+            </div>
+            <div class="tick-screenshot-body">
+              <div class="tick-screenshot-icon">&#128273;</div>
+              <div class="tick-screenshot-label">API Tokens</div>
+              <div class="tick-screenshot-sub">Owner &middot; Fleet-scoped &middot; Read-only global</div>
+              <div class="tick-screenshot-hint"><code>/images/tick-tour-tokens.png</code></div>
+            </div>
+          </div>
+        </div>
+        <h4>8. API Tokens</h4>
+        <p>Bearer tokens for external systems &mdash; Grafana dashboards, Power BI reports, CI jobs, your own scripts. Three scopes, optional expiry, sha256-hashed storage. Shown once at creation, revocable any time.</p>
       </div>
 
     </div>
@@ -596,13 +659,23 @@
       </div>
 
       <div class="tick-feat-card">
-        <h4>Gateway Management</h4>
-        <p>Onboard, monitor, and decommission LoRaWAN gateways from the console. Basics Station over port 8887. Multi-gateway, multi-site ready &mdash; swap hardware without touching the devices.</p>
+        <h4>Gateway Health Monitoring</h4>
+        <p>Dedicated health page with Healthy / Stale / Offline summary, lifetime traffic totals, uplink rate, and staleness-sorted per-gateway rows. Swap hardware without touching devices. Read-for-all so operators can triage coverage without admin access.</p>
       </div>
 
       <div class="tick-feat-card">
-        <h4>Full Audit Trail</h4>
-        <p>Every downlink, every mode change, every fleet assignment, every user invitation, every device state transition. Timestamped, identity-attributed, filterable. Compliance and forensics, solved.</p>
+        <h4>Full Audit Trail + Export</h4>
+        <p>Every downlink, every mode change, every fleet assignment, every user action, every token issued, every alert firing. Timestamped, identity-attributed, filterable, CSV-exportable. Configurable retention with automatic pruning. Compliance and forensics, solved.</p>
+      </div>
+
+      <div class="tick-feat-card">
+        <h4>Rate-Limited Ingest</h4>
+        <p>Three-tier token bucket on <code>/api/ingest</code> &mdash; per webhook key, per source IP, per device. Absorbs misconfigured devices, replay loops, and leaked-secret floods. Legitimate TTN bursts pass through; abusive traffic gets a <code>429</code> with <code>Retry-After</code>. Audit-logged.</p>
+      </div>
+
+      <div class="tick-feat-card">
+        <h4>API Tokens</h4>
+        <p>Bearer tokens for <strong style="color: var(--text-bright);">Grafana</strong>, <strong style="color: var(--text-bright);">Power BI</strong>, CI jobs, and custom dashboards. Three scopes: owner (inherits admin / fleet rights), fleet-scoped read-only, or read-only-global. Expiry dates, sha256-hashed storage, one-click revoke.</p>
       </div>
 
       <div class="tick-feat-card">
@@ -612,7 +685,7 @@
 
       <div class="tick-feat-card">
         <h4>REST API</h4>
-        <p>24 first-party endpoints for devices, fleets, users, audit, and telemetry. Same OAuth and role model as the console. Build your own integrations, dashboards, or alerting pipelines.</p>
+        <p>First-party endpoints for devices, fleets, users, audit, telemetry, alerts, and tokens. Two auth paths: SWA session cookie (for the browser console) or <strong style="color: var(--text-bright);">bearer token</strong> (for scripts and integrations). Same OAuth and RBAC model applies to both.</p>
       </div>
 
       <div class="tick-feat-card">
