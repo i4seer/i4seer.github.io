@@ -2760,3 +2760,218 @@ body.fairies-page .char-card h4 {
   line-height: 1.3;
 }
 
+
+/* ========== /books/ aggregate series cards ========== */
+
+.books-series-card {
+  display: block;
+  text-decoration: none;
+  color: var(--text-main);
+  background: var(--bg-card);
+  border: 2px solid var(--bg-card-hover);
+  border-radius: 10px;
+  padding: 2rem 1.75rem;
+  transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+
+.books-series-card:hover {
+  transform: translateY(-4px);
+}
+
+.books-series-eyebrow {
+  font-family: 'Russo One', sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  opacity: 0.65;
+  margin-bottom: 0.75rem;
+}
+
+.books-series-card h3 {
+  font-family: 'Russo One', sans-serif;
+  letter-spacing: 4px;
+  font-size: 1.6rem;
+  margin-bottom: 0.4rem;
+}
+
+.books-series-tagline {
+  font-style: italic;
+  opacity: 0.7;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.books-series-desc {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  opacity: 0.88;
+  margin-bottom: 1.25rem;
+  min-height: 4.8rem;
+}
+
+.books-series-covers {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+  align-items: flex-end;
+}
+
+.books-series-covers img {
+  width: 60px;
+  height: auto;
+  border-radius: 3px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5);
+  transition: transform 0.2s;
+}
+
+.books-series-card:hover .books-series-covers img {
+  transform: translateY(-2px);
+}
+
+.books-series-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.books-series-arrow {
+  font-family: 'Russo One', sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+/* Per-series accents */
+.books-series-frights {
+  border-color: rgba(42, 204, 16, 0.2);
+}
+.books-series-frights:hover {
+  border-color: var(--green-glow);
+  box-shadow: 0 0 30px rgba(42, 204, 16, 0.18);
+}
+.books-series-frights h3,
+.books-series-frights .books-series-arrow,
+.books-series-frights .books-series-eyebrow {
+  color: var(--green-glow);
+  text-shadow: 0 0 6px rgba(42, 204, 16, 0.25);
+}
+
+.books-series-warns {
+  border-color: rgba(196, 168, 130, 0.2);
+}
+.books-series-warns:hover {
+  border-color: var(--sepia);
+  box-shadow: 0 0 30px rgba(196, 168, 130, 0.18);
+}
+.books-series-warns h3,
+.books-series-warns .books-series-arrow,
+.books-series-warns .books-series-eyebrow {
+  color: var(--sepia);
+  text-shadow: 0 0 6px rgba(196, 168, 130, 0.25);
+}
+
+.books-series-fairies {
+  border-color: rgba(232, 184, 74, 0.2);
+}
+.books-series-fairies:hover {
+  border-color: var(--fae-gold);
+  box-shadow: 0 0 30px rgba(232, 184, 74, 0.18);
+}
+.books-series-fairies h3,
+.books-series-fairies .books-series-arrow,
+.books-series-fairies .books-series-eyebrow {
+  color: var(--fae-gold);
+  text-shadow: 0 0 6px rgba(232, 184, 74, 0.25);
+}
+
+/* ========== /seer-frights/build/ project cards (simple icon + name + button) ========== */
+
+.build-grid {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  padding: 0 1.5rem;
+}
+
+.build-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  color: var(--text-main);
+  background: var(--bg-card);
+  border: 2px solid var(--bg-card-hover);
+  border-radius: 10px;
+  padding: 2rem 1.5rem;
+  transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+
+.build-card:hover {
+  transform: translateY(-4px);
+}
+
+.build-icon {
+  font-size: 3.5rem;
+  line-height: 1;
+  margin-bottom: 1rem;
+  filter: drop-shadow(0 0 12px currentColor);
+}
+
+.build-card h3 {
+  font-family: 'Russo One', sans-serif;
+  letter-spacing: 2px;
+  font-size: 1.25rem;
+  margin-bottom: 0.6rem;
+}
+
+.build-card p {
+  font-size: 0.92rem;
+  line-height: 1.55;
+  opacity: 0.78;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.build-cta {
+  font-family: 'Russo One', sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 0.55rem 1.5rem;
+  border-radius: 4px;
+  border: 1px solid currentColor;
+  transition: all 0.2s;
+}
+
+.build-card:hover .build-cta {
+  background: currentColor;
+}
+
+.build-card:hover .build-cta {
+  color: #0a0a0a;
+}
+
+.build-card-green { border-color: rgba(42, 204, 16, 0.25); }
+.build-card-green .build-icon,
+.build-card-green h3,
+.build-card-green .build-cta { color: var(--green-glow); }
+.build-card-green:hover { border-color: var(--green-glow); box-shadow: 0 0 25px rgba(42, 204, 16, 0.18); }
+
+.build-card-orange { border-color: rgba(255, 140, 66, 0.25); }
+.build-card-orange .build-icon,
+.build-card-orange h3,
+.build-card-orange .build-cta { color: var(--orange-sodium); }
+.build-card-orange:hover { border-color: var(--orange-sodium); box-shadow: 0 0 25px rgba(255, 140, 66, 0.18); }
+
+.build-card-amber { border-color: rgba(255, 179, 71, 0.25); }
+.build-card-amber .build-icon,
+.build-card-amber h3,
+.build-card-amber .build-cta { color: var(--amber); }
+.build-card-amber:hover { border-color: var(--amber); box-shadow: 0 0 25px rgba(255, 179, 71, 0.18); }

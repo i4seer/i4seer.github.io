@@ -36,10 +36,9 @@
         <a href="/tick/" class="logo" style="font-family: 'Russo One', sans-serif; letter-spacing: 4px; color: var(--teal-glow); text-shadow: 0 0 10px rgba(46, 230, 208, 0.4), 0 0 25px rgba(46, 230, 208, 0.2);">TICK<span style="color: var(--teal-glow); opacity: 0.5;">Telemetry by i4Seer</span></a>
         <ul>
           <li><a href="/">i4Seer</a></li>
-          <li><a href="/tick/" class="active" style="color: var(--teal-glow);">Tick</a></li>
-          <li><a href="/seer-frights/">Seer Frights</a></li>
-          <li><a href="/seer-warns/">Seer Warns</a></li>
-          <li><a href="/seer-fairies/">Seer Fairies</a></li>
+          <li><a href="/books/">Books</a></li>
+          <li><a href="/tick/" class="active" style="color: var(--teal-glow);">Tech</a></li>
+          <li><a href="/about/">About</a></li>
         </ul>
       </div>
     </nav>
@@ -52,53 +51,52 @@
       <h1 style="font-family: 'Russo One', sans-serif; letter-spacing: 6px; color: var(--teal-glow); text-shadow: 0 0 20px rgba(46, 230, 208, 0.5), 0 0 60px rgba(46, 230, 208, 0.2); -webkit-text-stroke: 0;">SEER TICK</h1>
       <p class="subtitle" style="max-width: 760px; font-size: 1.4rem; color: var(--text-bright);">Monitor what matters. Anywhere you need it.</p>
       <p class="subtitle" style="max-width: 720px; font-size: 1.05rem; opacity: 0.75; margin-top: 0.75rem;">SEER Tick delivers rugged, battery-efficient LoRaWAN sensors, private gateways, a secure cloud console, email &amp; Teams alerts, and bearer tokens for Grafana and Power BI &mdash; built for operators who need focused simplicity, private control, and no vendor lock-in.</p>
+
+      <!-- DEVICE VISUAL (moved into hero) -->
+      <div class="tick-device-visual" aria-hidden="true" style="margin: 2rem auto;">
+        <div class="tick-device-row">
+          <div class="tick-device-node tick-node-green">
+            <div class="tick-node-dot"></div>
+            <div class="tick-node-label">Sensor</div>
+            <div class="tick-node-sub">healthy</div>
+          </div>
+          <div class="tick-device-link"></div>
+          <div class="tick-device-node tick-node-blue">
+            <div class="tick-node-dot"></div>
+            <div class="tick-node-label">Sensor</div>
+            <div class="tick-node-sub">transmitting</div>
+          </div>
+          <div class="tick-device-link"></div>
+          <div class="tick-device-node tick-node-gateway">
+            <div class="tick-node-dot"></div>
+            <div class="tick-node-label">Gateway</div>
+            <div class="tick-node-sub">online</div>
+          </div>
+          <div class="tick-device-link"></div>
+          <div class="tick-device-node tick-node-cloud">
+            <div class="tick-node-dot"></div>
+            <div class="tick-node-label">Cloud</div>
+            <div class="tick-node-sub">ingesting</div>
+          </div>
+          <div class="tick-device-link"></div>
+          <div class="tick-device-node tick-node-console">
+            <div class="tick-node-dot"></div>
+            <div class="tick-node-label">Console</div>
+            <div class="tick-node-sub">live</div>
+          </div>
+        </div>
+      </div>
+
       <div class="hero-cta-row">
-        <a href="https://tick.i4seer.com" target="_blank" rel="noopener" class="btn btn-glow" style="background: var(--teal-glow); color: #0a0a0a; box-shadow: 0 0 15px rgba(46, 230, 208,0.4);">Visit the Portal &rarr;</a>
+        <a href="https://tick.i4seer.com/demo/" target="_blank" rel="noopener" class="btn btn-glow" style="background: var(--teal-glow); color: #0a0a0a; box-shadow: 0 0 15px rgba(46, 230, 208,0.4);">See the Live Demo &rarr;</a>
         <a href="#where-to-buy" class="btn btn-outline" style="border-color: var(--teal-glow); color: var(--teal-glow);">Where to Buy</a>
         <a href="mailto:sales@i4seer.com" class="btn btn-outline" style="border-color: var(--teal-glow); color: var(--teal-glow);">Contact Sales</a>
       </div>
       <p style="margin-top: 1.25rem; font-size: 0.85rem; opacity: 0.65;">
-        Already a customer? <a href="https://tick.i4seer.com/login" target="_blank" rel="noopener" style="color: var(--teal-glow); text-decoration: none; border-bottom: 1px dotted var(--teal-glow);">Sign in &rarr;</a>
+        Already a customer? <a href="https://tick.i4seer.com/login" target="_blank" rel="noopener" style="color: var(--teal-glow); text-decoration: none; border-bottom: 1px dotted var(--teal-glow);">Sign in to the portal &rarr;</a>
       </p>
     </div>
   </div>
-
-  <!-- DEVICE VISUAL -->
-  <section style="padding: 1rem 1rem 0;">
-    <div class="tick-device-visual" aria-hidden="true">
-      <div class="tick-device-row">
-        <div class="tick-device-node tick-node-green">
-          <div class="tick-node-dot"></div>
-          <div class="tick-node-label">Sensor</div>
-          <div class="tick-node-sub">healthy</div>
-        </div>
-        <div class="tick-device-link"></div>
-        <div class="tick-device-node tick-node-blue">
-          <div class="tick-node-dot"></div>
-          <div class="tick-node-label">Sensor</div>
-          <div class="tick-node-sub">transmitting</div>
-        </div>
-        <div class="tick-device-link"></div>
-        <div class="tick-device-node tick-node-gateway">
-          <div class="tick-node-dot"></div>
-          <div class="tick-node-label">Gateway</div>
-          <div class="tick-node-sub">online</div>
-        </div>
-        <div class="tick-device-link"></div>
-        <div class="tick-device-node tick-node-cloud">
-          <div class="tick-node-dot"></div>
-          <div class="tick-node-label">Cloud</div>
-          <div class="tick-node-sub">ingesting</div>
-        </div>
-        <div class="tick-device-link"></div>
-        <div class="tick-device-node tick-node-console">
-          <div class="tick-node-dot"></div>
-          <div class="tick-node-label">Console</div>
-          <div class="tick-node-sub">live</div>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- BADGE ROW -->
   <section style="padding: 2rem 1rem;">
@@ -205,6 +203,12 @@
     <h2 class="section-title" style="font-family: 'Russo One', sans-serif; letter-spacing: 2px; color: var(--teal-glow); text-shadow: 0 0 8px rgba(46, 230, 208,0.3);">The Console</h2>
     <div style="max-width: 760px; margin: 0 auto; text-align: center; line-height: 1.9; font-size: 1.05rem; margin-bottom: 2rem;">
       <p>The Tick Console is a single-page portal for managing devices, fleets, users, and telemetry. Sign in with your existing corporate identity &mdash; <strong style="color: var(--text-bright);">Microsoft</strong> or <strong style="color: var(--text-bright);">Google</strong> &mdash; no new passwords, no new accounts, no identity silos.</p>
+      <p style="margin-top: 1rem;">Forget mocked-up screenshots. <strong style="color: var(--text-bright);">Open the live demo.</strong> Real devices, real telemetry, real alert events &mdash; the same console our customers use, with one fleet open to the public for read-only viewing.</p>
+    </div>
+
+    <div class="tick-demo-cta" style="text-align: center; margin: 0 auto 3rem;">
+      <a href="https://tick.i4seer.com/demo/" target="_blank" rel="noopener" class="btn btn-glow tick-demo-btn" style="background: var(--teal-glow); color: #0a0a0a; box-shadow: 0 0 15px rgba(46, 230, 208,0.4); font-size: 1.1rem; padding: 1rem 2.25rem;">Open the Live Demo &rarr;</a>
+      <p class="tick-demo-sub" style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.7; line-height: 1.6;">No sign-in required for the demo fleet.<br>Sign in with Microsoft or Google to see the rest.</p>
     </div>
 
     <div style="max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; padding: 0 1.5rem;">
@@ -273,26 +277,6 @@
       <p>Author threshold rules against any metric. Get notified by <strong style="color: var(--text-bright);">email</strong> or <strong style="color: var(--text-bright);">Microsoft Teams</strong> when a device crosses the line &mdash; or goes silent. Every firing is logged, attributed, and rate-limited so a fleet-wide event can&rsquo;t flood an operator&rsquo;s inbox.</p>
     </div>
 
-    <!-- Alerts console screenshot -->
-    <div class="tick-screenshot tick-screenshot-alerts">
-      <img src="/images/tick-alerts-console.png"
-           alt="SEER Tick Alerts console showing rule editor and fired events"
-           onerror="this.parentElement.classList.add('tick-screenshot-placeholder'); this.style.display='none';">
-      <div class="tick-screenshot-fallback">
-        <div class="tick-screenshot-chrome">
-          <span class="tick-dot tick-dot-red"></span>
-          <span class="tick-dot tick-dot-yellow"></span>
-          <span class="tick-dot tick-dot-green"></span>
-          <span class="tick-chrome-url">tick.i4seer.com/alerts</span>
-        </div>
-        <div class="tick-screenshot-body">
-          <div class="tick-screenshot-icon">&#128276;</div>
-          <div class="tick-screenshot-label">Alerts Console</div>
-          <div class="tick-screenshot-sub">Rule editor &middot; Event history &middot; Teams &amp; Email delivery</div>
-          <div class="tick-screenshot-hint">Drop a screenshot at<br><code>/images/tick-alerts-console.png</code></div>
-        </div>
-      </div>
-    </div>
 
     <div style="max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; padding: 0 1.5rem;">
 
@@ -339,218 +323,6 @@
     </div>
   </section>
 
-  <!-- QUICK TOUR -->
-  <section>
-    <h2 class="section-title" style="font-family: 'Russo One', sans-serif; letter-spacing: 2px; color: var(--teal-glow); text-shadow: 0 0 8px rgba(46, 230, 208,0.3);">Quick Tour</h2>
-    <div style="max-width: 760px; margin: 0 auto 2.5rem; text-align: center; line-height: 1.9; font-size: 1.05rem;">
-      <p>What the console actually looks like. Every screenshot below is from the live <a href="https://tick.i4seer.com" target="_blank" rel="noopener" style="color: var(--teal-glow);">tick.i4seer.com</a> portal.</p>
-    </div>
-
-    <div class="tick-tour-grid">
-
-      <!-- Device list -->
-      <div class="tick-tour-item">
-        <div class="tick-screenshot">
-          <img src="/images/tick-tour-devices.png"
-               alt="SEER Tick devices list"
-               onerror="this.parentElement.classList.add('tick-screenshot-placeholder'); this.style.display='none';">
-          <div class="tick-screenshot-fallback">
-            <div class="tick-screenshot-chrome">
-              <span class="tick-dot tick-dot-red"></span>
-              <span class="tick-dot tick-dot-yellow"></span>
-              <span class="tick-dot tick-dot-green"></span>
-              <span class="tick-chrome-url">tick.i4seer.com/devices</span>
-            </div>
-            <div class="tick-screenshot-body">
-              <div class="tick-screenshot-icon">&#128225;</div>
-              <div class="tick-screenshot-label">Devices</div>
-              <div class="tick-screenshot-sub">Fleet &middot; Status &middot; Last Seen &middot; Battery</div>
-              <div class="tick-screenshot-hint"><code>/images/tick-tour-devices.png</code></div>
-            </div>
-          </div>
-        </div>
-        <h4>1. Device List</h4>
-        <p>Every sensor at a glance. Fleet membership, current status, last uplink, battery level, signal strength. Click any row to drill in.</p>
-      </div>
-
-      <!-- Device detail / telemetry -->
-      <div class="tick-tour-item">
-        <div class="tick-screenshot">
-          <img src="/images/tick-tour-telemetry.png"
-               alt="SEER Tick telemetry chart"
-               onerror="this.parentElement.classList.add('tick-screenshot-placeholder'); this.style.display='none';">
-          <div class="tick-screenshot-fallback">
-            <div class="tick-screenshot-chrome">
-              <span class="tick-dot tick-dot-red"></span>
-              <span class="tick-dot tick-dot-yellow"></span>
-              <span class="tick-dot tick-dot-green"></span>
-              <span class="tick-chrome-url">tick.i4seer.com/device/&hellip;</span>
-            </div>
-            <div class="tick-screenshot-body">
-              <div class="tick-screenshot-icon">&#128200;</div>
-              <div class="tick-screenshot-label">Telemetry</div>
-              <div class="tick-screenshot-sub">Temperature &middot; Humidity &middot; Battery &middot; RSSI</div>
-              <div class="tick-screenshot-hint"><code>/images/tick-tour-telemetry.png</code></div>
-            </div>
-          </div>
-        </div>
-        <h4>2. Telemetry History</h4>
-        <p>Every metric plotted over time. Zoom, pan, export CSV, or hit the API for the raw data. Retention is yours to configure.</p>
-      </div>
-
-      <!-- Fleets -->
-      <div class="tick-tour-item">
-        <div class="tick-screenshot">
-          <img src="/images/tick-tour-fleets.png"
-               alt="SEER Tick fleets management"
-               onerror="this.parentElement.classList.add('tick-screenshot-placeholder'); this.style.display='none';">
-          <div class="tick-screenshot-fallback">
-            <div class="tick-screenshot-chrome">
-              <span class="tick-dot tick-dot-red"></span>
-              <span class="tick-dot tick-dot-yellow"></span>
-              <span class="tick-dot tick-dot-green"></span>
-              <span class="tick-chrome-url">tick.i4seer.com/fleets</span>
-            </div>
-            <div class="tick-screenshot-body">
-              <div class="tick-screenshot-icon">&#127760;</div>
-              <div class="tick-screenshot-label">Fleets</div>
-              <div class="tick-screenshot-sub">Group by site, customer, or purpose</div>
-              <div class="tick-screenshot-hint"><code>/images/tick-tour-fleets.png</code></div>
-            </div>
-          </div>
-        </div>
-        <h4>3. Fleet Management</h4>
-        <p>Organize devices by site, customer, or purpose. Assign operators to specific fleets with viewer or editor roles. Full audit on every change.</p>
-      </div>
-
-      <!-- Rule editor -->
-      <div class="tick-tour-item">
-        <div class="tick-screenshot">
-          <img src="/images/tick-tour-rule-editor.png"
-               alt="SEER Tick alert rule editor"
-               onerror="this.parentElement.classList.add('tick-screenshot-placeholder'); this.style.display='none';">
-          <div class="tick-screenshot-fallback">
-            <div class="tick-screenshot-chrome">
-              <span class="tick-dot tick-dot-red"></span>
-              <span class="tick-dot tick-dot-yellow"></span>
-              <span class="tick-dot tick-dot-green"></span>
-              <span class="tick-chrome-url">tick.i4seer.com/alerts/new</span>
-            </div>
-            <div class="tick-screenshot-body">
-              <div class="tick-screenshot-icon">&#9881;</div>
-              <div class="tick-screenshot-label">Rule Editor</div>
-              <div class="tick-screenshot-sub">Metric &middot; Operator &middot; Threshold &middot; Channels</div>
-              <div class="tick-screenshot-hint"><code>/images/tick-tour-rule-editor.png</code></div>
-            </div>
-          </div>
-        </div>
-        <h4>4. Alert Rule Editor</h4>
-        <p>Pick a metric, an operator, a threshold, and a delivery channel. Scope to all devices, a fleet, or a single sensor. Enable, disable, or duplicate existing rules.</p>
-      </div>
-
-      <!-- Users -->
-      <div class="tick-tour-item">
-        <div class="tick-screenshot">
-          <img src="/images/tick-tour-users.png"
-               alt="SEER Tick users and roles"
-               onerror="this.parentElement.classList.add('tick-screenshot-placeholder'); this.style.display='none';">
-          <div class="tick-screenshot-fallback">
-            <div class="tick-screenshot-chrome">
-              <span class="tick-dot tick-dot-red"></span>
-              <span class="tick-dot tick-dot-yellow"></span>
-              <span class="tick-dot tick-dot-green"></span>
-              <span class="tick-chrome-url">tick.i4seer.com/users</span>
-            </div>
-            <div class="tick-screenshot-body">
-              <div class="tick-screenshot-icon">&#128101;</div>
-              <div class="tick-screenshot-label">Users</div>
-              <div class="tick-screenshot-sub">Admin &middot; Editor &middot; Viewer per fleet</div>
-              <div class="tick-screenshot-hint"><code>/images/tick-tour-users.png</code></div>
-            </div>
-          </div>
-        </div>
-        <h4>5. Users &amp; Roles</h4>
-        <p>Invite by email. Assign per-fleet roles. Admins bypass fleets entirely. Every sign-in, every permission change, every invitation is recorded.</p>
-      </div>
-
-      <!-- Audit log -->
-      <div class="tick-tour-item">
-        <div class="tick-screenshot">
-          <img src="/images/tick-tour-audit.png"
-               alt="SEER Tick audit log"
-               onerror="this.parentElement.classList.add('tick-screenshot-placeholder'); this.style.display='none';">
-          <div class="tick-screenshot-fallback">
-            <div class="tick-screenshot-chrome">
-              <span class="tick-dot tick-dot-red"></span>
-              <span class="tick-dot tick-dot-yellow"></span>
-              <span class="tick-dot tick-dot-green"></span>
-              <span class="tick-chrome-url">tick.i4seer.com/audit</span>
-            </div>
-            <div class="tick-screenshot-body">
-              <div class="tick-screenshot-icon">&#128196;</div>
-              <div class="tick-screenshot-label">Audit</div>
-              <div class="tick-screenshot-sub">Every action, timestamped and attributed</div>
-              <div class="tick-screenshot-hint"><code>/images/tick-tour-audit.png</code></div>
-            </div>
-          </div>
-        </div>
-        <h4>6. Audit Log</h4>
-        <p>Every downlink, every mode change, every user action, every alert firing. Searchable, filterable, CSV-exportable. Configurable retention with automatic pruning.</p>
-      </div>
-
-      <!-- Gateway health -->
-      <div class="tick-tour-item">
-        <div class="tick-screenshot">
-          <img src="/images/tick-tour-gateways.png"
-               alt="SEER Tick gateway health"
-               onerror="this.parentElement.classList.add('tick-screenshot-placeholder'); this.style.display='none';">
-          <div class="tick-screenshot-fallback">
-            <div class="tick-screenshot-chrome">
-              <span class="tick-dot tick-dot-red"></span>
-              <span class="tick-dot tick-dot-yellow"></span>
-              <span class="tick-dot tick-dot-green"></span>
-              <span class="tick-chrome-url">tick.i4seer.com/gateways</span>
-            </div>
-            <div class="tick-screenshot-body">
-              <div class="tick-screenshot-icon">&#128225;</div>
-              <div class="tick-screenshot-label">Gateway Health</div>
-              <div class="tick-screenshot-sub">Healthy / Stale / Offline &middot; Uplink rate</div>
-              <div class="tick-screenshot-hint"><code>/images/tick-tour-gateways.png</code></div>
-            </div>
-          </div>
-        </div>
-        <h4>7. Gateway Health</h4>
-        <p>Summary row of healthy / stale / offline counts plus lifetime traffic totals and uplink rate. Per-gateway rows sorted by staleness so the sick ones float to the top. Read-for-all.</p>
-      </div>
-
-      <!-- API Tokens -->
-      <div class="tick-tour-item">
-        <div class="tick-screenshot">
-          <img src="/images/tick-tour-tokens.png"
-               alt="SEER Tick API tokens management"
-               onerror="this.parentElement.classList.add('tick-screenshot-placeholder'); this.style.display='none';">
-          <div class="tick-screenshot-fallback">
-            <div class="tick-screenshot-chrome">
-              <span class="tick-dot tick-dot-red"></span>
-              <span class="tick-dot tick-dot-yellow"></span>
-              <span class="tick-dot tick-dot-green"></span>
-              <span class="tick-chrome-url">tick.i4seer.com/tokens</span>
-            </div>
-            <div class="tick-screenshot-body">
-              <div class="tick-screenshot-icon">&#128273;</div>
-              <div class="tick-screenshot-label">API Tokens</div>
-              <div class="tick-screenshot-sub">Owner &middot; Fleet-scoped &middot; Read-only global</div>
-              <div class="tick-screenshot-hint"><code>/images/tick-tour-tokens.png</code></div>
-            </div>
-          </div>
-        </div>
-        <h4>8. API Tokens</h4>
-        <p>Bearer tokens for external systems &mdash; Grafana dashboards, Power BI reports, CI jobs, your own scripts. Three scopes, optional expiry, sha256-hashed storage. Shown once at creation, revocable any time.</p>
-      </div>
-
-    </div>
-  </section>
-
   <!-- WHO IT'S FOR / USE CASES -->
   <section>
     <h2 class="section-title" style="font-family: 'Russo One', sans-serif; letter-spacing: 2px; color: var(--teal-glow); text-shadow: 0 0 8px rgba(46, 230, 208,0.3);">Who It&rsquo;s For</h2>
@@ -586,7 +358,7 @@
 
     </div>
 
-    <!-- Case study placeholder — ready for a real deployment story -->
+    <!-- Case study placeholder — hidden until a real deployment story is ready
     <div class="tick-case-study">
       <div class="tick-case-study-badge">CASE STUDY</div>
       <blockquote>
@@ -616,6 +388,7 @@
       </div>
       <p class="tick-case-study-note">Interested in becoming our first named case study? <a href="mailto:sales@i4seer.com?subject=Case%20Study%20Interest">Get in touch</a> &mdash; early customers get pilot pricing in exchange for a story we can tell.</p>
     </div>
+    -->
   </section>
 
   <!-- DEVICE & PLATFORM FEATURES -->
@@ -766,9 +539,10 @@
   <section>
     <h2 class="section-title" style="font-family: 'Russo One', sans-serif; letter-spacing: 2px; color: var(--teal-glow); text-shadow: 0 0 8px rgba(46, 230, 208,0.3);">Who Builds This</h2>
     <div style="max-width: 720px; margin: 0 auto; text-align: center; line-height: 1.9; font-size: 1.05rem;">
-      <p>SEER Tick is built by <a href="/" style="color: var(--teal-glow); text-decoration: none;">Institute for Seer LLC</a>, an independent publisher and technology studio. We also publish the <a href="/seer-frights/" style="color: var(--green-glow); text-decoration: none;">Seer Frights</a>, <a href="/seer-warns/" style="color: var(--sepia);">Seer Warns</a>, and <a href="/seer-fairies/" style="color: var(--fae-gold);">Seer Fairies</a> horror fiction series. The same instinct drives both halves: pay attention to what&rsquo;s actually happening.</p>
+      <p>SEER Tick is designed, built, and operated by <a href="/" style="color: var(--teal-glow); text-decoration: none;">Institute for Seer LLC</a> &mdash; an independent technology studio focused on rugged, low-power telemetry for operators who need private control and no vendor lock-in.</p>
+      <p>Hardware, firmware, gateways, cloud ingest, console, and alerts &mdash; all developed in-house. No outsourced backend. No third-party data brokers in the loop. The same team that ships the code answers the support email.</p>
       <br>
-      <p style="opacity: 0.4; font-size: 0.9rem;">Stories that watch back. Devices that think ahead.</p>
+      <p style="opacity: 0.4; font-size: 0.9rem;">Devices that think ahead.</p>
     </div>
   </section>
 
