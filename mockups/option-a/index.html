@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>i4Seer &mdash; Mockup A: Console</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="console-header">
+    <div class="console-header-inner">
+      <a href="#" class="console-logo"><span class="dot"></span>i4seer</a>
+      <ul class="console-nav">
+        <li><a href="#" class="active">Tick</a></li>
+        <li><a href="#">How It Works</a></li>
+        <li><a href="#">Hardware</a></li>
+        <li><a href="#">Self-Hosted</a></li>
+        <li><a href="#">Books</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+      <a href="#" class="console-cta">Sign in &rarr;</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="console-hero">
+    <div>
+      <div class="console-eyebrow">Tick &middot; v1.1.1 &middot; Live</div>
+      <h1 class="console-h1">Telemetry that ships <span class="accent">anywhere</span>.</h1>
+      <p class="console-sub">Plug-and-play IoT for distributed equipment. WiFi, cellular, or both. Send to your backend, ours, or skip the backend entirely and use our hosted portal.</p>
+      <div class="console-cta-row">
+        <a href="#" class="btn-primary">See live data &rarr;</a>
+        <a href="#" class="btn-ghost">Pilot a deployment</a>
+      </div>
+      <p class="mono" style="font-size: 0.82rem; color: var(--text-dim); margin-top: 1.5rem;">$ cfg set base_url https://your-endpoint/</p>
+    </div>
+
+    <!-- Mock dashboard preview -->
+    <div class="dash-preview">
+      <div class="dash-preview-bar">
+        <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+        <span class="url">tick.i4seer.com/public</span>
+      </div>
+      <div class="dash-rows">
+        <div class="dash-row">
+          <span class="id">T-BE04B8</span>
+          <span class="label">freezer-04</span>
+          <span class="val">-18.2&deg;C</span>
+          <span class="pill pill-healthy">healthy</span>
+        </div>
+        <div class="dash-row">
+          <span class="id">T-AC7733</span>
+          <span class="label">walk-in-2</span>
+          <span class="val">3.7&deg;C</span>
+          <span class="pill pill-healthy">healthy</span>
+        </div>
+        <div class="dash-row">
+          <span class="id">T-91D4F2</span>
+          <span class="label">prep-line</span>
+          <span class="val">7.1&deg;C</span>
+          <span class="pill pill-stale">stale</span>
+        </div>
+        <div class="dash-row">
+          <span class="id">T-5F8A1C</span>
+          <span class="label">truck-08</span>
+          <span class="val">&mdash;</span>
+          <span class="pill pill-late">late</span>
+        </div>
+        <div class="dash-row">
+          <span class="id">T-3B2E40</span>
+          <span class="label">backup-unit</span>
+          <span class="val">-19.8&deg;C</span>
+          <span class="pill pill-healthy">healthy</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats-bar">
+    <div class="stats-inner">
+      <div class="stat">
+        <div class="num"><span class="accent">~30s</span></div>
+        <div class="lbl">Power-on to first reading</div>
+      </div>
+      <div class="stat">
+        <div class="num">3 <span style="font-size: 1rem; color: var(--text-muted); font-weight: 500;">modes</span></div>
+        <div class="lbl">WiFi &middot; cellular &middot; both</div>
+      </div>
+      <div class="stat">
+        <div class="num">3 <span style="font-size: 1rem; color: var(--text-muted); font-weight: 500;">destinations</span></div>
+        <div class="lbl">Yours &middot; ours self-hosted &middot; ours hosted</div>
+      </div>
+      <div class="stat">
+        <div class="num">$4<span style="font-size: 1rem; color: var(--text-muted); font-weight: 500;">/mo</span></div>
+        <div class="lbl">Self-hosted droplet size</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEPLOYMENT TIERS -->
+  <section class="section">
+    <div class="section-eyebrow">// destinations</div>
+    <h2 class="section-title">Three ways to deploy.</h2>
+    <p class="section-lede">Same device. Same firmware. Pick where the data lands.</p>
+
+    <div class="three-col">
+      <a href="#" class="card" style="text-decoration: none; color: inherit;">
+        <div class="card-eyebrow">Mode 1</div>
+        <h3>Bring your own backend</h3>
+        <p>Point Tick at any HTTPS endpoint. JSON payload, HMAC-SHA256 header, predictable schema. Tick becomes a turn-key device fleet feeding your existing pipeline.</p>
+      </a>
+      <a href="#" class="card" style="text-decoration: none; color: inherit;">
+        <div class="card-eyebrow">Mode 2</div>
+        <h3>Self-host our backend</h3>
+        <p>Run the FastAPI portal on your own server. $4/mo droplet. Multi-tenant orgs, JSONL on disk, <code>rsync</code> backups. Your data, your hardware, our code.</p>
+      </a>
+      <a href="#" class="card card-default" style="text-decoration: none; color: inherit;">
+        <div class="card-eyebrow">Mode 3 &middot; Default</div>
+        <h3>i4Seer-hosted portal</h3>
+        <p>Sign up, plug in, see live telemetry. We run the droplet, the TLS, the backups, the upgrades. Easiest on-ramp for new devices.</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- TRANSPORT MODES -->
+  <section class="section" style="border-top: 1px solid var(--border); padding-top: 4rem;">
+    <div class="section-eyebrow">// transports</div>
+    <h2 class="section-title">Pick the pipe per site.</h2>
+    <p class="section-lede">WiFi for connected sites. Cellular for places without IT. Both for places where downtime hurts.</p>
+
+    <div class="three-col">
+      <div class="card">
+        <div class="card-eyebrow">Transport 1</div>
+        <h3>WiFi only</h3>
+        <p>For offices, kitchens, warehouses with reliable WiFi. No cellular cost, no SIM. Sub-1s round trip.</p>
+      </div>
+      <div class="card">
+        <div class="card-eyebrow">Transport 2</div>
+        <h3>Cellular only</h3>
+        <p>For rentals, jobsites, mobile units, remote outbuildings. NB-IoT/LTE-M with global Hologram SIM. 95%+ US/EU coverage.</p>
+      </div>
+      <div class="card">
+        <div class="card-eyebrow">Transport 3</div>
+        <h3>WiFi + cellular backup</h3>
+        <p>WiFi-primary to save cost; falls through to cell on any failure &mdash; per send, not per session. An ISP outage can&rsquo;t take you offline.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOKS — secondary strip -->
+  <section class="books-strip">
+    <div class="books-strip-inner">
+      <div>
+        <div class="section-eyebrow">// also published by i4seer</div>
+        <h2>Horror fiction by independent voices.</h2>
+        <p>Institute for Seer Press &mdash; an independent imprint publishing horror, dark fiction, and folklore-adjacent literary work. Three series live.</p>
+        <a href="#" class="btn-ghost" style="margin-top: 0.5rem;">Browse books &rarr;</a>
+      </div>
+      <div class="books-mini">
+        <a href="#" class="book-mini">
+          <div class="name">Seer Frights</div>
+          <div class="blurb">Middle-grade horror with buildable devices.</div>
+        </a>
+        <a href="#" class="book-mini">
+          <div class="name">Seer Fairies</div>
+          <div class="blurb">Dark fae horror for upper MG / lower YA.</div>
+        </a>
+        <a href="#" class="book-mini">
+          <div class="name">Seer Warns</div>
+          <div class="blurb">Adult literary horror.</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <div class="console-logo" style="margin-bottom: 0.85rem;"><span class="dot"></span>i4seer</div>
+        <p style="color: var(--text-muted); margin: 0; font-size: 0.88rem; max-width: 320px;">An independent technology studio. We build Tick. We also publish horror fiction. Devices that think ahead.</p>
+      </div>
+      <div>
+        <h5>Tick</h5>
+        <ul>
+          <li><a href="#">Overview</a></li>
+          <li><a href="#">How It Works</a></li>
+          <li><a href="#">Hardware</a></li>
+          <li><a href="#">Self-Hosted</a></li>
+          <li><a href="#">Roadmap</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Books</h5>
+        <ul>
+          <li><a href="#">Seer Frights</a></li>
+          <li><a href="#">Seer Fairies</a></li>
+          <li><a href="#">Seer Warns</a></li>
+          <li><a href="#">For Authors</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Company</h5>
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Press Kit</a></li>
+          <li><a href="#">Privacy</a></li>
+          <li><a href="#">Terms</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-meta">&copy; 2026 Institute for Seer LLC &middot; Operated in the United States</div>
+  </footer>
+
+</body>
+</html>
