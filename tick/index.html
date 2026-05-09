@@ -52,10 +52,45 @@
     <div>
       <div class="kicker">tech &middot; cellular IoT telemetry</div>
       <h1><em>Tick</em> by i4Seer.</h1>
-      <p class="lede">A small, rugged device that monitors your equipment and reports to the dashboard you choose. Cellular by default, WiFi when you want it, both for resilience. Multi-tenant from day one. Plug in and watch.</p>
+      <p class="lede">A small, rugged device that monitors your equipment and reports direct to the dashboard you choose. Cellular when you need it, WiFi when you have it, both at once when downtime hurts. Multi-tenant from day one. Plug in and watch.</p>
       <div class="cta-row">
-        <a href="https://tick.i4seer.com/public" target="_blank" rel="noopener" class="btn-primary">See live data &rarr;</a>
-        <a href="#where-to-buy" class="btn-ghost">Pilot a deployment</a>
+        <a href="mailto:sales@i4seer.com?subject=Tick%20Pilot%20Inquiry" class="btn-primary">Request a pilot &rarr;</a>
+        <a href="https://tick.i4seer.com/login" target="_blank" rel="noopener" class="btn-ghost">Sign in to portal</a>
+      </div>
+
+      <!-- DEVICE FLOW VISUAL -->
+      <div class="tick-device-visual" aria-hidden="true">
+        <div class="tick-device-row">
+          <div class="tick-device-node tick-node-green">
+            <div class="tick-node-dot"></div>
+            <div class="tick-node-label">Device</div>
+            <div class="tick-node-sub">tick</div>
+          </div>
+          <div class="tick-device-link"></div>
+          <div class="tick-device-node tick-node-blue">
+            <div class="tick-node-dot"></div>
+            <div class="tick-node-label">Network</div>
+            <div class="tick-node-sub">cell &middot; wifi</div>
+          </div>
+          <div class="tick-device-link"></div>
+          <div class="tick-device-node tick-node-gateway">
+            <div class="tick-node-dot"></div>
+            <div class="tick-node-label">Portal</div>
+            <div class="tick-node-sub">view &middot; manage</div>
+          </div>
+          <div class="tick-device-link"></div>
+          <div class="tick-device-node tick-node-cloud">
+            <div class="tick-node-dot"></div>
+            <div class="tick-node-label">Routes</div>
+            <div class="tick-node-sub">forward</div>
+          </div>
+          <div class="tick-device-link"></div>
+          <div class="tick-device-node tick-node-console">
+            <div class="tick-node-dot"></div>
+            <div class="tick-node-label">Your stack</div>
+            <div class="tick-node-sub">live</div>
+          </div>
+        </div>
       </div>
     </div>
     <aside class="masthead-side">
@@ -63,12 +98,135 @@
       <ul>
         <li><span class="k">Provisioning</span><span class="v">Auto + approval</span></li>
         <li><span class="k">Transports</span><span class="v">WiFi &middot; Cell &middot; Both</span></li>
-        <li><span class="k">Destinations</span><span class="v">Yours &middot; Private &middot; Hosted</span></li>
-        <li><span class="k">Coverage</span><span class="v">95%+ US/EU</span></li>
-        <li><span class="k">Multi-tenant</span><span class="v">Out of the box</span></li>
-        <li><span class="k">Data</span><span class="v">Store &amp; Route</span></li>
+        <li><span class="k">Tenancy</span><span class="v">Orgs &middot; Fleets &middot; Roles</span></li>
+        <li><span class="k">Console</span><span class="v">Live remote shell</span></li>
+        <li><span class="k">Auth</span><span class="v">HMAC, signed both ways</span></li>
+        <li><span class="k">Audit</span><span class="v">Per-org &middot; Platform</span></li>
       </ul>
     </aside>
+  </section>
+
+  <!-- OPERATORS / RETURNING -->
+  <section style="background: var(--paper-2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 2.5rem 1.5rem;">
+    <div class="quick-row">
+
+      <a href="https://tick.i4seer.com/console" target="_blank" rel="noopener" class="quick-card">
+        <div class="quick-card-icon">&#x2318;</div>
+        <div class="quick-card-body">
+          <div class="quick-card-tag">Operators</div>
+          <h3>Open the console</h3>
+          <p>Plug a Tick in over USB-C, or open a remote session into a fielded unit. Full transcript saved.</p>
+        </div>
+        <div class="quick-card-arrow">&rarr;</div>
+      </a>
+
+      <a href="https://tick.i4seer.com/login" target="_blank" rel="noopener" class="quick-card">
+        <div class="quick-card-icon">&rarr;</div>
+        <div class="quick-card-body">
+          <div class="quick-card-tag">Returning</div>
+          <h3>Already a customer? Sign in.</h3>
+          <p>Your devices, your fleets, your data. Email + password &mdash; invite-only.</p>
+        </div>
+        <div class="quick-card-arrow">&rarr;</div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- DEVICE -->
+  <section class="section">
+    <div class="section-head">
+      <h2>The device.</h2>
+      <p class="lede">A small, rugged unit that lives where the equipment lives. Plug it in, point it at the dashboard you choose, and it starts reporting in seconds.</p>
+    </div>
+
+    <div class="prose" style="margin-bottom: 2.5rem;">
+      <p>Built around an ESP32-class microcontroller and a global cellular SIM, the Tick device fits in a panel, a wall mount, or on a bench. The on-device screen shows what&rsquo;s happening right now. The single front button cycles through diagnostic views &mdash; identity, signal, last send, current state &mdash; so most operators never reach for a serial cable. Identity is derived from hardware, so reflashing or factory-reset doesn&rsquo;t change which device you&rsquo;re looking at.</p>
+    </div>
+
+    <div class="tile-grid">
+      <div class="tile">
+        <span class="tile-tag">Plug-and-play</span>
+        <h3>~30 sec to first reading</h3>
+        <p>Power on, network attach, first telemetry post &mdash; the whole cold-start path takes about half a minute. No router config, no SIM activation paperwork.</p>
+      </div>
+      <div class="tile">
+        <span class="tile-tag">On-device screen</span>
+        <h3>Diagnostics in your hand</h3>
+        <p>0.85" IPS display shows transport state, signal strength, and last-send age. Press the button to cycle views. Field-friendly without an app.</p>
+      </div>
+      <div class="tile">
+        <span class="tile-tag">Hardware-rooted ID</span>
+        <h3>Identity that survives anything</h3>
+        <p>Every device&rsquo;s ID is derived from its hardware. Reflash, factory-reset, swap the SIM &mdash; the same physical unit is the same identity, every time.</p>
+      </div>
+    </div>
+
+    <p style="text-align: center; margin-top: 2rem;"><a href="/tick/hardware/">More on the hardware &rarr;</a></p>
+  </section>
+
+  <!-- DATA -->
+  <section class="section">
+    <div class="section-head">
+      <h2>Telemetry data.</h2>
+      <p class="lede">Tick stores every reading. Routes forward that same data to wherever you actually use it &mdash; a dashboard, an alerting system, an in-house pipeline.</p>
+    </div>
+
+    <div class="prose" style="margin-bottom: 2.5rem;">
+      <p>Sample as often as the use case needs. The portal aggregates each window into a compact summary &mdash; min, max, average, last value &mdash; so a thirty-second freezer spike still shows up inside a thirty-minute reporting window. Every reading is HMAC-signed by the device and persisted on arrival; nothing depends on the network being up at the moment of measurement. Routes (coming) forward those events out to your stack as they arrive.</p>
+    </div>
+
+    <div class="tile-grid">
+      <div class="tile">
+        <span class="tile-tag">Store</span>
+        <h3>Persisted, queryable</h3>
+        <p>Every reading lands in the portal with full context: which transport carried it, round-trip time, device health, and the rolling-window summary. Searchable by device, fleet, or time range.</p>
+      </div>
+      <div class="tile">
+        <span class="tile-tag">Sense often</span>
+        <h3>Lo / hi / avg / last per window</h3>
+        <p>Sample every 30 seconds, send every 30 minutes &mdash; the report carries the full window. Catch short events without paying for thousands of redundant data points.</p>
+      </div>
+      <div class="tile">
+        <span class="tile-tag">Routes <span class="coming">Coming</span></span>
+        <h3>Forward to your stack</h3>
+        <p>The portal pushes events out as they arrive: HTTPS first, with MQTT, AWS, Azure, Google Cloud, Twilio, Datacake, Blynk, and Qubitro in development.</p>
+      </div>
+    </div>
+
+    <p style="text-align: center; margin-top: 2rem;"><a href="/tick/how-it-works/">More on the data path &rarr;</a></p>
+  </section>
+
+  <!-- PORTAL -->
+  <section class="section">
+    <div class="section-head">
+      <h2>The portal.</h2>
+      <p class="lede">Where your fleet lives. Sign in, see every device, drill into any one of them &mdash; including a live remote terminal session, from any browser.</p>
+    </div>
+
+    <div class="prose" style="margin-bottom: 2.5rem;">
+      <p>Multi-tenant from day one: orgs are the security boundary, fleets group devices for access, roles scope what each user can do. Open a remote console session to any device in seconds &mdash; type the same commands you&rsquo;d type at the bench with a USB cable. Every action is logged to a per-org audit trail, with a separate platform-level audit for cross-org events.</p>
+    </div>
+
+    <div class="tile-grid">
+      <div class="tile">
+        <span class="tile-tag">Remote console</span>
+        <h3>Reach any device, live</h3>
+        <p>Open a terminal session through the dashboard. Sessions go live in seconds. Multi-admin sessions, full transcript saved to audit, transport-aware acceleration.</p>
+      </div>
+      <div class="tile">
+        <span class="tile-tag">Multi-tenant</span>
+        <h3>Orgs &middot; fleets &middot; roles</h3>
+        <p>Real org / fleet / role model from day one. Inspectors with cross-customer access. Contractors locked to a single fleet. Platform admins separated from regular users.</p>
+      </div>
+      <div class="tile">
+        <span class="tile-tag">Audit</span>
+        <h3>Every action signed and logged</h3>
+        <p>Approvals, label changes, console sessions, downlinks &mdash; all recorded with operator identity. Members read their own org&rsquo;s history; platform admins see global events.</p>
+      </div>
+    </div>
+
+    <p style="text-align: center; margin-top: 2rem;"><a href="https://tick.i4seer.com" target="_blank" rel="noopener">Visit the portal &rarr;</a></p>
   </section>
 
   <!-- THREE DESTINATIONS -->
@@ -103,7 +261,7 @@
   <!-- THREE TRANSPORTS -->
   <section class="section">
     <div class="section-head">
-      <h2>Pick the transport per site.</h2>
+      <h2>Pick the transport.</h2>
       <p class="lede">WiFi for connected sites. Cellular for places without IT. Both when downtime hurts.</p>
     </div>
 
@@ -126,60 +284,6 @@
     </div>
   </section>
 
-  <!-- REMOTE CONSOLE -->
-  <section class="section">
-    <div class="section-head">
-      <h2>Operate from anywhere.</h2>
-      <p class="lede">Tick&rsquo;s remote console lets you reach any device through your dashboard &mdash; from a browser, in real time. The same operator experience as standing in front of the unit with a USB cable.</p>
-    </div>
-
-    <div class="two-col-feature" style="margin-top: 0;">
-      <div class="feature-block">
-        <div class="feature-num">// real-time</div>
-        <h3>Open a session in seconds.</h3>
-        <p>Click Open Session. Pick the device. Type. Sessions go live in about two seconds on WiFi, five on cellular. Live transcript, ANSI colors, scrollback &mdash; everything you&rsquo;d expect from a real terminal.</p>
-      </div>
-      <div class="feature-block">
-        <div class="feature-num">// multi-operator</div>
-        <h3>More than one admin can attend.</h3>
-        <p>Several admins can attach to the same session at the same time. They see each other&rsquo;s commands and the device&rsquo;s responses live. No &ldquo;take over from Alice&rdquo; choreography. Every command is signed by the operator who issued it.</p>
-      </div>
-      <div class="feature-block">
-        <div class="feature-num">// transport-aware</div>
-        <h3>Choose the route per session.</h3>
-        <p>Open the session on WiFi to save cellular minutes; switch to cellular mid-session if WiFi drops. The chosen transport accelerates for responsiveness; the other stays at idle.</p>
-      </div>
-      <div class="feature-block">
-        <div class="feature-num">// auto-end</div>
-        <h3>Walk away safely.</h3>
-        <p>Sessions end automatically two minutes after the last activity from either side. The full transcript is saved server-side, visible later from the audit log. No leaked sessions, no forgotten terminals.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ROUTES -->
-  <section class="section">
-    <div class="section-head">
-      <h2>Routes. <span class="coming">Coming</span></h2>
-      <p class="lede">Tick devices send data <em>in</em> to your portal. Routes send data <em>out</em> &mdash; events forwarded to your destinations as they arrive. Same JSON the device speaks, signed the same way.</p>
-    </div>
-
-    <div class="callout">
-      <p>The portal becomes the routing layer for your fleet&rsquo;s telemetry. Forward to a custom HTTPS endpoint, an MQTT broker, a cloud queue, an SMS gateway, an IoT dashboard &mdash; or anywhere else you can describe.</p>
-      <ul class="route-targets">
-        <li class="route-target">HTTPS <span class="badge soon">Coming soon</span></li>
-        <li class="route-target">MQTT <span class="badge dev">In development</span></li>
-        <li class="route-target">AWS <span class="badge dev">In development</span></li>
-        <li class="route-target">Azure <span class="badge dev">In development</span></li>
-        <li class="route-target">Google Cloud <span class="badge dev">In development</span></li>
-        <li class="route-target">Twilio <span class="badge dev">In development</span></li>
-        <li class="route-target">Datacake <span class="badge dev">In development</span></li>
-        <li class="route-target">Blynk <span class="badge dev">In development</span></li>
-        <li class="route-target">Qubitro <span class="badge dev">In development</span></li>
-      </ul>
-      <p style="margin-bottom: 0; margin-top: 1.25rem;"><strong>HTTPS routes ship first;</strong> the rest are in development. <a href="/tick/roadmap/">See the roadmap &rarr;</a></p>
-    </div>
-  </section>
 
   <!-- WHO IT'S FOR -->
   <section class="section">
@@ -264,7 +368,7 @@
         </ul>
       </div>
     </div>
-    <div class="footer-meta">&copy; 2026 Institute for Seer LLC &middot; Operated in the United States &middot; v2.0.0</div>
+    <div class="footer-meta">&copy; 2026 Institute for Seer LLC &middot; Operated in the United States &middot; v2.1.0</div>
   </footer>
 
   <div class="cookie-banner" id="cookie-banner">

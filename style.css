@@ -686,6 +686,235 @@ img { max-width: 100%; height: auto; display: block; }
 .tile p { margin: 0; color: var(--ink-soft); font-size: 0.92rem; line-height: 1.55; }
 
 /* ============================================================
+   DEVICE FLOW VISUAL (animated 5-node telemetry path)
+   Used in masthead under primary CTA on / and /tick/
+   ============================================================ */
+.tick-device-visual {
+  margin-top: 2rem;
+  max-width: 100%;
+  overflow: hidden;
+}
+.tick-device-row {
+  display: grid;
+  grid-template-columns: auto 1fr auto 1fr auto 1fr auto 1fr auto;
+  align-items: center;
+  gap: 0;
+}
+.tick-device-node {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.6rem 0.4rem;
+  min-width: 60px;
+}
+.tick-node-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--ink-mute);
+  box-shadow: 0 0 0 3px var(--surface), 0 0 0 4px var(--line);
+  transition: background 200ms;
+}
+.tick-node-green   .tick-node-dot { background: var(--green, #16a34a); }
+.tick-node-blue    .tick-node-dot { background: var(--teal); }
+.tick-node-gateway .tick-node-dot { background: var(--ink-soft); }
+.tick-node-cloud   .tick-node-dot { background: var(--teal-deep); }
+.tick-node-console .tick-node-dot { background: var(--ink); }
+.tick-node-label {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.04em;
+  font-weight: 600;
+  color: var(--ink);
+  white-space: nowrap;
+}
+.tick-node-sub {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+  white-space: nowrap;
+}
+
+/* Connecting lines.
+   A single dot travels Device -> Network -> Portal -> Routes -> Your stack.
+   Implementation: every link runs the SAME 8s master loop, but each link
+   is only "active" during its own 25% segment. Outside its segment the dot
+   is hidden, so visually only one dot is ever moving on the whole path. */
+.tick-device-link {
+  position: relative;
+  height: 2px;
+  background: var(--line);
+  margin: 0 0.25rem;
+  border-radius: 2px;
+  overflow: visible;
+}
+.tick-device-link::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--teal);
+  box-shadow: 0 0 0 2px rgba(10, 163, 154, 0.18);
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+.tick-device-link:nth-of-type(2)::after { animation-name: tickFlowSeg1; }
+.tick-device-link:nth-of-type(4)::after { animation-name: tickFlowSeg2; }
+.tick-device-link:nth-of-type(6)::after { animation-name: tickFlowSeg3; }
+.tick-device-link:nth-of-type(8)::after { animation-name: tickFlowSeg4; }
+
+/* Each segment is 25% of the master timeline; the dot crosses the link
+   during its slice and is hidden the other 75%. */
+@keyframes tickFlowSeg1 {
+  0%   { left: 0%;   opacity: 1; }
+  25%  { left: 100%; opacity: 1; }
+  25.01%, 100% { left: 100%; opacity: 0; }
+}
+@keyframes tickFlowSeg2 {
+  0%, 25%      { left: 0%;   opacity: 0; }
+  25.01%       { left: 0%;   opacity: 1; }
+  50%          { left: 100%; opacity: 1; }
+  50.01%, 100% { left: 100%; opacity: 0; }
+}
+@keyframes tickFlowSeg3 {
+  0%, 50%      { left: 0%;   opacity: 0; }
+  50.01%       { left: 0%;   opacity: 1; }
+  75%          { left: 100%; opacity: 1; }
+  75.01%, 100% { left: 100%; opacity: 0; }
+}
+@keyframes tickFlowSeg4 {
+  0%, 75%      { left: 0%;   opacity: 0; }
+  75.01%       { left: 0%;   opacity: 1; }
+  100%         { left: 100%; opacity: 1; }
+}
+
+/* On the dark/teal hero-tick-bg if ever reused, keep things readable */
+
+@media (max-width: 700px) {
+  .tick-device-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .tick-device-node {
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 0.6rem;
+    padding: 0.4rem 0.5rem;
+  }
+  .tick-device-link {
+    width: 2px;
+    height: 18px;
+    margin: 0.15rem 0 0.15rem 1.1rem;
+  }
+  .tick-device-link::after {
+    top: 0;
+    left: 50%;
+  }
+  /* Same segmented logic, just top instead of left */
+  .tick-device-link:nth-of-type(2)::after { animation-name: tickFlowVertSeg1; }
+  .tick-device-link:nth-of-type(4)::after { animation-name: tickFlowVertSeg2; }
+  .tick-device-link:nth-of-type(6)::after { animation-name: tickFlowVertSeg3; }
+  .tick-device-link:nth-of-type(8)::after { animation-name: tickFlowVertSeg4; }
+  @keyframes tickFlowVertSeg1 {
+    0%   { top: 0%;   opacity: 1; }
+    25%  { top: 100%; opacity: 1; }
+    25.01%, 100% { top: 100%; opacity: 0; }
+  }
+  @keyframes tickFlowVertSeg2 {
+    0%, 25%      { top: 0%;   opacity: 0; }
+    25.01%       { top: 0%;   opacity: 1; }
+    50%          { top: 100%; opacity: 1; }
+    50.01%, 100% { top: 100%; opacity: 0; }
+  }
+  @keyframes tickFlowVertSeg3 {
+    0%, 50%      { top: 0%;   opacity: 0; }
+    50.01%       { top: 0%;   opacity: 1; }
+    75%          { top: 100%; opacity: 1; }
+    75.01%, 100% { top: 100%; opacity: 0; }
+  }
+  @keyframes tickFlowVertSeg4 {
+    0%, 75%      { top: 0%;   opacity: 0; }
+    75.01%       { top: 0%;   opacity: 1; }
+    100%         { top: 100%; opacity: 1; }
+  }
+}
+
+/* ============================================================
+   QUICK CARDS (Operators / Returning row on /tick/)
+   ============================================================ */
+.quick-row {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+.quick-card {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 1.25rem;
+  align-items: center;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 1.5rem 1.5rem;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 120ms, transform 120ms;
+}
+.quick-card:hover {
+  border-color: var(--ink);
+  transform: translateY(-1px);
+  text-decoration: none;
+}
+.quick-card-icon {
+  font-size: 1.6rem;
+  color: var(--teal);
+  font-family: "JetBrains Mono", monospace;
+  font-weight: 700;
+  width: 1.6rem;
+  text-align: center;
+}
+.quick-card-tag {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+  margin-bottom: 0.25rem;
+}
+.quick-card h3 {
+  font-family: inherit;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 0.3rem;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+}
+.quick-card p {
+  margin: 0;
+  font-size: 0.88rem;
+  color: var(--ink-mute);
+  line-height: 1.5;
+}
+.quick-card-arrow {
+  color: var(--teal);
+  font-size: 1.4rem;
+  font-weight: 600;
+  font-family: "JetBrains Mono", monospace;
+}
+.quick-card:hover .quick-card-arrow { color: var(--teal-deep); }
+
+/* ============================================================
    ROUTE-DESTINATION PILLS (with per-target status badge)
    ============================================================ */
 .route-targets {
@@ -1130,6 +1359,9 @@ img { max-width: 100%; height: auto; display: block; }
   .books-grid { grid-template-columns: 1fr; }
   .footer-inner { grid-template-columns: 1fr 1fr; }
   .tile-grid, .tile-grid.two { grid-template-columns: 1fr; }
+  .quick-row { grid-template-columns: 1fr; gap: 1rem; }
+  .quick-card { padding: 1.25rem; gap: 1rem; }
+  .quick-card-icon { font-size: 1.4rem; }
   .subhero h1 { font-size: 1.85rem; }
   .series-hero { grid-template-columns: 1fr; gap: 2rem; padding: 2.5rem 1.25rem; }
   .series-hero h1 { font-size: 2.2rem; }
