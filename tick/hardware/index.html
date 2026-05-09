@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tick Hardware &mdash; AtomS3R, K059 NB-IoT, Hologram SIM</title>
-  <meta name="description" content="The Tick device: M5Stack AtomS3R + Atom DTU NB-IoT2 (K059) + Hologram global IoT SIM. ESP32-S3, SIM7028 modem, 0.85-inch IPS screen. Credit-card-sized, USB-C powered.">
+  <title>Tick Hardware &mdash; i4Seer</title>
+  <meta name="description" content="The Tick device: credit-card-sized, USB-C powered, ESP32-based microcontroller with a small color screen, NB-IoT/LTE-M cellular base, and a global IoT SIM. Field-friendly by design.">
   <link rel="stylesheet" href="/style.css">
   <meta name="robots" content="index, follow">
   <link rel="icon" type="image/svg+xml" href="/images/favicon-seertick.svg">
@@ -12,159 +12,151 @@
   <link rel="canonical" href="https://www.i4seer.com/tick/hardware/">
   <script defer data-domain="i4seer.com" src="https://plausible.io/js/script.js"></script>
 </head>
-<body class="tick-page">
+<body>
 
-  <header style="border-bottom-color: var(--teal-glow); box-shadow: 0 4px 20px rgba(46, 230, 208,0.1);">
-    <nav>
-      <div class="nav-top">
-        <a href="/tick/" class="logo" style="font-family: 'Russo One', sans-serif; letter-spacing: 4px; color: var(--teal-glow); text-shadow: 0 0 10px rgba(46, 230, 208, 0.4), 0 0 25px rgba(46, 230, 208, 0.2);">TICK<span style="color: var(--teal-glow); opacity: 0.5;">Telemetry by i4Seer</span></a>
-        <ul>
-          <li><a href="/">i4Seer</a></li>
-          <li><a href="/books/">Books</a></li>
-          <li><a href="/tick/" class="active" style="color: var(--teal-glow);">Tech</a></li>
-          <li><a href="/about/">About</a></li>
-        </ul>
-      </div>
-    </nav>
+  <header class="studio-header">
+    <div class="studio-header-inner">
+      <a href="/" class="studio-logo">i4Seer</a>
+      <span class="studio-tagline">Devices that think ahead. Stories that watch back.</span>
+      <ul class="studio-nav">
+        <li><a href="/tick/" class="active">Tick</a></li>
+        <li><a href="/books/">Books</a></li>
+        <li><a href="/about/">About</a></li>
+      </ul>
+    </div>
   </header>
 
-  <div class="hero" style="min-height: 35vh;">
-    <div class="hero-content">
-      <p class="tagline" style="color: var(--teal-glow); opacity: 0.6;">Tick / Hardware</p>
-      <h1 style="font-family: 'Russo One', sans-serif; letter-spacing: 4px; color: var(--teal-glow); text-shadow: 0 0 20px rgba(46, 230, 208, 0.5);">HARDWARE</h1>
-      <p class="subtitle" style="max-width: 720px; font-size: 1.1rem; opacity: 0.85;">Credit-card-sized. USB-C powered. ESP32-S3 + SIM7028 NB-IoT/LTE-M modem + global Hologram SIM. Ships first reading in ~30 seconds.</p>
-    </div>
-  </div>
-
-  <!-- STACK -->
-  <section>
-    <h2 class="section-title" style="font-family: 'Russo One', sans-serif; letter-spacing: 2px; color: var(--teal-glow); text-shadow: 0 0 8px rgba(46, 230, 208,0.3);">The Stack</h2>
-
-    <div style="max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; padding: 0 1.5rem;">
-
-      <div class="tick-feat-card">
-        <h4>AtomS3R (top)</h4>
-        <p style="opacity: 0.8;">ESP32-S3 with 8 MB PSRAM. 0.85" 128&times;128 IPS display. BMI270 6-axis IMU. BMM150 3-axis magnetometer. Front button cycles screens. PSRAM-OPI flash mode.</p>
-        <p style="margin-top: 0.75rem; font-size: 0.85rem; opacity: 0.65;"><a href="https://shop.m5stack.com/products/atoms3r-dev-kit" target="_blank" rel="noopener" style="color: var(--teal-glow); text-decoration: none; border-bottom: 1px dotted var(--teal-glow);">M5Stack AtomS3R product page &rarr;</a></p>
-      </div>
-
-      <div class="tick-feat-card">
-        <h4>Atom DTU NB-IoT2 v1.1 (K059, base)</h4>
-        <p style="opacity: 0.8;">SIM7028 NB-IoT/LTE-M modem on the standard Atom socket. SMA antenna connector, SIM slot, USB-C power passthrough. The board the AtomS3R clips on top of.</p>
-        <p style="margin-top: 0.75rem; font-size: 0.85rem; opacity: 0.65;"><a href="https://shop.m5stack.com/products/atomic-dtu-nb-iot2-cat1-kit-sim7028" target="_blank" rel="noopener" style="color: var(--teal-glow); text-decoration: none; border-bottom: 1px dotted var(--teal-glow);">M5Stack K059 product page &rarr;</a></p>
-      </div>
-
-      <div class="tick-feat-card">
-        <h4>Hologram Global IoT SIM</h4>
-        <p style="opacity: 0.8;">Default APN <code>hologram</code>. Pay-as-you-go data, no minimum, no carrier contract. Works in 200+ countries. Swap to another carrier&rsquo;s SIM and change one APN line in firmware to switch.</p>
-        <p style="margin-top: 0.75rem; font-size: 0.85rem; opacity: 0.65;"><a href="https://www.hologram.io/" target="_blank" rel="noopener" style="color: var(--teal-glow); text-decoration: none; border-bottom: 1px dotted var(--teal-glow);">Hologram &rarr;</a></p>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- KEY FACTS -->
-  <section>
-    <h2 class="section-title" style="font-family: 'Russo One', sans-serif; letter-spacing: 2px; color: var(--teal-glow); text-shadow: 0 0 8px rgba(46, 230, 208,0.3);">Key Facts</h2>
-
-    <div style="max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; padding: 0 1.5rem;">
-
-      <div class="tick-feat-card">
-        <h4>Identity from MAC</h4>
-        <p>Device ID is <code>T-&lt;6 hex of last 3 MAC bytes&gt;</code> &mdash; e.g. <code>T-BE04B8</code>. Survives NVS wipe, reflash, and factory reset.</p>
-      </div>
-
-      <div class="tick-feat-card">
-        <h4>0.85" IPS Screen</h4>
-        <p>Multi-screen UI: identity, WiFi, cell, data, send, scan. Front button cycles. 30s auto-revert. <code>[!]</code> indicator stays lit when boot is in failed state.</p>
-      </div>
-
-      <div class="tick-feat-card">
-        <h4>Modem-Side TLS</h4>
-        <p>SIM7028 handles TLS via <code>AT+CSSLCFG</code> + <code>AT+HTTPACTION</code>. No CA bundle on device &mdash; HMAC at the application layer is the auth, TLS is line-tap protection. RSA-2048 cert (modem doesn&rsquo;t accept ECDSA).</p>
-      </div>
-
-      <div class="tick-feat-card">
-        <h4>Boot in 5s, First POST in 30s</h4>
-        <p>Cold boot to first state POST is dominated by NB-IoT attach. Cellular RTT after attach: ~3-7s over NB-IoT. WiFi RTT: under 1s.</p>
-      </div>
-
-      <div class="tick-feat-card">
-        <h4>NVS-Backed Counters</h4>
-        <p>Tick number, accumulator (count, lo, hi, sum, last), epoch timestamps. Per-minute readings fold into the accumulator; RAM <code>seq</code> resets on boot. NVS partition sized for 20+ years at 1-min cadence.</p>
-      </div>
-
-      <div class="tick-feat-card">
-        <h4>QR Deep-Link</h4>
-        <p>Each device renders a per-device QR on the screen. Scan with a phone, opens the dashboard for that exact device. No paperwork, no part numbers.</p>
-      </div>
-
-      <div class="tick-feat-card">
-        <h4>Power Modes</h4>
-        <p>PSM and eDRX both work on Hologram/T-Mobile US &mdash; requested timers granted as-requested. <code>AT+CSCLK</code> auto-sleep modes return ERROR on this firmware revision; host-only light-sleep is the fallback.</p>
-      </div>
-
-      <div class="tick-feat-card">
-        <h4>Diagnostic Shell</h4>
-        <p>USB serial at 115200. Type <code>help</code> for the command list: <code>start</code>, <code>send</code>, <code>cfg</code>, <code>wifi connect</code>, <code>reboot dtu</code>, <code>scan</code>, etc.</p>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- WHAT IT MEASURES TODAY -->
-  <section>
-    <h2 class="section-title" style="font-family: 'Russo One', sans-serif; letter-spacing: 2px; color: var(--teal-glow); text-shadow: 0 0 8px rgba(46, 230, 208,0.3);">What It Measures &mdash; Today</h2>
-    <div style="max-width: 760px; margin: 0 auto; line-height: 1.9; font-size: 1.05rem; text-align: center;">
-      <p>Today the device reports its own MCU temperature &mdash; a self-monitoring metric, not a customer-facing one. That&rsquo;s honest about where the product is.</p>
-      <br>
-      <p>External sensors are the next hardware step. <strong style="color: var(--text-bright);">DS18B20</strong> (1-Wire, ~$2, &plusmn;0.5&deg;C, waterproof variants for fridges/freezers) is the obvious first pick. Wires to a free GPIO on the Atom socket; firmware adds <code>probe_lo / probe_hi / probe_avg / probe_last</code> fields to the payload. Backend already tolerates unknown fields &mdash; JSONL is schema-flexible.</p>
-      <br>
-      <p style="opacity: 0.85;">If you need a different probe (humidity, current, pressure, contact, pulse-counting), tell us &mdash; we&rsquo;ll spec the integration during pilot.</p>
-    </div>
-  </section>
-
-  <!-- ENCLOSURE -->
-  <section>
-    <h2 class="section-title" style="font-family: 'Russo One', sans-serif; letter-spacing: 2px; color: var(--teal-glow); text-shadow: 0 0 8px rgba(46, 230, 208,0.3);">Enclosure &amp; Mounting</h2>
-    <div style="max-width: 760px; margin: 0 auto; line-height: 1.9; font-size: 1.05rem; text-align: center;">
-      <p>The dev-board form factor works for pilots. For production: enclosure (waterproof if outdoor), mounting (magnet, screw, or zip-tie), clear label with claim token + serial, and a one-page quickstart card.</p>
-      <p style="margin-top: 1rem; opacity: 0.8;">M5Stack ships matching cases for the AtomS3R. We&rsquo;ll spec enclosure + cable routing alongside the first real customer deployment &mdash; cost-of-goods conversation, not a commodity SKU.</p>
-    </div>
-  </section>
-
-  <!-- VERSIONS -->
-  <section>
-    <div style="max-width: 720px; margin: 0 auto; padding: 0 1.5rem; text-align: center; opacity: 0.7; font-size: 0.9rem; line-height: 1.8;">
-      <p style="font-family: 'JetBrains Mono', 'Courier New', monospace;">
-        Firmware <strong style="color: var(--teal-glow);">1.1.1</strong> &middot;
-        Backend <strong style="color: var(--teal-glow);">1.1.1</strong> &middot;
-        Hardware: <strong style="color: var(--teal-glow);">AtomS3R + K059 v1.1</strong>
-      </p>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section style="text-align: center;">
-    <a href="/tick/how-it-works/" class="btn btn-outline" style="border-color: var(--teal-glow); color: var(--teal-glow);">&larr; How It Works</a>
-    <a href="/tick/self-hosted/" class="btn btn-glow" style="background: var(--teal-glow); color: #0a0a0a; box-shadow: 0 0 15px rgba(46, 230, 208,0.4); margin-left: 0.75rem;">Self-Hosting Guide &rarr;</a>
-  </section>
-
-  <footer>
-    <div class="footer-logo" style="font-family: 'Russo One', sans-serif; color: var(--teal-glow); letter-spacing: 3px;">TICK</div>
-    <p>&copy; 2026 Institute for Seer LLC. All rights reserved.</p>
-    <div class="footer-links">
-      <a href="/">i4Seer</a>
-      <a href="/tick/">Tick</a>
+  <nav class="subnav">
+    <div class="subnav-inner">
+      <a href="/tick/">Overview</a>
       <a href="/tick/how-it-works/">How It Works</a>
-      <a href="/tick/hardware/">Hardware</a>
-      <a href="/tick/self-hosted/">Self-Hosted</a>
+      <a href="/tick/hardware/" class="active">Hardware</a>
       <a href="/tick/roadmap/">Roadmap</a>
-      <a href="https://tick.i4seer.com" target="_blank" rel="noopener">Portal</a>
-      <a href="/about/">About</a>
-      <a href="/privacy/">Privacy</a>
-      <a href="/terms/">Terms</a>
+      <a href="https://tick.i4seer.com/public" target="_blank" rel="noopener">Live Data &rarr;</a>
     </div>
+  </nav>
+
+  <section class="subhero">
+    <div class="crumbs"><a href="/">i4Seer</a> / <a href="/tick/">Tick</a> / Hardware</div>
+    <h1>The device, in your <em>hand</em>.</h1>
+    <p class="lede">Credit-card-sized. USB-C powered. Ruggedly built around two well-known modules: an ESP32-based MCU with a small color screen and a cellular base with a global SIM. It fits in a panel, a wall mount, or on a bench.</p>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <h2>What&rsquo;s inside.</h2>
+      <p class="lede">Tick is built on commodity, well-supported hardware. No mystery silicon. No vendor lock-in.</p>
+    </div>
+
+    <div class="tile-grid">
+      <div class="tile">
+        <span class="tile-tag">Module 01</span>
+        <h3>ESP32-S3 with display</h3>
+        <p>An ESP32-based microcontroller with built-in WiFi, a small color screen, and a single front button. The screen shows status at a glance: identity, signal, last send, current state.</p>
+      </div>
+      <div class="tile">
+        <span class="tile-tag">Module 02</span>
+        <h3>Cellular base</h3>
+        <p>An NB-IoT/LTE-M modem on its own carrier board, with a SIM slot and an SMA antenna connector. Auto-detects the hardware revision so devices roll out across multiple production runs.</p>
+      </div>
+      <div class="tile">
+        <span class="tile-tag">Module 03</span>
+        <h3>Global SIM</h3>
+        <p>A standard pay-as-you-go IoT SIM ships pre-installed. Works in 200+ countries on partner carriers. Swap to your own carrier&rsquo;s SIM and Tick adapts automatically.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <h2>Field-friendly by design.</h2>
+      <p class="lede">Built for places where someone might have to debug it standing on a roof.</p>
+    </div>
+
+    <div class="tile-grid">
+      <div class="tile">
+        <span class="tile-tag">On-Device</span>
+        <h3>Always-on screen</h3>
+        <p>The 0.85" IPS display shows what&rsquo;s happening right now: device ID, transport state, signal strength, time since last send. No app, no laptop &mdash; the device tells you it&rsquo;s healthy by being healthy on screen.</p>
+      </div>
+      <div class="tile">
+        <span class="tile-tag">On-Device</span>
+        <h3>Single-button operation</h3>
+        <p>Cycle screens with the front button. Most operators never touch a serial cable. The device tells you what it knows; the dashboard tells you what your fleet knows.</p>
+      </div>
+      <div class="tile">
+        <span class="tile-tag">Hardware-Derived ID</span>
+        <h3>Identity that survives anything</h3>
+        <p>Every device is identified by a string derived from its hardware. Reflash, factory-reset, replace the SIM &mdash; the same physical device is the same identity. No re-registration, no claim flow gone wrong.</p>
+      </div>
+      <div class="tile">
+        <span class="tile-tag">Power</span>
+        <h3>Standard USB-C</h3>
+        <p>Plug it into any USB-C power source: wall adapter, PoE splitter, vehicle charger, battery bank. The same device works on a kitchen counter, a refrigerator truck, or an off-grid pump house.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <h2>What it measures.</h2>
+      <p class="lede">Tick ships with a built-in temperature sensor as a self-monitoring metric. External sensors are coming in production runs.</p>
+    </div>
+
+    <div class="prose">
+      <p><strong>Today:</strong> the device&rsquo;s own temperature, which is enough to demonstrate the platform end-to-end and prove a deployment is alive.</p>
+      <p><strong>Next:</strong> external probes, starting with a 1-Wire temperature probe (the kind used in fridges, freezers, food trucks). Cheap, accurate, waterproof variants exist. The data path doesn&rsquo;t change &mdash; the same dashboard, the same alerts, the same routes out to your destinations.</p>
+      <p><strong>If you need a different probe:</strong> humidity, current, pressure, contact, pulse-counting &mdash; tell us during pilot. We&rsquo;ll spec the integration.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <h2>Mounted, labeled, labeled again.</h2>
+      <p class="lede">A dev-board form factor works for pilots. For production, every detail matters &mdash; we spec it with you.</p>
+    </div>
+
+    <div class="prose">
+      <p>For the first ten devices in a customer&rsquo;s hands, the bare board with USB-C power is fine: it boots, it reports, you see data. For ten thousand, it isn&rsquo;t.</p>
+      <p>Production deployments need an enclosure (waterproof if outdoor), mounting (magnet, screw, or zip-tie), a clear label with serial and claim instructions, and a one-page quickstart card so the person installing the device doesn&rsquo;t need a phone call from us.</p>
+      <p>That&rsquo;s a cost-of-goods conversation, and we have it once a real prospect&rsquo;s requirements are on the table. <a href="mailto:sales@i4seer.com?subject=Tick%20Pilot%20Inquiry">Email sales</a> when you&rsquo;re ready to talk specifics.</p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-logo-line">i4Seer</div>
+        <p class="footer-tag">An independent technology studio.<br>We build Tick. We also publish books.</p>
+      </div>
+      <div>
+        <h5>Tick</h5>
+        <ul>
+          <li><a href="/tick/">Overview</a></li>
+          <li><a href="/tick/how-it-works/">How It Works</a></li>
+          <li><a href="/tick/hardware/">Hardware</a></li>
+          <li><a href="/tick/roadmap/">Roadmap</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Press</h5>
+        <ul>
+          <li><a href="/seer-frights/">Seer Frights</a></li>
+          <li><a href="/seer-fairies/">Seer Fairies</a></li>
+          <li><a href="/seer-warns/">Seer Warns</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Company</h5>
+        <ul>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/press/">Press Kit</a></li>
+          <li><a href="/privacy/">Privacy</a></li>
+          <li><a href="/terms/">Terms</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-meta">&copy; 2026 Institute for Seer LLC &middot; Operated in the United States &middot; v2.0.0</div>
   </footer>
 
 </body>

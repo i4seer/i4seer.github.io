@@ -3,573 +3,270 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tick &mdash; IoT Telemetry by i4Seer</title>
-  <meta name="description" content="Tick is a plug-and-play telemetry platform for distributed equipment. Three transport modes: WiFi, cellular, or WiFi with cellular backup. Self-hosted multi-tenant FastAPI portal at tick.i4seer.com.">
+  <title>Tick &mdash; Telemetry by i4Seer</title>
+  <meta name="description" content="Tick is a plug-and-play IoT telemetry platform. WiFi, cellular, or both. Send data to your endpoint, the i4Seer-hosted portal, or a private portal deployment. Multi-tenant, remote console, public read-only fleet at tick.i4seer.com/public.">
   <link rel="stylesheet" href="/style.css">
   <meta name="robots" content="index, follow">
   <meta name="copyright" content="Institute for Seer LLC">
   <link rel="icon" type="image/svg+xml" href="/images/favicon-seertick.svg">
   <link rel="alternate icon" href="/favicon.ico" type="image/x-icon">
-  <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="i4Seer">
   <meta property="og:url" content="https://www.i4seer.com/tick/">
-  <meta property="og:title" content="Tick &mdash; IoT Telemetry by i4Seer">
-  <meta property="og:description" content="Plug-and-play telemetry for distributed equipment. WiFi, cellular, or WiFi with cellular backup. Self-hosted multi-tenant FastAPI portal.">
+  <meta property="og:title" content="Tick &mdash; Telemetry by i4Seer">
+  <meta property="og:description" content="Plug-and-play IoT telemetry. WiFi, cellular, or both. Your backend, ours, or our hosted portal.">
   <meta property="og:image" content="https://www.i4seer.com/images/tick-product.png">
-  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Tick &mdash; IoT Telemetry by i4Seer">
-  <meta name="twitter:description" content="Plug-and-play telemetry for distributed equipment. WiFi, cellular, or WiFi with cellular backup. Self-hosted multi-tenant FastAPI portal.">
+  <meta name="twitter:title" content="Tick &mdash; Telemetry by i4Seer">
+  <meta name="twitter:description" content="Plug-and-play IoT telemetry. WiFi, cellular, or both. Your backend, ours, or our hosted portal.">
   <meta name="twitter:image" content="https://www.i4seer.com/images/tick-product.png">
-  <!-- Canonical -->
   <link rel="canonical" href="https://www.i4seer.com/tick/">
-  <!-- Plausible Analytics -->
   <script defer data-domain="i4seer.com" src="https://plausible.io/js/script.js"></script>
 </head>
-<body class="tick-page">
+<body>
 
-  <!-- NAV -->
-  <header style="border-bottom-color: var(--teal-glow); box-shadow: 0 4px 20px rgba(46, 230, 208,0.1);">
-    <nav>
-      <div class="nav-top">
-        <a href="/tick/" class="logo" style="font-family: 'Russo One', sans-serif; letter-spacing: 4px; color: var(--teal-glow); text-shadow: 0 0 10px rgba(46, 230, 208, 0.4), 0 0 25px rgba(46, 230, 208, 0.2);">TICK<span style="color: var(--teal-glow); opacity: 0.5;">Telemetry by i4Seer</span></a>
-        <ul>
-          <li><a href="/">i4Seer</a></li>
-          <li><a href="/books/">Books</a></li>
-          <li><a href="/tick/" class="active" style="color: var(--teal-glow);">Tech</a></li>
-          <li><a href="/about/">About</a></li>
-        </ul>
-      </div>
-    </nav>
+  <header class="studio-header">
+    <div class="studio-header-inner">
+      <a href="/" class="studio-logo">i4Seer</a>
+      <span class="studio-tagline">Devices that think ahead. Stories that watch back.</span>
+      <ul class="studio-nav">
+        <li><a href="/tick/" class="active">Tick</a></li>
+        <li><a href="/books/">Books</a></li>
+        <li><a href="/about/">About</a></li>
+      </ul>
+    </div>
   </header>
 
-  <!-- HERO -->
-  <div class="hero hero-tick-bg" style="min-height: 70vh;">
-    <div class="hero-content">
-      <p class="tagline" style="color: var(--teal-glow); opacity: 0.6;">i4Seer presents</p>
-      <h1 style="font-family: 'Russo One', sans-serif; letter-spacing: 6px; color: var(--teal-glow); text-shadow: 0 0 20px rgba(46, 230, 208, 0.5), 0 0 60px rgba(46, 230, 208, 0.2); -webkit-text-stroke: 0;">TICK</h1>
-      <p class="subtitle" style="max-width: 760px; font-size: 1.4rem; color: var(--text-bright);">Plug-and-play telemetry. WiFi, cellular, or both.</p>
-      <p class="subtitle" style="max-width: 760px; font-size: 1.05rem; opacity: 0.75; margin-top: 0.75rem;">A credit-card-sized device ships data within seconds of power-on. Pick the <strong>transport</strong> that fits the site &mdash; WiFi, cellular, or both. Pick the <strong>destination</strong> that fits the org &mdash; your existing backend, our backend on your server, or the i4Seer-hosted portal.</p>
-
-      <!-- DEVICE FLOW VISUAL -->
-      <div class="tick-device-visual" aria-hidden="true" style="margin: 2rem auto;">
-        <div class="tick-device-row">
-          <div class="tick-device-node tick-node-green">
-            <div class="tick-node-dot"></div>
-            <div class="tick-node-label">Device</div>
-            <div class="tick-node-sub">power-on</div>
-          </div>
-          <div class="tick-device-link"></div>
-          <div class="tick-device-node tick-node-blue">
-            <div class="tick-node-dot"></div>
-            <div class="tick-node-label">WiFi</div>
-            <div class="tick-node-sub">configurable</div>
-          </div>
-          <div class="tick-device-link"></div>
-          <div class="tick-device-node tick-node-gateway">
-            <div class="tick-node-dot"></div>
-            <div class="tick-node-label">Cellular</div>
-            <div class="tick-node-sub">configurable</div>
-          </div>
-          <div class="tick-device-link"></div>
-          <div class="tick-device-node tick-node-cloud">
-            <div class="tick-node-dot"></div>
-            <div class="tick-node-label">Endpoint</div>
-            <div class="tick-node-sub">configurable</div>
-          </div>
-          <div class="tick-device-link"></div>
-          <div class="tick-device-node tick-node-console">
-            <div class="tick-node-dot"></div>
-            <div class="tick-node-label">Portal</div>
-            <div class="tick-node-sub">your dashboard</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="hero-cta-row">
-        <a href="https://tick.i4seer.com/public" target="_blank" rel="noopener" class="btn btn-glow" style="background: var(--teal-glow); color: #0a0a0a; box-shadow: 0 0 15px rgba(46, 230, 208,0.4);">See the Public Data &rarr;</a>
-        <a href="/tick/how-it-works/" class="btn btn-outline" style="border-color: var(--teal-glow); color: var(--teal-glow);">How It Works</a>
-        <a href="#where-to-buy" class="btn btn-outline" style="border-color: var(--teal-glow); color: var(--teal-glow);">Pilot a Deployment</a>
-      </div>
-      <p style="margin-top: 1.25rem; font-size: 0.85rem; opacity: 0.65;">
-        Already a customer? <a href="https://tick.i4seer.com" target="_blank" rel="noopener" style="color: var(--teal-glow); text-decoration: none; border-bottom: 1px dotted var(--teal-glow);">Sign in to the portal &rarr;</a>
-      </p>
+  <nav class="subnav">
+    <div class="subnav-inner">
+      <a href="/tick/" class="active">Overview</a>
+      <a href="/tick/how-it-works/">How It Works</a>
+      <a href="/tick/hardware/">Hardware</a>
+      <a href="/tick/roadmap/">Roadmap</a>
+      <a href="https://tick.i4seer.com/public" target="_blank" rel="noopener">Live Data &rarr;</a>
     </div>
-  </div>
+  </nav>
 
-  <!-- BADGE ROW -->
-  <section style="padding: 2rem 1rem;">
-    <div class="tick-badges">
-      <div class="tick-badge">WiFi</div>
-      <div class="tick-badge">Cellular (NB-IoT / LTE-M)</div>
-      <div class="tick-badge">WiFi + Cellular Backup</div>
-      <div class="tick-badge">Hologram Global SIM</div>
-      <div class="tick-badge">HMAC-SHA256 Device Auth</div>
-      <div class="tick-badge">Bring Your Own Endpoint</div>
-      <div class="tick-badge">i4Seer-Hosted Portal</div>
-      <div class="tick-badge">Self-Hostable FastAPI</div>
-      <div class="tick-badge">Multi-Tenant Orgs &amp; Fleets</div>
-      <div class="tick-badge">Per-Device QR Code</div>
-      <div class="tick-badge">No Vendor Lock-In</div>
+  <!-- MASTHEAD -->
+  <section class="masthead">
+    <div>
+      <div class="kicker">tech &middot; cellular IoT telemetry</div>
+      <h1><em>Tick</em> by i4Seer.</h1>
+      <p class="lede">A small, rugged device that monitors your equipment and reports to the dashboard you choose. Cellular by default, WiFi when you want it, both for resilience. Multi-tenant from day one. Plug in and watch.</p>
+      <div class="cta-row">
+        <a href="https://tick.i4seer.com/public" target="_blank" rel="noopener" class="btn-primary">See live data &rarr;</a>
+        <a href="#where-to-buy" class="btn-ghost">Pilot a deployment</a>
+      </div>
+    </div>
+    <aside class="masthead-side">
+      <h4>At a glance</h4>
+      <ul>
+        <li><span class="k">Provisioning</span><span class="v">Auto + approval</span></li>
+        <li><span class="k">Transports</span><span class="v">WiFi &middot; Cell &middot; Both</span></li>
+        <li><span class="k">Destinations</span><span class="v">Yours &middot; Private &middot; Hosted</span></li>
+        <li><span class="k">Coverage</span><span class="v">95%+ US/EU</span></li>
+        <li><span class="k">Multi-tenant</span><span class="v">Out of the box</span></li>
+        <li><span class="k">Data</span><span class="v">Store &amp; Route</span></li>
+      </ul>
+    </aside>
+  </section>
+
+  <!-- THREE DESTINATIONS -->
+  <section class="section">
+    <div class="section-head">
+      <h2>Three ways to deploy.</h2>
+      <p class="lede">Pick where the data lands. Switch later if your needs change.</p>
+    </div>
+
+    <div class="deploy-grid">
+      <div class="deploy-cell">
+        <span class="deploy-tag">Mode 01</span>
+        <div class="deploy-num">01</div>
+        <h3>Bring your own backend</h3>
+        <p>Already have an ingest pipeline, time-series database, or in-house dashboard? Point Tick at your endpoint. Use it as a turn-key device fleet feeding your existing stack.</p>
+      </div>
+      <div class="deploy-cell featured">
+        <span class="deploy-tag">Default &middot; Mode 02</span>
+        <div class="deploy-num">02</div>
+        <h3>i4Seer-hosted portal</h3>
+        <p>Sign up at <a href="https://tick.i4seer.com" target="_blank" rel="noopener">tick.i4seer.com</a>. Plug in. See live telemetry. We run the servers, the TLS, the backups, the upgrades.</p>
+      </div>
+      <div class="deploy-cell">
+        <span class="deploy-tag">Mode 03 &middot; Enterprise</span>
+        <div class="deploy-num">03</div>
+        <h3>Tick Private Portal</h3>
+        <p>A customer-owned portal deployment for organizations with compliance, data-residency, or sovereignty requirements. Paid setup, paid support, versioned compatibility. <a href="mailto:sales@i4seer.com?subject=Tick%20Private%20Portal%20Inquiry">Contact for quote &rarr;</a></p>
+      </div>
     </div>
   </section>
 
-  <!-- WHAT IS TICK -->
-  <section id="what-is-tick">
-    <h2 class="section-title" style="font-family: 'Russo One', sans-serif; letter-spacing: 2px; color: var(--teal-glow); text-shadow: 0 0 8px rgba(46, 230, 208,0.3);">What Tick Is</h2>
-    <div style="max-width: 760px; margin: 0 auto; text-align: center; line-height: 1.9; font-size: 1.05rem;">
-      <p>Tick is a <strong style="color: var(--text-bright);">plug-and-play telemetry platform for monitoring distributed equipment</strong>. A small device sends HMAC-signed JSON over HTTPS to <strong style="color: var(--text-bright);">whatever endpoint you configure</strong>. Three transport modes &mdash; WiFi, cellular, or WiFi with cellular backup. Three destinations &mdash; your own backend, our backend on your server, or our hosted portal.</p>
-      <br>
-      <p>An AtomS3R + SIM7028 NB-IoT/LTE-M stack with an 0.85" IPS screen and a global Hologram SIM. Plug it in, pick a transport, point it at a URL, and it starts reporting telemetry within seconds. <strong style="color: var(--text-bright);">Out of the box, Tick reports to your i4Seer-hosted portal</strong> at <a href="https://tick.i4seer.com" target="_blank" rel="noopener" style="color: var(--teal-glow); text-decoration: none; border-bottom: 1px dotted var(--teal-glow);">tick.i4seer.com</a>. Reconfigure with one shell command (<code>cfg set base_url https://...</code>) to point anywhere else.</p>
+  <!-- THREE TRANSPORTS -->
+  <section class="section">
+    <div class="section-head">
+      <h2>Pick the transport per site.</h2>
+      <p class="lede">WiFi for connected sites. Cellular for places without IT. Both when downtime hurts.</p>
+    </div>
+
+    <div class="tile-grid">
+      <div class="tile">
+        <span class="tile-tag">Transport 01</span>
+        <h3>WiFi only</h3>
+        <p>For offices, kitchens, warehouses with reliable WiFi. No cellular cost, no SIM. The fastest transport.</p>
+      </div>
+      <div class="tile">
+        <span class="tile-tag">Transport 02</span>
+        <h3>Cellular only</h3>
+        <p>For rentals, jobsites, mobile units, remote outbuildings. Global SIM, nationwide carrier coverage. Plug in anywhere.</p>
+      </div>
+      <div class="tile">
+        <span class="tile-tag">Transport 03</span>
+        <h3>WiFi + cellular backup</h3>
+        <p>WiFi to save cost; cellular kicks in instantly when WiFi blips. An outage can&rsquo;t take you offline.</p>
+      </div>
     </div>
   </section>
 
-  <!-- THREE DEPLOYMENT MODES -->
-  <section>
-    <h2 class="section-title" style="font-family: 'Russo One', sans-serif; letter-spacing: 2px; color: var(--teal-glow); text-shadow: 0 0 8px rgba(46, 230, 208,0.3);">Pick a Destination</h2>
-    <div style="max-width: 760px; margin: 0 auto 2.5rem; text-align: center; line-height: 1.85; font-size: 1.02rem; opacity: 0.85;">
-      <p>Three deployment modes. Same device, same firmware. Pick where the data lands.</p>
+  <!-- REMOTE CONSOLE -->
+  <section class="section">
+    <div class="section-head">
+      <h2>Operate from anywhere.</h2>
+      <p class="lede">Tick&rsquo;s remote console lets you reach any device through your dashboard &mdash; from a browser, in real time. The same operator experience as standing in front of the unit with a USB cable.</p>
     </div>
 
-    <div style="max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.75rem; padding: 0 1.5rem;">
-
-      <div class="tick-feat-card">
-        <div style="font-family: 'Russo One', sans-serif; font-size: 0.75rem; letter-spacing: 2px; color: var(--teal-glow); text-shadow: 0 0 6px rgba(46, 230, 208, 0.3); margin-bottom: 0.5rem;">DESTINATION 1</div>
-        <h4>Bring Your Own Backend</h4>
-        <p>Already have an ingest pipeline, time-series DB, or in-house dashboard? Point Tick at any HTTPS endpoint. JSON payload, HMAC-SHA256 signature header, predictable schema. Use Tick as a turn-key device fleet feeding your existing stack.</p>
-        <p style="margin-top: 0.85rem; font-size: 0.85rem; opacity: 0.7;">Best for: teams with established backend infrastructure or compliance requirements that pin where data flows.</p>
+    <div class="two-col-feature" style="margin-top: 0;">
+      <div class="feature-block">
+        <div class="feature-num">// real-time</div>
+        <h3>Open a session in seconds.</h3>
+        <p>Click Open Session. Pick the device. Type. Sessions go live in about two seconds on WiFi, five on cellular. Live transcript, ANSI colors, scrollback &mdash; everything you&rsquo;d expect from a real terminal.</p>
       </div>
-
-      <div class="tick-feat-card">
-        <div style="font-family: 'Russo One', sans-serif; font-size: 0.75rem; letter-spacing: 2px; color: var(--teal-glow); text-shadow: 0 0 6px rgba(46, 230, 208, 0.3); margin-bottom: 0.5rem;">DESTINATION 2</div>
-        <h4>Self-Host Our Backend</h4>
-        <p>Run the Tick FastAPI portal on your own server. A $4/mo droplet handles a meaningful fleet. Multi-tenant orgs and fleets, per-device dashboard, HMAC verify, JSONL on disk. Backups are <code>rsync</code>. Your data, your hardware, our code.</p>
-        <p style="margin-top: 0.85rem; font-size: 0.85rem; opacity: 0.7;">Best for: operators who want the dashboard but don&rsquo;t want their telemetry on a vendor cloud.</p>
+      <div class="feature-block">
+        <div class="feature-num">// multi-operator</div>
+        <h3>More than one admin can attend.</h3>
+        <p>Several admins can attach to the same session at the same time. They see each other&rsquo;s commands and the device&rsquo;s responses live. No &ldquo;take over from Alice&rdquo; choreography. Every command is signed by the operator who issued it.</p>
       </div>
-
-      <div class="tick-feat-card" style="border-color: rgba(46, 230, 208, 0.4); box-shadow: 0 0 18px rgba(46, 230, 208, 0.08);">
-        <div style="font-family: 'Russo One', sans-serif; font-size: 0.75rem; letter-spacing: 2px; color: var(--teal-glow); text-shadow: 0 0 6px rgba(46, 230, 208, 0.3); margin-bottom: 0.5rem;">DESTINATION 3 &middot; DEFAULT</div>
-        <h4>i4Seer-Hosted Portal</h4>
-        <p>Sign up at <a href="https://tick.i4seer.com" target="_blank" rel="noopener" style="color: var(--teal-glow); text-decoration: none; border-bottom: 1px dotted var(--teal-glow);">tick.i4seer.com</a>, plug in the device, see live telemetry. Out-of-the-box default. We run the droplet, the TLS, the backups, the upgrades. You get the dashboard.</p>
-        <p style="margin-top: 0.85rem; font-size: 0.85rem; opacity: 0.7;">Best for: anyone who doesn&rsquo;t want to think about backends. Easiest on-ramp.</p>
+      <div class="feature-block">
+        <div class="feature-num">// transport-aware</div>
+        <h3>Choose the route per session.</h3>
+        <p>Open the session on WiFi to save cellular minutes; switch to cellular mid-session if WiFi drops. The chosen transport accelerates for responsiveness; the other stays at idle.</p>
       </div>
-
+      <div class="feature-block">
+        <div class="feature-num">// auto-end</div>
+        <h3>Walk away safely.</h3>
+        <p>Sessions end automatically two minutes after the last activity from either side. The full transcript is saved server-side, visible later from the audit log. No leaked sessions, no forgotten terminals.</p>
+      </div>
     </div>
-
-    <p style="max-width: 720px; margin: 2.5rem auto 0; text-align: center; line-height: 1.85; font-size: 0.95rem; opacity: 0.75;">
-      Switching modes is one shell command on the device: <code>cfg set base_url https://your-endpoint/</code>. No re-flashing. No firmware variants.
-    </p>
   </section>
 
-  <!-- THREE TRANSPORT MODES -->
-  <section>
-    <h2 class="section-title" style="font-family: 'Russo One', sans-serif; letter-spacing: 2px; color: var(--teal-glow); text-shadow: 0 0 8px rgba(46, 230, 208,0.3);">Pick a Transport</h2>
-    <div style="max-width: 760px; margin: 0 auto 2.5rem; text-align: center; line-height: 1.85; font-size: 1.02rem; opacity: 0.85;">
-      <p>Three modes. Same device, same backend, same dashboard. Choose per site.</p>
+  <!-- ROUTES -->
+  <section class="section">
+    <div class="section-head">
+      <h2>Routes. <span class="coming">Coming</span></h2>
+      <p class="lede">Tick devices send data <em>in</em> to your portal. Routes send data <em>out</em> &mdash; events forwarded to your destinations as they arrive. Same JSON the device speaks, signed the same way.</p>
     </div>
 
-    <div style="max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.75rem; padding: 0 1.5rem;">
-
-      <div class="tick-feat-card">
-        <div style="font-family: 'Russo One', sans-serif; font-size: 0.75rem; letter-spacing: 2px; color: var(--teal-glow); text-shadow: 0 0 6px rgba(46, 230, 208, 0.3); margin-bottom: 0.5rem;">MODE 1</div>
-        <h4>WiFi Only</h4>
-        <p>For connected sites: offices, kitchens, warehouses with reliable WiFi. No cellular cost, no SIM. WPA2/3, NVS-stored credentials, NTP-synced clock. Fastest pipe (sub-1s round trip), zero monthly per-device fee.</p>
-      </div>
-
-      <div class="tick-feat-card">
-        <div style="font-family: 'Russo One', sans-serif; font-size: 0.75rem; letter-spacing: 2px; color: var(--teal-glow); text-shadow: 0 0 6px rgba(46, 230, 208, 0.3); margin-bottom: 0.5rem;">MODE 2</div>
-        <h4>Cellular Only</h4>
-        <p>For sites without IT: rentals, jobsites, mobile units, remote outbuildings. Ship the device, plug it in, it works. NB-IoT/LTE-M with a global Hologram SIM. 95%+ US/EU coverage. First reading in ~30 seconds.</p>
-      </div>
-
-      <div class="tick-feat-card">
-        <div style="font-family: 'Russo One', sans-serif; font-size: 0.75rem; letter-spacing: 2px; color: var(--teal-glow); text-shadow: 0 0 6px rgba(46, 230, 208, 0.3); margin-bottom: 0.5rem;">MODE 3</div>
-        <h4>WiFi with Cellular Backup</h4>
-        <p>For sites where downtime hurts: pharma cold-chain, food service, anything regulator-watched. Tries WiFi first to save cellular cost, falls through to cell on any failure &mdash; per send, not per session. An ISP outage can&rsquo;t take you offline.</p>
-      </div>
-
+    <div class="callout">
+      <p>The portal becomes the routing layer for your fleet&rsquo;s telemetry. Forward to a custom HTTPS endpoint, an MQTT broker, a cloud queue, an SMS gateway, an IoT dashboard &mdash; or anywhere else you can describe.</p>
+      <ul class="route-targets">
+        <li class="route-target">HTTPS <span class="badge soon">Coming soon</span></li>
+        <li class="route-target">MQTT <span class="badge dev">In development</span></li>
+        <li class="route-target">AWS <span class="badge dev">In development</span></li>
+        <li class="route-target">Azure <span class="badge dev">In development</span></li>
+        <li class="route-target">Google Cloud <span class="badge dev">In development</span></li>
+        <li class="route-target">Twilio <span class="badge dev">In development</span></li>
+        <li class="route-target">Datacake <span class="badge dev">In development</span></li>
+        <li class="route-target">Blynk <span class="badge dev">In development</span></li>
+        <li class="route-target">Qubitro <span class="badge dev">In development</span></li>
+      </ul>
+      <p style="margin-bottom: 0; margin-top: 1.25rem;"><strong>HTTPS routes ship first;</strong> the rest are in development. <a href="/tick/roadmap/">See the roadmap &rarr;</a></p>
     </div>
   </section>
 
   <!-- WHO IT'S FOR -->
-  <section>
-    <h2 class="section-title" style="font-family: 'Russo One', sans-serif; letter-spacing: 2px; color: var(--teal-glow); text-shadow: 0 0 8px rgba(46, 230, 208,0.3);">Who It&rsquo;s For</h2>
-    <div style="max-width: 760px; margin: 0 auto 2.5rem; text-align: center; line-height: 1.9; font-size: 1.05rem;">
-      <p>Anyone with expensive equipment in places without IT staff or reliable WiFi.</p>
+  <section class="section">
+    <div class="section-head">
+      <h2>Who Tick is for.</h2>
+      <p class="lede">Anyone with expensive equipment in places without IT staff or reliable WiFi.</p>
     </div>
 
-    <div style="max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.75rem; padding: 0 1.5rem;">
-
-      <div class="tick-use-case">
-        <div class="tick-use-case-label">COLD-CHAIN</div>
-        <h4>Restaurants, Pharma, Food Trucks</h4>
-        <p>Restaurant freezer monitoring, pharma cold-chain, mobile units. The &ldquo;freezer #4 dropped to 41&deg;F&rdquo; story. Devices ride along anywhere there&rsquo;s cell signal.</p>
+    <div class="tile-grid two">
+      <div class="tile">
+        <span class="tile-tag">Cold-Chain</span>
+        <h3>Restaurants &middot; Pharma &middot; Food trucks</h3>
+        <p>Restaurant freezer monitoring. Pharma cold-chain. Mobile units. The &ldquo;freezer #4 dropped to 41&deg;F&rdquo; story. Devices ride along anywhere there&rsquo;s cell signal.</p>
       </div>
-
-      <div class="tick-use-case">
-        <div class="tick-use-case-label">FIELD SERVICE</div>
-        <h4>HVAC, Rentals, Generators</h4>
+      <div class="tile">
+        <span class="tile-tag">Field Service</span>
+        <h3>HVAC &middot; Rentals &middot; Generators</h3>
         <p>Equipment rental fleets, jobsite generators, HVAC installations. Customer wants to know if a unit is running without sending a tech to check.</p>
       </div>
-
-      <div class="tick-use-case">
-        <div class="tick-use-case-label">INSPECTORS</div>
-        <h4>One Identity, Many Customers</h4>
-        <p>Contractors and inspectors with cross-customer access. Real org / fleet / role model lets one user see fleet A in customer X and fleet B in customer Y, scoped exactly.</p>
+      <div class="tile">
+        <span class="tile-tag">Inspectors</span>
+        <h3>One identity, many customers</h3>
+        <p>Contractors and inspectors with cross-customer access. The org / fleet / role model lets one user see fleet A in customer X and fleet B in customer Y, scoped exactly.</p>
       </div>
-
-      <div class="tick-use-case">
-        <div class="tick-use-case-label">SELF-HOSTED</div>
-        <h4>SaaS Skeptics</h4>
-        <p>Your data, on your droplet, our code. JSONL on disk, FastAPI in front, Caddy for TLS. Migrate it anywhere with rsync. No managed cloud, no proprietary database.</p>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- WHAT MAKES IT DIFFERENT -->
-  <section>
-    <h2 class="section-title" style="font-family: 'Russo One', sans-serif; letter-spacing: 2px; color: var(--teal-glow); text-shadow: 0 0 8px rgba(46, 230, 208,0.3);">What Makes It Different</h2>
-    <div style="max-width: 760px; margin: 0 auto 2.5rem; text-align: center; line-height: 1.85; font-size: 1.02rem; opacity: 0.85;">
-      <p>None of these is unique on its own. The combination is rare.</p>
-    </div>
-
-    <div style="max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; padding: 0 1.5rem;">
-
-      <div class="tick-feat-card">
-        <h4>Three Transports, One Device</h4>
-        <p>WiFi, cellular, or WiFi with cellular backup &mdash; configurable per device. Same hardware, same firmware, same dashboard. Pick the transport that fits the site instead of buying different products for different deployments.</p>
-      </div>
-
-      <div class="tick-feat-card">
-        <h4>Per-Send Failover</h4>
-        <p>In WiFi+cellular-backup mode, the device tries WiFi first and falls through to cell on any failure &mdash; per send, not per session. A brief router outage doesn&rsquo;t cost you a dropped reading. 8s WiFi timeout, 60s skip-window after 3 fails.</p>
-      </div>
-
-      <div class="tick-feat-card">
-        <h4>Endpoint-Agnostic</h4>
-        <p>Tick posts HMAC-signed JSON to any HTTPS endpoint. Use our backend (self-hosted or i4Seer-hosted) or your own. No proprietary protocol, no vendor SDK, no lock-in. Switching destinations is one shell command on the device.</p>
-      </div>
-
-      <div class="tick-feat-card">
-        <h4>Multi-Tenant from Day One</h4>
-        <p>Real org / fleet / role model &mdash; not an afterthought. Inspectors with cross-customer access, contractors locked to one fleet, platform admins separated from regular users. Org is the security boundary.</p>
-      </div>
-
-      <div class="tick-feat-card">
-        <h4>HMAC Auth, No Key Registry</h4>
-        <p>Device identity is derived from MAC. Reflashing or factory-reset doesn&rsquo;t break identity. The HMAC secret is derived from MAC + per-fleet salt &mdash; no per-device key registry. Compromise is recovered by rotating one fleet salt.</p>
-      </div>
-
-      <div class="tick-feat-card">
-        <h4>Screen + QR on the Device</h4>
-        <p>0.85" IPS screen on the front. Scan the QR with your phone, open the dashboard for that exact device. Multi-screen UI for field diagnostics: identity, WiFi, cell, data, send, scan. No app required to see if a device is healthy.</p>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- BOOT SEQUENCE -->
-  <section>
-    <h2 class="section-title" style="font-family: 'Russo One', sans-serif; letter-spacing: 2px; color: var(--teal-glow); text-shadow: 0 0 8px rgba(46, 230, 208,0.3);">From Power-On to First Reading</h2>
-    <div style="max-width: 760px; margin: 0 auto 2.5rem; text-align: center; line-height: 1.85; font-size: 1.02rem; opacity: 0.85;">
-      <p>Seven numbered steps. Boots in ~5 seconds. First reading lands in ~30.</p>
-    </div>
-
-    <div style="max-width: 820px; margin: 0 auto; padding: 0 1.5rem;">
-      <div class="tick-feat-card" style="font-family: 'JetBrains Mono', 'Courier New', monospace; line-height: 1.9; font-size: 0.95rem;">
-        <div style="opacity: 0.95;">
-          <div><span style="color: var(--teal-glow);">[1/7]</span>&nbsp;&nbsp;host&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ESP32-S3 info</div>
-          <div><span style="color: var(--teal-glow);">[2/7]</span>&nbsp;&nbsp;wifi&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;associate (skipped if wifi_on=false)</div>
-          <div><span style="color: var(--teal-glow);">[3/7]</span>&nbsp;&nbsp;modem&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AT over UART</div>
-          <div><span style="color: var(--teal-glow);">[4/7]</span>&nbsp;&nbsp;sim&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CPIN ready + IMEI/CCID/IMSI</div>
-          <div><span style="color: var(--teal-glow);">[5/7]</span>&nbsp;&nbsp;network&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CEREG HOME or ROAMING (60s budget)</div>
-          <div><span style="color: var(--teal-glow);">[6/7]</span>&nbsp;&nbsp;pdp attach&nbsp;&nbsp;&nbsp;APN + IP</div>
-          <div><span style="color: var(--teal-glow);">[7/7]</span>&nbsp;&nbsp;state&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;one state POST to the backend</div>
-        </div>
-        <p style="margin-top: 1.25rem; opacity: 0.7; font-family: inherit; font-size: 0.85rem;">Steps run in order with retry budgets per step; the device keeps making progress through transient failures rather than giving up. Sensing continues regardless of transport state &mdash; readings fold into a persistent accumulator (see below) so a WiFi or cell outage never costs you sensor data, only the moment it gets reported.</p>
-      </div>
-
-      <div style="text-align: center; margin-top: 2rem;">
-        <a href="/tick/how-it-works/" style="color: var(--teal-glow); text-decoration: none; border-bottom: 1px dotted var(--teal-glow); font-size: 0.95rem;">Full architecture: transport modes, HMAC, data on disk &rarr;</a>
+      <div class="tile">
+        <span class="tile-tag">Enterprise</span>
+        <h3>Compliance-bound operations</h3>
+        <p>Procurement requirements, data-residency rules, sector-specific compliance. The Tick Private Portal deployment puts your data and your portal under your control, with paid setup and support.</p>
       </div>
     </div>
   </section>
 
-  <!-- SENSE OFTEN, REPORT SMART -->
-  <section>
-    <h2 class="section-title" style="font-family: 'Russo One', sans-serif; letter-spacing: 2px; color: var(--teal-glow); text-shadow: 0 0 8px rgba(46, 230, 208,0.3);">Sense Often, Report Smart</h2>
-    <div style="max-width: 760px; margin: 0 auto 2rem; text-align: center; line-height: 1.9; font-size: 1.05rem;">
-      <p>A naive sensor either samples too rarely (and misses short events) or floods the backend with raw readings. Tick does neither. Sample as often as the use case needs &mdash; <strong style="color: var(--text-bright);">accumulate</strong> the values &mdash; report a compact summary on a separate cadence.</p>
+  <!-- PILOT CTA -->
+  <section class="section" id="where-to-buy">
+    <div class="section-head">
+      <h2>Pilot a deployment.</h2>
+      <p class="lede">Tick is sold direct, in pilot batches. Every deployment is different, so we build quotes around the use case &mdash; how many devices, what transport, where the data lands.</p>
     </div>
 
-    <div style="max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; padding: 0 1.5rem;">
-
-      <div class="tick-feat-card">
-        <h4>Two Independent Cadences</h4>
-        <p>Sample interval (how often to read the sensor) is independent of send interval (how often to ship). Sample every 30 seconds, send every 30 minutes &mdash; one record summarizes 60 readings.</p>
-      </div>
-
-      <div class="tick-feat-card">
-        <h4>Lo / Hi / Avg / Last</h4>
-        <p>Each report includes the minimum, maximum, average, and most-recent value over the window &mdash; plus the timestamps of the first and last reading. A 30-second freezer spike inside a 30-minute window still shows up in <code>hi</code>.</p>
-      </div>
-
-      <div class="tick-feat-card">
-        <h4>NVS-Persistent</h4>
-        <p>The accumulator lives in non-volatile storage. Power blip, modem reboot, MCU restart &mdash; the rolling window survives. The next report still reflects what happened during the outage. Sized for 20+ years of writes at 1-minute cadence.</p>
-      </div>
-
-      <div class="tick-feat-card">
-        <h4>No Reading Lost</h4>
-        <p>Sensing is decoupled from transport. WiFi down, cell down, both down &mdash; the device keeps reading and accumulating. When a transport recovers, the next send carries the full window. The only thing an outage costs is the moment the data lands, not the data itself.</p>
-      </div>
-
-      <div class="tick-feat-card">
-        <h4>10-Second Server Buffer + Dedupe</h4>
-        <p>The backend buffers writes for 10 seconds and dedupes by <code>(device_id, tick)</code>. A cellular retransmit looks identical to the first send and gets coalesced &mdash; no double-counting, no special idempotency-token plumbing on the device.</p>
-      </div>
-
-      <div class="tick-feat-card">
-        <h4>Backend-Tolerant Schema</h4>
-        <p>Payload is JSON. Adding a new metric means appending a field; older backends ignore unknowns. Storage is JSONL on disk &mdash; schema-flexible by design. Custom probes don&rsquo;t require backend changes.</p>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- THE PORTAL / PUBLIC DATA -->
-  <section>
-    <h2 class="section-title" style="font-family: 'Russo One', sans-serif; letter-spacing: 2px; color: var(--teal-glow); text-shadow: 0 0 8px rgba(46, 230, 208,0.3);">The Portal</h2>
-    <div style="max-width: 760px; margin: 0 auto; text-align: center; line-height: 1.9; font-size: 1.05rem; margin-bottom: 2rem;">
-      <p>If you use the i4Seer-hosted portal or self-host our FastAPI backend, you get the Tick dashboard. One process, multi-tenant. Live device-state view with transport indicator, signal strength, send/fail counters, snapshot age, and countdown to next refresh. Mobile-responsive &mdash; table folds to cards under 600px. (Bring-your-own-backend deployments use your existing dashboard.)</p>
-      <p style="margin-top: 1rem;">Forget mocked-up screenshots. <strong style="color: var(--text-bright);">See real telemetry.</strong> We publish a public read-only view of one operational fleet &mdash; real devices, real uplinks. The same console our customers use.</p>
-    </div>
-
-    <div class="tick-demo-cta" style="text-align: center; margin: 0 auto 3rem;">
-      <a href="https://tick.i4seer.com/public" target="_blank" rel="noopener" class="btn btn-glow tick-demo-btn" style="background: var(--teal-glow); color: #0a0a0a; box-shadow: 0 0 15px rgba(46, 230, 208,0.4); font-size: 1.1rem; padding: 1rem 2.25rem;">View Public Data &rarr;</a>
-      <p class="tick-demo-sub" style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.7; line-height: 1.6;">No sign-in required for the public fleet.<br>Sign in to the portal to manage your own.</p>
-    </div>
-
-    <div style="max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; padding: 0 1.5rem;">
-
-      <div class="tick-feat-card">
-        <h4>Multi-Tenant Orgs</h4>
-        <p>Org is the security boundary. Devices belong to one org; users belong to many orgs with a per-org role. Fleets group devices inside an org for grouping and access. Inspectors get one identity across multiple customer orgs.</p>
-      </div>
-
-      <div class="tick-feat-card">
-        <h4>Per-Device Dashboard</h4>
-        <p>Live transport indicator (wifi or cell), signal strength, send and fail counters per pipe, snapshot age, countdown to next refresh. Same view a customer&rsquo;s ops dispatcher sees, every day.</p>
-      </div>
-
-      <div class="tick-feat-card">
-        <h4>QR Deep-Linking</h4>
-        <p>Each device&rsquo;s 0.85" screen renders a QR that deep-links to the per-device portal page. Field tech scans, the right page opens. No paperwork. No part numbers to memorize.</p>
-      </div>
-
-      <div class="tick-feat-card">
-        <h4>Per-Org Audit</h4>
-        <p>Every org-level action is logged to a per-org JSONL file. Members can read their own org&rsquo;s audit trail. Platform admins have a separate global audit for pre-org events.</p>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- HARDWARE & DATA SHAPE -->
-  <section>
-    <h2 class="section-title" style="font-family: 'Russo One', sans-serif; letter-spacing: 2px; color: var(--teal-glow); text-shadow: 0 0 8px rgba(46, 230, 208,0.3);">Hardware &amp; Data</h2>
-
-    <div style="max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; padding: 0 1.5rem;">
-
-      <div class="tick-feat-card">
-        <h4>The Device</h4>
-        <p>M5Stack <strong style="color: var(--text-bright);">AtomS3R</strong> (ESP32-S3, 8 MB PSRAM, 0.85" IPS, BMI270 IMU) on the <strong style="color: var(--text-bright);">Atom DTU NB-IoT2 v1.1 (K059)</strong> base with a SIM7028 modem and a global Hologram IoT SIM. USB-C power. Credit-card-sized.</p>
-        <p style="margin-top: 0.75rem; font-size: 0.9rem; opacity: 0.7;"><a href="/tick/hardware/" style="color: var(--teal-glow); text-decoration: none; border-bottom: 1px dotted var(--teal-glow);">Hardware spec sheet &rarr;</a></p>
-      </div>
-
-      <div class="tick-feat-card">
-        <h4>Identity from MAC</h4>
-        <p>Device ID is <code>T-&lt;6 hex of last 3 MAC bytes&gt;</code> &mdash; e.g. <code>T-BE04B8</code>. Survives NVS wipe, reflash, and factory reset. No per-device secrets to manage.</p>
-      </div>
-
-      <div class="tick-feat-card">
-        <h4>WiFi + Cellular Hardware</h4>
-        <p>The device has both pipes built in. ESP32-S3 native WiFi (WPA2/3, NVS-stored credentials). SIM7028 in NB-IoT mode with modem-side TLS. NITZ syncs the clock on cell; NTP fallback over WiFi (carriers block UDP/123). Pick which pipes are enabled per device.</p>
-      </div>
-
-      <div class="tick-feat-card">
-        <h4>JSONL on Disk</h4>
-        <p>Telemetry is one JSONL file per device per UTC day. State snapshots are atomic JSON files. 10-second write buffer with <code>(device_id, tick)</code> dedupe handles cellular retransmits. Backups are <code>rsync /var/tick/data/</code>.</p>
-      </div>
-
-      <div class="tick-feat-card">
-        <h4>HMAC Auth</h4>
-        <p>HMAC-SHA256 on every POST. Device secret is derived from MAC + per-fleet salt &mdash; no key registry on the server. Single combined <code>X-Tick-Auth</code> header (modem AT quirk: literal CRLF in headers gets sent raw). TLS underneath, RSA-2048 cert.</p>
-      </div>
-
-      <div class="tick-feat-card">
-        <h4>Honest Latency</h4>
-        <p>Cellular RTT ~3-7s over NB-IoT. WiFi RTT under 1s when reachable. State snapshots refresh every 30 minutes by default. Reading cadence is configurable per device.</p>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ROADMAP / WHAT'S NOT BUILT YET -->
-  <section>
-    <h2 class="section-title" style="font-family: 'Russo One', sans-serif; letter-spacing: 2px; color: var(--teal-glow); text-shadow: 0 0 8px rgba(46, 230, 208,0.3);">What&rsquo;s Next</h2>
-    <div style="max-width: 760px; margin: 0 auto 2.5rem; text-align: center; line-height: 1.85; font-size: 1.02rem; opacity: 0.85;">
-      <p>Tick ships data reliably from anywhere with cell coverage. The alerting layer that turns that data into a pager is being built now.</p>
-    </div>
-
-    <div style="max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; padding: 0 1.5rem;">
-
-      <div class="tick-feat-card" style="border-color: rgba(255, 200, 60, 0.3);">
-        <h4 style="color: #ffc83c;">Server-Side Alerting</h4>
-        <p>Fleet-level rule engine, email and webhook channels, dwell-time + cooldown, resolved-notifications. The &ldquo;page at 3am&rdquo; feature. Building now.</p>
-      </div>
-
-      <div class="tick-feat-card" style="border-color: rgba(255, 200, 60, 0.3);">
-        <h4 style="color: #ffc83c;">External Sensors</h4>
-        <p>Today readings are the device&rsquo;s own MCU temperature &mdash; a self-monitoring metric. DS18B20 customer-temperature probe (1-Wire, waterproof, ~$2) is the first external sensor on the path.</p>
-      </div>
-
-      <div class="tick-feat-card" style="border-color: rgba(255, 200, 60, 0.3);">
-        <h4 style="color: #ffc83c;">Email Password Reset</h4>
-        <p>Today password resets are admin-driven. Self-service reset via email token is on the path before the first paying customer.</p>
-      </div>
-
-      <div class="tick-feat-card" style="border-color: rgba(255, 200, 60, 0.3);">
-        <h4 style="color: #ffc83c;">Off-Droplet Backups</h4>
-        <p>Today backups are manual rsync. Nightly rsync to S3-compatible (Backblaze B2 or DO Spaces) is queued for the first fleet that can&rsquo;t afford to lose data.</p>
-      </div>
-
-    </div>
-
-    <div style="text-align: center; margin-top: 2.5rem;">
-      <a href="/tick/roadmap/" style="color: var(--teal-glow); text-decoration: none; border-bottom: 1px dotted var(--teal-glow); font-size: 0.95rem;">Full roadmap &mdash; what&rsquo;s done with dates, what&rsquo;s next &rarr;</a>
-    </div>
-  </section>
-
-  <!-- VERSIONS -->
-  <section>
-    <div style="max-width: 720px; margin: 0 auto; padding: 0 1.5rem; text-align: center; opacity: 0.7; font-size: 0.9rem; line-height: 1.8;">
-      <p style="font-family: 'JetBrains Mono', 'Courier New', monospace;">
-        Firmware <strong style="color: var(--teal-glow);">1.1.1</strong> &middot;
-        Backend <strong style="color: var(--teal-glow);">1.1.1</strong> &middot;
-        Live at <a href="https://tick.i4seer.com" target="_blank" rel="noopener" style="color: var(--teal-glow); text-decoration: none;">tick.i4seer.com</a>
+    <div style="text-align: center;">
+      <a href="mailto:sales@i4seer.com?subject=Tick%20Pilot%20Inquiry" class="btn-primary">Request a pilot &rarr;</a>
+      <a href="/tick/how-it-works/" class="btn-ghost" style="margin-left: 0.5rem;">How it works</a>
+      <p style="margin-top: 1.5rem; color: var(--ink-mute); font-size: 0.9rem;">
+        Sales: <a href="mailto:sales@i4seer.com">sales@i4seer.com</a> &middot;
+        Support: <a href="mailto:support@i4seer.com">support@i4seer.com</a>
       </p>
     </div>
   </section>
 
-  <!-- DEPLOYMENT GUIDES -->
-  <section>
-    <h2 class="section-title" style="font-family: 'Russo One', sans-serif; letter-spacing: 2px; color: var(--teal-glow); text-shadow: 0 0 8px rgba(46, 230, 208,0.3);">Going Deeper</h2>
-    <div style="max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.25rem; padding: 0 1.5rem;">
-
-      <a href="/tick/self-hosted/" class="tick-feat-card" style="text-decoration: none; color: inherit;">
-        <h4>Self-Host Our Backend</h4>
-        <p>FastAPI + Caddy + Docker Compose on a $4/mo droplet. 10-step deploy guide, sizing notes, security posture.</p>
-        <p style="margin-top: 0.85rem; color: var(--teal-glow); font-size: 0.9rem;">Self-hosting guide &rarr;</p>
-      </a>
-
-      <a href="/tick/how-it-works/" class="tick-feat-card" style="text-decoration: none; color: inherit;">
-        <h4>Bring Your Own Endpoint</h4>
-        <p>JSON payload schema, HMAC header format, retry semantics. Everything you need to point Tick at your existing backend.</p>
-        <p style="margin-top: 0.85rem; color: var(--teal-glow); font-size: 0.9rem;">How it works &rarr;</p>
-      </a>
-
-      <a href="https://tick.i4seer.com" target="_blank" rel="noopener" class="tick-feat-card" style="text-decoration: none; color: inherit;">
-        <h4>i4Seer-Hosted Portal</h4>
-        <p>Skip the droplet. Sign in, plug in the device, see live telemetry. Out-of-the-box default for new devices.</p>
-        <p style="margin-top: 0.85rem; color: var(--teal-glow); font-size: 0.9rem;">tick.i4seer.com &rarr;</p>
-      </a>
-
-    </div>
-  </section>
-
-  <!-- WHERE TO BUY / PILOT -->
-  <section id="where-to-buy">
-    <h2 class="section-title" style="font-family: 'Russo One', sans-serif; letter-spacing: 2px; color: var(--teal-glow); text-shadow: 0 0 8px rgba(46, 230, 208,0.3);">Pilot a Deployment</h2>
-    <div style="max-width: 760px; margin: 0 auto 2rem; text-align: center; line-height: 1.9; font-size: 1.05rem;">
-      <p>Tick is sold direct, in pilot batches. Every deployment is different &mdash; how many devices, what transport, what destination, what you&rsquo;re measuring &mdash; so we build quotes around the use case instead of pushing everyone through self-serve checkout.</p>
-    </div>
-
-    <div style="max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; padding: 0 1.5rem;">
-
-      <div class="tick-feat-card">
-        <h4>Pilot Batch</h4>
-        <p>Start with a handful of devices on one site. Cellular SIM included where needed; no carrier contract on your side. Live telemetry within a week of shipping.</p>
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-logo-line">i4Seer</div>
+        <p class="footer-tag">An independent technology studio.<br>We build Tick. We also publish books.</p>
       </div>
-
-      <div class="tick-feat-card">
-        <h4>Production Rollout</h4>
-        <p>Scale to dozens or hundreds of devices across sites. Multi-org, multi-fleet, delegated per-customer access. Mix transports per site, mix destinations per fleet.</p>
+      <div>
+        <h5>Tick</h5>
+        <ul>
+          <li><a href="/tick/">Overview</a></li>
+          <li><a href="/tick/how-it-works/">How It Works</a></li>
+          <li><a href="/tick/hardware/">Hardware</a></li>
+          <li><a href="/tick/roadmap/">Roadmap</a></li>
+          <li><a href="https://tick.i4seer.com" target="_blank" rel="noopener">Portal &rarr;</a></li>
+        </ul>
       </div>
-
-      <div class="tick-feat-card">
-        <h4>Pick Any Destination</h4>
-        <p>Bring your own backend, self-host ours on your server, or use the i4Seer-hosted portal. Switching is one shell command per device.</p>
+      <div>
+        <h5>Press</h5>
+        <ul>
+          <li><a href="/seer-frights/">Seer Frights</a></li>
+          <li><a href="/seer-fairies/">Seer Fairies</a></li>
+          <li><a href="/seer-warns/">Seer Warns</a></li>
+          <li><a href="/about/#authors">For Authors</a></li>
+        </ul>
       </div>
-
+      <div>
+        <h5>Company</h5>
+        <ul>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/press/">Press Kit</a></li>
+          <li><a href="/privacy/">Privacy</a></li>
+          <li><a href="/terms/">Terms</a></li>
+        </ul>
+      </div>
     </div>
-
-    <div style="text-align: center; padding: 2.5rem 1rem 1rem;">
-      <a href="mailto:sales@i4seer.com?subject=Tick%20Pilot%20Inquiry" class="btn btn-glow" style="background: var(--teal-glow); color: #0a0a0a; box-shadow: 0 0 20px rgba(46, 230, 208,0.4); font-size: 1.05rem; padding: 0.9rem 2.25rem;">Request a Pilot &rarr;</a>
-      <p style="margin-top: 1rem; opacity: 0.6; font-size: 0.9rem;">
-        Sales: <a href="mailto:sales@i4seer.com" style="color: var(--teal-glow);">sales@i4seer.com</a>
-        &nbsp;&middot;&nbsp;
-        Support: <a href="mailto:support@i4seer.com" style="color: var(--teal-glow);">support@i4seer.com</a>
-      </p>
-    </div>
-  </section>
-
-  <!-- WHO BUILDS THIS -->
-  <section>
-    <h2 class="section-title" style="font-family: 'Russo One', sans-serif; letter-spacing: 2px; color: var(--teal-glow); text-shadow: 0 0 8px rgba(46, 230, 208,0.3);">Who Builds This</h2>
-    <div style="max-width: 720px; margin: 0 auto; text-align: center; line-height: 1.9; font-size: 1.05rem;">
-      <p>Tick is designed, built, and operated by <a href="/" style="color: var(--teal-glow); text-decoration: none;">Institute for Seer LLC</a> &mdash; an independent technology studio focused on rugged cellular telemetry for operators who need plug-and-play deployment and no vendor lock-in.</p>
-      <p>Hardware integration, firmware, backend, portal &mdash; all in-house. No outsourced backend. No third-party data brokers. The same team that ships the code answers the support email.</p>
-      <br>
-      <p style="opacity: 0.4; font-size: 0.9rem;">Devices that think ahead.</p>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <div class="footer-logo" style="font-family: 'Russo One', sans-serif; color: var(--teal-glow); letter-spacing: 3px;">TICK</div>
-    <p>&copy; 2026 Institute for Seer LLC. All rights reserved.</p>
-    <div class="footer-links">
-      <a href="/">i4Seer</a>
-      <a href="/about/">About</a>
-      <a href="/press/">Press Kit</a>
-      <a href="/tick/">Tick</a>
-      <a href="/tick/how-it-works/">How It Works</a>
-      <a href="/tick/hardware/">Hardware</a>
-      <a href="/tick/self-hosted/">Self-Hosted</a>
-      <a href="/tick/roadmap/">Roadmap</a>
-      <a href="https://tick.i4seer.com" target="_blank" rel="noopener">Portal</a>
-      <a href="/seer-frights/">Seer Frights</a>
-      <a href="/seer-warns/">Seer Warns</a>
-      <a href="/seer-fairies/">Seer Fairies</a>
-      <a href="/privacy/">Privacy Policy</a>
-      <a href="/terms/">Terms of Use</a>
-      <a href="/cookie-policy/">Cookie Policy</a>
-      <a href="/do-not-sell/">Do Not Sell My Info</a>
-    </div>
-
-    <p style="opacity: 0.4; font-size: 0.75rem; margin-top: 1rem; max-width: 800px; margin-left: auto; margin-right: auto;">
-      Tick&trade;, Seer Frights&reg;, Seer Warns&trade;, Seer Fairies&trade;, and i4Seer&trade; are trademarks of Institute for Seer LLC.
-    </p>
-
-    <p style="opacity: 0.3; font-size: 0.7rem; margin-top: 0.5rem;">
-      This website is operated in the United States.
-    </p>
+    <div class="footer-meta">&copy; 2026 Institute for Seer LLC &middot; Operated in the United States &middot; v2.0.0</div>
   </footer>
 
-  <!-- COOKIE BANNER -->
   <div class="cookie-banner" id="cookie-banner">
     <p>This site uses essential cookies for basic functionality. Non-essential cookies (analytics, preferences) are only set with your consent. See our <a href="/privacy/">Privacy Policy</a>.</p>
     <div class="cookie-buttons">

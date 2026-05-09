@@ -3,129 +3,98 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>404 — Page Not Found | i4Seer.com</title>
-  <meta name="description" content="This page doesn't exist. Or maybe it did, and something took it.">
+  <title>Not Found &mdash; i4Seer</title>
+  <meta name="description" content="That page isn't here. Try Tick, Books, or the homepage.">
   <link rel="stylesheet" href="/style.css">
   <meta name="robots" content="noindex">
   <link rel="icon" type="image/svg+xml" href="/images/favicon-seertick.svg">
   <link rel="alternate icon" href="/favicon.ico" type="image/x-icon">
-  <!-- Plausible Analytics -->
-  <script defer data-domain="i4seer.com" src="https://plausible.io/js/script.js"></script>
 </head>
-<body class="landing-page">
+<body>
 
-  <!-- NAV -->
-  <header>
-    <nav>
-      <div class="nav-top">
-        <a href="/" class="logo">I4SEER<span>Institute for Seer</span></a>
-        <ul>
-          <li><a href="/" class="active">i4Seer</a></li>
-          <li><a href="/books/">Books</a></li>
-          <li><a href="/tick/">Tech</a></li>
-          <li><a href="/about/">About</a></li>
-        </ul>
-      </div>
-    </nav>
+  <header class="studio-header">
+    <div class="studio-header-inner">
+      <a href="/" class="studio-logo">i4Seer</a>
+      <span class="studio-tagline">Devices that think ahead. Stories that watch back.</span>
+      <ul class="studio-nav">
+        <li><a href="/tick/">Tick</a></li>
+        <li><a href="/books/">Books</a></li>
+        <li><a href="/about/">About</a></li>
+      </ul>
+    </div>
   </header>
 
-  <!-- 404 HERO -->
-  <div class="hero" style="min-height: 65vh;">
-    <div class="hero-content">
-      <h1 style="font-family: 'Russo One', sans-serif; font-size: clamp(5rem, 15vw, 12rem); letter-spacing: 8px; margin-bottom: 0; color: var(--warm-gold); text-shadow: 0 0 20px rgba(232,220,200,0.3), 0 0 60px rgba(232,220,200,0.1); -webkit-text-stroke: 0;">404</h1>
-      <p class="subtitle" style="margin-top: 0.5rem; font-size: 1.3rem;">You followed the map.<br>But this page doesn&rsquo;t exist.</p>
-      <p class="subtitle" style="margin-top: 0; font-size: 0.95rem; opacity: 0.4;">Or maybe it did, and something took it.</p>
-      <div class="hero-cta-row">
-        <a href="/" class="btn btn-glow">Go Home</a>
-        <a href="/tick/" class="btn btn-outline" style="border-color: var(--teal-glow); color: var(--teal-glow);">Explore Tick</a>
-      </div>
+  <section class="subhero">
+    <div class="crumbs">404 / Not Found</div>
+    <h1>That page isn&rsquo;t <em>here</em>.</h1>
+    <p class="lede">The link or address you followed doesn&rsquo;t resolve to anything we publish. It may have moved, or it may never have existed. Try one of the doorways below.</p>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <h2>Maybe you were looking for&hellip;</h2>
+      <p class="lede">The four sides of the studio. Pick the closest one.</p>
     </div>
-  </div>
 
-  <!-- QUICK NAV -->
-  <section>
-    <h2 class="section-title">Maybe you were looking for&hellip;</h2>
-    <div style="max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.25rem; padding: 0 1.5rem;">
-
-      <a href="/tick/" class="tick-feat-card" style="text-decoration: none; color: inherit; border-color: rgba(46, 230, 208, 0.2);">
-        <h4 style="color: var(--teal-glow); text-shadow: 0 0 6px rgba(46, 230, 208, 0.3);">TICK</h4>
-        <p>Cellular-first IoT telemetry. Plug-and-play. Self-hosted portal.</p>
+    <div class="tile-grid two">
+      <a href="/tick/" class="tile" style="text-decoration: none; color: inherit;">
+        <span class="tile-tag">Tech</span>
+        <h3>Tick</h3>
+        <p>Plug-and-play IoT telemetry. WiFi, cellular, or both. Three deployment modes. Live portal at <code>tick.i4seer.com</code>.</p>
       </a>
-
-      <a href="/seer-frights/" class="tick-feat-card" style="text-decoration: none; color: inherit; border-color: rgba(42, 204, 16, 0.2);">
-        <h4 style="color: var(--green-glow); text-shadow: 0 0 6px rgba(42, 204, 16, 0.3);">SEER FRIGHTS</h4>
-        <p>Middle-grade horror with buildable devices. Three books live.</p>
+      <a href="/books/" class="tile" style="text-decoration: none; color: inherit;">
+        <span class="tile-tag">Press</span>
+        <h3>Books</h3>
+        <p>Three horror series under Institute for Seer Press. Frights, Fairies, Warns. Every book stands alone.</p>
       </a>
-
-      <a href="/seer-fairies/" class="tick-feat-card" style="text-decoration: none; color: inherit; border-color: rgba(232, 184, 74, 0.2);">
-        <h4 style="color: var(--fae-gold); text-shadow: 0 0 6px rgba(232, 184, 74, 0.3);">SEER FAIRIES</h4>
-        <p>Dark fae horror for upper MG / lower YA. Ancient European fae in American towns.</p>
+      <a href="/about/" class="tile" style="text-decoration: none; color: inherit;">
+        <span class="tile-tag">Company</span>
+        <h3>About</h3>
+        <p>An independent technology studio. We build Tick. We publish books. Same instinct on both sides.</p>
       </a>
-
-      <a href="/seer-warns/" class="tick-feat-card" style="text-decoration: none; color: inherit; border-color: rgba(196, 168, 130, 0.2);">
-        <h4 style="color: var(--sepia); text-shadow: 0 0 6px rgba(196, 168, 130, 0.3);">SEER WARNS</h4>
-        <p>Adult literary horror. Standalone novels about warnings you cannot doubt.</p>
+      <a href="/" class="tile" style="text-decoration: none; color: inherit;">
+        <span class="tile-tag">Home</span>
+        <h3>Start over</h3>
+        <p>Back to the front door. The site map fits on one homepage.</p>
       </a>
-
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer>
-    <div class="footer-logo" style="font-family: 'Russo One', sans-serif; color: var(--text-bright); font-size: 1.2rem; letter-spacing: 3px;">
-      i4Seer
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-logo-line">i4Seer</div>
+        <p class="footer-tag">An independent technology studio.<br>We build Tick. We also publish books.</p>
+      </div>
+      <div>
+        <h5>Tick</h5>
+        <ul>
+          <li><a href="/tick/">Overview</a></li>
+          <li><a href="/tick/how-it-works/">How It Works</a></li>
+          <li><a href="/tick/hardware/">Hardware</a></li>
+          <li><a href="/tick/roadmap/">Roadmap</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Press</h5>
+        <ul>
+          <li><a href="/seer-frights/">Seer Frights</a></li>
+          <li><a href="/seer-fairies/">Seer Fairies</a></li>
+          <li><a href="/seer-warns/">Seer Warns</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Company</h5>
+        <ul>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/press/">Press Kit</a></li>
+          <li><a href="/privacy/">Privacy</a></li>
+          <li><a href="/terms/">Terms</a></li>
+        </ul>
+      </div>
     </div>
-
-    <p>&copy; 2026 Institute for Seer LLC. All rights reserved.</p>
-
-    <div class="footer-links">
-      <a href="/">Home</a>
-      <a href="/about/">About</a>
-      <a href="/press/">Press Kit</a>
-      <a href="/tick/">Tick</a>
-      <a href="/seer-frights/">Seer Frights</a>
-      <a href="/seer-warns/">Seer Warns</a>
-      <a href="/seer-fairies/">Seer Fairies</a>
-      <a href="/privacy/">Privacy Policy</a>
-      <a href="/terms/">Terms of Use</a>
-      <a href="/build-safety/">Build Safety</a>
-      <a href="/affiliate-disclosure/">Affiliate Disclosure</a>
-      <a href="/cookie-policy/">Cookie Policy</a>
-      <a href="/do-not-sell/">Do Not Sell My Info</a>
-    </div>
-
-    <p style="opacity: 0.4; font-size: 0.75rem; margin-top: 1rem; max-width: 800px; margin-left: auto; margin-right: auto;">
-      Tick&trade;, Seer Frights&reg;, Seer Warns&trade;, Seer Fairies&trade;, and i4Seer&trade; are trademarks of Institute for Seer LLC.
-    </p>
-
-    <p style="opacity: 0.3; font-size: 0.7rem; margin-top: 0.5rem;">
-      This website is operated in the United States.
-    </p>
+    <div class="footer-meta">&copy; 2026 Institute for Seer LLC &middot; Operated in the United States &middot; v2.0.0</div>
   </footer>
-
-  <!-- COOKIE BANNER -->
-  <div class="cookie-banner" id="cookie-banner">
-    <p>This site uses essential cookies for basic functionality. Non-essential cookies (analytics, preferences) are only set with your consent. See our <a href="/privacy/">Privacy Policy</a>.</p>
-    <div class="cookie-buttons">
-      <button class="cookie-accept" id="cookie-accept">Accept</button>
-      <button class="cookie-decline" id="cookie-decline">Decline</button>
-    </div>
-  </div>
-  <script>
-    (function() {
-      if (!localStorage.getItem('cookie-consent')) {
-        document.getElementById('cookie-banner').style.display = 'flex';
-      }
-      document.getElementById('cookie-accept').onclick = function() {
-        localStorage.setItem('cookie-consent', 'accepted');
-        document.getElementById('cookie-banner').style.display = 'none';
-      };
-      document.getElementById('cookie-decline').onclick = function() {
-        localStorage.setItem('cookie-consent', 'declined');
-        document.getElementById('cookie-banner').style.display = 'none';
-      };
-    })();
-  </script>
 
 </body>
 </html>

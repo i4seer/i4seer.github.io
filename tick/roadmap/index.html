@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tick Roadmap &mdash; What&rsquo;s Done, What&rsquo;s Next</title>
-  <meta name="description" content="Tick roadmap. Honest list of what ships today, what's being built now, and what's deferred. Multi-tenant orgs are live. Server-side alerting is the next priority.">
+  <title>Tick Roadmap &mdash; i4Seer</title>
+  <meta name="description" content="Tick roadmap. Honest list of what ships today, what's being built now, and what's deferred. Multi-tenant orgs and remote console are live. Outbound webhooks and server-side alerting are in progress.">
   <link rel="stylesheet" href="/style.css">
   <meta name="robots" content="index, follow">
   <link rel="icon" type="image/svg+xml" href="/images/favicon-seertick.svg">
@@ -12,188 +12,205 @@
   <link rel="canonical" href="https://www.i4seer.com/tick/roadmap/">
   <script defer data-domain="i4seer.com" src="https://plausible.io/js/script.js"></script>
 </head>
-<body class="tick-page">
+<body>
 
-  <header style="border-bottom-color: var(--teal-glow); box-shadow: 0 4px 20px rgba(46, 230, 208,0.1);">
-    <nav>
-      <div class="nav-top">
-        <a href="/tick/" class="logo" style="font-family: 'Russo One', sans-serif; letter-spacing: 4px; color: var(--teal-glow); text-shadow: 0 0 10px rgba(46, 230, 208, 0.4), 0 0 25px rgba(46, 230, 208, 0.2);">TICK<span style="color: var(--teal-glow); opacity: 0.5;">Telemetry by i4Seer</span></a>
-        <ul>
-          <li><a href="/">i4Seer</a></li>
-          <li><a href="/books/">Books</a></li>
-          <li><a href="/tick/" class="active" style="color: var(--teal-glow);">Tech</a></li>
-          <li><a href="/about/">About</a></li>
-        </ul>
-      </div>
-    </nav>
+  <header class="studio-header">
+    <div class="studio-header-inner">
+      <a href="/" class="studio-logo">i4Seer</a>
+      <span class="studio-tagline">Devices that think ahead. Stories that watch back.</span>
+      <ul class="studio-nav">
+        <li><a href="/tick/" class="active">Tick</a></li>
+        <li><a href="/books/">Books</a></li>
+        <li><a href="/about/">About</a></li>
+      </ul>
+    </div>
   </header>
 
-  <div class="hero" style="min-height: 35vh;">
-    <div class="hero-content">
-      <p class="tagline" style="color: var(--teal-glow); opacity: 0.6;">Tick / Roadmap</p>
-      <h1 style="font-family: 'Russo One', sans-serif; letter-spacing: 4px; color: var(--teal-glow); text-shadow: 0 0 20px rgba(46, 230, 208, 0.5);">ROADMAP</h1>
-      <p class="subtitle" style="max-width: 720px; font-size: 1.1rem; opacity: 0.85;">What ships today. What&rsquo;s being built now. What&rsquo;s deferred. Honesty is a positioning advantage.</p>
-    </div>
-  </div>
-
-  <!-- SHIPPING -->
-  <section>
-    <h2 class="section-title" style="font-family: 'Russo One', sans-serif; letter-spacing: 2px; color: var(--teal-glow); text-shadow: 0 0 8px rgba(46, 230, 208,0.3);">Shipping Today</h2>
-    <div style="max-width: 760px; margin: 0 auto 2rem; text-align: center; line-height: 1.9; font-size: 1.02rem; opacity: 0.85;">
-      <p>If we say it on the main page, it works in production. Firmware 1.1.1 + Backend 1.1.1 are running at <a href="https://tick.i4seer.com" target="_blank" rel="noopener" style="color: var(--teal-glow); text-decoration: none; border-bottom: 1px dotted var(--teal-glow);">tick.i4seer.com</a> right now.</p>
-    </div>
-
-    <div style="max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; padding: 0 1.5rem;">
-
-      <div class="tick-feat-card" style="border-color: rgba(42, 204, 16, 0.3);">
-        <h4 style="color: #2ee6d0;">Cellular Bring-Up</h4>
-        <p>SIM7028 over raw AT (no TinyGSM). HTTPS via modem-side TLS. NB-IoT/LTE-M attach with NITZ clock sync. Diagnostic shell.</p>
-      </div>
-
-      <div class="tick-feat-card" style="border-color: rgba(42, 204, 16, 0.3);">
-        <h4 style="color: #2ee6d0;">Three Transport Modes</h4>
-        <p>WiFi only, cellular only, or WiFi with cellular backup. Configurable per device. Per-send failover in backup mode with 8s WiFi timeout and 60s skip-window after 3 fails.</p>
-      </div>
-
-      <div class="tick-feat-card" style="border-color: rgba(42, 204, 16, 0.3);">
-        <h4 style="color: #2ee6d0;">HMAC Auth</h4>
-        <p>HMAC-SHA256 on every POST. Secret derived from MAC + per-fleet salt. Single combined <code>X-Tick-Auth</code> header.</p>
-      </div>
-
-      <div class="tick-feat-card" style="border-color: rgba(42, 204, 16, 0.3);">
-        <h4 style="color: #2ee6d0;">Multi-Tenant Orgs</h4>
-        <p>Org / fleet / role model with platform admins, org owners/editors/viewers, and fleet members. Cascade lives in two functions; every check goes through them.</p>
-      </div>
-
-      <div class="tick-feat-card" style="border-color: rgba(42, 204, 16, 0.3);">
-        <h4 style="color: #2ee6d0;">Per-Device Dashboard</h4>
-        <p>Live transport indicator, signal strength, send/fail counters per pipe, snapshot age, countdown to next refresh. Mobile-responsive.</p>
-      </div>
-
-      <div class="tick-feat-card" style="border-color: rgba(42, 204, 16, 0.3);">
-        <h4 style="color: #2ee6d0;">Per-Org Audit</h4>
-        <p>JSONL audit log per org plus a global audit for pre-org-context events (login attempts, platform-admin actions). Members read their own org&rsquo;s history.</p>
-      </div>
-
-      <div class="tick-feat-card" style="border-color: rgba(42, 204, 16, 0.3);">
-        <h4 style="color: #2ee6d0;">Public Read-Only View</h4>
-        <p>One operational fleet exposed read-only at <code>/public</code> &mdash; field-scrubbed and rate-limited. The demo is the product.</p>
-      </div>
-
-      <div class="tick-feat-card" style="border-color: rgba(42, 204, 16, 0.3);">
-        <h4 style="color: #2ee6d0;">QR Deep-Linking</h4>
-        <p>Each device&rsquo;s 0.85" screen renders a QR that opens the per-device dashboard page. Scan, fix, walk away.</p>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- BUILDING NOW -->
-  <section>
-    <h2 class="section-title" style="font-family: 'Russo One', sans-serif; letter-spacing: 2px; color: var(--teal-glow); text-shadow: 0 0 8px rgba(46, 230, 208,0.3);">Building Now</h2>
-    <div style="max-width: 760px; margin: 0 auto 2rem; text-align: center; line-height: 1.9; font-size: 1.02rem; opacity: 0.85;">
-      <p>Active priorities. These will land before the first paid customer.</p>
-    </div>
-
-    <div style="max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; padding: 0 1.5rem;">
-
-      <div class="tick-feat-card" style="border-color: rgba(255, 200, 60, 0.3);">
-        <h4 style="color: #ffc83c;">Server-Side Alerting</h4>
-        <p>Fleet-level rule storage. Background evaluator. Email + webhook channels. Dwell-time, cooldown, resolved-notifications. The pager-at-3am feature. Server-side, not device-side &mdash; tweak rules without re-flashing.</p>
-      </div>
-
-      <div class="tick-feat-card" style="border-color: rgba(255, 200, 60, 0.3);">
-        <h4 style="color: #ffc83c;">External Sensor (DS18B20)</h4>
-        <p>Today readings are MCU temperature &mdash; a self-monitoring metric. DS18B20 1-Wire probe is the first external sensor: cheap, accurate, waterproof variants. Backend already tolerates unknown payload fields.</p>
-      </div>
-
-      <div class="tick-feat-card" style="border-color: rgba(255, 200, 60, 0.3);">
-        <h4 style="color: #ffc83c;">Email Password Reset</h4>
-        <p>Today resets are admin-driven. Self-service token-based reset over email is on the path before self-service onboarding.</p>
-      </div>
-
-      <div class="tick-feat-card" style="border-color: rgba(255, 200, 60, 0.3);">
-        <h4 style="color: #ffc83c;">Off-Droplet Backups</h4>
-        <p>Today: manual rsync. Coming: nightly automated rsync to S3-compatible (Backblaze B2 or DO Spaces). Cheap, decoupled from droplet survival.</p>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- LATER -->
-  <section>
-    <h2 class="section-title" style="font-family: 'Russo One', sans-serif; letter-spacing: 2px; color: var(--teal-glow); text-shadow: 0 0 8px rgba(46, 230, 208,0.3);">Later</h2>
-    <div style="max-width: 760px; margin: 0 auto 2rem; text-align: center; line-height: 1.9; font-size: 1.02rem; opacity: 0.85;">
-      <p>On the list, but waiting for a customer to ask. We&rsquo;re not speculatively building.</p>
-    </div>
-
-    <div style="max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.25rem; padding: 0 1.5rem;">
-
-      <div class="tick-feat-card" style="opacity: 0.85;">
-        <h4>Self-Service Claim Tokens</h4>
-        <p>Customer enters a one-time token printed on the device label and the device joins their org. Today: admin clicks Approve.</p>
-      </div>
-
-      <div class="tick-feat-card" style="opacity: 0.85;">
-        <h4>Charts on Device Detail</h4>
-        <p>Light SVG chart of last ~200 readings, range picker (1h / 24h / 7d / 30d). Most useful once alerting overlays threshold lines on it.</p>
-      </div>
-
-      <div class="tick-feat-card" style="opacity: 0.85;">
-        <h4>OTA Firmware Updates</h4>
-        <p>USB updates work for any device we can physically reach. Build OTA when there&rsquo;s a fleet that we can&rsquo;t.</p>
-      </div>
-
-      <div class="tick-feat-card" style="opacity: 0.85;">
-        <h4>Stripe Billing</h4>
-        <p>Per-device-per-month, billed to org owner. Won&rsquo;t exist until someone&rsquo;s offered to pay for it.</p>
-      </div>
-
-      <div class="tick-feat-card" style="opacity: 0.85;">
-        <h4>Device-Went-Dark Detection</h4>
-        <p>The other half of alerting: a device that <em>should</em> be reporting and isn&rsquo;t. Same notification plumbing as threshold alerts; different trigger.</p>
-      </div>
-
-      <div class="tick-feat-card" style="opacity: 0.85;">
-        <h4>Scale to a Real DB</h4>
-        <p>JSONL is fine to a few thousand devices. Beyond that, TimescaleDB or DuckDB-on-files alongside. Files stay valid through the transition.</p>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- VERSIONS -->
-  <section>
-    <div style="max-width: 720px; margin: 0 auto; padding: 0 1.5rem; text-align: center; opacity: 0.7; font-size: 0.9rem; line-height: 1.8;">
-      <p style="font-family: 'JetBrains Mono', 'Courier New', monospace;">
-        Firmware <strong style="color: var(--teal-glow);">1.1.1</strong> &middot;
-        Backend <strong style="color: var(--teal-glow);">1.1.1</strong> &middot;
-        Live at <a href="https://tick.i4seer.com" target="_blank" rel="noopener" style="color: var(--teal-glow); text-decoration: none;">tick.i4seer.com</a>
-      </p>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section style="text-align: center;">
-    <a href="/tick/self-hosted/" class="btn btn-outline" style="border-color: var(--teal-glow); color: var(--teal-glow);">&larr; Self-Hosted</a>
-    <a href="/tick/" class="btn btn-glow" style="background: var(--teal-glow); color: #0a0a0a; box-shadow: 0 0 15px rgba(46, 230, 208,0.4); margin-left: 0.75rem;">Back to Tick &rarr;</a>
-  </section>
-
-  <footer>
-    <div class="footer-logo" style="font-family: 'Russo One', sans-serif; color: var(--teal-glow); letter-spacing: 3px;">TICK</div>
-    <p>&copy; 2026 Institute for Seer LLC. All rights reserved.</p>
-    <div class="footer-links">
-      <a href="/">i4Seer</a>
-      <a href="/tick/">Tick</a>
+  <nav class="subnav">
+    <div class="subnav-inner">
+      <a href="/tick/">Overview</a>
       <a href="/tick/how-it-works/">How It Works</a>
       <a href="/tick/hardware/">Hardware</a>
-      <a href="/tick/self-hosted/">Self-Hosted</a>
-      <a href="/tick/roadmap/">Roadmap</a>
-      <a href="https://tick.i4seer.com" target="_blank" rel="noopener">Portal</a>
-      <a href="/about/">About</a>
-      <a href="/privacy/">Privacy</a>
-      <a href="/terms/">Terms</a>
+      <a href="/tick/roadmap/" class="active">Roadmap</a>
+      <a href="https://tick.i4seer.com/public" target="_blank" rel="noopener">Live Data &rarr;</a>
     </div>
+  </nav>
+
+  <section class="subhero">
+    <div class="crumbs"><a href="/">i4Seer</a> / <a href="/tick/">Tick</a> / Roadmap</div>
+    <h1>What ships today. <em>What&rsquo;s next.</em></h1>
+    <p class="lede">Honesty is a positioning advantage. We don&rsquo;t list features as shipped until they actually ship. Here&rsquo;s where things actually stand.</p>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <h2>Shipping today.</h2>
+      <p class="lede">If we say it on the main page, it works in production. Live at <a href="https://tick.i4seer.com" target="_blank" rel="noopener">tick.i4seer.com</a>.</p>
+    </div>
+
+    <div class="tile-grid">
+      <div class="tile">
+        <span class="tile-tag">Live <span class="coming live">Shipped</span></span>
+        <h3>Cellular + WiFi</h3>
+        <p>Both transports run continuously. WiFi-first dispatch with cell fallback. Auto-recovery from outages without operator action.</p>
+      </div>
+      <div class="tile">
+        <span class="tile-tag">Live <span class="coming live">Shipped</span></span>
+        <h3>Three deployment modes</h3>
+        <p>Bring your own backend, an enterprise Tick Private Portal, or the i4Seer-hosted portal. Same firmware behind all three.</p>
+      </div>
+      <div class="tile">
+        <span class="tile-tag">Live <span class="coming live">Shipped</span></span>
+        <h3>Multi-tenant orgs</h3>
+        <p>Real org / fleet / role model. Inspectors with cross-customer access. Contractors locked to a single fleet. Platform admins separated from regular users.</p>
+      </div>
+      <div class="tile">
+        <span class="tile-tag">Live <span class="coming live">Shipped</span></span>
+        <h3>Remote console</h3>
+        <p>Open a terminal session to any device through your dashboard. Real-time output, multi-admin sessions, full transcripts saved to audit.</p>
+      </div>
+      <div class="tile">
+        <span class="tile-tag">Live <span class="coming live">Shipped</span></span>
+        <h3>Per-device dashboard</h3>
+        <p>Live transport indicator, signal strength, send/fail counters per transport, snapshot age. Mobile-responsive.</p>
+      </div>
+      <div class="tile">
+        <span class="tile-tag">Live <span class="coming live">Shipped</span></span>
+        <h3>Auto-provisioning</h3>
+        <p>Factory-fresh devices land in the unclaimed pool with auto-named labels. Platform admins assign to an org with one click.</p>
+      </div>
+      <div class="tile">
+        <span class="tile-tag">Live <span class="coming live">Shipped</span></span>
+        <h3>Per-org audit log</h3>
+        <p>Every approval, label change, and console session logged. Members read their own org&rsquo;s history. Platform admins see global events.</p>
+      </div>
+      <div class="tile">
+        <span class="tile-tag">Live <span class="coming live">Shipped</span></span>
+        <h3>Public read-only fleet</h3>
+        <p>One operational fleet exposed at <code>/public</code>, field-scrubbed and rate-limited. The demo is the product.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <h2>Building now.</h2>
+      <p class="lede">Active priorities. These are the next features customers will see.</p>
+    </div>
+
+    <div class="tile-grid">
+      <div class="tile featured">
+        <span class="tile-tag">In progress <span class="coming">Coming</span></span>
+        <h3>Server-side alerting</h3>
+        <p>Fleet-level rules. Email and webhook delivery. Threshold breaches, dwell-time, cooldowns, resolved-notifications. The pager-at-3am feature.</p>
+      </div>
+      <div class="tile featured">
+        <span class="tile-tag">In progress <span class="coming">Coming</span></span>
+        <h3>Routes</h3>
+        <p>The portal forwards data and state changes out to your destinations as they arrive. <strong>HTTPS routes ship first</strong>; other targets are in development:</p>
+        <ul class="route-targets" style="margin-top: 0.85rem;">
+          <li class="route-target">HTTPS <span class="badge soon">Coming soon</span></li>
+          <li class="route-target">MQTT <span class="badge dev">In dev</span></li>
+          <li class="route-target">AWS <span class="badge dev">In dev</span></li>
+          <li class="route-target">Azure <span class="badge dev">In dev</span></li>
+          <li class="route-target">Google Cloud <span class="badge dev">In dev</span></li>
+          <li class="route-target">Twilio <span class="badge dev">In dev</span></li>
+          <li class="route-target">Datacake <span class="badge dev">In dev</span></li>
+          <li class="route-target">Blynk <span class="badge dev">In dev</span></li>
+          <li class="route-target">Qubitro <span class="badge dev">In dev</span></li>
+        </ul>
+      </div>
+      <div class="tile featured">
+        <span class="tile-tag">In progress <span class="coming">Coming</span></span>
+        <h3>External temperature probes</h3>
+        <p>1-Wire DS18B20 first &mdash; cheap, accurate, waterproof. Measure what your customer actually cares about, not the device&rsquo;s internal temperature.</p>
+      </div>
+      <div class="tile featured">
+        <span class="tile-tag">In progress <span class="coming">Coming</span></span>
+        <h3>Email-driven password reset</h3>
+        <p>Self-service reset over email token. On the path before self-service onboarding for new orgs.</p>
+      </div>
+      <div class="tile featured">
+        <span class="tile-tag">In progress <span class="coming">Coming</span></span>
+        <h3>Off-server backups</h3>
+        <p>Nightly automated backup to S3-compatible storage. Cheap, decoupled from any single server&rsquo;s survival.</p>
+      </div>
+      <div class="tile featured">
+        <span class="tile-tag">In progress <span class="coming">Coming</span></span>
+        <h3>Dashboard config UI</h3>
+        <p>Edit reading cadences, send intervals, and the auto-reboot schedule from the device&rsquo;s page. Today: terminal-only.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <h2>Later.</h2>
+      <p class="lede">On the list, but waiting for a customer to ask. We don&rsquo;t speculatively build.</p>
+    </div>
+
+    <div class="tile-grid">
+      <div class="tile">
+        <h3>Self-service claim tokens</h3>
+        <p>Customer enters a one-time token printed on the device label and the device joins their org. Today: a platform admin clicks Approve.</p>
+      </div>
+      <div class="tile">
+        <h3>Charts on device detail</h3>
+        <p>Trend lines, range pickers, threshold overlays. Most useful once alerting overlays its rules on the same chart.</p>
+      </div>
+      <div class="tile">
+        <h3>OTA firmware updates</h3>
+        <p>USB updates work for any device we can physically reach. Build OTA when there&rsquo;s a fleet that can&rsquo;t be reached.</p>
+      </div>
+      <div class="tile">
+        <h3>Stripe billing</h3>
+        <p>Per-device-per-month, billed to org owner. Won&rsquo;t exist until someone&rsquo;s offered to pay.</p>
+      </div>
+      <div class="tile">
+        <h3>Device-went-dark detection</h3>
+        <p>The other half of alerting: a device that <em>should</em> be reporting and isn&rsquo;t. Same plumbing as threshold alerts, different trigger.</p>
+      </div>
+      <div class="tile">
+        <h3>Scale to a real database</h3>
+        <p>The current file-based store is fine to a few thousand devices. Beyond that, time-series indexing alongside. Files stay valid through the transition.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-logo-line">i4Seer</div>
+        <p class="footer-tag">An independent technology studio.<br>We build Tick. We also publish books.</p>
+      </div>
+      <div>
+        <h5>Tick</h5>
+        <ul>
+          <li><a href="/tick/">Overview</a></li>
+          <li><a href="/tick/how-it-works/">How It Works</a></li>
+          <li><a href="/tick/hardware/">Hardware</a></li>
+          <li><a href="/tick/roadmap/">Roadmap</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Press</h5>
+        <ul>
+          <li><a href="/seer-frights/">Seer Frights</a></li>
+          <li><a href="/seer-fairies/">Seer Fairies</a></li>
+          <li><a href="/seer-warns/">Seer Warns</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Company</h5>
+        <ul>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/press/">Press Kit</a></li>
+          <li><a href="/privacy/">Privacy</a></li>
+          <li><a href="/terms/">Terms</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-meta">&copy; 2026 Institute for Seer LLC &middot; Operated in the United States &middot; v2.0.0</div>
   </footer>
 
 </body>

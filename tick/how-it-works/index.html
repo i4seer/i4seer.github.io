@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>How Tick Works &mdash; Telemetry Architecture</title>
-  <meta name="description" content="How a Tick device boots, picks a transport, and ships data. Seven-step boot sequence, three transport modes (WiFi / cellular / WiFi+cellular backup), HMAC authentication, JSONL storage.">
+  <title>How Tick Works &mdash; i4Seer</title>
+  <meta name="description" content="How a Tick device boots, picks a transport, and ships data. Power-on to first reading, sensing decoupled from transport, automatic outage recovery, remote console.">
   <link rel="stylesheet" href="/style.css">
   <meta name="robots" content="index, follow">
   <link rel="icon" type="image/svg+xml" href="/images/favicon-seertick.svg">
@@ -12,241 +12,178 @@
   <link rel="canonical" href="https://www.i4seer.com/tick/how-it-works/">
   <script defer data-domain="i4seer.com" src="https://plausible.io/js/script.js"></script>
 </head>
-<body class="tick-page">
+<body>
 
-  <header style="border-bottom-color: var(--teal-glow); box-shadow: 0 4px 20px rgba(46, 230, 208,0.1);">
-    <nav>
-      <div class="nav-top">
-        <a href="/tick/" class="logo" style="font-family: 'Russo One', sans-serif; letter-spacing: 4px; color: var(--teal-glow); text-shadow: 0 0 10px rgba(46, 230, 208, 0.4), 0 0 25px rgba(46, 230, 208, 0.2);">TICK<span style="color: var(--teal-glow); opacity: 0.5;">Telemetry by i4Seer</span></a>
-        <ul>
-          <li><a href="/">i4Seer</a></li>
-          <li><a href="/books/">Books</a></li>
-          <li><a href="/tick/" class="active" style="color: var(--teal-glow);">Tech</a></li>
-          <li><a href="/about/">About</a></li>
-        </ul>
-      </div>
-    </nav>
+  <header class="studio-header">
+    <div class="studio-header-inner">
+      <a href="/" class="studio-logo">i4Seer</a>
+      <span class="studio-tagline">Devices that think ahead. Stories that watch back.</span>
+      <ul class="studio-nav">
+        <li><a href="/tick/" class="active">Tick</a></li>
+        <li><a href="/books/">Books</a></li>
+        <li><a href="/about/">About</a></li>
+      </ul>
+    </div>
   </header>
 
-  <div class="hero" style="min-height: 35vh;">
-    <div class="hero-content">
-      <p class="tagline" style="color: var(--teal-glow); opacity: 0.6;">Tick / How It Works</p>
-      <h1 style="font-family: 'Russo One', sans-serif; letter-spacing: 4px; color: var(--teal-glow); text-shadow: 0 0 20px rgba(46, 230, 208, 0.5);">HOW IT WORKS</h1>
-      <p class="subtitle" style="max-width: 720px; font-size: 1.1rem; opacity: 0.85;">From power-on to first reading in ~30 seconds. Per-send transport selection. Self-hosted backend. JSONL on disk.</p>
-    </div>
-  </div>
-
-  <!-- BOOT SEQUENCE -->
-  <section>
-    <h2 class="section-title" style="font-family: 'Russo One', sans-serif; letter-spacing: 2px; color: var(--teal-glow); text-shadow: 0 0 8px rgba(46, 230, 208,0.3);">Boot Sequence</h2>
-    <div style="max-width: 760px; margin: 0 auto 2rem; text-align: center; line-height: 1.9; font-size: 1.05rem;">
-      <p>The firmware&rsquo;s <code>cmdStart()</code> runs seven numbered steps with a per-step retry budget. Steps that fail past their budget cause the bring-up to halt and re-attempt &mdash; the device doesn&rsquo;t pretend network exists when it doesn&rsquo;t. <strong style="color: var(--text-bright);">Sensing is independent of bring-up</strong>: even when transport is failing, the device keeps reading the sensor and folding values into the persistent accumulator (see below) so no data is lost while the dispatcher recovers.</p>
-    </div>
-
-    <div style="max-width: 820px; margin: 0 auto; padding: 0 1.5rem;">
-      <div class="tick-feat-card" style="font-family: 'JetBrains Mono', 'Courier New', monospace; line-height: 2; font-size: 0.95rem;">
-        <div><span style="color: var(--teal-glow);">[1/7]</span>&nbsp;&nbsp;<strong>host</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ESP32-S3 chip info, MAC, firmware version, free heap.</div>
-        <div><span style="color: var(--teal-glow);">[2/7]</span>&nbsp;&nbsp;<strong>wifi</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Associate (skipped if wifi_on=false). Non-fatal.</div>
-        <div><span style="color: var(--teal-glow);">[3/7]</span>&nbsp;&nbsp;<strong>modem</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UART up, AT-OK, ATE0, CMEE=2.</div>
-        <div><span style="color: var(--teal-glow);">[4/7]</span>&nbsp;&nbsp;<strong>sim</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CPIN ready, IMEI, CCID, IMSI.</div>
-        <div><span style="color: var(--teal-glow);">[5/7]</span>&nbsp;&nbsp;<strong>network</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CEREG = HOME or ROAMING. 60s budget.</div>
-        <div><span style="color: var(--teal-glow);">[6/7]</span>&nbsp;&nbsp;<strong>pdp attach</strong>&nbsp;&nbsp;APN <code>hologram</code>, IP assigned.</div>
-        <div><span style="color: var(--teal-glow);">[7/7]</span>&nbsp;&nbsp;<strong>state</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;One state POST to the backend. Non-fatal.</div>
-      </div>
-      <p style="margin-top: 1.5rem; opacity: 0.7; font-size: 0.9rem; text-align: center; line-height: 1.7;">A failed start retries every 10 minutes; the <code>[!]</code> indicator stays in the screen corner until recovery. After 6 consecutive failures, the MCU reboots as a last-ditch reset &mdash; the accumulator persists in NVS, so the next boot resumes the same rolling window. No reset of bring-up state ever costs you sensor data.</p>
-    </div>
-  </section>
-
-  <!-- ACCUMULATOR -->
-  <section>
-    <h2 class="section-title" style="font-family: 'Russo One', sans-serif; letter-spacing: 2px; color: var(--teal-glow); text-shadow: 0 0 8px rgba(46, 230, 208,0.3);">The Accumulator</h2>
-    <div style="max-width: 760px; margin: 0 auto 2rem; text-align: center; line-height: 1.9; font-size: 1.05rem;">
-      <p>Sensing and reporting run on independent cadences. Each sample is folded into a persistent accumulator; reports flush the accumulator on a separate schedule. This makes high-frequency sensing affordable on cellular and survives outages without losing data.</p>
-    </div>
-
-    <div style="max-width: 820px; margin: 0 auto; padding: 0 1.5rem;">
-      <div class="tick-feat-card" style="font-family: 'JetBrains Mono', 'Courier New', monospace; font-size: 0.85rem; line-height: 1.8;">
-<pre style="margin: 0; white-space: pre-wrap; color: inherit; background: transparent; border: 0;">// Accumulator state, persisted to NVS on every read.
-// Survives modem reboot, MCU restart, even <code>reboot dtu</code>.
-
-tick             u32   reading sequence number (monotonic)
-acc_count        u32   readings in the current window
-acc_first_epoch  u32   first reading in the window (UTC seconds)
-mcu_lo           i32   minimum value seen this window
-mcu_hi           i32   maximum value seen this window
-mcu_sum          i64   sum (for avg = sum / count at flush)
-mcu_last         i32   most recent value
-mcu_last_epoch   u32   timestamp of most recent value</pre>
-      </div>
-    </div>
-
-    <div style="max-width: 1000px; margin: 2rem auto 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; padding: 0 1.5rem;">
-
-      <div class="tick-feat-card">
-        <h4>Why Two Cadences</h4>
-        <p>Sample frequency is dictated by the physical event you&rsquo;re catching (a freezer spike can last 30 seconds). Send frequency is dictated by what your backend, your bandwidth budget, or your cellular plan can absorb (a 30-minute summary is plenty). Decoupling them lets you tune both independently.</p>
-      </div>
-
-      <div class="tick-feat-card">
-        <h4>Why NVS</h4>
-        <p>If the accumulator only lived in RAM, a power blip or modem reboot would reset the rolling window and the next report would only reflect post-reset readings. Persisting to NVS means the window survives anything short of a flash erase. The <code>acc_first_epoch</code> field tells the backend exactly what time range a report covers.</p>
-      </div>
-
-      <div class="tick-feat-card">
-        <h4>Why Lo + Hi (not just Avg)</h4>
-        <p>Averages hide outliers. A 30-minute average looks fine even when a 30-second spike crossed your threshold. Reporting <code>lo</code> and <code>hi</code> alongside <code>avg</code> means the alerting layer (or your existing backend) can fire on the actual peak, not the smoothed-out version.</p>
-      </div>
-
-      <div class="tick-feat-card">
-        <h4>Sensing &harr; Transport Decoupled</h4>
-        <p>The sample loop runs on its own timer, independent of any send. WiFi down, cell down, both down &mdash; the device keeps reading and accumulating. When transport recovers, the next send carries the full window, with first/last timestamps so the backend places it correctly on the timeline.</p>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- TRANSPORT MODES -->
-  <section>
-    <h2 class="section-title" style="font-family: 'Russo One', sans-serif; letter-spacing: 2px; color: var(--teal-glow); text-shadow: 0 0 8px rgba(46, 230, 208,0.3);">Three Transport Modes</h2>
-    <div style="max-width: 760px; margin: 0 auto 2rem; text-align: center; line-height: 1.9; font-size: 1.05rem;">
-      <p>The device has WiFi and cellular pipes built in. Configure which are enabled per device: <strong style="color: var(--text-bright);">WiFi only</strong>, <strong style="color: var(--text-bright);">cellular only</strong>, or <strong style="color: var(--text-bright);">WiFi with cellular backup</strong>. The dispatcher in <code>httpsPostJsonAuto()</code> picks the egress for every send based on what&rsquo;s enabled and what&rsquo;s up.</p>
-    </div>
-
-    <div style="max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; padding: 0 1.5rem;">
-
-      <div class="tick-feat-card">
-        <h4>Per-Send Selection (Backup Mode)</h4>
-        <p>In WiFi+cellular-backup mode, the dispatcher tries WiFi first when associated and falls through to cellular on any failure &mdash; <strong>per send, not per session</strong>. A device on a marginal AP fails over immediately rather than waiting for a daemon to notice.</p>
-      </div>
-
-      <div class="tick-feat-card">
-        <h4>Hysteresis (Backup Mode)</h4>
-        <p>After 3 consecutive WiFi failures the dispatcher skips WiFi for 60s (configurable). A device on a dead AP doesn&rsquo;t burn an 8s timeout on every send. Window resets on success or expiry. Cell-only and WiFi-only modes don&rsquo;t apply.</p>
-      </div>
-
-      <div class="tick-feat-card">
-        <h4>Failure Escalation</h4>
-        <p>3 consecutive total fails &rarr; reboot the modem (~25s) and re-associate WiFi. 6 fails &rarr; <code>ESP.restart()</code>. Counters are RAM-only &mdash; preserving them across reboots would be misleading because the failure context is gone.</p>
-      </div>
-
-      <div class="tick-feat-card">
-        <h4>Clock Sync Per Pipe</h4>
-        <p>NITZ from the carrier sets the clock on cellular attach. If a device is WiFi-only or boots into WiFi before cell completes, fall back to <code>configTime(0, 0, "pool.ntp.org", ...)</code> over WiFi &mdash; carriers block UDP/123 on the cell data path.</p>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- HMAC -->
-  <section>
-    <h2 class="section-title" style="font-family: 'Russo One', sans-serif; letter-spacing: 2px; color: var(--teal-glow); text-shadow: 0 0 8px rgba(46, 230, 208,0.3);">HMAC &amp; Identity</h2>
-    <div style="max-width: 760px; margin: 0 auto; line-height: 1.9; font-size: 1.05rem;">
-      <p style="text-align: center;">Every device-to-server POST is HMAC-SHA256 signed with a secret derived from <code>MAC + per-fleet salt</code>. There is no per-device key registry on the server &mdash; the secret is recomputed from MAC at verify-time.</p>
-      <br>
-      <p style="text-align: center;">A factory reset, NVS wipe, or reflash all preserve identity because the MAC is hardware-derived. Compromise is recovered by rotating one fleet salt and re-flashing the affected fleet &mdash; not by tracking down every device&rsquo;s key.</p>
-      <br>
-      <p style="text-align: center; font-size: 0.95rem; opacity: 0.8;">Headers ride a <strong style="color: var(--text-bright);">single combined</strong> <code>X-Tick-Auth: &lt;id&gt;:&lt;ts&gt;:&lt;sig-hex&gt;</code> &mdash; the SIM7028&rsquo;s <code>AT+HTTPPARA="USERDATA"</code> doesn&rsquo;t interpret literal CRLF, so multi-header attempts collapse into mangled values. One header sidesteps the modem quirk.</p>
-    </div>
-  </section>
-
-  <!-- DATA SHAPE -->
-  <section>
-    <h2 class="section-title" style="font-family: 'Russo One', sans-serif; letter-spacing: 2px; color: var(--teal-glow); text-shadow: 0 0 8px rgba(46, 230, 208,0.3);">Data on Disk</h2>
-    <div style="max-width: 760px; margin: 0 auto 2rem; text-align: center; line-height: 1.9; font-size: 1.05rem;">
-      <p>Per-device telemetry is JSONL, one file per UTC day. State snapshots are atomic JSON. A 10-second write buffer with <code>(device_id, tick)</code> dedupe handles cellular retransmits without double-writes.</p>
-    </div>
-
-    <div style="max-width: 820px; margin: 0 auto; padding: 0 1.5rem;">
-      <div class="tick-feat-card" style="font-family: 'JetBrains Mono', 'Courier New', monospace; font-size: 0.85rem; line-height: 1.8;">
-<pre style="margin: 0; white-space: pre-wrap; color: inherit; background: transparent; border: 0;">data/
-  orgs.json                          # registry of orgs
-  users/{user_id}.json               # per-user identity + memberships
-  unclaimed.json                     # HMAC-valid POSTs, no org yet
-  audit/{date}.jsonl                 # platform-level audit
-  orgs/{org_slug}/
-    devices.json                     # per-org device registry
-    fleets.json                      # fleets in this org
-    device_fleets.json               # device &harr; fleet many-to-many
-    audit/{date}.jsonl               # org-level audit
-    {device_id}/
-      state.json                     # last state snapshot (atomic write)
-      {YYYY-MM-DD}.jsonl             # daily readings (10s buffered + dedupe)
-</pre>
-      </div>
-      <p style="margin-top: 1.5rem; text-align: center; opacity: 0.7; font-size: 0.9rem; line-height: 1.7;">In production the data path lives at <code>/var/tick/data/</code> &mdash; outside the repo, so deploys can never clobber it. Backups are <code>rsync</code>; no proprietary export needed.</p>
-    </div>
-  </section>
-
-  <!-- AUTH MATRIX -->
-  <section>
-    <h2 class="section-title" style="font-family: 'Russo One', sans-serif; letter-spacing: 2px; color: var(--teal-glow); text-shadow: 0 0 8px rgba(46, 230, 208,0.3);">Multi-Tenant Roles</h2>
-    <div style="max-width: 760px; margin: 0 auto 2rem; text-align: center; line-height: 1.9; font-size: 1.05rem;">
-      <p>Org is the security boundary. A device belongs to <strong style="color: var(--text-bright);">0 or 1 orgs</strong>. A user belongs to <strong style="color: var(--text-bright);">0 or more orgs</strong>, with a per-org role. Fleets group devices for grouping and access &mdash; not ownership.</p>
-    </div>
-
-    <div style="max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; padding: 0 1.5rem;">
-
-      <div class="tick-role-card">
-        <div class="tick-role-label">PLATFORM ADMIN</div>
-        <h4>Effective Owner of Every Org</h4>
-        <p>Stored separately from regular users for fail-safe. Creates orgs, assigns initial owners, ejects devices to unclaimed, reads global audit.</p>
-      </div>
-
-      <div class="tick-role-card">
-        <div class="tick-role-label">ORG OWNER / EDITOR</div>
-        <h4>Full Org Access</h4>
-        <p>Effective fleet editor of every fleet in the org. Owners can manage org members and roles; editors can&rsquo;t. Both can create fleets and approve devices.</p>
-      </div>
-
-      <div class="tick-role-card">
-        <div class="tick-role-label">ORG VIEWER</div>
-        <h4>Read-Only Across Org</h4>
-        <p>Sees readings for every fleet in the org. May be elevated to editor on a specific fleet via explicit fleet grants. Cannot manage members.</p>
-      </div>
-
-      <div class="tick-role-card">
-        <div class="tick-role-label">FLEET MEMBER</div>
-        <h4>Scoped to Granted Fleets</h4>
-        <p>Opts out of the cascade. Sees only fleets where they have an explicit fleet grant. The way to give a contractor access to one fleet without seeing the rest of the org.</p>
-      </div>
-
-    </div>
-
-    <p style="max-width: 720px; margin: 2rem auto 0; text-align: center; line-height: 1.8; font-size: 0.95rem; opacity: 0.7;">The cascade lives in two functions: <code>effective_org_role(user, org)</code> and <code>effective_fleet_role(user, org, fleet)</code>. Every access check calls into these &mdash; no ad-hoc cascade logic anywhere else.</p>
-  </section>
-
-  <!-- VERSIONS -->
-  <section>
-    <div style="max-width: 720px; margin: 0 auto; padding: 0 1.5rem; text-align: center; opacity: 0.7; font-size: 0.9rem; line-height: 1.8;">
-      <p style="font-family: 'JetBrains Mono', 'Courier New', monospace;">
-        Firmware <strong style="color: var(--teal-glow);">1.1.1</strong> &middot;
-        Backend <strong style="color: var(--teal-glow);">1.1.1</strong> &middot;
-        Live at <a href="https://tick.i4seer.com" target="_blank" rel="noopener" style="color: var(--teal-glow); text-decoration: none;">tick.i4seer.com</a>
-      </p>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section style="text-align: center;">
-    <a href="/tick/" class="btn btn-outline" style="border-color: var(--teal-glow); color: var(--teal-glow);">&larr; Back to Tick</a>
-    <a href="/tick/hardware/" class="btn btn-glow" style="background: var(--teal-glow); color: #0a0a0a; box-shadow: 0 0 15px rgba(46, 230, 208,0.4); margin-left: 0.75rem;">Hardware &rarr;</a>
-  </section>
-
-  <footer>
-    <div class="footer-logo" style="font-family: 'Russo One', sans-serif; color: var(--teal-glow); letter-spacing: 3px;">TICK</div>
-    <p>&copy; 2026 Institute for Seer LLC. All rights reserved.</p>
-    <div class="footer-links">
-      <a href="/">i4Seer</a>
-      <a href="/tick/">Tick</a>
-      <a href="/tick/how-it-works/">How It Works</a>
+  <nav class="subnav">
+    <div class="subnav-inner">
+      <a href="/tick/">Overview</a>
+      <a href="/tick/how-it-works/" class="active">How It Works</a>
       <a href="/tick/hardware/">Hardware</a>
-      <a href="/tick/self-hosted/">Self-Hosted</a>
       <a href="/tick/roadmap/">Roadmap</a>
-      <a href="https://tick.i4seer.com" target="_blank" rel="noopener">Portal</a>
-      <a href="/about/">About</a>
-      <a href="/privacy/">Privacy</a>
-      <a href="/terms/">Terms</a>
+      <a href="https://tick.i4seer.com/public" target="_blank" rel="noopener">Live Data &rarr;</a>
     </div>
+  </nav>
+
+  <section class="subhero">
+    <div class="crumbs"><a href="/">i4Seer</a> / <a href="/tick/">Tick</a> / How It Works</div>
+    <h1>From <em>plug-in</em> to live data.</h1>
+    <p class="lede">A walkthrough of what happens when you power a Tick device on, how data finds its way to your dashboard, and why an outage doesn&rsquo;t cost you readings.</p>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <h2>Power-on to first reading.</h2>
+      <p class="lede">About thirty seconds, start to finish. Most of that is the cellular network handshake.</p>
+    </div>
+
+    <div class="flow">
+      <div class="flow-step">
+        <div class="num">01</div>
+        <div class="name">Plug in</div>
+        <div class="desc">USB-C power, anywhere</div>
+      </div>
+      <div class="flow-step">
+        <div class="num">02</div>
+        <div class="name">Connect</div>
+        <div class="desc">WiFi, cellular, or both</div>
+      </div>
+      <div class="flow-step">
+        <div class="num">03</div>
+        <div class="name">Identify</div>
+        <div class="desc">Auto-named on first sight</div>
+      </div>
+      <div class="flow-step">
+        <div class="num">04</div>
+        <div class="name">Send</div>
+        <div class="desc">First reading hits your dashboard</div>
+      </div>
+    </div>
+
+    <p class="prose" style="margin-top: 2rem; text-align: center;">No router config. No SIM activation paperwork. No enrollment portal. The device&rsquo;s identity is derived from its hardware, so reflashing or factory-resetting doesn&rsquo;t break anything &mdash; the same device shows up with the same identity, every time.</p>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <h2>Sense often. Report smart.</h2>
+      <p class="lede">A na&iuml;ve sensor either samples too rarely (and misses short events) or floods the backend with raw readings. Tick does neither.</p>
+    </div>
+
+    <div class="prose">
+      <p>Tick samples your equipment as often as the use case demands &mdash; once a minute, every thirty seconds, whatever&rsquo;s right. Each sample is folded into a rolling window. On a separate cadence, Tick reports a compact summary of that window: <strong>minimum, maximum, average, and most-recent value</strong>, with timestamps for the first and last reading.</p>
+      <p>That means a thirty-second freezer spike inside a thirty-minute reporting window <em>still shows up</em> as the maximum. You catch the event without paying for thousands of redundant data points.</p>
+      <p>The accumulator survives outages. If the device&rsquo;s power blips, the modem reboots, or a network goes down for two days &mdash; sensing keeps going, the window keeps building, and the next successful report carries the full picture. <strong>The only thing an outage costs is the moment the data lands, not the data itself.</strong></p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <h2>Always reachable.</h2>
+      <p class="lede">Both transports run continuously. Either one can carry traffic. The device picks the right transport for each send, and recovers from outages on its own.</p>
+    </div>
+
+    <div class="tile-grid">
+      <div class="tile">
+        <span class="tile-tag">Per-Send Failover</span>
+        <h3>WiFi blip? No problem.</h3>
+        <p>If a send fails on WiFi, the next one tries cellular. Per-send, not per-session. A five-second hotspot stutter doesn&rsquo;t cost you a reading.</p>
+      </div>
+      <div class="tile">
+        <span class="tile-tag">Self-Healing</span>
+        <h3>Outages recover automatically.</h3>
+        <p>WiFi failing? The device reconnects every 10 minutes. Cellular failing? Modem reboots every 30 minutes. Both failing? Full recovery cycle every hour. No operator action needed.</p>
+      </div>
+      <div class="tile">
+        <span class="tile-tag">No-Brick Guarantees</span>
+        <h3>One typo doesn&rsquo;t lock you out.</h3>
+        <p>Bad config or wrong auth key? The device rejects the change or auto-reverts after a few failed attempts. You can&rsquo;t accidentally strand a device in the field.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <h2>What you get back.</h2>
+      <p class="lede">Every reading comes with the metadata you need to debug a deployment from your desk.</p>
+    </div>
+
+    <div class="tile-grid">
+      <div class="tile">
+        <span class="tile-tag">Per-Reading</span>
+        <h3>Which transport carried it</h3>
+        <p>Every reading shows whether WiFi or cellular delivered it. You can see at a glance which transport is doing the work, and which one&rsquo;s been quiet.</p>
+      </div>
+      <div class="tile">
+        <span class="tile-tag">Per-Reading</span>
+        <h3>How long it took</h3>
+        <p>Network round-trip from device send-start to backend receive, recorded on every reading. Spot a slow site without leaving your dashboard.</p>
+      </div>
+      <div class="tile">
+        <span class="tile-tag">Per-Reading</span>
+        <h3>Device health</h3>
+        <p>Uptime, free memory, signal strength. Catch a memory leak that takes weeks to surface, or a cell tower whose RSSI dropped after a roof was rebuilt.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <h2>Reach into any device.</h2>
+      <p class="lede">When something needs a closer look, open a remote console session from the dashboard. Same shell as if you were at the bench with a USB cable.</p>
+    </div>
+
+    <div class="callout">
+      <p>The remote console is the killer feature for fleets you can&rsquo;t physically reach. Click <em>Open Session</em>. Pick the device. Type. Sessions go live in a few seconds, and several admins can attend the same session at once. The full transcript saves to your audit log.</p>
+      <p style="margin-bottom: 0;"><a href="/tick/">More on the operator workflow &rarr;</a></p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-logo-line">i4Seer</div>
+        <p class="footer-tag">An independent technology studio.<br>We build Tick. We also publish books.</p>
+      </div>
+      <div>
+        <h5>Tick</h5>
+        <ul>
+          <li><a href="/tick/">Overview</a></li>
+          <li><a href="/tick/how-it-works/">How It Works</a></li>
+          <li><a href="/tick/hardware/">Hardware</a></li>
+          <li><a href="/tick/roadmap/">Roadmap</a></li>
+          <li><a href="https://tick.i4seer.com" target="_blank" rel="noopener">Portal &rarr;</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Press</h5>
+        <ul>
+          <li><a href="/seer-frights/">Seer Frights</a></li>
+          <li><a href="/seer-fairies/">Seer Fairies</a></li>
+          <li><a href="/seer-warns/">Seer Warns</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Company</h5>
+        <ul>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/press/">Press Kit</a></li>
+          <li><a href="/privacy/">Privacy</a></li>
+          <li><a href="/terms/">Terms</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-meta">&copy; 2026 Institute for Seer LLC &middot; Operated in the United States &middot; v2.0.0</div>
   </footer>
 
 </body>
