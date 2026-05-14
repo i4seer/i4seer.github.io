@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Portal &mdash; Tick by i4Seer</title>
+  <meta name="description" content="The Tick portal: live device dashboards, multi-tenant orgs and fleets, remote console for any device, per-org audit, role-based access. Where your fleet lives.">
+  <link rel="stylesheet" href="/style.css">
+  <meta name="robots" content="index, follow">
+  <meta name="copyright" content="Institute for Seer LLC">
+  <link rel="icon" type="image/svg+xml" href="/images/favicon-seertick.svg">
+  <link rel="alternate icon" href="/favicon.ico" type="image/x-icon">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.i4seer.com/tick/portal/">
+  <meta property="og:title" content="The Portal &mdash; Tick by i4Seer">
+  <meta property="og:description" content="Live dashboards. Multi-tenant orgs and fleets. Remote console for any device through the browser. Per-org audit.">
+  <link rel="canonical" href="https://www.i4seer.com/tick/portal/">
+  <script defer data-domain="i4seer.com" src="https://plausible.io/js/script.js"></script>
+</head>
+<body>
+
+  <header class="studio-header">
+    <div class="studio-header-inner">
+      <a href="/" class="studio-logo">i4Seer</a>
+      <span class="studio-tagline">Devices that think ahead. Stories that watch back.</span>
+      <ul class="studio-nav">
+        <li><a href="/">i4Seer</a></li>
+        <li><a href="/tick/" class="active">Tick</a></li>
+        <li><a href="/books/">Books</a></li>
+        <li><a href="/about/">About</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <nav class="subnav">
+    <div class="subnav-inner">
+      <a href="/tick/">Overview</a>
+      <a href="/tick/how-it-works/">How It Works</a>
+      <a href="/tick/hardware/">Hardware</a>
+      <a href="/tick/portal/" class="active">Portal</a>
+      <a href="/tick/roadmap/">Roadmap</a>
+      <a href="https://tick.i4seer.com/public" target="_blank" rel="noopener">Live Data &rarr;</a>
+    </div>
+  </nav>
+
+  <section class="subhero">
+    <div class="crumbs"><a href="/">i4Seer</a> / <a href="/tick/">Tick</a> / Portal</div>
+    <h1>Where your <em>fleet</em> lives.</h1>
+    <p class="lede">Sign in. See every device, drill into any one. Open a live remote terminal session into a fielded unit from your browser. Run a multi-tenant operation with real org / fleet / role separation. Every action signed and audited. Same surface our customers use, every day.</p>
+  </section>
+
+  <!-- OPERATORS / RETURNING -->
+  <section style="background: var(--paper-2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 2.5rem 1.5rem;">
+    <div class="quick-row">
+
+      <a href="https://tick.i4seer.com/public" target="_blank" rel="noopener" class="quick-card">
+        <div class="quick-card-icon">&#x25C8;</div>
+        <div class="quick-card-body">
+          <div class="quick-card-tag">See it live</div>
+          <h3>Public read-only fleet</h3>
+          <p>One operational fleet at <code>/public</code>, field-scrubbed and rate-limited. The demo is the product.</p>
+        </div>
+        <div class="quick-card-arrow">&rarr;</div>
+      </a>
+
+      <a href="https://tick.i4seer.com/login" target="_blank" rel="noopener" class="quick-card">
+        <div class="quick-card-icon">&rarr;</div>
+        <div class="quick-card-body">
+          <div class="quick-card-tag">Returning</div>
+          <h3>Already a customer? Sign in.</h3>
+          <p>Your devices, your fleets, your data. Email + password &mdash; invite-only.</p>
+        </div>
+        <div class="quick-card-arrow">&rarr;</div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- LIVE DEVICE VIEW -->
+  <section class="section">
+    <div class="section-head">
+      <h2>Live device view.</h2>
+      <p class="lede">Per-device dashboards that update on a one-second tick. Every reading shows which transport carried it, how long the round-trip took, and how healthy the device is right now.</p>
+    </div>
+
+    <div class="tile-grid">
+      <div class="tile">
+        <span class="tile-tag">At a glance</span>
+        <h3>Card grid &middot; live tick</h3>
+        <p>Every device the user can see, grouped by org. Status pill, last-seen relative time, countdown to the next scheduled send &mdash; all updating in real time without a page reload.</p>
+      </div>
+      <div class="tile">
+        <span class="tile-tag">Per device</span>
+        <h3>Transport, signal, sends/fails</h3>
+        <p>WiFi up/down + SSID/RSSI/IP, cell up/down + CSQ + registration, sends and fails per transport, switches counter. Admin-off pipes show a dash so &ldquo;down&rdquo; never reads as a fault.</p>
+      </div>
+      <div class="tile">
+        <span class="tile-tag">Per reading</span>
+        <h3>Via &middot; latency &middot; uptime</h3>
+        <p>Each row shows whether WiFi or cellular delivered it, network round-trip time, device uptime, and free heap. Click to expand the full kv detail of any reading.</p>
+      </div>
+    </div>
+
+    <p class="section-more"><a href="https://tick.i4seer.com/public" target="_blank" rel="noopener">See the public fleet &rarr;</a></p>
+  </section>
+
+  <!-- MULTI-TENANT -->
+  <section class="section alt">
+    <div class="section-head">
+      <h2>Multi-tenant from day one.</h2>
+      <p class="lede">Real org / fleet / role model. The same identity can be editor in one org and viewer in another. Inspectors with cross-customer access, contractors locked to one fleet, platform admins separated from regular users.</p>
+    </div>
+
+    <div class="tile-grid">
+      <div class="tile">
+        <span class="tile-tag">Org</span>
+        <h3>The security boundary</h3>
+        <p>Every device belongs to 0 or 1 orgs. Data is partitioned per-org on disk and in the dashboard. Cross-org leakage is structurally impossible, not just policy-bound.</p>
+      </div>
+      <div class="tile">
+        <span class="tile-tag">Fleets</span>
+        <h3>Groupings within an org</h3>
+        <p>&ldquo;Building A,&rdquo; &ldquo;Pilot customers,&rdquo; &ldquo;Bench&rdquo; &mdash; whatever you want. Devices can live in multiple fleets at once. Fleets are for visibility and access, not ownership.</p>
+      </div>
+      <div class="tile">
+        <span class="tile-tag">Roles</span>
+        <h3>Owner, editor, viewer, fleet member</h3>
+        <p>Per-org roles cascade across fleets. Fleet members opt out of the cascade for outside-contractor scoping. Viewers can be elevated to editor on a specific fleet without org-wide permissions.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- REMOTE CONSOLE -->
+  <section class="section">
+    <div class="section-head">
+      <h2>Remote console.</h2>
+      <p class="lede">Reach any device through your dashboard, in real time, from any browser. Same shell as standing at the bench with a USB cable &mdash; only it&rsquo;s a fielded unit on a tower across town.</p>
+    </div>
+
+    <div class="tile-grid">
+      <div class="tile">
+        <span class="tile-tag">Open in seconds</span>
+        <h3>Click. Pick. Type.</h3>
+        <p>Click <em>Open Session</em>, pick the device, type. Sessions go live in about two seconds on WiFi, five on cellular. xterm.js terminal, ANSI colors, scrollback &mdash; everything you&rsquo;d expect.</p>
+      </div>
+      <div class="tile">
+        <span class="tile-tag">Multi-operator</span>
+        <h3>More than one admin can attend</h3>
+        <p>Multiple admins can attach to the same session at the same time. They see each other&rsquo;s commands and the device&rsquo;s responses live, with each command tagged by the submitter&rsquo;s email.</p>
+      </div>
+      <div class="tile">
+        <span class="tile-tag">Transport-aware</span>
+        <h3>Choose the route per session</h3>
+        <p>Open on WiFi to save cellular minutes; switch to cellular mid-session if WiFi drops. The chosen transport accelerates for responsiveness; the other stays at idle.</p>
+      </div>
+      <div class="tile">
+        <span class="tile-tag">Auto-end</span>
+        <h3>Walk away safely</h3>
+        <p>Sessions end automatically two minutes after the last activity from either side. Full transcript saved server-side, visible later from the audit log. No leaked sessions, no forgotten terminals.</p>
+      </div>
+      <div class="tile">
+        <span class="tile-tag">USB mode</span>
+        <h3>Same console, plugged in</h3>
+        <p>For benches and provisioning. WebSerial in Chrome / Edge desktop. Auto-reconnect on page reload and on USB plug-in. Same xterm.js, same color scheme, same line-ending controls.</p>
+      </div>
+      <div class="tile">
+        <span class="tile-tag">Default-deny allowlist</span>
+        <h3>Locked-down by design</h3>
+        <p>The remote console can only run commands explicitly whitelisted on the device. Lockout-class commands prompt a UI confirmation; the device-side allowlist is the real boundary.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- AUDIT / SECURITY -->
+  <section class="section alt">
+    <div class="section-head">
+      <h2>Audit-by-default.</h2>
+      <p class="lede">Every state-changing action is recorded with actor, IP, target, and detail. Org members see their own org&rsquo;s history; platform admins see global events. The wire is signed both ways &mdash; HMAC out of the device, HMAC back from the cloud.</p>
+    </div>
+
+    <div class="tile-grid">
+      <div class="tile">
+        <span class="tile-tag">Per-org audit</span>
+        <h3>Every approval, label, session</h3>
+        <p>Approve a device, change a label, open a console session, eject from a fleet &mdash; all logged with operator identity, timestamp, and full detail. Click any row to expand the kv body.</p>
+      </div>
+      <div class="tile">
+        <span class="tile-tag">Bidirectional HMAC</span>
+        <h3>Signed both ways</h3>
+        <p>Device requests carry HMAC-SHA256 of body + timestamp + nonce. Server responses are signed back with the same secret + the request&rsquo;s nonce. A captured response can&rsquo;t be replayed; a forged request can&rsquo;t pass.</p>
+      </div>
+      <div class="tile">
+        <span class="tile-tag">Salt rotation</span>
+        <h3>No-downtime key rotation</h3>
+        <p>Backend accepts both current and previous salt for a configurable window. Rotate without firing a healthy fleet into a recovery hole. HMAC mismatch from a typo auto-recovers in ~6 minutes.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEVICE LIFECYCLE -->
+  <section class="section">
+    <div class="section-head">
+      <h2>Device lifecycle.</h2>
+      <p class="lede">Five clean states, one unified verb for moving devices between them. A factory-fresh device lands in the unclaimed pool, gets assigned to an org, lives there until you eject it, and shows up in the next org&rsquo;s pool with a hint about where it came from.</p>
+    </div>
+
+    <div class="tile-grid">
+      <div class="tile">
+        <span class="tile-tag">Pending</span>
+        <h3>Brand-new, never claimed</h3>
+        <p>Sits in the unclaimed pool. POSTs are accepted but no data is persisted. ICCID-derived label so a freshly-claimed device isn&rsquo;t anonymous.</p>
+      </div>
+      <div class="tile">
+        <span class="tile-tag">Approved</span>
+        <h3>In an org, persisting data</h3>
+        <p>POSTs persist, data shows in dashboards, the device participates in fleet membership and audit. Editor and above can rename or move it.</p>
+      </div>
+      <div class="tile">
+        <span class="tile-tag">Disabled / Ejected</span>
+        <h3>Suspended or kicked out</h3>
+        <p>Disabled: POSTs rejected with 403, no data written, recoverable. Ejected: returned to the unclaimed pool with a <code>previously_in_org</code> hint. Historical visibility preserved via &ldquo;show released.&rdquo;</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT'S COMING -->
+  <section class="section alt">
+    <div class="section-head">
+      <h2>On the roadmap.</h2>
+      <p class="lede">What ships today is what&rsquo;s on the page. The next round of portal features is in active development &mdash; Routes for outbound forwarding, server-side alerting, the dashboard config UI for cadences.</p>
+    </div>
+
+    <div class="tile-grid">
+      <div class="tile">
+        <span class="tile-tag">In progress <span class="coming">Coming</span></span>
+        <h3>Routes &mdash; data forwarding</h3>
+        <p>The portal pushes events out to your destinations as they arrive. HTTPS first; MQTT, AWS, Azure, Google Cloud, Twilio, Datacake, Blynk, and Qubitro in development.</p>
+      </div>
+      <div class="tile">
+        <span class="tile-tag">In progress <span class="coming">Coming</span></span>
+        <h3>Server-side alerting</h3>
+        <p>Fleet-level rules. Email and webhook delivery. Threshold breaches, dwell-time, cooldowns, resolved-notifications. The pager-at-3am feature.</p>
+      </div>
+      <div class="tile">
+        <span class="tile-tag">In progress <span class="coming">Coming</span></span>
+        <h3>Dashboard config UI</h3>
+        <p>Edit reading cadences, send intervals, and the auto-reboot schedule from the device&rsquo;s page. Today: terminal-only via remote console.</p>
+      </div>
+    </div>
+
+    <p class="section-more"><a href="/tick/roadmap/">See the full roadmap &rarr;</a></p>
+  </section>
+
+  <!-- CTA -->
+  <section class="section">
+    <div class="section-head">
+      <h2>Try it.</h2>
+      <p class="lede">The fastest way to understand the portal is to use it. Open the public read-only fleet, click around, expand a device row, watch the live tick. The signed-in surface is the same surface plus your data.</p>
+    </div>
+
+    <div style="text-align: center;">
+      <a href="https://tick.i4seer.com/public" target="_blank" rel="noopener" class="btn-primary">See live data &rarr;</a>
+      <a href="https://tick.i4seer.com/login" target="_blank" rel="noopener" class="btn-ghost" style="margin-left: 0.5rem;">Sign in</a>
+      <p style="margin-top: 1.5rem; color: var(--ink-mute); font-size: 0.9rem;">
+        Pilot inquiry: <a href="mailto:sales@i4seer.com?subject=Tick%20Pilot%20Inquiry">sales@i4seer.com</a>
+      </p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-logo-line">i4Seer</div>
+        <p class="footer-tag">An independent technology studio.<br>We build Tick. We also publish books.</p>
+      </div>
+      <div>
+        <h5>Tick</h5>
+        <ul>
+          <li><a href="/tick/">Overview</a></li>
+          <li><a href="/tick/how-it-works/">How It Works</a></li>
+          <li><a href="/tick/hardware/">Hardware</a></li>
+          <li><a href="/tick/portal/">Portal</a></li>
+          <li><a href="/tick/roadmap/">Roadmap</a></li>
+          <li><a href="https://tick.i4seer.com" target="_blank" rel="noopener">Portal &rarr;</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Press</h5>
+        <ul>
+          <li><a href="/seer-warns/">Seer Warns</a></li>
+          <li><a href="/about/#authors">For Authors</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Company</h5>
+        <ul>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/press/">Press Kit</a></li>
+          <li><a href="/privacy/">Privacy</a></li>
+          <li><a href="/terms/">Terms</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-meta">&copy; 2026 Institute for Seer LLC &middot; Operated in the United States &middot; v2.3.0</div>
+  </footer>
+
+  <div class="cookie-banner" id="cookie-banner">
+    <p>This site uses essential cookies for basic functionality. Non-essential cookies (analytics, preferences) are only set with your consent. See our <a href="/privacy/">Privacy Policy</a>.</p>
+    <div class="cookie-buttons">
+      <button class="cookie-accept" id="cookie-accept">Accept</button>
+      <button class="cookie-decline" id="cookie-decline">Decline</button>
+    </div>
+  </div>
+  <script>
+    (function() {
+      if (!localStorage.getItem('cookie-consent')) {
+        document.getElementById('cookie-banner').style.display = 'flex';
+      }
+      document.getElementById('cookie-accept').onclick = function() {
+        localStorage.setItem('cookie-consent', 'accepted');
+        document.getElementById('cookie-banner').style.display = 'none';
+      };
+      document.getElementById('cookie-decline').onclick = function() {
+        localStorage.setItem('cookie-consent', 'declined');
+        document.getElementById('cookie-banner').style.display = 'none';
+      };
+    })();
+  </script>
+
+</body>
+</html>

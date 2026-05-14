@@ -333,6 +333,37 @@ img { max-width: 100%; height: auto; display: block; }
   padding: 4.5rem 1.5rem;
   border-bottom: 1px solid var(--line);
 }
+.section-more {
+  margin: 2.5rem 0 0;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line);
+}
+.section-more a {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  color: var(--teal);
+  font-weight: 600;
+}
+.section-more a:hover { color: var(--teal-deep); text-decoration: none; }
+.section.alt .section-more { border-top-color: var(--line-strong); }
+/* Alternating-row variant: full-bleed gray background.
+   Apply to <section> directly. Content inside still uses the same
+   .section-head / tile-grid / prose / etc. patterns. */
+.section.alt {
+  background: var(--paper-2);
+  max-width: none;
+  padding-left: 0;
+  padding-right: 0;
+  border-top: 1px solid var(--line);
+}
+.section.alt > * {
+  max-width: 1180px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
 .section-head {
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -1057,8 +1088,10 @@ img { max-width: 100%; height: auto; display: block; }
   border-radius: 999px;
 }
 .status-pill.live { background: #d1fae5; color: #065f46; }
-.status-pill.writing { background: #fef3c7; color: #92400e; }
+.status-pill.publishing { background: var(--teal-bg); color: var(--teal-deep); }
 .status-pill.review { background: #ede5d4; color: #5a4a2a; }
+.status-pill.development,
+.status-pill.writing { background: #fef3c7; color: #92400e; }
 .status-pill.planned { background: var(--paper-2); color: var(--ink-mute); }
 
 .btn-buy {

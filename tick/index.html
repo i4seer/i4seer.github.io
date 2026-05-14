@@ -43,6 +43,7 @@
       <a href="/tick/" class="active">Overview</a>
       <a href="/tick/how-it-works/">How It Works</a>
       <a href="/tick/hardware/">Hardware</a>
+      <a href="/tick/portal/">Portal</a>
       <a href="/tick/roadmap/">Roadmap</a>
       <a href="https://tick.i4seer.com/public" target="_blank" rel="noopener">Live Data &rarr;</a>
     </div>
@@ -141,10 +142,6 @@
       <p class="lede">A small, rugged unit that lives where the equipment lives. Plug it in, point it at the dashboard you choose, and it starts reporting in seconds.</p>
     </div>
 
-    <div class="prose" style="margin-bottom: 2.5rem;">
-      <p>Built around an ESP32-class microcontroller and a global cellular SIM, the Tick device fits in a panel, a wall mount, or on a bench. The on-device screen shows what&rsquo;s happening right now. The single front button cycles through diagnostic views &mdash; identity, signal, last send, current state &mdash; so most operators never reach for a serial cable. Identity is derived from hardware, so reflashing or factory-reset doesn&rsquo;t change which device you&rsquo;re looking at.</p>
-    </div>
-
     <div class="tile-grid">
       <div class="tile">
         <span class="tile-tag">Plug-and-play</span>
@@ -163,18 +160,14 @@
       </div>
     </div>
 
-    <p style="text-align: center; margin-top: 2rem;"><a href="/tick/hardware/">More on the hardware &rarr;</a></p>
+    <p class="section-more"><a href="/tick/hardware/">More on the hardware &rarr;</a></p>
   </section>
 
   <!-- DATA -->
-  <section class="section">
+  <section class="section alt">
     <div class="section-head">
       <h2>Telemetry data.</h2>
       <p class="lede">Tick stores every reading. Routes forward that same data to wherever you actually use it &mdash; a dashboard, an alerting system, an in-house pipeline.</p>
-    </div>
-
-    <div class="prose" style="margin-bottom: 2.5rem;">
-      <p>Sample as often as the use case needs. The portal aggregates each window into a compact summary &mdash; min, max, average, last value &mdash; so a thirty-second freezer spike still shows up inside a thirty-minute reporting window. Every reading is HMAC-signed by the device and persisted on arrival; nothing depends on the network being up at the moment of measurement. Routes (coming) forward those events out to your stack as they arrive.</p>
     </div>
 
     <div class="tile-grid">
@@ -195,7 +188,7 @@
       </div>
     </div>
 
-    <p style="text-align: center; margin-top: 2rem;"><a href="/tick/how-it-works/">More on the data path &rarr;</a></p>
+    <p class="section-more"><a href="/tick/how-it-works/">More on the data path &rarr;</a></p>
   </section>
 
   <!-- PORTAL -->
@@ -203,10 +196,6 @@
     <div class="section-head">
       <h2>The portal.</h2>
       <p class="lede">Where your fleet lives. Sign in, see every device, drill into any one of them &mdash; including a live remote terminal session, from any browser.</p>
-    </div>
-
-    <div class="prose" style="margin-bottom: 2.5rem;">
-      <p>Multi-tenant from day one: orgs are the security boundary, fleets group devices for access, roles scope what each user can do. Open a remote console session to any device in seconds &mdash; type the same commands you&rsquo;d type at the bench with a USB cable. Every action is logged to a per-org audit trail, with a separate platform-level audit for cross-org events.</p>
     </div>
 
     <div class="tile-grid">
@@ -227,11 +216,11 @@
       </div>
     </div>
 
-    <p style="text-align: center; margin-top: 2rem;"><a href="https://tick.i4seer.com" target="_blank" rel="noopener">Visit the portal &rarr;</a></p>
+    <p class="section-more"><a href="https://tick.i4seer.com" target="_blank" rel="noopener">Visit the portal &rarr;</a></p>
   </section>
 
   <!-- THREE DESTINATIONS -->
-  <section class="section">
+  <section class="section alt">
     <div class="section-head">
       <h2>Three ways to deploy.</h2>
       <p class="lede">Pick where the data lands. Switch later if your needs change.</p>
@@ -287,7 +276,7 @@
 
 
   <!-- WHO IT'S FOR -->
-  <section class="section">
+  <section class="section alt">
     <div class="section-head">
       <h2>Who Tick is for.</h2>
       <p class="lede">Anyone with expensive equipment in places without IT staff or reliable WiFi.</p>
@@ -353,8 +342,6 @@
       <div>
         <h5>Press</h5>
         <ul>
-          <li><a href="/seer-frights/">Seer Frights</a></li>
-          <li><a href="/seer-fairies/">Seer Fairies</a></li>
           <li><a href="/seer-warns/">Seer Warns</a></li>
           <li><a href="/about/#authors">For Authors</a></li>
         </ul>
@@ -369,7 +356,7 @@
         </ul>
       </div>
     </div>
-    <div class="footer-meta">&copy; 2026 Institute for Seer LLC &middot; Operated in the United States &middot; v2.2.0</div>
+    <div class="footer-meta">&copy; 2026 Institute for Seer LLC &middot; Operated in the United States &middot; v2.3.0</div>
   </footer>
 
   <div class="cookie-banner" id="cookie-banner">
