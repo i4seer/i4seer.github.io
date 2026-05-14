@@ -1092,6 +1092,7 @@ img { max-width: 100%; height: auto; display: block; }
 .status-pill.review { background: #ede5d4; color: #5a4a2a; }
 .status-pill.development,
 .status-pill.writing { background: #fef3c7; color: #92400e; }
+.status-pill.future { background: #ede9fe; color: #5b21b6; }
 .status-pill.planned { background: var(--paper-2); color: var(--ink-mute); }
 
 .btn-buy {
