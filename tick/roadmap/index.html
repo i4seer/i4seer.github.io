@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tick Roadmap &mdash; i4Seer</title>
-  <meta name="description" content="Tick roadmap. Honest list of what ships today, what's being built now, and what's deferred. Multi-tenant orgs and remote console are live. Outbound webhooks and server-side alerting are in progress.">
+  <meta name="description" content="Tick roadmap. Honest list of what ships today, what's being built now, and what's deferred. Operator UI, OTA, structured device error log, and signed audit are live. Multi-tenant orgs, alerting, and outbound Routes are in progress.">
   <link rel="stylesheet" href="/style.css">
   <meta name="robots" content="index, follow">
   <link rel="icon" type="image/svg+xml" href="/images/favicon-seertick.svg">
@@ -34,7 +34,7 @@
       <a href="/tick/hardware/">Hardware</a>
       <a href="/tick/portal/">Portal</a>
       <a href="/tick/roadmap/" class="active">Roadmap</a>
-      <a href="https://tick.i4seer.com/public" target="_blank" rel="noopener">Live Data &rarr;</a>
+      <a href="https://tick.i4seer.com" target="_blank" rel="noopener">Portal &rarr;</a>
     </div>
   </nav>
 
@@ -54,7 +54,7 @@
       <div class="tile">
         <span class="tile-tag">Live <span class="coming live">Shipped</span></span>
         <h3>Cellular + WiFi</h3>
-        <p>Both transports run continuously. WiFi-first dispatch with cell fallback. Auto-recovery from outages without operator action.</p>
+        <p>Both transports run continuously. WiFi-first dispatch with cell fallback, per send. Auto-recovery from outages without operator action. Modem-side TLS via SIM7028.</p>
       </div>
       <div class="tile">
         <span class="tile-tag">Live <span class="coming live">Shipped</span></span>
@@ -63,33 +63,53 @@
       </div>
       <div class="tile">
         <span class="tile-tag">Live <span class="coming live">Shipped</span></span>
-        <h3>Multi-tenant orgs</h3>
-        <p>Real org / fleet / role model. Inspectors with cross-customer access. Contractors locked to a single fleet. Platform admins separated from regular users.</p>
+        <h3>Operator UI</h3>
+        <p>Live device list over WebSocket, per-device panel with transport indicator, command queue, firmware OTA, audit. localStorage backfill on reconnect, exponential-backoff auto-reconnect.</p>
       </div>
       <div class="tile">
         <span class="tile-tag">Live <span class="coming live">Shipped</span></span>
-        <h3>Remote console</h3>
-        <p>Open a terminal session to any device through your dashboard. Real-time output, multi-admin sessions, full transcripts saved to audit.</p>
+        <h3>Remote commands</h3>
+        <p>Queue commands from the portal; device executes on next chkin and returns the result. UUID-keyed replay cache, signed both ways, written to audit.</p>
       </div>
       <div class="tile">
         <span class="tile-tag">Live <span class="coming live">Shipped</span></span>
-        <h3>Per-device dashboard</h3>
-        <p>Live transport indicator, signal strength, send/fail counters per transport, snapshot age. Mobile-responsive.</p>
+        <h3>Firmware OTA</h3>
+        <p>Per-device targeting. Chunked download with compression and SHA verification. Resume-on-crash via NVS. Progress events sampled by milestone and rendered in the UI.</p>
       </div>
       <div class="tile">
         <span class="tile-tag">Live <span class="coming live">Shipped</span></span>
         <h3>Auto-provisioning</h3>
-        <p>Factory-fresh devices land in the unclaimed pool with auto-named labels. Platform admins assign to an org with one click.</p>
+        <p>Factory-fresh devices land in the unclaimed pool on first HMAC-valid POST, with an auto-named label. Operator clicks Approve to bring it into service.</p>
       </div>
       <div class="tile">
         <span class="tile-tag">Live <span class="coming live">Shipped</span></span>
-        <h3>Per-org audit log</h3>
-        <p>Every approval, label change, and console session logged. Members read their own org&rsquo;s history. Platform admins see global events.</p>
+        <h3>Signed audit log</h3>
+        <p>Every approval, label change, queued command, firmware target, OTA outcome &mdash; logged with operator identity. Per-device JSONL rotated monthly. Export via <code>tick-cli audit --days/--device/--op</code>.</p>
       </div>
       <div class="tile">
         <span class="tile-tag">Live <span class="coming live">Shipped</span></span>
-        <h3>Public read-only fleet</h3>
-        <p>One operational fleet exposed at <code>/public</code>, field-scrubbed and rate-limited. The demo is the product.</p>
+        <h3>On-device error log</h3>
+        <p>64KB flash partition, up to 1024 indexed entries. chkin v2 carries a breadcrumb; the UI renders a colored chip per device. Drill in with queued <code>errlog show</code>. Survives reboot and reflash.</p>
+      </div>
+      <div class="tile">
+        <span class="tile-tag">Live <span class="coming live">Shipped</span></span>
+        <h3>Bidirectional HMAC</h3>
+        <p>HMAC-SHA256 of body + timestamp + nonce on device requests; signed responses back. Replay cache on command IDs. Salt rotation supported with overlap window.</p>
+      </div>
+      <div class="tile">
+        <span class="tile-tag">Live <span class="coming live">Shipped</span></span>
+        <h3>Encryption at rest</h3>
+        <p>Per-device HMAC secrets can be sealed with AES-256-GCM using a KEK loaded at boot. Opt-in via <code>TICK_KEK_PATH</code>. Plaintext fallback for development.</p>
+      </div>
+      <div class="tile">
+        <span class="tile-tag">Live <span class="coming live">Shipped</span></span>
+        <h3>Operator metrics</h3>
+        <p>Per-op counters, queue depth, device counts, frame errors. Surfaced through OP_METRICS and rendered in the operator UI status header.</p>
+      </div>
+      <div class="tile">
+        <span class="tile-tag">Live <span class="coming live">Shipped</span></span>
+        <h3>Hardened wire + lifecycle</h3>
+        <p>Strict CSP and security headers, HTTP-to-HTTPS redirect listener, graceful SIGTERM/SIGINT shutdown that drains in-flight requests, operator tokens with 14d idle / 90d hard expiry.</p>
       </div>
     </div>
   </section>
@@ -101,6 +121,11 @@
     </div>
 
     <div class="tile-grid">
+      <div class="tile featured">
+        <span class="tile-tag">In progress <span class="coming">Coming</span></span>
+        <h3>User / org / fleet / role</h3>
+        <p>End-customer accounts. Org as the security boundary, fleets as groupings, roles cascading from org to fleet, fleet members for outside-contractor scoping. Cascade designed and documented; build underway. Today: operator-only.</p>
+      </div>
       <div class="tile featured">
         <span class="tile-tag">In progress <span class="coming">Coming</span></span>
         <h3>Server-side alerting</h3>
@@ -130,17 +155,12 @@
       <div class="tile featured">
         <span class="tile-tag">In progress <span class="coming">Coming</span></span>
         <h3>Email-driven password reset</h3>
-        <p>Self-service reset over email token. On the path before self-service onboarding for new orgs.</p>
+        <p>Self-service reset over email token. On the path with end-customer accounts.</p>
       </div>
       <div class="tile featured">
         <span class="tile-tag">In progress <span class="coming">Coming</span></span>
         <h3>Off-server backups</h3>
         <p>Nightly automated backup to S3-compatible storage. Cheap, decoupled from any single server&rsquo;s survival.</p>
-      </div>
-      <div class="tile featured">
-        <span class="tile-tag">In progress <span class="coming">Coming</span></span>
-        <h3>Dashboard config UI</h3>
-        <p>Edit reading cadences, send intervals, and the auto-reboot schedule from the device&rsquo;s page. Today: terminal-only.</p>
       </div>
     </div>
   </section>
@@ -153,16 +173,16 @@
 
     <div class="tile-grid">
       <div class="tile">
+        <h3>Public read-only fleet</h3>
+        <p>One operational fleet exposed unauthenticated, field-scrubbed and rate-limited &mdash; the demo as the product. Behind alerting and Routes in priority.</p>
+      </div>
+      <div class="tile">
         <h3>Self-service claim tokens</h3>
-        <p>Customer enters a one-time token printed on the device label and the device joins their org. Today: a platform admin clicks Approve.</p>
+        <p>Customer enters a one-time token printed on the device label and the device joins their org. Today: a platform operator clicks Approve.</p>
       </div>
       <div class="tile">
         <h3>Charts on device detail</h3>
         <p>Trend lines, range pickers, threshold overlays. Most useful once alerting overlays its rules on the same chart.</p>
-      </div>
-      <div class="tile">
-        <h3>OTA firmware updates</h3>
-        <p>USB updates work for any device we can physically reach. Build OTA when there&rsquo;s a fleet that can&rsquo;t be reached.</p>
       </div>
       <div class="tile">
         <h3>Stripe billing</h3>
@@ -175,6 +195,24 @@
       <div class="tile">
         <h3>Scale to a real database</h3>
         <p>The current file-based store is fine to a few thousand devices. Beyond that, time-series indexing alongside. Files stay valid through the transition.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <h2>Won&rsquo;t build.</h2>
+      <p class="lede">Things that sound like good ideas but trade off against the design. Listed here so we don&rsquo;t get asked twice.</p>
+    </div>
+
+    <div class="tile-grid">
+      <div class="tile">
+        <h3>Dashboard config UI for cadences</h3>
+        <p>Editing reading cadences and send intervals from a browser form looks friendly but creates a misconfiguration surface that a typo can disable a fleet through. We&rsquo;ll keep cadence changes in the command queue and the serial shell, where they go through audit and recover-from-typo paths the UI doesn&rsquo;t have.</p>
+      </div>
+      <div class="tile">
+        <h3>Interactive remote PTY / xterm session</h3>
+        <p>A live shell over the modem looks good in a demo but doesn&rsquo;t survive cellular jitter or device sleep. The queued-command model fits the device&rsquo;s actual lifecycle: command goes in, runs on next chkin, result comes back &mdash; signed, auditable, and replay-proof.</p>
       </div>
     </div>
   </section>
@@ -210,7 +248,7 @@
         </ul>
       </div>
     </div>
-    <div class="footer-meta">&copy; 2026 Institute for Seer LLC &middot; Operated in the United States &middot; v2.3.0</div>
+    <div class="footer-meta">&copy; 2026 Institute for Seer LLC &middot; Operated in the United States &middot; v2.4.0</div>
   </footer>
 
 </body>

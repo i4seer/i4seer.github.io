@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tick &mdash; Telemetry by i4Seer</title>
-  <meta name="description" content="Tick is a plug-and-play IoT telemetry platform. WiFi, cellular, or both. Send data to your endpoint, the i4Seer-hosted portal, or a private portal deployment. Multi-tenant, remote console, public read-only fleet at tick.i4seer.com/public.">
+  <meta name="description" content="Tick is a plug-and-play IoT telemetry platform. WiFi, cellular, or both. Send data to your endpoint, the i4Seer-hosted portal, or a private portal deployment. Operator UI with remote command execution, signed audit log, full OTA pipeline.">
   <link rel="stylesheet" href="/style.css">
   <meta name="robots" content="index, follow">
   <meta name="copyright" content="Institute for Seer LLC">
@@ -45,7 +45,7 @@
       <a href="/tick/hardware/">Hardware</a>
       <a href="/tick/portal/">Portal</a>
       <a href="/tick/roadmap/">Roadmap</a>
-      <a href="https://tick.i4seer.com/public" target="_blank" rel="noopener">Live Data &rarr;</a>
+      <a href="https://tick.i4seer.com" target="_blank" rel="noopener">Portal &rarr;</a>
     </div>
   </nav>
 
@@ -54,10 +54,10 @@
     <div>
       <div class="kicker">tech &middot; cellular IoT telemetry</div>
       <h1><em>Tick</em> by i4Seer.</h1>
-      <p class="lede">A small, rugged device that monitors your equipment and reports direct to the dashboard you choose. Cellular when you need it, WiFi when you have it, both at once when downtime hurts. Multi-tenant from day one. Plug in and watch.</p>
+      <p class="lede">A small, rugged device that monitors your equipment and reports direct to the dashboard you choose. Cellular when you need it, WiFi when you have it, both at once when downtime hurts. Plug in and watch.</p>
       <div class="cta-row">
         <a href="mailto:sales@i4seer.com?subject=Tick%20Pilot%20Inquiry" class="btn-primary">Request a pilot &rarr;</a>
-        <a href="https://tick.i4seer.com/login" target="_blank" rel="noopener" class="btn-ghost">Sign in to portal</a>
+        <a href="https://tick.i4seer.com" target="_blank" rel="noopener" class="btn-ghost">Open the portal</a>
       </div>
 
       <!-- DEVICE FLOW VISUAL -->
@@ -100,10 +100,11 @@
       <ul>
         <li><span class="k">Provisioning</span><span class="v">Auto + approval</span></li>
         <li><span class="k">Transports</span><span class="v">WiFi &middot; Cell &middot; Both</span></li>
-        <li><span class="k">Tenancy</span><span class="v">Orgs &middot; Fleets &middot; Roles</span></li>
-        <li><span class="k">Console</span><span class="v">Live remote shell</span></li>
+        <li><span class="k">Operator UI</span><span class="v">Live WebSocket</span></li>
+        <li><span class="k">Remote ops</span><span class="v">Command queue</span></li>
+        <li><span class="k">Firmware</span><span class="v">OTA + resume</span></li>
         <li><span class="k">Auth</span><span class="v">HMAC, signed both ways</span></li>
-        <li><span class="k">Audit</span><span class="v">Per-org &middot; Platform</span></li>
+        <li><span class="k">Audit</span><span class="v">Every action signed</span></li>
       </ul>
     </aside>
   </section>
@@ -112,22 +113,22 @@
   <section style="background: var(--paper-2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 2.5rem 1.5rem;">
     <div class="quick-row">
 
-      <a href="https://tick.i4seer.com/console" target="_blank" rel="noopener" class="quick-card">
+      <a href="https://tick.i4seer.com" target="_blank" rel="noopener" class="quick-card">
         <div class="quick-card-icon">&#x2318;</div>
         <div class="quick-card-body">
           <div class="quick-card-tag">Operators</div>
-          <h3>Open the console</h3>
-          <p>Plug a Tick in over USB-C, or open a remote session into a fielded unit. Full transcript saved.</p>
+          <h3>Open the operator UI</h3>
+          <p>Live device list, per-device panel, command queue, firmware OTA, audit log. Same surface our team uses.</p>
         </div>
         <div class="quick-card-arrow">&rarr;</div>
       </a>
 
-      <a href="https://tick.i4seer.com/login" target="_blank" rel="noopener" class="quick-card">
+      <a href="https://tick.i4seer.com" target="_blank" rel="noopener" class="quick-card">
         <div class="quick-card-icon">&rarr;</div>
         <div class="quick-card-body">
           <div class="quick-card-tag">Returning</div>
-          <h3>Already a customer? Sign in.</h3>
-          <p>Your devices, your fleets, your data. Email + password &mdash; invite-only.</p>
+          <h3>Already an operator? Sign in.</h3>
+          <p>Operator name + token. Per-operator audit, 14-day idle / 90-day hard expiry on tokens.</p>
         </div>
         <div class="quick-card-arrow">&rarr;</div>
       </a>
@@ -195,28 +196,43 @@
   <section class="section">
     <div class="section-head">
       <h2>The portal.</h2>
-      <p class="lede">Where your fleet lives. Sign in, see every device, drill into any one of them &mdash; including a live remote terminal session, from any browser.</p>
+      <p class="lede">An operator-grade UI for managing the fleet. Live device list, per-device panel, command queue, firmware OTA, signed audit. End-user views with org / fleet / role separation are next.</p>
     </div>
 
     <div class="tile-grid">
       <div class="tile">
-        <span class="tile-tag">Remote console</span>
-        <h3>Reach any device, live</h3>
-        <p>Open a terminal session through the dashboard. Sessions go live in seconds. Multi-admin sessions, full transcript saved to audit, transport-aware acceleration.</p>
+        <span class="tile-tag">Remote commands</span>
+        <h3>Reach any device, queued</h3>
+        <p>Send commands from the dashboard; the device executes and returns results in the next event. Approvals, labels, firmware targets, diagnostics &mdash; all without leaving the browser.</p>
       </div>
       <div class="tile">
-        <span class="tile-tag">Multi-tenant</span>
-        <h3>Orgs &middot; fleets &middot; roles</h3>
-        <p>Real org / fleet / role model from day one. Inspectors with cross-customer access. Contractors locked to a single fleet. Platform admins separated from regular users.</p>
+        <span class="tile-tag">Firmware OTA</span>
+        <h3>Updates with progress</h3>
+        <p>Per-device firmware targeting. Chunked download with compression, SHA verification, resume-after-crash. The portal shows progress as it lands.</p>
       </div>
       <div class="tile">
-        <span class="tile-tag">Audit</span>
-        <h3>Every action signed and logged</h3>
-        <p>Approvals, label changes, console sessions, downlinks &mdash; all recorded with operator identity. Members read their own org&rsquo;s history; platform admins see global events.</p>
+        <span class="tile-tag">Audit by default</span>
+        <h3>Every action signed</h3>
+        <p>Approvals, label changes, queued commands, firmware targets, OTA outcomes &mdash; all recorded with operator identity and timestamp. Export via <code>tick-cli audit</code>.</p>
+      </div>
+      <div class="tile">
+        <span class="tile-tag">In progress <span class="coming">Coming</span></span>
+        <h3>User &middot; org &middot; fleet &middot; role</h3>
+        <p>End-customer accounts with org / fleet / role separation: org owners, editors, viewers, and fleet members for contractors. Today: operator-only. Cascade model designed and documented; implementation underway.</p>
+      </div>
+      <div class="tile">
+        <span class="tile-tag">Built in</span>
+        <h3>Live WebSocket UI</h3>
+        <p>The operator UI pushes events over WebSocket as they happen, with localStorage backfill on reconnect. Auto-reconnect with exponential backoff up to 60s.</p>
+      </div>
+      <div class="tile">
+        <span class="tile-tag">Built in</span>
+        <h3>Operator metrics</h3>
+        <p>Counters, gauges, queue depth, device counts, frame errors &mdash; surfaced through a dedicated metrics endpoint and rendered in the UI&rsquo;s status header.</p>
       </div>
     </div>
 
-    <p class="section-more"><a href="https://tick.i4seer.com" target="_blank" rel="noopener">Visit the portal &rarr;</a></p>
+    <p class="section-more"><a href="/tick/portal/">More on the portal &rarr;</a> &middot; <a href="https://tick.i4seer.com" target="_blank" rel="noopener">Visit the portal &rarr;</a></p>
   </section>
 
   <!-- THREE DESTINATIONS -->
@@ -294,9 +310,9 @@
         <p>Equipment rental fleets, jobsite generators, HVAC installations. Customer wants to know if a unit is running without sending a tech to check.</p>
       </div>
       <div class="tile">
-        <span class="tile-tag">Inspectors</span>
-        <h3>One identity, many customers</h3>
-        <p>Contractors and inspectors with cross-customer access. The org / fleet / role model lets one user see fleet A in customer X and fleet B in customer Y, scoped exactly.</p>
+        <span class="tile-tag">Operators</span>
+        <h3>Run a fleet from a browser</h3>
+        <p>Live device list, transport indicator per device, queued commands, firmware OTA, signed audit. The same operator UI we use to run our own fleet, available to you.</p>
       </div>
       <div class="tile">
         <span class="tile-tag">Enterprise</span>
@@ -356,7 +372,7 @@
         </ul>
       </div>
     </div>
-    <div class="footer-meta">&copy; 2026 Institute for Seer LLC &middot; Operated in the United States &middot; v2.3.0</div>
+    <div class="footer-meta">&copy; 2026 Institute for Seer LLC &middot; Operated in the United States &middot; v2.4.0</div>
   </footer>
 
   <div class="cookie-banner" id="cookie-banner">

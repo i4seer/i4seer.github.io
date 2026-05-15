@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>How Tick Works &mdash; i4Seer</title>
-  <meta name="description" content="How a Tick device boots, picks a transport, and ships data. Power-on to first reading, sensing decoupled from transport, automatic outage recovery, remote console.">
+  <meta name="description" content="How a Tick device boots, picks a transport, and ships data. Power-on to first reading, sensing decoupled from transport, automatic outage recovery, remote commands.">
   <link rel="stylesheet" href="/style.css">
   <meta name="robots" content="index, follow">
   <link rel="icon" type="image/svg+xml" href="/images/favicon-seertick.svg">
@@ -34,7 +34,7 @@
       <a href="/tick/hardware/">Hardware</a>
       <a href="/tick/portal/">Portal</a>
       <a href="/tick/roadmap/">Roadmap</a>
-      <a href="https://tick.i4seer.com/public" target="_blank" rel="noopener">Live Data &rarr;</a>
+      <a href="https://tick.i4seer.com" target="_blank" rel="noopener">Portal &rarr;</a>
     </div>
   </nav>
 
@@ -142,12 +142,49 @@
   <section class="section alt">
     <div class="section-head">
       <h2>Reach into any device.</h2>
-      <p class="lede">When something needs a closer look, open a remote console session from the dashboard. Same shell as if you were at the bench with a USB cable.</p>
+      <p class="lede">When something needs a closer look, queue a command from the dashboard. The device runs it on its next check-in and returns the result &mdash; everything you&rsquo;d type at the bench, only it&rsquo;s a unit on a tower across town.</p>
     </div>
 
     <div class="callout">
-      <p>The remote console is the killer feature for fleets you can&rsquo;t physically reach. Click <em>Open Session</em>. Pick the device. Type. Sessions go live in a few seconds, and several admins can attend the same session at once. The full transcript saves to your audit log.</p>
-      <p style="margin-bottom: 0;"><a href="/tick/">More on the operator workflow &rarr;</a></p>
+      <p>Pick the device, type a command, hit send. Inspect state, dump the on-device error log, toggle WiFi, change the chkin cadence, kick the modem, target a firmware image. The device executes, returns output as an event, and the operator UI renders it inline. Every queued command and every result is signed with the operator&rsquo;s identity and saved to audit.</p>
+      <p style="margin-bottom: 0;"><a href="/tick/portal/">More on the operator workflow &rarr;</a></p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <h2>Updates without a truck roll.</h2>
+      <p class="lede">Firmware updates over the air. Targeting per device, chunked download with compression and SHA verification, resume on crash, progress visible end-to-end.</p>
+    </div>
+
+    <div class="tile-grid">
+      <div class="tile">
+        <span class="tile-tag">Per device</span>
+        <h3>Target what you want, where you want</h3>
+        <p>Pick a firmware image, target it at one device or many. The portal serves the directive on the device&rsquo;s next check-in, the device downloads and verifies, the outcome lands as an event.</p>
+      </div>
+      <div class="tile">
+        <span class="tile-tag">Chunked + compressed</span>
+        <h3>Bandwidth-aware delivery</h3>
+        <p>Images are compressed and shipped in chunks small enough to survive cellular. SHA over the inflated image; mismatched bytes never flash. Crashes mid-flash resume from the last good chunk on reboot.</p>
+      </div>
+      <div class="tile">
+        <span class="tile-tag">Visible</span>
+        <h3>Progress, not silence</h3>
+        <p>The portal emits sampled progress events as chunks land &mdash; &ldquo;OTA 14 / 32&rdquo; renders right in the per-device panel. No more wondering if the device picked up the new build.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="section-head">
+      <h2>The device tells you when it&rsquo;s hurting.</h2>
+      <p class="lede">Every Tick maintains a structured error log in flash &mdash; 64KB partition, 1024 indexed entries, breadcrumb in every check-in. When something goes wrong on a unit you can&rsquo;t physically reach, you find out without rolling a truck.</p>
+    </div>
+
+    <div class="prose">
+      <p>The breadcrumb rides with every check-in: most-recent error sequence, source, severity, code, timestamp. The portal renders it as a colored chip on the device row &mdash; green for clean, yellow for warnings, red when something tripped. Drill in, queue <code>errlog show</code>, and the full entry comes back as an event with the kv context the device captured when the error fired.</p>
+      <p style="margin-bottom: 0;">Modem failures, PDP attach errors, NVS write faults, watchdog resets, OTA verification mismatches &mdash; all instrumented. The error log survives reboot and reflash (it&rsquo;s a dedicated partition, not RAM).</p>
     </div>
   </section>
 
@@ -183,7 +220,7 @@
         </ul>
       </div>
     </div>
-    <div class="footer-meta">&copy; 2026 Institute for Seer LLC &middot; Operated in the United States &middot; v2.3.0</div>
+    <div class="footer-meta">&copy; 2026 Institute for Seer LLC &middot; Operated in the United States &middot; v2.4.0</div>
   </footer>
 
 </body>

@@ -34,7 +34,7 @@
       <a href="/tick/hardware/" class="active">Hardware</a>
       <a href="/tick/portal/">Portal</a>
       <a href="/tick/roadmap/">Roadmap</a>
-      <a href="https://tick.i4seer.com/public" target="_blank" rel="noopener">Live Data &rarr;</a>
+      <a href="https://tick.i4seer.com" target="_blank" rel="noopener">Portal &rarr;</a>
     </div>
   </nav>
 
@@ -54,7 +54,7 @@
       <div class="tile">
         <span class="tile-tag">Module 01</span>
         <h3>ESP32-S3 with display</h3>
-        <p>An ESP32-based microcontroller with built-in WiFi, a small color screen, and a single front button. The screen shows status at a glance: identity, signal, last send, current state.</p>
+        <p>An ESP32-S3 with 8 MB PSRAM, built-in WiFi, a 0.85&Prime; 128&times;128 IPS color screen, a single front button, an RGB status LED, and onboard 6-axis IMU + magnetometer. The screen shows status at a glance: identity, signal, last send, current state.</p>
       </div>
       <div class="tile">
         <span class="tile-tag">Module 02</span>
@@ -85,6 +85,16 @@
         <span class="tile-tag">On-Device</span>
         <h3>Single-button operation</h3>
         <p>Cycle screens with the front button. Most operators never touch a serial cable. The device tells you what it knows; the dashboard tells you what your fleet knows.</p>
+      </div>
+      <div class="tile">
+        <span class="tile-tag">On-Device</span>
+        <h3>RGB status LED</h3>
+        <p>Five colors, no manual: white while booting, green when idle and healthy, blue mid-check-in, purple during OTA, red on error. Tells you the device&rsquo;s state from across a warehouse aisle.</p>
+      </div>
+      <div class="tile">
+        <span class="tile-tag">On-Device</span>
+        <h3>Structured error log</h3>
+        <p>A 64KB flash partition records up to 1024 structured errors with timestamp, source, severity, and context. Survives reboot and reflash. Every check-in carries a breadcrumb to the portal so a remote operator can drill in.</p>
       </div>
       <div class="tile">
         <span class="tile-tag">Hardware-Derived ID</span>
@@ -156,7 +166,7 @@
         </ul>
       </div>
     </div>
-    <div class="footer-meta">&copy; 2026 Institute for Seer LLC &middot; Operated in the United States &middot; v2.3.0</div>
+    <div class="footer-meta">&copy; 2026 Institute for Seer LLC &middot; Operated in the United States &middot; v2.4.0</div>
   </footer>
 
 </body>

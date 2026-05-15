@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Portal &mdash; Tick by i4Seer</title>
-  <meta name="description" content="The Tick portal: live device dashboards, multi-tenant orgs and fleets, remote console for any device, per-org audit, role-based access. Where your fleet lives.">
+  <meta name="description" content="The Tick portal: live operator UI over WebSocket, per-device panel with transport indicator, queued remote commands, firmware OTA with progress, signed audit log. Multi-tenant orgs and roles next.">
   <link rel="stylesheet" href="/style.css">
   <meta name="robots" content="index, follow">
   <meta name="copyright" content="Institute for Seer LLC">
@@ -13,7 +13,7 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.i4seer.com/tick/portal/">
   <meta property="og:title" content="The Portal &mdash; Tick by i4Seer">
-  <meta property="og:description" content="Live dashboards. Multi-tenant orgs and fleets. Remote console for any device through the browser. Per-org audit.">
+  <meta property="og:description" content="Live operator UI. Remote commands and firmware OTA from the browser. Signed audit. Multi-tenant orgs and roles coming.">
   <link rel="canonical" href="https://www.i4seer.com/tick/portal/">
   <script defer data-domain="i4seer.com" src="https://plausible.io/js/script.js"></script>
 </head>
@@ -39,36 +39,36 @@
       <a href="/tick/hardware/">Hardware</a>
       <a href="/tick/portal/" class="active">Portal</a>
       <a href="/tick/roadmap/">Roadmap</a>
-      <a href="https://tick.i4seer.com/public" target="_blank" rel="noopener">Live Data &rarr;</a>
+      <a href="https://tick.i4seer.com" target="_blank" rel="noopener">Portal &rarr;</a>
     </div>
   </nav>
 
   <section class="subhero">
     <div class="crumbs"><a href="/">i4Seer</a> / <a href="/tick/">Tick</a> / Portal</div>
     <h1>Where your <em>fleet</em> lives.</h1>
-    <p class="lede">Sign in. See every device, drill into any one. Open a live remote terminal session into a fielded unit from your browser. Run a multi-tenant operation with real org / fleet / role separation. Every action signed and audited. Same surface our customers use, every day.</p>
+    <p class="lede">An operator-grade UI over a live WebSocket. See every device, drill into any one, queue commands, push firmware, watch OTA progress as it lands. Every state-changing action is signed with the operator&rsquo;s identity and written to audit. End-customer views with org / fleet / role separation are next.</p>
   </section>
 
   <!-- OPERATORS / RETURNING -->
   <section style="background: var(--paper-2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 2.5rem 1.5rem;">
     <div class="quick-row">
 
-      <a href="https://tick.i4seer.com/public" target="_blank" rel="noopener" class="quick-card">
-        <div class="quick-card-icon">&#x25C8;</div>
+      <a href="https://tick.i4seer.com" target="_blank" rel="noopener" class="quick-card">
+        <div class="quick-card-icon">&#x2318;</div>
         <div class="quick-card-body">
-          <div class="quick-card-tag">See it live</div>
-          <h3>Public read-only fleet</h3>
-          <p>One operational fleet at <code>/public</code>, field-scrubbed and rate-limited. The demo is the product.</p>
+          <div class="quick-card-tag">Operator UI</div>
+          <h3>Open the portal</h3>
+          <p>Live device list, per-device panel, queued commands, firmware OTA, signed audit. Same surface our team uses.</p>
         </div>
         <div class="quick-card-arrow">&rarr;</div>
       </a>
 
-      <a href="https://tick.i4seer.com/login" target="_blank" rel="noopener" class="quick-card">
+      <a href="mailto:sales@i4seer.com?subject=Tick%20Pilot%20Inquiry" class="quick-card">
         <div class="quick-card-icon">&rarr;</div>
         <div class="quick-card-body">
-          <div class="quick-card-tag">Returning</div>
-          <h3>Already a customer? Sign in.</h3>
-          <p>Your devices, your fleets, your data. Email + password &mdash; invite-only.</p>
+          <div class="quick-card-tag">Get an operator account</div>
+          <h3>Pilot a deployment</h3>
+          <p>Operator accounts issued during pilot. End-customer accounts and org / fleet / role separation are on the path.</p>
         </div>
         <div class="quick-card-arrow">&rarr;</div>
       </a>
@@ -86,8 +86,8 @@
     <div class="tile-grid">
       <div class="tile">
         <span class="tile-tag">At a glance</span>
-        <h3>Card grid &middot; live tick</h3>
-        <p>Every device the user can see, grouped by org. Status pill, last-seen relative time, countdown to the next scheduled send &mdash; all updating in real time without a page reload.</p>
+        <h3>Device list &middot; live tick</h3>
+        <p>Sortable device list with status pill, last-seen relative time, transport indicator, and error-log breadcrumb chip. Events stream over WebSocket; the UI updates in real time without a page reload.</p>
       </div>
       <div class="tile">
         <span class="tile-tag">Per device</span>
@@ -101,21 +101,21 @@
       </div>
     </div>
 
-    <p class="section-more"><a href="https://tick.i4seer.com/public" target="_blank" rel="noopener">See the public fleet &rarr;</a></p>
+    <p class="section-more"><a href="https://tick.i4seer.com" target="_blank" rel="noopener">Open the portal &rarr;</a></p>
   </section>
 
-  <!-- MULTI-TENANT -->
+  <!-- MULTI-TENANT (COMING) -->
   <section class="section alt">
     <div class="section-head">
-      <h2>Multi-tenant from day one.</h2>
-      <p class="lede">Real org / fleet / role model. The same identity can be editor in one org and viewer in another. Inspectors with cross-customer access, contractors locked to one fleet, platform admins separated from regular users.</p>
+      <h2>Multi-tenant <span class="coming">Coming</span></h2>
+      <p class="lede">Today the portal is operator-facing &mdash; one operator account, all devices visible. End-customer accounts with org / fleet / role separation are designed, documented, and on the build list. Here&rsquo;s the cascade we&rsquo;re shipping.</p>
     </div>
 
     <div class="tile-grid">
       <div class="tile">
         <span class="tile-tag">Org</span>
         <h3>The security boundary</h3>
-        <p>Every device belongs to 0 or 1 orgs. Data is partitioned per-org on disk and in the dashboard. Cross-org leakage is structurally impossible, not just policy-bound.</p>
+        <p>Every device will belong to 0 or 1 orgs. Data partitioned per-org on disk and in the dashboard. Cross-org leakage structurally impossible, not just policy-bound. Unclaimed devices sit in a platform-wide pool until assigned.</p>
       </div>
       <div class="tile">
         <span class="tile-tag">Fleets</span>
@@ -130,43 +130,43 @@
     </div>
   </section>
 
-  <!-- REMOTE CONSOLE -->
+  <!-- REMOTE COMMANDS -->
   <section class="section">
     <div class="section-head">
-      <h2>Remote console.</h2>
-      <p class="lede">Reach any device through your dashboard, in real time, from any browser. Same shell as standing at the bench with a USB cable &mdash; only it&rsquo;s a fielded unit on a tower across town.</p>
+      <h2>Remote commands.</h2>
+      <p class="lede">Send commands from the portal; the device executes on its next check-in and returns the result as an event. The same diagnostics you&rsquo;d run at the bench, only the unit is on a tower across town.</p>
     </div>
 
     <div class="tile-grid">
       <div class="tile">
-        <span class="tile-tag">Open in seconds</span>
-        <h3>Click. Pick. Type.</h3>
-        <p>Click <em>Open Session</em>, pick the device, type. Sessions go live in about two seconds on WiFi, five on cellular. xterm.js terminal, ANSI colors, scrollback &mdash; everything you&rsquo;d expect.</p>
+        <span class="tile-tag">Pick. Type. Send.</span>
+        <h3>From the per-device panel</h3>
+        <p>Type a command, hit send. Goes into the device&rsquo;s queue. On the next chkin the device pops the queue, runs the command, and posts a <code>cmd_result</code> event back. The operator UI renders it inline with the rest of the event log.</p>
       </div>
       <div class="tile">
-        <span class="tile-tag">Multi-operator</span>
-        <h3>More than one admin can attend</h3>
-        <p>Multiple admins can attach to the same session at the same time. They see each other&rsquo;s commands and the device&rsquo;s responses live, with each command tagged by the submitter&rsquo;s email.</p>
+        <span class="tile-tag">Idempotent</span>
+        <h3>Every command has an ID</h3>
+        <p>Commands carry a UUID. Server keeps a replay cache &mdash; reused IDs are rejected, so a retried submit can&rsquo;t fire the command twice. Safe to bang on the send button.</p>
       </div>
       <div class="tile">
-        <span class="tile-tag">Transport-aware</span>
-        <h3>Choose the route per session</h3>
-        <p>Open on WiFi to save cellular minutes; switch to cellular mid-session if WiFi drops. The chosen transport accelerates for responsiveness; the other stays at idle.</p>
+        <span class="tile-tag">Common diagnostics</span>
+        <h3>State, error log, transport, OTA</h3>
+        <p>Inspect device state, dump the structured error log, toggle WiFi, change the chkin cadence, kick the modem, target a firmware image, force a reboot. Everything the serial console can do, the queue can do.</p>
       </div>
       <div class="tile">
-        <span class="tile-tag">Auto-end</span>
-        <h3>Walk away safely</h3>
-        <p>Sessions end automatically two minutes after the last activity from either side. Full transcript saved server-side, visible later from the audit log. No leaked sessions, no forgotten terminals.</p>
+        <span class="tile-tag">Errlog drill-in</span>
+        <h3>Find out what hurt</h3>
+        <p>Every check-in carries an error-log breadcrumb &mdash; if a device tripped, the UI shows a colored chip on its row. Queue <code>errlog show &lt;seq&gt;</code> to pull the full entry: source, severity, code, timestamp, kv context.</p>
+      </div>
+      <div class="tile">
+        <span class="tile-tag">Signed audit</span>
+        <h3>Operator identity on every send</h3>
+        <p>Every queued command is signed with the operator&rsquo;s HMAC key and written to audit before it&rsquo;s queued. Every <code>cmd_result</code> is signed by the device on the way back. Both ends, all the time.</p>
       </div>
       <div class="tile">
         <span class="tile-tag">USB mode</span>
-        <h3>Same console, plugged in</h3>
-        <p>For benches and provisioning. WebSerial in Chrome / Edge desktop. Auto-reconnect on page reload and on USB plug-in. Same xterm.js, same color scheme, same line-ending controls.</p>
-      </div>
-      <div class="tile">
-        <span class="tile-tag">Default-deny allowlist</span>
-        <h3>Locked-down by design</h3>
-        <p>The remote console can only run commands explicitly whitelisted on the device. Lockout-class commands prompt a UI confirmation; the device-side allowlist is the real boundary.</p>
+        <h3>Same shell, plugged in</h3>
+        <p>For benches and provisioning. Connect over USB-C and a serial terminal gives you the same command surface directly, no queue round-trip. Useful for first-time bring-up before the device has talked to the portal.</p>
       </div>
     </div>
   </section>
@@ -175,24 +175,39 @@
   <section class="section alt">
     <div class="section-head">
       <h2>Audit-by-default.</h2>
-      <p class="lede">Every state-changing action is recorded with actor, IP, target, and detail. Org members see their own org&rsquo;s history; platform admins see global events. The wire is signed both ways &mdash; HMAC out of the device, HMAC back from the cloud.</p>
+      <p class="lede">Every state-changing action is recorded with operator identity, target, and detail. The wire is signed both ways &mdash; HMAC out of the device, HMAC back from the cloud.</p>
     </div>
 
     <div class="tile-grid">
       <div class="tile">
-        <span class="tile-tag">Per-org audit</span>
-        <h3>Every approval, label, session</h3>
-        <p>Approve a device, change a label, open a console session, eject from a fleet &mdash; all logged with operator identity, timestamp, and full detail. Click any row to expand the kv body.</p>
+        <span class="tile-tag">Signed audit</span>
+        <h3>Every approval, label, command</h3>
+        <p>Approve a device, change a label, queue a command, target firmware, set device state &mdash; all logged with operator identity, timestamp, and full payload. Per-device JSONL rotated monthly, exportable via <code>tick-cli audit</code>.</p>
       </div>
       <div class="tile">
         <span class="tile-tag">Bidirectional HMAC</span>
         <h3>Signed both ways</h3>
-        <p>Device requests carry HMAC-SHA256 of body + timestamp + nonce. Server responses are signed back with the same secret + the request&rsquo;s nonce. A captured response can&rsquo;t be replayed; a forged request can&rsquo;t pass.</p>
+        <p>Device requests carry HMAC-SHA256 of body + timestamp + nonce. Server responses are signed back with the same secret. A captured response can&rsquo;t be replayed; a forged request can&rsquo;t pass.</p>
       </div>
       <div class="tile">
-        <span class="tile-tag">Salt rotation</span>
-        <h3>No-downtime key rotation</h3>
-        <p>Backend accepts both current and previous salt for a configurable window. Rotate without firing a healthy fleet into a recovery hole. HMAC mismatch from a typo auto-recovers in ~6 minutes.</p>
+        <span class="tile-tag">Encryption at rest</span>
+        <h3>Device keys, sealed</h3>
+        <p>Per-device HMAC secrets can be sealed with AES-256-GCM using a KEK loaded at boot. Opt-in via <code>TICK_KEK_PATH</code>; the server falls back to plaintext keys if KEK is absent for development simplicity.</p>
+      </div>
+      <div class="tile">
+        <span class="tile-tag">Hardened wire</span>
+        <h3>CSP, replay cache, headers</h3>
+        <p>Strict Content Security Policy on the operator UI, X-Frame-Options, replay cache on command IDs, HTTP-to-HTTPS redirect listener, graceful SIGTERM/SIGINT shutdown that drains in-flight requests.</p>
+      </div>
+      <div class="tile">
+        <span class="tile-tag">Operator tokens</span>
+        <h3>Expire on their own</h3>
+        <p>Operator tokens expire after 14 days of inactivity and 90 days of total life, whichever comes first. Stolen creds have a half-life. Operators rotate by signing in again.</p>
+      </div>
+      <div class="tile">
+        <span class="tile-tag">Replay-proof commands</span>
+        <h3>UUID-keyed replay cache</h3>
+        <p>Server remembers recently-seen command IDs and refuses reuse. Combined with the bidirectional HMAC, every command is unique, signed, and one-shot.</p>
       </div>
     </div>
   </section>
@@ -206,19 +221,19 @@
 
     <div class="tile-grid">
       <div class="tile">
-        <span class="tile-tag">Pending</span>
-        <h3>Brand-new, never claimed</h3>
-        <p>Sits in the unclaimed pool. POSTs are accepted but no data is persisted. ICCID-derived label so a freshly-claimed device isn&rsquo;t anonymous.</p>
+        <span class="tile-tag">Unclaimed</span>
+        <h3>Brand-new, HMAC-valid</h3>
+        <p>A factory-fresh device&rsquo;s first valid POST auto-registers it in the unclaimed pool with an auto-named label. Subsequent POSTs are stored against the unclaimed record. A platform operator clicks Approve to bring it into service.</p>
       </div>
       <div class="tile">
         <span class="tile-tag">Approved</span>
-        <h3>In an org, persisting data</h3>
-        <p>POSTs persist, data shows in dashboards, the device participates in fleet membership and audit. Editor and above can rename or move it.</p>
+        <h3>Live, persisting, ops-ready</h3>
+        <p>POSTs persist, the device shows on the live device list, queued commands flow on next chkin, firmware can be targeted. Operators can rename, retarget firmware, disable, or restore from the per-device panel.</p>
       </div>
       <div class="tile">
-        <span class="tile-tag">Disabled / Ejected</span>
-        <h3>Suspended or kicked out</h3>
-        <p>Disabled: POSTs rejected with 403, no data written, recoverable. Ejected: returned to the unclaimed pool with a <code>previously_in_org</code> hint. Historical visibility preserved via &ldquo;show released.&rdquo;</p>
+        <span class="tile-tag">Disabled</span>
+        <h3>Suspended, recoverable</h3>
+        <p>POSTs from a disabled device are rejected at the HMAC-OK layer; no data is written, and the device&rsquo;s history stays intact. Restore at any time. Useful for &ldquo;in transit,&rdquo; &ldquo;in storage,&rdquo; or &ldquo;under investigation.&rdquo;</p>
       </div>
     </div>
   </section>
@@ -227,14 +242,14 @@
   <section class="section alt">
     <div class="section-head">
       <h2>On the roadmap.</h2>
-      <p class="lede">What ships today is what&rsquo;s on the page. The next round of portal features is in active development &mdash; Routes for outbound forwarding, server-side alerting, the dashboard config UI for cadences.</p>
+      <p class="lede">What ships today is the operator UI on the page. Next: end-customer accounts with org / fleet / role separation, server-side alerting, outbound Routes, and a public read-only fleet view.</p>
     </div>
 
     <div class="tile-grid">
       <div class="tile">
         <span class="tile-tag">In progress <span class="coming">Coming</span></span>
-        <h3>Routes &mdash; data forwarding</h3>
-        <p>The portal pushes events out to your destinations as they arrive. HTTPS first; MQTT, AWS, Azure, Google Cloud, Twilio, Datacake, Blynk, and Qubitro in development.</p>
+        <h3>User / org / fleet / role</h3>
+        <p>End-customer accounts. Org as the security boundary, fleets for groupings, roles cascading from org to fleet, fleet members for outside-contractor scoping. Design locked; build underway.</p>
       </div>
       <div class="tile">
         <span class="tile-tag">In progress <span class="coming">Coming</span></span>
@@ -243,8 +258,13 @@
       </div>
       <div class="tile">
         <span class="tile-tag">In progress <span class="coming">Coming</span></span>
-        <h3>Dashboard config UI</h3>
-        <p>Edit reading cadences, send intervals, and the auto-reboot schedule from the device&rsquo;s page. Today: terminal-only via remote console.</p>
+        <h3>Routes &mdash; data forwarding</h3>
+        <p>The portal pushes events out to your destinations as they arrive. HTTPS first; MQTT, AWS, Azure, Google Cloud, Twilio, Datacake, Blynk, and Qubitro on the path.</p>
+      </div>
+      <div class="tile">
+        <span class="tile-tag">Planned <span class="coming">Coming</span></span>
+        <h3>Public read-only fleet</h3>
+        <p>One operational fleet exposed unauthenticated, field-scrubbed and rate-limited &mdash; the demo as the product. Designed; build in queue behind alerting and Routes.</p>
       </div>
     </div>
 
@@ -255,12 +275,12 @@
   <section class="section">
     <div class="section-head">
       <h2>Try it.</h2>
-      <p class="lede">The fastest way to understand the portal is to use it. Open the public read-only fleet, click around, expand a device row, watch the live tick. The signed-in surface is the same surface plus your data.</p>
+      <p class="lede">The portal is operator-only today. Talk to us about a pilot &mdash; we&rsquo;ll issue operator credentials and walk you through your first device.</p>
     </div>
 
     <div style="text-align: center;">
-      <a href="https://tick.i4seer.com/public" target="_blank" rel="noopener" class="btn-primary">See live data &rarr;</a>
-      <a href="https://tick.i4seer.com/login" target="_blank" rel="noopener" class="btn-ghost" style="margin-left: 0.5rem;">Sign in</a>
+      <a href="mailto:sales@i4seer.com?subject=Tick%20Pilot%20Inquiry" class="btn-primary">Request a pilot &rarr;</a>
+      <a href="https://tick.i4seer.com" target="_blank" rel="noopener" class="btn-ghost" style="margin-left: 0.5rem;">Open portal</a>
       <p style="margin-top: 1.5rem; color: var(--ink-mute); font-size: 0.9rem;">
         Pilot inquiry: <a href="mailto:sales@i4seer.com?subject=Tick%20Pilot%20Inquiry">sales@i4seer.com</a>
       </p>
@@ -301,7 +321,7 @@
         </ul>
       </div>
     </div>
-    <div class="footer-meta">&copy; 2026 Institute for Seer LLC &middot; Operated in the United States &middot; v2.3.0</div>
+    <div class="footer-meta">&copy; 2026 Institute for Seer LLC &middot; Operated in the United States &middot; v2.4.0</div>
   </footer>
 
   <div class="cookie-banner" id="cookie-banner">
