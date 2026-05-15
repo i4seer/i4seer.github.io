@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tick Hardware &mdash; i4Seer</title>
-  <meta name="description" content="The Tick device: credit-card-sized, USB-C powered, ESP32-based microcontroller with a small color screen, NB-IoT/LTE-M cellular base, and a global IoT SIM. Field-friendly by design.">
+  <meta name="description" content="The Tick device: credit-card-sized, USB-C powered, ESP32-S3-based microcontroller with an RGB status LED, NB-IoT/LTE-M cellular base, and a global IoT SIM. Field-friendly by design.">
   <link rel="stylesheet" href="/style.css">
   <meta name="robots" content="index, follow">
   <link rel="icon" type="image/svg+xml" href="/images/favicon-seertick.svg">
@@ -41,7 +41,7 @@
   <section class="subhero">
     <div class="crumbs"><a href="/">i4Seer</a> / <a href="/tick/">Tick</a> / Hardware</div>
     <h1>The device, in your <em>hand</em>.</h1>
-    <p class="lede">Credit-card-sized. USB-C powered. Ruggedly built around two well-known modules: an ESP32-based MCU with a small color screen and a cellular base with a global SIM. It fits in a panel, a wall mount, or on a bench.</p>
+    <p class="lede">Credit-card-sized. USB-C powered. Ruggedly built around two well-known modules: an ESP32-S3 MCU with an RGB status LED and a cellular base with a global SIM. It fits in a panel, a wall mount, or on a bench.</p>
   </section>
 
   <section class="section alt">
@@ -53,8 +53,8 @@
     <div class="tile-grid">
       <div class="tile">
         <span class="tile-tag">Module 01</span>
-        <h3>ESP32-S3 with display</h3>
-        <p>An ESP32-S3 with 8 MB PSRAM, built-in WiFi, a 0.85&Prime; 128&times;128 IPS color screen, a single front button, an RGB status LED, and onboard 6-axis IMU + magnetometer. The screen shows status at a glance: identity, signal, last send, current state.</p>
+        <h3>ESP32-S3 with RGB status LED</h3>
+        <p>An ESP32-S3 with built-in WiFi, a single front button, and a single WS2812 RGB LED. No screen, no app &mdash; the LED color tells you what the device is doing from across a warehouse aisle. State lives in the cloud, not on a tiny display.</p>
       </div>
       <div class="tile">
         <span class="tile-tag">Module 02</span>
@@ -78,18 +78,13 @@
     <div class="tile-grid">
       <div class="tile">
         <span class="tile-tag">On-Device</span>
-        <h3>Always-on screen</h3>
-        <p>The 0.85" IPS display shows what&rsquo;s happening right now: device ID, transport state, signal strength, time since last send. No app, no laptop &mdash; the device tells you it&rsquo;s healthy by being healthy on screen.</p>
-      </div>
-      <div class="tile">
-        <span class="tile-tag">On-Device</span>
-        <h3>Single-button operation</h3>
-        <p>Cycle screens with the front button. Most operators never touch a serial cable. The device tells you what it knows; the dashboard tells you what your fleet knows.</p>
-      </div>
-      <div class="tile">
-        <span class="tile-tag">On-Device</span>
         <h3>RGB status LED</h3>
-        <p>Five colors, no manual: white while booting, green when idle and healthy, blue mid-check-in, purple during OTA, red on error. Tells you the device&rsquo;s state from across a warehouse aisle.</p>
+        <p>Five colors, no manual: white while booting, green when idle and healthy, blue mid-check-in, purple during OTA, red on error. Tells you the device&rsquo;s state from across a warehouse aisle &mdash; no screen, no app needed.</p>
+      </div>
+      <div class="tile">
+        <span class="tile-tag">On-Device</span>
+        <h3>One button, one purpose</h3>
+        <p>A single front button for the moments you need it &mdash; long-press for a forced check-in, hold to reboot. Most operators never touch the button or a serial cable; the dashboard tells you everything the device knows.</p>
       </div>
       <div class="tile">
         <span class="tile-tag">On-Device</span>

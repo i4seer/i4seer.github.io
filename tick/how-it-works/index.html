@@ -154,14 +154,24 @@
   <section class="section">
     <div class="section-head">
       <h2>Updates without a truck roll.</h2>
-      <p class="lede">Firmware updates over the air. Targeting per device, chunked download with compression and SHA verification, resume on crash, progress visible end-to-end.</p>
+      <p class="lede">Firmware over the air, over either transport. Per-device targeting, chunked download with compression and SHA verification, resume on crash, progress visible end-to-end.</p>
     </div>
 
     <div class="tile-grid">
       <div class="tile">
         <span class="tile-tag">Per device</span>
         <h3>Target what you want, where you want</h3>
-        <p>Pick a firmware image, target it at one device or many. The portal serves the directive on the device&rsquo;s next check-in, the device downloads and verifies, the outcome lands as an event.</p>
+        <p>Pick a firmware image, target it at one device or many. The portal serves the directive on the device&rsquo;s next check-in, the device downloads and verifies, the outcome lands as an event. Different devices can run different images at once.</p>
+      </div>
+      <div class="tile">
+        <span class="tile-tag">WiFi or cellular</span>
+        <h3>OTA over whichever pipe is up</h3>
+        <p>The same OTA pipeline runs over WiFi or cellular. The device picks automatically, or an operator can pin a specific transport with <code>ota go wifi</code> / <code>ota go cell</code>. WiFi-first if available; cellular as a fallback or first-class option for sites with no LAN.</p>
+      </div>
+      <div class="tile">
+        <span class="tile-tag">Push or pull</span>
+        <h3>Kicked off from the portal or the device</h3>
+        <p>Operator queues a target from the dashboard and the device pulls on its next chkin &mdash; or the device pulls on its own from the serial console with <code>ota check</code> / <code>ota go</code>. Either way it&rsquo;s the same directive, same verification, same audit trail.</p>
       </div>
       <div class="tile">
         <span class="tile-tag">Chunked + compressed</span>
@@ -172,6 +182,11 @@
         <span class="tile-tag">Visible</span>
         <h3>Progress, not silence</h3>
         <p>The portal emits sampled progress events as chunks land &mdash; &ldquo;OTA 14 / 32&rdquo; renders right in the per-device panel. No more wondering if the device picked up the new build.</p>
+      </div>
+      <div class="tile">
+        <span class="tile-tag">Recoverable</span>
+        <h3>Pause, resume, abort</h3>
+        <p>OTAs can be paused mid-flight and resumed later from the last good chunk. A bad image never half-flashes &mdash; SHA verification gates the swap. If the new image won&rsquo;t boot, the bootloader rolls back to the previous slot on its own.</p>
       </div>
     </div>
   </section>
