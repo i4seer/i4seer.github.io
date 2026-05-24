@@ -1,0 +1,42 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3:*)",
+      "Bash(ls -d C:/SEERWEB/*/)",
+      "Bash(grep -n \"^---$\" /c/SEERWEB/**)",
+      "Bash(python fix_trust.py)",
+      "Bash(python -c \"import json,sys; data=json.load\\(sys.stdin\\); print\\(data[0][''''text'''']\\)\")",
+      "Bash(ls -la /c/SEERWEB/**)",
+      "Bash(python -c \"from PyPDF2 import PdfReader; r=PdfReader\\(''/c/SEERWEB/book01/the-good-father-interior.pdf''\\); print\\(len\\(r.pages\\)\\)\")",
+      "Read(//c/SEERWEB/**)",
+      "Read(//c/SEERWARNS/**)",
+      "Read(//c/TICKCELL/**)",
+      "Bash(ls -d /c/SEERWEB/book*/)",
+      "Bash(python3 -c \":*)",
+      "Bash(sort -t: -k3 -n)",
+      "Bash(/c/SEERWEB/book*/manuscript.md:*)",
+      "Bash(python -c \":*)",
+      "Bash(awk '/```html/,/```/' \"c:\\\\SEERWEB\\\\description.md\")",
+      "Bash(grep -rn \"2:3 portrait\\\\|portrait.*2:3\\\\|3:2 landscape\\\\|Aspect ratio\" c:/SEERWEB/book*/images.md)",
+      "Bash(pdftotext *)",
+      "Bash(gh search *)",
+      "Bash(Get-ChildItem *)",
+      "Bash(python *)",
+      "Bash(python3 *)",
+      "Bash(py *)",
+      "Bash(node *)",
+      "Bash(pwsh *)",
+      "Bash(ssh *)",
+      "Bash(PYTHONIOENCODING=utf-8 *)",
+      "Bash(PYTHONIOENCODING=* *)",
+      "Bash(command *)",
+      "Bash(cd *)",
+      "PowerShell(Get-Content *)",
+      "PowerShell(Measure-Object *)"
+    ],
+    "additionalDirectories": [
+      "c:\\TICKCELL",
+      "c:\\SEERWARNS"
+    ]
+  }
+}

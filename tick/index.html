@@ -183,6 +183,11 @@
         <p>Sample every 30 seconds, send every 30 minutes &mdash; the report carries the full window. Catch short events without paying for thousands of redundant data points.</p>
       </div>
       <div class="tile">
+        <span class="tile-tag">Offline-tolerant</span>
+        <h3>Buffered on flash</h3>
+        <p>When the network is down, unsent readings persist to a 64 KB flash partition &mdash; ~64 hours at one-minute records, ~26 days at ten-minute. When the device gets back online, the backlog drains oldest-first.</p>
+      </div>
+      <div class="tile">
         <span class="tile-tag">Routes <span class="coming">Coming</span></span>
         <h3>Forward to your stack</h3>
         <p>The portal pushes events out as they arrive: HTTPS first, with MQTT, AWS, Azure, Google Cloud, Twilio, Datacake, Blynk, and Qubitro in development.</p>
@@ -372,7 +377,7 @@
         </ul>
       </div>
     </div>
-    <div class="footer-meta">&copy; 2026 Institute for Seer LLC &middot; Operated in the United States &middot; v2.4.0</div>
+    <div class="footer-meta">&copy; 2026 Institute for Seer LLC &middot; Operated in the United States &middot; v2.5.0</div>
   </footer>
 
   <div class="cookie-banner" id="cookie-banner">

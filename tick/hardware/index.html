@@ -92,6 +92,11 @@
         <p>A 64KB flash partition records up to 1024 structured errors with timestamp, source, severity, and context. Survives reboot and reflash. Every check-in carries a breadcrumb to the portal so a remote operator can drill in.</p>
       </div>
       <div class="tile">
+        <span class="tile-tag">On-Device</span>
+        <h3>Reading buffer in flash</h3>
+        <p>A second 64KB flash partition holds up to 3,840 unsent readings (~64 hours at one-minute records, ~26 days at ten-minute). When the network is down, telemetry stays on the device. When it&rsquo;s back up, the device drains the backlog oldest-first.</p>
+      </div>
+      <div class="tile">
         <span class="tile-tag">Hardware-Derived ID</span>
         <h3>Identity that survives anything</h3>
         <p>Every device is identified by a string derived from its hardware. Reflash, factory-reset, replace the SIM &mdash; the same physical device is the same identity. No re-registration, no claim flow gone wrong.</p>
@@ -161,7 +166,7 @@
         </ul>
       </div>
     </div>
-    <div class="footer-meta">&copy; 2026 Institute for Seer LLC &middot; Operated in the United States &middot; v2.4.0</div>
+    <div class="footer-meta">&copy; 2026 Institute for Seer LLC &middot; Operated in the United States &middot; v2.5.0</div>
   </footer>
 
 </body>

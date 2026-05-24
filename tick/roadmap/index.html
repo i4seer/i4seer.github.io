@@ -93,13 +93,28 @@
       </div>
       <div class="tile">
         <span class="tile-tag">Live <span class="coming live">Shipped</span></span>
+        <h3>Offline readings queue</h3>
+        <p>Dedicated 64 KB flash partition. 3,840-slot append-only ring &mdash; ~64 hours at one-minute records, ~26 days at ten minutes. Reboot-safe, CRC-16 per slot. Drains oldest-first as soon as the device gets back online.</p>
+      </div>
+      <div class="tile">
+        <span class="tile-tag">Live <span class="coming live">Shipped</span></span>
         <h3>Bidirectional HMAC</h3>
         <p>HMAC-SHA256 of body + timestamp + nonce on device requests; signed responses back. Replay cache on command IDs. Salt rotation supported with overlap window.</p>
       </div>
       <div class="tile">
         <span class="tile-tag">Live <span class="coming live">Shipped</span></span>
+        <h3>Frame-level AES-256-GCM</h3>
+        <p>Opt-in <code>FRAME_FLAG_ENCRYPTED</code> bit on operator&harr;device frames. AES-256-GCM with 12-byte per-frame nonce. HMAC-verified before GCM tag check &mdash; defense in depth on top of TLS.</p>
+      </div>
+      <div class="tile">
+        <span class="tile-tag">Live <span class="coming live">Shipped</span></span>
         <h3>Encryption at rest</h3>
         <p>Per-device HMAC secrets can be sealed with AES-256-GCM using a KEK loaded at boot. Opt-in via <code>TICK_KEK_PATH</code>. Plaintext fallback for development.</p>
+      </div>
+      <div class="tile">
+        <span class="tile-tag">Live <span class="coming live">Shipped</span></span>
+        <h3>Wrapped operator tokens</h3>
+        <p>Operator HMAC token is wrapped in browser localStorage with AES-256-GCM, keyed by PBKDF2-SHA256 (600k iters) of a login passphrase. Plaintext in memory only during a session.</p>
       </div>
       <div class="tile">
         <span class="tile-tag">Live <span class="coming live">Shipped</span></span>
@@ -248,7 +263,7 @@
         </ul>
       </div>
     </div>
-    <div class="footer-meta">&copy; 2026 Institute for Seer LLC &middot; Operated in the United States &middot; v2.4.0</div>
+    <div class="footer-meta">&copy; 2026 Institute for Seer LLC &middot; Operated in the United States &middot; v2.5.0</div>
   </footer>
 
 </body>

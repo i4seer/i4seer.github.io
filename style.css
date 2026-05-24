@@ -1014,11 +1014,18 @@ img { max-width: 100%; height: auto; display: block; }
   border-top: 1px solid var(--line);
 }
 .book-row {
-  display: block;
-  padding: 1.5rem 0;
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  grid-template-rows: auto auto;
+  column-gap: 1.75rem;
+  row-gap: 0;
+  align-items: start;
+  padding: 2rem 0;
   border-bottom: 1px solid var(--line);
 }
-.book-row::after { content: ""; display: block; clear: both; }
+.book-row .book-cover { grid-row: 1 / span 2; grid-column: 1; }
+.book-row .book-info  { grid-row: 1; grid-column: 2; }
+.book-row .actions    { grid-row: 2; grid-column: 2; }
 .book-row .book-num {
   font-family: "JetBrains Mono", monospace;
   font-size: 1.35rem;
@@ -1027,20 +1034,18 @@ img { max-width: 100%; height: auto; display: block; }
   letter-spacing: -0.01em;
 }
 .book-row .book-cover {
-  float: right;
-  width: 80px;
-  margin: 0 0 0.5rem 1.5rem;
+  width: 160px;
 }
 .book-row .book-cover img {
   display: block;
   width: 100%;
   height: auto;
-  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.08);
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.12);
   transition: transform 200ms;
 }
 .book-row .book-cover.placeholder {
-  width: 80px;
-  height: 116px;
+  width: 160px;
+  height: 232px;
   background: var(--paper-2);
   border: 1px dashed var(--line-strong);
   border-radius: 3px;
@@ -1053,21 +1058,20 @@ img { max-width: 100%; height: auto; display: block; }
   font-weight: 700;
 }
 .book-row:hover .book-cover img { transform: translateY(-1px); }
-.book-row .book-info { margin-bottom: 0.85rem; }
-.book-row .actions { display: inline-flex; gap: 0.5rem; align-items: center; }
+.book-row .book-info { flex: 1 1 auto; min-width: 0; }
 .book-row .book-info h3 {
   font-family: inherit;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-weight: 600;
-  margin: 0 0 0.25rem;
+  margin: 0 0 0.5rem;
   letter-spacing: -0.01em;
   color: var(--ink);
 }
 .book-row .book-info .blurb {
   color: var(--ink-soft);
-  font-size: 0.95rem;
-  margin: 0 0 0.4rem;
-  line-height: 1.55;
+  font-size: 1rem;
+  margin: 0 0 0.75rem;
+  line-height: 1.6;
 }
 .book-row .book-info .meta {
   font-family: "JetBrains Mono", monospace;
@@ -1075,8 +1079,9 @@ img { max-width: 100%; height: auto; display: block; }
   letter-spacing: 0.06em;
   color: var(--ink-mute);
   text-transform: uppercase;
+  margin: 0 0 0.85rem;
 }
-.book-row .actions { display: flex; gap: 0.5rem; align-items: center; }
+.book-row .actions { display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap; }
 
 .status-pill {
   font-family: "JetBrains Mono", monospace;
@@ -1092,6 +1097,7 @@ img { max-width: 100%; height: auto; display: block; }
 .status-pill.review { background: #ede5d4; color: #5a4a2a; }
 .status-pill.development,
 .status-pill.writing { background: #fef3c7; color: #92400e; }
+.status-pill.ondeck { background: #dbeafe; color: #1e40af; }
 .status-pill.future { background: #ede9fe; color: #5b21b6; }
 .status-pill.planned { background: var(--paper-2); color: var(--ink-mute); }
 
@@ -1407,8 +1413,11 @@ img { max-width: 100%; height: auto; display: block; }
   .series-hero { grid-template-columns: 1fr; gap: 2rem; padding: 2.5rem 1.25rem; }
   .series-hero h1 { font-size: 2.2rem; }
   .book-row .book-num { font-size: 1.2rem; }
-  .book-row .book-cover { float: none; width: 72px; margin: 0.85rem 0 0; }
-  .book-row .book-cover.placeholder { width: 72px; height: 104px; font-size: 1rem; }
+  .book-row { grid-template-columns: 120px 1fr; column-gap: 1.25rem; padding: 1.5rem 0; }
+  .book-row .book-cover { width: 120px; }
+  .book-row .book-cover.placeholder { width: 120px; height: 174px; font-size: 1rem; }
+  .book-row .book-info h3 { font-size: 1.2rem; }
+  .book-row .book-info .blurb { font-size: 0.95rem; }
   .book-card-cover { float: none; width: 76px; margin: 0 0 0.85rem; }
   .flow { flex-direction: column; }
   .flow-step { margin-right: 0; margin-bottom: 1rem; }

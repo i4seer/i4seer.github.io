@@ -164,6 +164,11 @@
         <p>Every queued command is signed with the operator&rsquo;s HMAC key and written to audit before it&rsquo;s queued. Every <code>cmd_result</code> is signed by the device on the way back. Both ends, all the time.</p>
       </div>
       <div class="tile">
+        <span class="tile-tag">Command history</span>
+        <h3>&#x2191;/&#x2193; recalls what you typed</h3>
+        <p>Recent commands are kept in the browser (deduplicated, capped at 50). Up- and down-arrow in the queue-input field recalls what you sent, across devices. The same diagnostic at three in the morning takes one keystroke.</p>
+      </div>
+      <div class="tile">
         <span class="tile-tag">USB mode</span>
         <h3>Same shell, plugged in</h3>
         <p>For benches and provisioning. Connect over USB-C and a serial terminal gives you the same command surface directly, no queue round-trip. Useful for first-time bring-up before the device has talked to the portal.</p>
@@ -188,6 +193,16 @@
         <span class="tile-tag">Bidirectional HMAC</span>
         <h3>Signed both ways</h3>
         <p>Device requests carry HMAC-SHA256 of body + timestamp + nonce. Server responses are signed back with the same secret. A captured response can&rsquo;t be replayed; a forged request can&rsquo;t pass.</p>
+      </div>
+      <div class="tile">
+        <span class="tile-tag">Frame encryption</span>
+        <h3>AES-256-GCM on the wire</h3>
+        <p>Operator&harr;device frames carry an optional <code>FRAME_FLAG_ENCRYPTED</code> bit. When set, the payload is AES-256-GCM with a 12-byte AEAD nonce per frame, HMAC-verified before the GCM tag is checked. Defense in depth on top of TLS.</p>
+      </div>
+      <div class="tile">
+        <span class="tile-tag">Tokens at rest</span>
+        <h3>Operator tokens encrypted in the browser</h3>
+        <p>The operator&rsquo;s HMAC token is wrapped in localStorage with AES-256-GCM, keyed by a PBKDF2-SHA256 derivation (600k iters, OWASP 2023) of a passphrase entered at login. Plaintext lives in memory only for the session.</p>
       </div>
       <div class="tile">
         <span class="tile-tag">Encryption at rest</span>
@@ -321,7 +336,7 @@
         </ul>
       </div>
     </div>
-    <div class="footer-meta">&copy; 2026 Institute for Seer LLC &middot; Operated in the United States &middot; v2.4.0</div>
+    <div class="footer-meta">&copy; 2026 Institute for Seer LLC &middot; Operated in the United States &middot; v2.5.0</div>
   </footer>
 
   <div class="cookie-banner" id="cookie-banner">

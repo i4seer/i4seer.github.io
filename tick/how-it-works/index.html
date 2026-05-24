@@ -91,6 +91,31 @@
 
   <section class="section alt">
     <div class="section-head">
+      <h2>Outages don&rsquo;t lose readings.</h2>
+      <p class="lede">When the network is down longer than the sensor window, Tick writes unsent readings to a dedicated flash partition. Reboots, power cycles, and multi-day outages don&rsquo;t cost you the data &mdash; the device drains the backlog as soon as it&rsquo;s reachable again.</p>
+    </div>
+
+    <div class="tile-grid">
+      <div class="tile">
+        <span class="tile-tag">Durable queue</span>
+        <h3>64 KB partition, on flash</h3>
+        <p>A dedicated 64 KB flash partition (not RAM) holds up to 3,840 reading records in an append-only ring. That&rsquo;s roughly 64 hours of one-minute records or 26 days of ten-minute records waiting on the device with the power off.</p>
+      </div>
+      <div class="tile">
+        <span class="tile-tag">Reboot-safe</span>
+        <h3>Survives crashes, OTAs, brownouts</h3>
+        <p>The queue is committed to flash, not RAM, with CRC-16 on every slot and a header sector that tracks head and tail. A watchdog reboot mid-flight doesn&rsquo;t lose records. A dirty boot replays the header; an invalid header wipes cleanly with no half-state.</p>
+      </div>
+      <div class="tile">
+        <span class="tile-tag">Backfill on reconnect</span>
+        <h3>Drains automatically</h3>
+        <p>When the device gets back online, the send loop empties the RAM queue first, then drains the on-flash queue oldest-first. Each replayed record arrives as an <code>OP_READING_PUSH</code> event with its original capture timestamp, so dashboards backfill in chronological order.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
       <h2>Always reachable.</h2>
       <p class="lede">Both transports run continuously. Either one can carry traffic. The device picks the right transport for each send, and recovers from outages on its own.</p>
     </div>
@@ -235,7 +260,7 @@
         </ul>
       </div>
     </div>
-    <div class="footer-meta">&copy; 2026 Institute for Seer LLC &middot; Operated in the United States &middot; v2.4.0</div>
+    <div class="footer-meta">&copy; 2026 Institute for Seer LLC &middot; Operated in the United States &middot; v2.5.0</div>
   </footer>
 
 </body>
