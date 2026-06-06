@@ -42,13 +42,6 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- Seer Warns -->
-  <url>
-    <loc>https://www.i4seer.com/seer-warns/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
   <!-- About & Press -->
   <url>
     <loc>https://www.i4seer.com/about/</loc>
