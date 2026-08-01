@@ -1396,6 +1396,45 @@ img { max-width: 100%; height: auto; display: block; }
    RESPONSIVE
    ============================================================ */
 /* ============================================================
+   PARENT COMPANY BAND
+   Names Institute for Seer above the Seer Press masthead.
+   Deliberately light — context, not a second hero.
+   ============================================================ */
+.parent-band {
+  background: var(--paper-2);
+  border-bottom: 1px solid var(--line);
+}
+.parent-band-inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 1.75rem;
+}
+.parent-eyebrow {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--teal);
+  font-weight: 600;
+  margin: 0 0 0.6rem;
+}
+.parent-lede {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--ink-soft);
+  max-width: 760px;
+  margin: 0;
+}
+.parent-lede strong { color: var(--ink); font-weight: 600; }
+.parent-note {
+  font-size: 0.9rem;
+  color: var(--ink-mute);
+  margin: 0.7rem 0 0;
+}
+.parent-note a { color: var(--teal); text-decoration: none; font-weight: 500; }
+.parent-note a:hover { color: var(--teal-deep); text-decoration: underline; }
+
+/* ============================================================
    AT A GLANCE — SERIES COMPARISON TABLE
    Homepage band below the masthead. Frights left, Warns right.
    ============================================================ */
@@ -1489,6 +1528,8 @@ img { max-width: 100%; height: auto; display: block; }
   .masthead { grid-template-columns: 1fr; gap: 2.5rem; padding: 2.5rem 1.25rem; }
   .masthead h1 { font-size: 2.4rem; }
   .masthead-side { border-left: 0; padding-left: 0; border-top: 1px solid var(--line); padding-top: 1.5rem; }
+  .parent-band-inner { padding: 1.6rem 1.25rem 1.4rem; }
+  .parent-lede { font-size: 0.98rem; }
   .glance-inner { padding: 2.25rem 1.25rem; }
   .glance-table { font-size: 0.88rem; }
   .glance-table tbody th { white-space: normal; padding-right: 1rem; }
