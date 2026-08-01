@@ -1389,6 +1389,90 @@ img { max-width: 100%; height: auto; display: block; }
 /* ============================================================
    RESPONSIVE
    ============================================================ */
+/* ============================================================
+   AT A GLANCE — SERIES COMPARISON TABLE
+   Homepage band below the masthead. Frights left, Warns right.
+   ============================================================ */
+.visually-hidden {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+.glance {
+  background: var(--paper-2);
+  border-bottom: 1px solid var(--line);
+}
+.glance-inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+.glance-title {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+  margin: 0 0 1.5rem;
+  font-weight: 600;
+}
+/* Wide content scrolls inside its own container, never the page body. */
+.glance-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  display: block;
+  overflow-x: auto;
+}
+.glance-table thead th {
+  text-align: left;
+  vertical-align: bottom;
+  padding: 0 0 0.9rem;
+  border-bottom: 2px solid var(--line-strong);
+}
+.glance-table thead td { border-bottom: 2px solid var(--line-strong); }
+.glance-series {
+  display: block;
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  color: var(--teal);
+}
+.glance-quote {
+  display: block;
+  margin-top: 0.2rem;
+  font-size: 0.85rem;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--ink-mute);
+}
+.glance-table tbody th {
+  text-align: left;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.82rem;
+  font-weight: 400;
+  color: var(--ink-mute);
+  white-space: nowrap;
+  padding: 0.7rem 1.5rem 0.7rem 0;
+  border-bottom: 1px solid var(--line);
+  width: 1%;
+}
+.glance-table tbody td {
+  color: var(--ink);
+  font-weight: 500;
+  padding: 0.7rem 1.5rem 0.7rem 0;
+  border-bottom: 1px solid var(--line);
+  width: 42%;
+}
+.glance-table tbody tr:last-child th,
+.glance-table tbody tr:last-child td { border-bottom: 0; }
+.glance-table a { color: var(--teal); text-decoration: none; font-weight: 500; }
+.glance-table a:hover { color: var(--teal-deep); text-decoration: underline; }
+
 @media (max-width: 900px) {
   .studio-header-inner { flex-wrap: wrap; }
   .studio-tagline { display: none; }
@@ -1399,6 +1483,11 @@ img { max-width: 100%; height: auto; display: block; }
   .masthead { grid-template-columns: 1fr; gap: 2.5rem; padding: 2.5rem 1.25rem; }
   .masthead h1 { font-size: 2.4rem; }
   .masthead-side { border-left: 0; padding-left: 0; border-top: 1px solid var(--line); padding-top: 1.5rem; }
+  .glance-inner { padding: 2.25rem 1.25rem; }
+  .glance-table { font-size: 0.88rem; }
+  .glance-table tbody th { white-space: normal; padding-right: 1rem; }
+  .glance-table tbody td { padding-right: 1rem; }
+  .glance-series { font-size: 1rem; }
   .section { padding: 2.75rem 1.25rem; }
   .section-head { grid-template-columns: 1fr; gap: 1rem; }
   .deploy-grid { grid-template-columns: 1fr; }
