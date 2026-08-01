@@ -263,6 +263,12 @@ img { max-width: 100%; height: auto; display: block; }
   max-width: 540px;
   margin: 0 0 2rem;
 }
+/* Masthead with no sidebar — single column, no trailing grid gap. */
+.masthead-solo {
+  grid-template-columns: 1fr;
+  gap: 0;
+  border-bottom: 0;
+}
 .masthead-side {
   border-left: 1px solid var(--line);
   padding-left: 2rem;
@@ -1403,7 +1409,7 @@ img { max-width: 100%; height: auto; display: block; }
   border: 0;
 }
 .glance {
-  background: var(--paper-2);
+  background: var(--paper);
   border-bottom: 1px solid var(--line);
 }
 .glance-inner {
