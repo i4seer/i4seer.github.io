@@ -29,6 +29,12 @@
       }
     },
     {
+      "route": "/site.js",
+      "headers": {
+        "Cache-Control": "public, max-age=86400"
+      }
+    },
+    {
       "route": "/favicon.ico",
       "headers": {
         "Cache-Control": "public, max-age=604800"
