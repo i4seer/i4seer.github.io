@@ -14,6 +14,20 @@ window.SEER_SERIES = [
     "press": "#downloads"
   },
   {
+    "slug": "journey",
+    "name": "Journey",
+    "category": "Middle-grade adventure",
+    "audience": "Ages 8+",
+    "tagline": "The map ended. The journey didn't.",
+    "description": "At ten, Sam Calder finds a mile marker past the end of the only map anyone has. Over the next decade one road becomes bridges, forgotten towns, mountain routes, conflicting records, and finally a regional network. Every book covers one year and adds real geography, real people, and a harder question about what connection should mean.",
+    "readerHook": "Start here if you like grounded adventure, maps and evidence, a hero who grows up one year per book, and stories where the exciting discovery is only the beginning of the work.",
+    "highlights": ["One year per book", "Evidence over legend", "A map that keeps growing", "Adventure with consequences"],
+    "image": "/images/series/journey-current.webp",
+    "website": "https://journey.i4seer.com/",
+    "cta": "Follow the Journey",
+    "press": "#downloads"
+  },
+  {
     "slug": "seer-frights",
     "name": "Seer Frights",
     "category": "Middle-grade horror",
