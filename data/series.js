@@ -54,5 +54,33 @@ window.SEER_SERIES = [
     "website": "https://seerwarns.com/",
     "cta": "Enter Harmon",
     "press": "#downloads"
+  },
+  {
+    "slug": "seer-fairies",
+    "name": "Seer Fairies",
+    "category": "Dark fae horror",
+    "audience": "Upper middle-grade · lower YA",
+    "tagline": "Every fairy is real. The rules were forgotten.",
+    "description": "Ancient European fae followed immigrants to America, hidden inside the trades and traditions that once kept them managed—then the factories closed, the mines sealed, and the grandmothers died without telling anyone. The Seer is the last compact-keeper, arriving in one American town after another to work the case, name the rule, and pay the cost. Every book is a standalone case file; the migration mystery beneath them belongs to readers who follow all twenty-two.",
+    "readerHook": "Start here if you want folklore horror grounded in real American places, a case-file structure with field notes at the end of every book, and stories you can start in any order.",
+    "highlights": ["Standalone case files", "Real-world folklore", "No reading order", "A mystery underneath"],
+    "image": "/images/series/seer-fairies-current.webp",
+    "website": "/series/seer-fairies/",
+    "cta": "Meet the Seer",
+    "press": "#downloads"
+  },
+  {
+    "slug": "standalone",
+    "name": "Standalone Novels",
+    "category": "Standalone fiction",
+    "audience": "Teen & adult",
+    "tagline": "One book. One story. No series.",
+    "description": "Grounded, character-driven novels that don't belong to any series—each one a complete, self-contained story with its own setting, cast, and stakes. No reading order, no shared world, no wordmark. Just one book at a time.",
+    "readerHook": "Start here if you want a complete story in a single book, real places and real work, and a quiet coming-of-age or family story without needing to track a series.",
+    "highlights": ["Always standalone", "No reading order", "Character-driven", "Real places, real work"],
+    "image": "/images/series/standalone-current.webp",
+    "website": "/standalone/",
+    "cta": "Browse standalone novels",
+    "press": "#downloads"
   }
 ];

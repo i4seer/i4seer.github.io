@@ -14,10 +14,14 @@
 
   const series = Array.isArray(window.SEER_SERIES) ? window.SEER_SERIES : [];
 
+  const isExternal = s => /^https?:\/\//.test(s.website);
+  const linkAttrs = s => isExternal(s) ? ' target="_blank" rel="noopener"' : '';
+  const linkArrow = s => isExternal(s) ? ' <span aria-hidden="true">↗</span>' : '';
+
   const chips = s => `<ul class="series-chips" aria-label="What to expect from ${s.name}">${s.highlights.map(item => `<li>${item}</li>`).join('')}</ul>`;
 
   const homeCard = (s, index) => `<article class="series-feature series-${s.slug}${index % 2 ? ' series-feature-reverse' : ''}">
-    <a class="series-feature-visual" href="${s.website}" target="_blank" rel="noopener" aria-label="Visit ${s.name}">
+    <a class="series-feature-visual" href="${s.website}"${linkAttrs(s)} aria-label="Visit ${s.name}">
       <img src="${s.image}" alt="${s.name} series artwork" loading="${index === 0 ? 'eager' : 'lazy'}" decoding="async">
     </a>
     <div class="series-feature-copy">
@@ -27,12 +31,12 @@
       <p class="series-description">${s.description}</p>
       <p class="series-reader-hook"><strong>For readers who want:</strong> ${s.readerHook.replace(/^Start here if you /, '')}</p>
       ${chips(s)}
-      <a class="btn btn-navy series-cta" href="${s.website}" target="_blank" rel="noopener">${s.cta} <span aria-hidden="true">↗</span></a>
+      <a class="btn btn-navy series-cta" href="${s.website}"${linkAttrs(s)}>${s.cta}${linkArrow(s)}</a>
     </div>
   </article>`;
 
   const directoryCard = s => `<article class="series-card series-card-rich">
-    <a class="series-visual" href="${s.website}" target="_blank" rel="noopener" aria-label="Visit ${s.name}"><img src="${s.image}" alt="${s.name} series artwork" loading="lazy" decoding="async"></a>
+    <a class="series-visual" href="${s.website}"${linkAttrs(s)} aria-label="Visit ${s.name}"><img src="${s.image}" alt="${s.name} series artwork" loading="lazy" decoding="async"></a>
     <div class="series-card-body">
       <div class="series-meta"><span>${s.category}</span><span>${s.audience}</span></div>
       <h3>${s.name}</h3>
@@ -40,13 +44,13 @@
       <p>${s.description}</p>
       ${chips(s)}
       <p class="series-reader-mini">${s.readerHook}</p>
-      <div class="series-actions"><a class="series-visit" href="${s.website}" target="_blank" rel="noopener">${s.cta} <span aria-hidden="true">↗</span></a></div>
+      <div class="series-actions"><a class="series-visit" href="${s.website}"${linkAttrs(s)}>${s.cta}${linkArrow(s)}</a></div>
     </div>
   </article>`;
 
   const pressCard = s => `<article class="series-card">
-    <a class="series-visual" href="${s.website}" target="_blank" rel="noopener" aria-label="Visit ${s.name}"><img src="${s.image}" alt="${s.name} series artwork" loading="lazy" decoding="async"></a>
-    <div class="series-card-body"><div class="series-meta"><span>${s.category}</span><span>${s.audience}</span></div><h3>${s.name}</h3><p>${s.description}</p><div class="series-actions"><a class="series-visit" href="${s.website}" target="_blank" rel="noopener">Visit series <span aria-hidden="true">↗</span></a><a class="text-link" href="${s.press}">Press assets →</a></div></div>
+    <a class="series-visual" href="${s.website}"${linkAttrs(s)} aria-label="Visit ${s.name}"><img src="${s.image}" alt="${s.name} series artwork" loading="lazy" decoding="async"></a>
+    <div class="series-card-body"><div class="series-meta"><span>${s.category}</span><span>${s.audience}</span></div><h3>${s.name}</h3><p>${s.description}</p><div class="series-actions"><a class="series-visit" href="${s.website}"${linkAttrs(s)}>Visit series${linkArrow(s)}</a><a class="text-link" href="${s.press}">Press assets →</a></div></div>
   </article>`;
 
   document.querySelectorAll('[data-series-grid]').forEach(grid => {
