@@ -19,4 +19,6 @@ The glossy black Dot is copied directly from the current Seer Worlds site. Serie
 
 Retired `/standalone/` and `/series/seer-fairies/` pages now redirect to Stories and Fairies. `/books/` continues to redirect to the collection directory. HTML redirects work on GitHub Pages; 301 rules are also retained in the Azure static hosting configuration. Redirect routes are excluded from the sitemap.
 
+The six independent collection sites also share an image-card discovery feature and full Other Series grids. Run `python scripts/sync_collection_sites.py` to refresh them from this publisher registry, then `python scripts/verify_collection_sites.py` to check all six. The shared templates are `scripts/collection_feature.py` and `assets/collection-feature.css`. Each independent site keeps its own copied assets, data snapshot, theme, and refresh script, so publishing a site does not require access to sibling folders.
+
 Verified October 22, 2026: Stories, Journey, Worlds, Frights, and Warns open the expected public sites. `fairies.i4seer.com` resolves but still serves a repository placeholder; the finished `C:/SEERFAIRIES_WEB` site needs its separate deployment.
