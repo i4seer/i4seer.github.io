@@ -14,6 +14,26 @@
   },
   "routes": [
     {
+      "route": "/standalone",
+      "redirect": "https://stories.i4seer.com/",
+      "statusCode": 301
+    },
+    {
+      "route": "/standalone/",
+      "redirect": "https://stories.i4seer.com/",
+      "statusCode": 301
+    },
+    {
+      "route": "/series/seer-fairies",
+      "redirect": "https://fairies.i4seer.com/",
+      "statusCode": 301
+    },
+    {
+      "route": "/series/seer-fairies/",
+      "redirect": "https://fairies.i4seer.com/",
+      "statusCode": 301
+    },
+    {
       "route": "/books",
       "redirect": "/series/",
       "statusCode": 301

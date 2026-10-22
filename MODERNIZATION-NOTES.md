@@ -22,4 +22,15 @@ Those belong on the dedicated series sites.
 
 ## Growth model
 
-Home, Series, and Press use `/data/series.js`. Adding a future series means adding one wide visual and one registry entry; the page structures do not need to change.
+Home, Series, Press, and the shared footer now use `data/series.json` at build time. Run `python scripts/build_site.py` after changing the registry. The HTML is complete without JavaScript. See `SERIES-ADDING-GUIDE.md` for the current workflow.
+
+## October 22, 2026 refresh
+
+- Added the independent Seer Stories and Seer Fairies homes alongside Worlds, Journey, Frights, and Warns.
+- Replaced the old Dot with the glossy black asset from Seer Worlds, and copied all six current series hero images into the publisher hub.
+- Removed Standalone from navigation and replaced the old embedded catalogs with redirects. Retired artwork and the client-rendered registry were removed after a backup was saved.
+- Rebuilt the shared navigation, footer, typography, page spacing, mobile layouts, image crops, and press resources. Added actual artwork and publisher-background downloads.
+- Used the approved Seer Stories author note on About. Policy text, analytics, domain configuration, and hosting workflow are preserved.
+- Public link checks opened five expected branded sites. Fairies resolves at `fairies.i4seer.com` but still serves a repository placeholder; its completed local website requires its separate deployment.
+
+The hub refresh is local and has not been pushed or deployed.

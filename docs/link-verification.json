@@ -1,0 +1,36 @@
+{
+  "checked": "2026-10-22",
+  "method": "Browser navigation over HTTPS; checked visible page title and heading, and compared each host with its local CNAME.",
+  "sites": [
+    {
+      "name": "Seer Worlds",
+      "url": "https://seerworlds.com/",
+      "result": "Opened the expected branded series homepage."
+    },
+    {
+      "name": "Journey",
+      "url": "https://journey.i4seer.com/",
+      "result": "Opened the expected branded series homepage."
+    },
+    {
+      "name": "Seer Frights",
+      "url": "https://seerfrights.com/",
+      "result": "Opened the expected branded series homepage."
+    },
+    {
+      "name": "Seer Warns",
+      "url": "https://seerwarns.com/",
+      "result": "Opened the expected branded series homepage."
+    },
+    {
+      "name": "Seer Fairies",
+      "url": "https://fairies.i4seer.com/",
+      "result": "Address resolves, but live page is still the SEERFAIRIES_WEB repository placeholder; completed local site needs deployment."
+    },
+    {
+      "name": "Seer Stories",
+      "url": "https://stories.i4seer.com/",
+      "result": "Opened the expected branded series homepage."
+    }
+  ]
+}
