@@ -44,8 +44,12 @@ for path,doc in docs.items():
         if u.fragment and target in docs and unquote(u.fragment) not in docs[target].ids:ERRORS.append(f'{path}: fragment {link}')
 for asset in json.loads((ROOT/'docs/artwork-sources.json').read_text()):
     if hashlib.sha256((ROOT/asset['asset']).read_bytes()).hexdigest()!=asset['sha256']:ERRORS.append('Art mismatch: '+asset['series'])
+    if hashlib.sha256(Path(asset['source']).read_bytes()).hexdigest()!=asset['source_sha256']:ERRORS.append('Source artwork changed: '+asset['series'])
 series=json.loads((ROOT/'data/series.json').read_text(encoding='utf-8'))
 assert len(series)==6 and len({s['website'] for s in series})==6
+home=(ROOT/'index.html').read_text(encoding='utf-8')
+assert home.count('class="hero-cover"')==6
+assert all(s['cover'] in home and s['cover_title'] in home for s in series)
 assert {s['website'] for s in series}=={'https://seerworlds.com/','https://journey.i4seer.com/','https://seerfrights.com/','https://seerwarns.com/','https://fairies.i4seer.com/','https://stories.i4seer.com/'}
 for route in ['index.html','series/index.html','press/index.html']:
     raw=(ROOT/route).read_text(encoding='utf-8')
@@ -56,4 +60,4 @@ for url in re.findall(r"url\(['\"]?([^)'\"]+)",css):
     assert (ROOT/url.lstrip('/')).exists(),url
 assert len(docs)==13
 if ERRORS:print('\n'.join(ERRORS));sys.exit(1)
-print(f'PASS: {len(docs)} pages/redirects, {refs} local links and assets, six series, six exact source images, unique IDs, valid nesting, metadata and CSS assets.')
+print(f'PASS: {len(docs)} pages/redirects, {refs} local links and assets, six series, 12 current artwork exports, unique IDs, valid nesting, metadata and CSS assets.')

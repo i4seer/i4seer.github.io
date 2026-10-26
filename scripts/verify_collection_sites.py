@@ -32,6 +32,7 @@ def verify():
                 section=re.search(r'<section class="seer-discovery.*?</section>',raw,re.S)[0]
                 check=Feature();check.feed(section);assert check.cards==5,path
                 assert all(s['website'] in section and s['image'] in section for s in others),path
+                assert all(s['cover'] in section for s in others),(path,'missing refreshed cover preview')
                 current=next(s for s in cfg['collections'] if s['slug']==slug)
                 assert 'href="'+current['website']+'"' not in section,path
                 for image in check.images:
@@ -49,6 +50,7 @@ def verify():
         assert entries==['https://'+(site/'CNAME').read_text().strip()+'/other-series/'],(site,entries)
         for s in cfg['collections']:
             assert hashlib.sha256((site/s['image'].lstrip('/')).read_bytes()).digest()==hashlib.sha256((ROOT/'images/series'/Path(s['image']).name).read_bytes()).digest()
+            assert hashlib.sha256((site/s['cover'].lstrip('/')).read_bytes()).digest()==hashlib.sha256((ROOT/'images/series/covers'/Path(s['cover']).name).read_bytes()).digest()
         print(folder+f': PASS; home, {books} book pages, five-card directory, footer links, image sources, sitemap.')
     print(f'PASS: {total} HTML pages; {previews} discovery sections; six full grids; each shows exactly five other collections.')
 if __name__=='__main__':verify()

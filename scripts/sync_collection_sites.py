@@ -38,6 +38,11 @@ def main():
             item=dict(entry);asset_name=Path(item['image']).name
             shutil.copyfile(ROOT/item['image'].lstrip('/'),site/'assets/seer-collections'/asset_name)
             item['image']='/assets/seer-collections/'+asset_name;collections.append(item)
+            if item.get('cover'):
+                cover_name=Path(item['cover']).name
+                (site/'assets/seer-collections/covers').mkdir(exist_ok=True)
+                shutil.copyfile(ROOT/item['cover'].lstrip('/'),site/'assets/seer-collections/covers'/cover_name)
+                item['cover']='/assets/seer-collections/covers/'+cover_name
         (site/'data/seer-collections.json').write_text(json.dumps({'current':slug,'collections':collections},ensure_ascii=False,indent=2)+'\n',encoding='utf-8',newline='\n')
         builder=site/'scripts/build_site.py'
         if builder.exists():

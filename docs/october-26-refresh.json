@@ -1,0 +1,24 @@
+{
+  "completed": "2026-10-26",
+  "tasks": [
+    "Journey: 10 current covers, illustrations and cover-led map theme",
+    "Stories: 20 current covers, illustrations and cover-led individual book pages",
+    "Warns: 20 current covers and imagery; original CSS theme unchanged except image versions",
+    "Publisher and discovery: six new series illustrations, six cover previews, each series links to the other five"
+  ],
+  "checks": {
+    "publisher_pages": 13,
+    "series_pages": 189,
+    "discovery_sections": 96,
+    "collection_directories": 6,
+    "published_shelves": {
+      "Journey": 3,
+      "Stories": 7
+    },
+    "phone_width": 390,
+    "phone_overflow": false,
+    "purchase_urls_preserved": true,
+    "domains_preserved": true
+  },
+  "deployment": "local files only"
+}

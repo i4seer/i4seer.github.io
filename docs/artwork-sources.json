@@ -1,62 +1,146 @@
 [
   {
     "series": "seer-worlds",
-    "source": "C:/SEERWORLDS_WEB/assets/seer-worlds-river-hero.webp",
-    "asset": "images/series/seer-worlds-20261022.webp",
-    "sha256": "ff19ef1940a3d34bfa69e197020112fd1f15f9a04dac28bb6d1ec58a5fd0802b",
+    "kind": "art",
+    "source": "C:\\SEERWORLDS_WEB\\assets\\seer-worlds-river-hero.webp",
+    "asset": "images/series/seer-worlds-20261026.webp",
+    "source_sha256": "080869907df68d4aecb61f48b246f4282a4028b9458705cf9af68cc034c0ab70",
+    "sha256": "080869907df68d4aecb61f48b246f4282a4028b9458705cf9af68cc034c0ab70",
     "size": [
-      1983,
-      793
+      1920,
+      1080
+    ]
+  },
+  {
+    "series": "seer-worlds",
+    "kind": "cover",
+    "source": "C:\\SEERWORLDS_WEB\\assets\\covers\\distance.webp",
+    "asset": "images/series/covers/seer-worlds.webp",
+    "source_sha256": "41b5b535d3f8aec0adf263e407f3551def62a9c128ca4a20650f9314311cb842",
+    "sha256": "0a0017a8d638e8f5d1821be890d67c3b953d6f84d512b881e5ee134dce6385fb",
+    "size": [
+      400,
+      640
     ]
   },
   {
     "series": "journey",
-    "source": "C:/SEERJOURNEYS_WEB/assets/hero-road.webp",
-    "asset": "images/series/journey-20261022.webp",
-    "sha256": "b47ad40051a6055babb213fae221a70c4bf3636baad796be24de0df745f9cf77",
+    "kind": "art",
+    "source": "C:\\SEERJOURNEYS_WEB\\assets\\hero-road.webp",
+    "asset": "images/series/journey-20261026.webp",
+    "source_sha256": "2557f8215bd30a310b393a989a387536eca0ba36ae93e36b6389881208c9f170",
+    "sha256": "2557f8215bd30a310b393a989a387536eca0ba36ae93e36b6389881208c9f170",
     "size": [
-      1672,
-      940
+      1600,
+      1000
+    ]
+  },
+  {
+    "series": "journey",
+    "kind": "cover",
+    "source": "C:\\SEERJOURNEYS_WEB\\assets\\covers\\book01.webp",
+    "asset": "images/series/covers/journey.webp",
+    "source_sha256": "379eac11c8f3afa424aa5e36633c7427cc76fae3328cfb71ca83a3c667c659f0",
+    "sha256": "033c9ab4b2d85f228a86f76fcca2cb8b2ab1ee6f8be0beaed5389e45fb9c0a81",
+    "size": [
+      400,
+      640
     ]
   },
   {
     "series": "seer-frights",
-    "source": "C:/SEERFRIGHTS_WEB/images/seer-frights-series-hero.webp",
-    "asset": "images/series/seer-frights-20261022.webp",
-    "sha256": "e2c7be1483a3f3b20442a8c509436286eea243a4882d0a1278235ec64e7e4e3c",
+    "kind": "art",
+    "source": "C:\\SEERFRIGHTS_WEB\\images\\seer-frights-series-hero.webp",
+    "asset": "images/series/seer-frights-20261026.webp",
+    "source_sha256": "9a475dc140aabead47094759443867351767c8e1ff1353d7f37b51c080e8e176",
+    "sha256": "9a475dc140aabead47094759443867351767c8e1ff1353d7f37b51c080e8e176",
     "size": [
-      1983,
-      793
+      1920,
+      1080
+    ]
+  },
+  {
+    "series": "seer-frights",
+    "kind": "cover",
+    "source": "C:\\SEERFRIGHTS_WEB\\images\\cover-dont-go-into-the-swamp-front-web.webp",
+    "asset": "images/series/covers/seer-frights.webp",
+    "source_sha256": "6add42b7c00b5f0987ea92f803a229f3c566dc25acaba6f383babfaad84cb202",
+    "sha256": "a92698b8520c4835f46c3393719c14914b7ea1983ca55b7c80b47da4f1759120",
+    "size": [
+      400,
+      640
     ]
   },
   {
     "series": "seer-warns",
-    "source": "C:/SEERWARNS_WEB/images/hero-home.webp",
-    "asset": "images/series/seer-warns-20261022.webp",
-    "sha256": "e24cf6b222b420658218ed9885a0e8ba27412247a6ee6e6b8e1476b32d810be8",
+    "kind": "art",
+    "source": "C:\\SEERWARNS_WEB\\images\\hero-home.webp",
+    "asset": "images/series/seer-warns-20261026.webp",
+    "source_sha256": "1e2dca0f1b58b0b031461441f529f845f6b59f1eeef37feb24e001f8c21c30fe",
+    "sha256": "1e2dca0f1b58b0b031461441f529f845f6b59f1eeef37feb24e001f8c21c30fe",
     "size": [
       1755,
       896
     ]
   },
   {
-    "series": "seer-fairies",
-    "source": "C:/SEERFAIRIES_WEB/assets/hero-crossroads.webp",
-    "asset": "images/series/seer-fairies-20261022.webp",
-    "sha256": "676782c43aba66b68f580c0e02b43ed2c79f7b90816197d6d572ef1ab5525617",
+    "series": "seer-warns",
+    "kind": "cover",
+    "source": "C:\\SEERWARNS_WEB\\images\\web\\cover-the-good-father-front.webp",
+    "asset": "images/series/covers/seer-warns.webp",
+    "source_sha256": "c28d0b825b5b27ef70ffac3c5ec8af2e3c5b304fa6928e17ff3510209446d44d",
+    "sha256": "27cee7fb82319622f63f64fb21ab3b9166e372e99a3a596944e361e559cee5b5",
     "size": [
-      1672,
-      941
+      400,
+      640
+    ]
+  },
+  {
+    "series": "seer-fairies",
+    "kind": "art",
+    "source": "C:\\SEERFAIRIES_WEB\\assets\\hero-crossroads.webp",
+    "asset": "images/series/seer-fairies-20261026.webp",
+    "source_sha256": "5dd57e42950b38759489b83a33e48f88a88c63e7fe30d33a7d990a181a435ad7",
+    "sha256": "5dd57e42950b38759489b83a33e48f88a88c63e7fe30d33a7d990a181a435ad7",
+    "size": [
+      1920,
+      1080
+    ]
+  },
+  {
+    "series": "seer-fairies",
+    "kind": "cover",
+    "source": "C:\\SEERFAIRIES_WEB\\assets\\covers\\the-puca.webp",
+    "asset": "images/series/covers/seer-fairies.webp",
+    "source_sha256": "925f1f127a4ebbc29f2059242c628d38d83741149580630659cce706fd9effa7",
+    "sha256": "44a32f2ef4923026c93ccaa4744e39a7c6c2fca6f0781647ed310183f7465021",
+    "size": [
+      400,
+      617
     ]
   },
   {
     "series": "seer-stories",
-    "source": "C:/SEERTheSeries_WEB/assets/hero-river.webp",
-    "asset": "images/series/seer-stories-20261022.webp",
-    "sha256": "a0bd44dd813c95ab6e51e47f031b12a3bbec1cc3f4da61b3a4ff3ac0c42697a5",
+    "kind": "art",
+    "source": "C:\\SEERTheSeries_WEB\\assets\\hero-river.webp",
+    "asset": "images/series/seer-stories-20261026.webp",
+    "source_sha256": "dfdf055b49dfdd925946e532248b819bdf0090c558dbe4ec0ef9d430352a6d11",
+    "sha256": "dfdf055b49dfdd925946e532248b819bdf0090c558dbe4ec0ef9d430352a6d11",
     "size": [
-      1672,
-      941
+      1600,
+      1000
+    ]
+  },
+  {
+    "series": "seer-stories",
+    "kind": "cover",
+    "source": "C:\\SEERTheSeries_WEB\\assets\\covers\\the-river-run.webp",
+    "asset": "images/series/covers/seer-stories.webp",
+    "source_sha256": "0d96b619a9d6f772eacf7d284da5dfd0a3b0e32547e2703901ac93f8977834a9",
+    "sha256": "05931e98deab998e71912fa68e7afd608eb995a56b7a527db2e533ce884aa766",
+    "size": [
+      400,
+      640
     ]
   }
 ]
