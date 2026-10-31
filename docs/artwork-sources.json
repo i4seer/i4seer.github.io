@@ -98,22 +98,22 @@
   {
     "series": "seer-fairies",
     "kind": "art",
-    "source": "C:\\SEERFAIRIES_WEB\\assets\\hero-crossroads.webp",
-    "asset": "images/series/seer-fairies-20261026.webp",
-    "source_sha256": "5dd57e42950b38759489b83a33e48f88a88c63e7fe30d33a7d990a181a435ad7",
-    "sha256": "5dd57e42950b38759489b83a33e48f88a88c63e7fe30d33a7d990a181a435ad7",
+    "source": "C:\\SEERFAIRIES_WEB\\assets\\scenes\\the-each-uisge.webp",
+    "asset": "images/series/seer-fairies-20261031.webp",
+    "source_sha256": "6d909c00bde53e3764c2beae1488fa926ce282381d1eb7e7f408ed33c94ff7fa",
+    "sha256": "6d909c00bde53e3764c2beae1488fa926ce282381d1eb7e7f408ed33c94ff7fa",
     "size": [
-      1920,
-      1080
+      1600,
+      900
     ]
   },
   {
     "series": "seer-fairies",
     "kind": "cover",
-    "source": "C:\\SEERFAIRIES_WEB\\assets\\covers\\the-puca.webp",
+    "source": "C:\\SEERFAIRIES_WEB\\assets\\covers\\the-each-uisge.webp",
     "asset": "images/series/covers/seer-fairies.webp",
-    "source_sha256": "925f1f127a4ebbc29f2059242c628d38d83741149580630659cce706fd9effa7",
-    "sha256": "44a32f2ef4923026c93ccaa4744e39a7c6c2fca6f0781647ed310183f7465021",
+    "source_sha256": "6136794450456520af7569179ee9843e111c3b211e297c034f91d2b757951172",
+    "sha256": "c198504bc3657ebe6dc4f6bee5963e25e8be16609399f2cd5e19cf836384be10",
     "size": [
       400,
       617

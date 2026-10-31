@@ -25,4 +25,6 @@ Verified October 22, 2026: Stories, Journey, Worlds, Frights, and Warns open the
 
 ## October 26, 2026 artwork and discovery refresh
 
+October 31: Fairies previews now use the updated Each-Uisge (Book 3) cover and lake illustration. To refresh just one collection, run `python scripts/refresh_series_artwork.py --series seer-fairies`, then rebuild the hub and sync collection sites as below.
+
 Run `python scripts/refresh_series_artwork.py`, `python scripts/build_site.py`, then `python scripts/sync_collection_sites.py` after updating the local series websites. The artwork refresh needs Pillow; the builders and verifiers use the standard library. The six main series illustrations and six current published covers are recorded with source and output hashes in docs/artwork-sources.json. The publisher home, directory and press room all use these assets. Shared discovery cards pair the new illustrations with a cover thumbnail; every series points to the other five. The shared palettes follow each refreshed cover theme, while Warns retains its existing theme. Verify with scripts/verify_site.py and scripts/verify_collection_sites.py. No deployment is performed.
